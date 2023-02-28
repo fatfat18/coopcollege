@@ -28,6 +28,12 @@ const submit = () => {
 <template>
     <GuestLayout>
         <Head title="Log in" />
+        <div class="flex justify-center items-center max-w-screen ">
+            <img src="../../../asset/logo.png" class="w-20">
+        </div>
+        <div class="text-center text-2xl">
+            Co-operative College of the Philippines
+        </div>
 
         <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
             {{ status }}
@@ -35,31 +41,33 @@ const submit = () => {
 
         <form @submit.prevent="submit">
             <div>
-                <InputLabel for="email" value="Email" />
+
 
                 <TextInput
                     id="email"
                     type="email"
-                    class="mt-1 block w-full"
+                    class="mt-1 block w-full focus:ring-yellow-500 active:ring-yellow-500"
                     v-model="form.email"
                     required
                     autofocus
                     autocomplete="username"
+                    placeholder="Email"
                 />
 
                 <InputError class="mt-2" :message="form.errors.email" />
             </div>
 
             <div class="mt-4">
-                <InputLabel for="password" value="Password" />
+              
 
                 <TextInput
                     id="password"
                     type="password"
-                    class="mt-1 block w-full"
+                    class="mt-1 block w-full focus:ring-yellow-500 active:ring-yellow-500"
                     v-model="form.password"
                     required
                     autocomplete="current-password"
+                    placeholder="Password"
                 />
 
                 <InputError class="mt-2" :message="form.errors.password" />
@@ -76,13 +84,13 @@ const submit = () => {
                 <Link
                     v-if="canResetPassword"
                     :href="route('password.request')"
-                    class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
                 >
                     Forgot your password?
                 </Link>
 
-                <PrimaryButton class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                    Log in
+                <PrimaryButton class="ml-4 text-l w-32 items-center justify-center h-14 bg-blue-900 text-yellow-500 text-m hover:bg-yellow-500 hover:text-blue-900" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                    LOGIN
                 </PrimaryButton>
             </div>
         </form>

@@ -24,10 +24,16 @@ const submit = () => {
 <template>
     <GuestLayout>
         <Head title="Register" />
+        <div class="flex justify-center items-center max-w-screen ">
+            <img src="../../../asset/logo.png" class="w-20">
+        </div>
+        <div class="text-center text-2xl">
+            Co-operative College of the Philippines
+        </div>
 
         <form @submit.prevent="submit">
             <div>
-                <InputLabel for="name" value="Name" />
+           
 
                 <TextInput
                     id="name"
@@ -37,13 +43,14 @@ const submit = () => {
                     required
                     autofocus
                     autocomplete="name"
+                    placeholder="Fullname"
                 />
 
                 <InputError class="mt-2" :message="form.errors.name" />
             </div>
 
             <div class="mt-4">
-                <InputLabel for="email" value="Email" />
+              
 
                 <TextInput
                     id="email"
@@ -52,13 +59,14 @@ const submit = () => {
                     v-model="form.email"
                     required
                     autocomplete="username"
+                    placeholder="Email"
                 />
 
                 <InputError class="mt-2" :message="form.errors.email" />
             </div>
 
             <div class="mt-4">
-                <InputLabel for="password" value="Password" />
+               
 
                 <TextInput
                     id="password"
@@ -67,13 +75,14 @@ const submit = () => {
                     v-model="form.password"
                     required
                     autocomplete="new-password"
+                    placeholder="Password"
                 />
 
                 <InputError class="mt-2" :message="form.errors.password" />
             </div>
 
             <div class="mt-4">
-                <InputLabel for="password_confirmation" value="Confirm Password" />
+             
 
                 <TextInput
                     id="password_confirmation"
@@ -82,6 +91,7 @@ const submit = () => {
                     v-model="form.password_confirmation"
                     required
                     autocomplete="new-password"
+                    placeholder="Confirm Password"
                 />
 
                 <InputError class="mt-2" :message="form.errors.password_confirmation" />
@@ -95,7 +105,7 @@ const submit = () => {
                     Already registered?
                 </Link>
 
-                <PrimaryButton class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                <PrimaryButton class="ml-4 w-32 items-center justify-center h-14 bg-blue-900 text-yellow-500 text-m hover:bg-yellow-500 hover:text-blue-900" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                     Register
                 </PrimaryButton>
             </div>
