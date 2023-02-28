@@ -10,16 +10,14 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-    @vite('resources/css/app.css')
+    @vite('resources/css/app.css','resources/js/app.js')
 
 
 </head>
 
 <body class="antialiased flex items-center justify-center h-screen w-screen overflow-y-auto overflow-x-hidden">
 
-        <h1 class="text-9xl"> TEST</h1>
-
-
+    
       
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </body>
