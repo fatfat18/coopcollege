@@ -29,7 +29,7 @@ const submit = () => {
     <GuestLayout>
         <Head title="Log in" />
         <div class="flex justify-center items-center max-w-screen ">
-            <img src="../../../asset/logo.png" class="w-20">
+            <a href="/"><img src="../../../asset/logo.png" class="w-20"></a>
         </div>
         <div class="text-center text-2xl">
             Co-operative College of the Philippines
@@ -89,7 +89,7 @@ const submit = () => {
                     Forgot your password?
                 </Link>
 
-                <PrimaryButton class="ml-4 text-l w-32 items-center justify-center h-14 bg-blue-900 text-yellow-500 text-m hover:bg-yellow-500 hover:text-blue-900" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                <PrimaryButton class="ml-4 text-l w-32 items-center justify-center h-14 bg-blue-900 text-yellow-500 text-sm hover:bg-yellow-500 hover:text-blue-900" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                     LOGIN
                 </PrimaryButton>
             </div>
