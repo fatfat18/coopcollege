@@ -89,7 +89,7 @@ const updatePassword = () => {
             </div>
 
             <div class="flex items-center gap-4">
-                <PrimaryButton class="bg-blue-900 text-yellow-500 text-xl hover:bg-yellow-500 hover:text-blue-900" :disabled="form.processing">Save</PrimaryButton>
+                <PrimaryButton class="bg-blue-900 text-yellow-500 text-sm hover:bg-yellow-500 hover:text-blue-900" :disabled="form.processing">Save</PrimaryButton>
 
                 <Transition enter-from-class="opacity-0" leave-to-class="opacity-0" class="transition ease-in-out">
                     <p v-if="form.recentlySuccessful" class="text-sm text-gray-600">Saved.</p>
