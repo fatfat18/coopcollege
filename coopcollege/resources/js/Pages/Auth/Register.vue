@@ -25,7 +25,7 @@ const submit = () => {
     <GuestLayout>
         <Head title="Register" />
         <div class="flex justify-center items-center max-w-screen ">
-            <img src="../../../asset/logo.png" class="w-20">
+            <a href="/"><img src="../../../asset/logo.png" class="w-20"></a>
         </div>
         <div class="text-center text-2xl">
             Co-operative College of the Philippines
