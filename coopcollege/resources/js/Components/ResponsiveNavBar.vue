@@ -10,18 +10,21 @@ export default {
 </script>
 
 <template>
-    <div class="bg-zinc-700 transition ease-in-out delay-1000">
+    <div class="bg-zinc-700 w-screen">
       <nav
         class="
-          container
-          px-6
           py-3
-          mx-auto
-          md:flex md:justify-between md:items-center
+          xl:flex 
+          justify-center
           text-xl
+      
+       
+      
           
+       
+
         "
-      >
+       >
         <div class="flex items-center justify-between">
           <router-link
             to="/"
@@ -31,9 +34,10 @@ export default {
               text-gray-100
               md:text-2xl
               hover:text-indigo-400
-            "
-            >Logo
+            ">
+            
           </router-link>
+
           <!-- Mobile menu button -->
           <div @click="toggleNav" class="flex md:hidden">
             <button
@@ -55,6 +59,13 @@ export default {
           </div>
         </div>
   
+
+
+
+
+
+
+
         <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
         <ul
           :class="showMenu ? 'flex' : 'hidden'"
@@ -62,14 +73,27 @@ export default {
             flex-col
             mt-8
             space-y-4
-            md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0
+            md:flex md:space-y-0 md:flex-row items-center justify-center md:space-x-10 md:mt-0
+            transition duration-500
+            
           "
         >
-          <a href="#"><li class="text-gray-100">Home</li></a>
-          <a href="#"><li class="text-gray-100">About</li></a>
-          <a href="#"><li class="text-gray-100">Blogs</li></a>
-          <a href="#"><li class="text-gray-100">Contact Us</li></a>
+          <a href="#"><li class="text-white ">Home</li></a>
+          <a href="#"><li class="text-white ">News</li></a>
+          <a href="#"><li class="text-white ">About us</li></a>
+          <a href="#"><li class="text-white ">Learn with us</li></a>
+          <a href="#"><li class="text-white ">Resources</li></a>
+          <a href="#"><li class="text-white ">Case Studies</li></a>
+          <a href="#"><li class="text-white ">Projects</li></a>
+          
+         
         </ul>
       </nav>
     </div>
   </template>
+
+  <style>
+  a.router-link-exact-active {
+    color:yellow;
+  }
+</style>

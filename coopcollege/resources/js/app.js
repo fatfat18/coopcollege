@@ -1,5 +1,7 @@
 import './bootstrap';
 import '../css/app.css';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 import { createApp, h } from 'vue';
 import { createInertiaApp } from '@inertiajs/vue3';
@@ -27,3 +29,11 @@ createInertiaApp({
 
 library.add(faHatWizard,faTwitter)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
+
+new Vue({
+    render: (h) => h(App),
+    mounted() {
+      AOS.init()
+    },
+  }).$mount('#app')
+
