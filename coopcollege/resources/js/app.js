@@ -29,11 +29,3 @@ createInertiaApp({
 
 library.add(faHatWizard,faTwitter)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
-
-new Vue({
-    render: (h) => h(App),
-    mounted() {
-      AOS.init()
-    },
-  }).$mount('#app')
-

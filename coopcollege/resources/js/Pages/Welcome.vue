@@ -39,11 +39,11 @@ AOS.init()
 <!-- HEADER -->
 <div id="welcome" class="h-28 bg-theme1 w-screen text-white  md:text-sm flex xl:flex-row justify-center items-center">
     <div class=" flex xl:justify-center xl:items-center md:items-start md:justify-center w-3/4">
-        <a href="/"><img src="../../asset/logo.png" class="h-28 min-w-fit" /></a> <p class="text-2xl">Co-operative College of the Philippines</p>
+        <a href="/"><img src="../../asset/logo.png" class="h-28 min-w-fit" data-aos="fade-right" data-aos-duration="1000" /></a> <p class="text-2xl" data-aos="fade-right" data-aos-duration="1000">Co-operative College of the Philippines</p>
     </div>
     <div class=" flex w-1/4">
 
-       <a href="#"><div class="transition duration-300 border border-white bg-theme2 text-theme1 hover:bg-theme1 hover:text-theme2 hover:border hover:border-theme2 text-l font-bold w-40 h-12 py-2 px-4 rounded-full  ">
+       <a href="#"><div data-aos="fade-left" data-aos-duration="1000" class="transition duration-300 border border-white bg-theme2 text-theme1 hover:bg-theme1 hover:text-theme2 hover:border hover:border-theme2 text-l font-bold w-40 h-12 py-2 px-4 rounded-full  ">
             Contact Us<font-awesome-icon icon="fa-solid fa-phone-flip" class="h-6 w-8 ml-2 " />  
         
         </div></a>

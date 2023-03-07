@@ -1,4 +1,6 @@
 <script setup>
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Checkbox from '@/Components/Checkbox.vue';
 import GuestLayout from '@/Layouts/GuestLayout.vue';
 import InputError from '@/Components/InputError.vue';
@@ -23,12 +25,15 @@ const submit = () => {
         onFinish: () => form.reset('password'),
     });
 };
+
+AOS.init();
 </script>
 
 <template>
+    
     <GuestLayout>
         <Head title="Log in" />
-        <div class="flex justify-center items-center max-w-screen ">
+        <div class="flex justify-center items-center max-w-screen " >
             <a href="/"><img src="../../../asset/logo.png" class="w-20"></a>
         </div>
         <div class="text-center text-2xl">
@@ -39,7 +44,7 @@ const submit = () => {
             {{ status }}
         </div>
 
-        <form @submit.prevent="submit">
+        <form @submit.prevent="submit" >
             <div>
 
 

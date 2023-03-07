@@ -1,4 +1,6 @@
 <script setup>
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import GuestLayout from '@/Layouts/GuestLayout.vue';
 import InputError from '@/Components/InputError.vue';
 import InputLabel from '@/Components/InputLabel.vue';
@@ -19,6 +21,8 @@ const submit = () => {
         onFinish: () => form.reset('password', 'password_confirmation'),
     });
 };
+
+AOS.init();
 </script>
 
 <template>
