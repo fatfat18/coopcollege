@@ -24,6 +24,7 @@ export default {
        
 
         "
+        data-aos="fade-down" data-aos-duration="1000"
        >
         <div class="flex items-center justify-between">
           <router-link
@@ -77,7 +78,7 @@ export default {
             transition duration-500
             
           "
-          data-aos="fade-down" data-aos-duration="1000"
+          
         >
           <a href="#"><li class="text-white ">Home</li></a>
           <a href="#"><li class="text-white ">News</li></a>

@@ -31,7 +31,6 @@ AOS.init()
 
 </script>
 
-
 <template>
     <Head title="Welcome" />
 
@@ -43,7 +42,7 @@ AOS.init()
     </div>
     <div class=" flex w-1/4">
 
-       <a href="#"><div data-aos="fade-left" data-aos-duration="1000" class="transition duration-300 border border-white bg-theme2 text-theme1 hover:bg-theme1 hover:text-theme2 hover:border hover:border-theme2 text-l font-bold w-40 h-12 py-2 px-4 rounded-full  ">
+       <a href="#"><div data-aos="fade-left" data-aos-duration="1000" class=" border border-white bg-theme2 text-theme1 hover:bg-theme1 hover:text-theme2 hover:border hover:border-theme2 text-l font-bold w-40 h-12 py-2 px-4 rounded-full  ">
             Contact Us<font-awesome-icon icon="fa-solid fa-phone-flip" class="h-6 w-8 ml-2 " />  
         
         </div></a>
