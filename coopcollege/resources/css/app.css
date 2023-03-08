@@ -2,12 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-html { padding: 0px; margin: 0px;}
 
+@font-face {
+    font-family: 'MyriadProBold';
+    src: url(MyriadProBold.ttf);
+}
+
+html { padding: 0px; margin: 0px; font-family: MyriadProBold;}
 
 
 div{
-    font-family: Gilroy;
+    font-family: MyriadProBold;
     overflow-x: hidden;
   
 }

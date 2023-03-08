@@ -46,11 +46,11 @@ defineProps({
 <!-- HEADER -->
 <div id="welcome" class="h-28 bg-theme1 w-screen text-white  md:text-sm flex xl:flex-row justify-center items-center">
     <div class=" flex xl:justify-center xl:items-center md:items-start md:justify-center w-3/4">
-        <a href="/"><img src="../../asset/logo.png" class="h-28 min-w-fit" data-aos="fade-right" data-aos-duration="1000" /></a> <p class="text-2xl" data-aos="fade-right" data-aos-duration="1000">Co-operative College of the Philippines</p>
+        <a href="/"><img src="../../asset/logo.png" class="h-20 mr-8 min-w-fit" data-aos="fade-right" data-aos-duration="1000" /></a> <p class="overflow-y-hidden text-3xl tracking-wider" data-aos="fade-right" data-aos-duration="1000">CO-OPERATIVE COLLEGE <br><span class="text-xl ">OF THE</span> PHILIPPINES</p>
     </div>
     <div class=" flex w-1/4">
 
-       <a href="#"><div data-aos="fade-left" data-aos-duration="1000" class="transition ease-in delay-300 border border-white bg-theme2 text-theme1 hover:bg-theme1 hover:text-theme2 hover:border-theme2 text-l font-bold w-40 h-12 py-2 px-4 rounded-full  ">
+       <a href="#"><div data-aos="fade-left" data-aos-duration="1000" class=" transition ease-in delay-300 border border-white bg-theme2 text-theme1 hover:bg-theme1 hover:text-theme2 hover:border-theme2 text-l font-bold w-40 h-12 py-2 px-4 rounded-full  ">
             Contact Us<font-awesome-icon icon="fa-solid fa-phone-flip" class="h-6 w-8 ml-2 " />  
         
         </div></a>
@@ -63,7 +63,7 @@ defineProps({
 
 
 <div id="maincontent" class="flex justify-center items-center h-max w-screen bg-slate-300" data-aos="fade-up" data-aos-duration="1000" >
-    <img src="../../asset/landingpage.jpg" />
+    <img src="../../asset/landingpage.jpg"/>
 </div>
 
 <div class="xl:h-96 md:h-max xl:w-screen  flex justify-center items-center xl:text-2xl md:text-sm text-justify py-10 px-8" data-aos="fade-up" data-aos-duration="2000">

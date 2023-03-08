@@ -37,7 +37,7 @@ AOS.init();
             <a href="/"><img src="../../../asset/logo.png" class="w-20"></a>
         </div>
         <div class="text-center text-2xl">
-            Co-operative College of the Philippines
+            CO-OPERATIVE COLLEGE OF THE PHILIPPINES
         </div>
 
         <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
