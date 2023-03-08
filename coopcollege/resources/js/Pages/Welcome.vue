@@ -46,11 +46,11 @@ defineProps({
 <!-- HEADER -->
 <div id="welcome" class="h-28 bg-theme1 w-screen text-white  md:text-sm flex xl:flex-row justify-center items-center">
     <div class=" flex xl:justify-center xl:items-center md:items-start md:justify-center w-3/4">
-        <a href="/"><img src="../../asset/logo.png" class="h-20 mr-8 min-w-fit" data-aos="fade-right" data-aos-duration="1000" /></a> <p class="overflow-y-hidden text-3xl tracking-wider" data-aos="fade-right" data-aos-duration="1000">CO-OPERATIVE COLLEGE <br><span class="text-xl ">OF THE</span> PHILIPPINES</p>
+        <a href="/"><img src="../../asset/logo.png" class="mx-2 h-20 xl:mr-8 md:mr-4 min-w-fit" data-aos="fade-right" data-aos-duration="1000" /></a> <p class="pt-2 overflow-y-hidden xl:text-3xl tracking-wider" data-aos="fade-right" data-aos-duration="1000">CO-OPERATIVE COLLEGE <br><span class="xl:text-xl md:text-sm">OF THE</span> PHILIPPINES</p>
     </div>
     <div class=" flex w-1/4">
 
-       <a href="#"><div data-aos="fade-left" data-aos-duration="1000" class=" transition ease-in delay-300 border border-white bg-theme2 text-theme1 hover:bg-theme1 hover:text-theme2 hover:border-theme2 text-l font-bold w-40 h-12 py-2 px-4 rounded-full  ">
+       <a href="#footer"><div data-aos="fade-left" data-aos-duration="1000" class=" transition ease-in delay-300 border border-white bg-theme2 text-theme1 hover:bg-theme1 hover:text-theme2 hover:border-theme2 text-xs font-bold w-40 h-12 py-2 px-4 rounded-full  ">
             Contact Us<font-awesome-icon icon="fa-solid fa-phone-flip" class="h-6 w-8 ml-2 " />  
         
         </div></a>
@@ -91,7 +91,7 @@ A total of 35 participants coming from 15 co-operatives nationwide joined and ac
 
 </div>
 
-<div class=" h-max my-20 w-screen flex flex-wrap justify-center items-center px-20 ">
+<div class=" h-max my-20 w-screen flex flex-wrap justify-center items-center px-4  ">
 
     <div class="px-4 text-justify flex flex-col justify-center items-center my-8 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1000">
         <font-awesome-icon icon="fa-solid fa-note-sticky " class="text-theme1 h-10 mb-4" />
@@ -122,7 +122,7 @@ A total of 35 participants coming from 15 co-operatives nationwide joined and ac
 </div>
 
    
-<div class="w-screen h-60 bg-theme1 flex flex-col justify-center items-center"  >
+<div id="footer" class="w-screen h-60 bg-theme1 flex flex-col justify-center items-center"  >
     <p class="text-white text-3xl" data-aos="fade-down" data-aos-duration="800"> Contact and Visit Us!</p>
     <div class=" h-20 flex justify-center items-center " data-aos="fade-down" data-aos-duration="1500">
     <a href="#"><font-awesome-icon icon="fa-brands fa-facebook" class="transition ease-in duration-150 h-10 text-theme2 mx-4 hover:scale-150 overflow-y-hidden" /></a>
@@ -130,6 +130,7 @@ A total of 35 participants coming from 15 co-operatives nationwide joined and ac
     <a href="#"><font-awesome-icon icon="fa-solid fa-envelope" class="transition ease-in duration-150 h-10 text-theme2 mx-4 hover:scale-150 overflow-y-hidden" /></a>
     </div>
    
+<p class="text-white text-sm mt-12">©️ Copyright All Rights Reserved 2023 ™️</p>
 
 </div>
 
@@ -144,7 +145,7 @@ A total of 35 participants coming from 15 co-operatives nationwide joined and ac
 
 
 <script>
-AOS.init(
+AOS.init({dataAosDuration:'2000'}
             );
 AOS.refresh();
 </script>

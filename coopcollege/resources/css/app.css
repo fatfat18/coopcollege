@@ -8,12 +8,13 @@
     src: url(MyriadProBold.ttf);
 }
 
-html { padding: 0px; margin: 0px; font-family: MyriadProBold;}
+html { padding: 0px; margin: 0px; font-family: MyriadProBold;scroll-behavior: smooth;}
 
 
 div{
     font-family: MyriadProBold;
     overflow-x: hidden;
+    scroll-behavior: smooth;
   
 }
 
