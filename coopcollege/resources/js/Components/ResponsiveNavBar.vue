@@ -80,7 +80,7 @@ export default {
           "
           
         >
-          <a href="#"><li class="text-white ">Home</li></a>
+          <a href="/"><li class="text-white ">Home</li></a>
           <a href="#"><li class="text-white ">News</li></a>
           <a href="#"><li class="text-white ">About us</li></a>
           <a href="#"><li class="text-white ">Learn with us</li></a>
