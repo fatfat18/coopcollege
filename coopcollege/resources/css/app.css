@@ -15,3 +15,7 @@ div{
 a :hover{
     color: #FECB00;
 }
+
+.lpg1 {
+    border-radius: 0% 25% 61% 0% / 25% 0% 100% 25%;
+}
