@@ -50,8 +50,8 @@ defineProps({
     </div>
     <div class=" flex w-1/4">
 
-       <a href="#footer"><div data-aos="fade-left" data-aos-duration="1000" class=" transition ease-in delay-300 border border-white bg-theme2 text-theme1 hover:bg-theme1 hover:text-theme2 hover:border-theme2 text-xs font-bold w-40 h-12 py-2 px-4 rounded-full  ">
-            Contact Us<font-awesome-icon icon="fa-solid fa-phone-flip" class="h-6 w-8 ml-2 " />  
+       <a href="#footer"><div data-aos="fade-left" data-aos-duration="1000" class=" transition ease-in delay-300 border border-white bg-theme2 text-theme1 hover:bg-theme1 hover:text-theme2 hover:border-theme2 text-l font-bold w-36 h-12 py-4 px-4 rounded-full overflow-y-hidden  ">
+            Contact Us<font-awesome-icon icon="fa-solid fa-phone-flip" class="h-4 w-6 ml-2 " />  
         
         </div></a>
 
@@ -123,7 +123,7 @@ A total of 35 participants coming from 15 co-operatives nationwide joined and ac
 
    
 <div id="footer" class="w-screen h-60 bg-theme1 flex flex-col justify-center items-center"  >
-    <p class="text-white text-2xl" data-aos="fade-down" data-aos-duration="800"> Contact and Visit Us!</p>
+    <p class="text-white text-2xl" data-aos="fade-down" data-aos-duration="800"> Message Us Now!</p>
     <div class=" h-20 flex justify-center items-center " data-aos="fade-down" data-aos-duration="1500">
     <a href="#"><font-awesome-icon icon="fa-brands fa-facebook" class="transition ease-in duration-150 h-10 text-theme2 mx-4 hover:scale-150 overflow-y-hidden" /></a>
     <a href="#"><font-awesome-icon icon="fa-solid fa-phone" class="transition ease-in duration-150 h-10 text-theme2 mx-4 hover:scale-150 overflow-y-hidden" /></a>

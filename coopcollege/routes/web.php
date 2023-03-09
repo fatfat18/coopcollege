@@ -37,9 +37,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/CreatePost', function () {
     return Inertia::render('CreatePost');
-})->middleware(['auth', 'verified'])->name('CreatePost');
-
-
+});
 
 
 
