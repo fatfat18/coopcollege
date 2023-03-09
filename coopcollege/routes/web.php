@@ -35,8 +35,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
-
+Route::get('/CreatePost', function () {
+    return Inertia::render('CreatePost');
+})->middleware(['auth', 'verified'])->name('CreatePost');
 
 
 
