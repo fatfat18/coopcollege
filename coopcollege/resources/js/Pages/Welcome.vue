@@ -125,9 +125,9 @@ A total of 35 participants coming from 15 co-operatives nationwide joined and ac
 <div id="footer" class="w-screen h-60 bg-theme1 flex flex-col justify-center items-center"  >
     <p class="text-white text-2xl" data-aos="fade-down" data-aos-duration="800"> Message Us Now!</p>
     <div class=" h-20 flex justify-center items-center " data-aos="fade-down" data-aos-duration="1500">
-    <a href="#"><font-awesome-icon icon="fa-brands fa-facebook" class="transition ease-in duration-150 h-10 text-theme2 mx-4 hover:scale-150 overflow-y-hidden" /></a>
-    <a href="#"><font-awesome-icon icon="fa-solid fa-phone" class="transition ease-in duration-150 h-10 text-theme2 mx-4 hover:scale-150 overflow-y-hidden" /></a>
-    <a href="#"><font-awesome-icon icon="fa-solid fa-envelope" class="transition ease-in duration-150 h-10 text-theme2 mx-4 hover:scale-150 overflow-y-hidden" /></a>
+    <a href="#"><font-awesome-icon icon="fa-brands fa-facebook" class="transition ease-in duration-150 h-10 text-theme2 mx-4 hover:scale-125 overflow-y-hidden" /></a>
+    <a href="#"><font-awesome-icon icon="fa-solid fa-phone" class="transition ease-in duration-150 h-10 text-theme2 mx-4 hover:scale-125 overflow-y-hidden" /></a>
+    <a href="#"><font-awesome-icon icon="fa-solid fa-envelope" class="transition ease-in duration-150 h-10 text-theme2 mx-4 hover:scale-125 overflow-y-hidden" /></a>
     </div>
    
 <p class="text-white text-sm mt-12">©️ Copyright All Rights Reserved 2023 ™️</p>

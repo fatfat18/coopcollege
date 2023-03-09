@@ -26,6 +26,7 @@
         "@fortawesome/vue-fontawesome": "^3.0.3",
         "aos": "^2.3.4",
         "vue": "^3.2.36",
-        "vue-loader": "^17.0.1"
+        "vue-loader": "^17.0.1",
+        "vue-router": "^4.1.6"
     }
 }
