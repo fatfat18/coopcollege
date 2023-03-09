@@ -32,7 +32,7 @@ const alignmentClasses = computed(() => {
     if (props.align === 'left') {
         return 'origin-top-left left-0';
     } else if (props.align === 'right') {
-        return 'origin-top-right right-0';
+        return 'origin-top-right right-1/5';
     } else {
         return 'origin-top';
     }
@@ -42,13 +42,13 @@ const open = ref(false);
 </script>
 
 <template>
-    <div class="relative">
+    <div class="relative z-50">
         <div @click="open = !open">
             <slot name="trigger" />
         </div>
 
         <!-- Full Screen Dropdown Overlay -->
-        <div v-show="open" class="fixed inset-0 z-40" @click="open = false"></div>
+        <div v-show="open" class="absolute inset-0 z-40" @click="open = false"></div>
 
         <transition
             enter-active-class="transition ease-out duration-200"
@@ -60,7 +60,7 @@ const open = ref(false);
         >
             <div
                 v-show="open"
-                class="absolute z-50 mt-2 rounded-md shadow-lg"
+                class="fixed z-150 mt-2 rounded-md shadow-lg"
                 :class="[widthClass, alignmentClasses]"
                 style="display: none"
                 @click="open = false"

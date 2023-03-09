@@ -80,7 +80,7 @@ A total of 35 participants coming from 15 co-operatives nationwide joined and ac
     <div class="lpg1 bg-slate-900 h-screen w-1/2 " data-aos="fade-right" data-aos-duration="3000" >
         <img src="../../asset/lpg1.jpg" class="h-screen w-screen items-stretch" />
     </div>
-    <div class="flex flex-col justify-center items-center h-screen w-1/2" data-aos="zoom-in-left" data-aos-duration="3000" data-aos-anchor-placement="top-center">
+    <div class="flex flex-col justify-center items-center h-screen w-1/2" data-aos="zoom-in-left" data-aos-duration="2000" data-aos-anchor-placement="top-center">
         <p class="xl:text-6xl md:text-l mb-8 text-white"> Cebu Training Session</p>
         <p class=" text-white text-l  text-justify mr-12 ">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspThe morning session on Deepening our Co-operative Identity was facilitated by the <strong>Co-op College PH</strong> team headed by CEO & Principal <strong>Donna Dizon</strong>. This interactive learning activity brought out the creativity of the participants in making their own “Halo-halo” which requires certain key ingredients on embodying our identity as co-op leaders.
 The afternoon session on Co-op Financial Literacy: The Usage of Statutory Funds was conducted by our Resource Speaker and Trainer <strong>Hon. Gervacio Piator, CPA, MBA, DM, PhD.</strong>
@@ -123,7 +123,7 @@ A total of 35 participants coming from 15 co-operatives nationwide joined and ac
 
    
 <div id="footer" class="w-screen h-60 bg-theme1 flex flex-col justify-center items-center"  >
-    <p class="text-white text-3xl" data-aos="fade-down" data-aos-duration="800"> Contact and Visit Us!</p>
+    <p class="text-white text-2xl" data-aos="fade-down" data-aos-duration="800"> Contact and Visit Us!</p>
     <div class=" h-20 flex justify-center items-center " data-aos="fade-down" data-aos-duration="1500">
     <a href="#"><font-awesome-icon icon="fa-brands fa-facebook" class="transition ease-in duration-150 h-10 text-theme2 mx-4 hover:scale-150 overflow-y-hidden" /></a>
     <a href="#"><font-awesome-icon icon="fa-solid fa-phone" class="transition ease-in duration-150 h-10 text-theme2 mx-4 hover:scale-150 overflow-y-hidden" /></a>
