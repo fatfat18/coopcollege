@@ -36,9 +36,10 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/CreatePost', function () {
-    return Inertia::render('CreatePost');
-});
-
+    return Inertia::render('CreatePost', [
+        'user' => auth()->user(),
+    ]);
+})->name('CreatePost');
 
 
 

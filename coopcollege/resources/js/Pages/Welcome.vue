@@ -62,7 +62,7 @@ defineProps({
       <ResponsiveNavBar />
 
 
-<div id="maincontent" class="flex justify-center items-center h-max w-screen bg-slate-300" data-aos="fade-up" data-aos-duration="1000" >
+<div id="maincontent" class="flex justify-center items-center h-max w-screen bg-slate-300" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" >
     <img src="../../asset/landingpage.jpg"/>
 </div>
 
@@ -93,27 +93,27 @@ A total of 35 participants coming from 15 co-operatives nationwide joined and ac
 
 <div class=" h-max my-20 w-screen flex flex-wrap justify-center items-center px-4  ">
 
-    <div class="px-4 text-justify flex flex-col justify-center items-center my-8 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1500">
+    <div class="px-4 text-justify flex flex-col justify-center items-center my-8 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="500" >
         <font-awesome-icon icon="fa-solid fa-note-sticky " class="text-theme1 h-10 mb-4" />
             Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor.
     </div>
-    <div class="px-4 text-justify flex flex-col justify-center items-center my-8 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1500">
+    <div class="px-4 text-justify flex flex-col justify-center items-center my-8 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="500" >
         <font-awesome-icon icon="fa-solid fa-coins" class="text-theme1 h-10 mb-4" />
         Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor.
     </div>
-    <div class="px-4 text-justify flex flex-col justify-center items-center my-8 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1500">
+    <div class="px-4 text-justify flex flex-col justify-center items-center my-8 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="500" >
         <font-awesome-icon icon="fa-solid fa-lightbulb" class="text-theme1 h-10 mb-4" />
         Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor.
     </div>
-    <div class="px-4 text-justify flex flex-col justify-center items-center my-8 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1500">
+    <div class="px-4 text-justify flex flex-col justify-center items-center my-8 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="500" >
         <font-awesome-icon icon="fa-solid fa-briefcase-medical" class="text-theme1 h-10 mb-4" />
         Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor.
     </div>
-    <div class="px-4 text-justify flex flex-col justify-center items-center my-8 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1500">
+    <div class="px-4 text-justify flex flex-col justify-center items-center my-8 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="500" >
         <font-awesome-icon icon="fa-solid fa-chart-simple" class="text-theme1 h-10 mb-4" />
         Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor.
     </div>
-    <div class="px-4 text-justify flex flex-col justify-center items-center my-8 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1500">
+    <div class="px-4 text-justify flex flex-col justify-center items-center my-8 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="500" >
         <font-awesome-icon icon="fa-solid fa-earth-asia" class="text-theme1 h-10 mb-4" />
         Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor.
 
@@ -123,8 +123,8 @@ A total of 35 participants coming from 15 co-operatives nationwide joined and ac
 
    
 <div id="footer" class="w-screen h-60 bg-theme1 flex flex-col justify-center items-center"  >
-    <p class="text-white text-2xl" data-aos="fade-down" data-aos-duration="800"> Message Us Now!</p>
-    <div class=" h-20 flex justify-center items-center " data-aos="fade-down" data-aos-duration="1500">
+    <p class="text-white text-2xl" data-aos="fade-down" data-aos-duration="800" data-aos-delay="500"> Message Us Now!</p>
+    <div class=" h-20 flex justify-center items-center " data-aos="fade-down" data-aos-duration="1500" data-aos-delay="500">
     <a href="#"><font-awesome-icon icon="fa-brands fa-facebook" class="transition ease-in duration-150 h-10 text-theme2 mx-4 hover:scale-125 overflow-y-hidden" /></a>
     <a href="#"><font-awesome-icon icon="fa-solid fa-phone" class="transition ease-in duration-150 h-10 text-theme2 mx-4 hover:scale-125 overflow-y-hidden" /></a>
     <a href="#"><font-awesome-icon icon="fa-solid fa-envelope" class="transition ease-in duration-150 h-10 text-theme2 mx-4 hover:scale-125 overflow-y-hidden" /></a>
@@ -145,7 +145,7 @@ A total of 35 participants coming from 15 co-operatives nationwide joined and ac
 
 
 <script>
-AOS.init({dataAosDuration:'2000'}
-            );
+AOS.init({dataAosDuration:'2000',
+            });
 AOS.refresh();
 </script>
