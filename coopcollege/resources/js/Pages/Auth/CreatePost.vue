@@ -1,5 +1,5 @@
 <script setup>
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
+
 
 
 </script>
@@ -7,6 +7,5 @@ import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 <template>
 
 
-testing ramani
-
+test
 </template>
