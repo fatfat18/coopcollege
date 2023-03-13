@@ -65,7 +65,6 @@ Route::get('/Projects', function () {
 
 
 
-
-Route::get('/news', [news::class, 'displayNews']);
+Route::get('/news',[news::class, 'displayNews'] );
 
 require __DIR__.'/auth.php';
