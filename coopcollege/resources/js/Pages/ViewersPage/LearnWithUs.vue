@@ -15,7 +15,7 @@ import Header from '@/Components/Header.vue'
  <div class="h-screen w-screen flex justify-center items-center">
 
     <h1>
-        SO MAO NING lEARN WITH US
+        SO MAO NING LEARN WITH US
     </h1>
 
  </div>
