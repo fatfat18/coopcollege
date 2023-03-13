@@ -1,12 +1,26 @@
 <script>
 import { ref } from 'vue';
+import { RouterLink } from 'vue-router';
+
+ 
+
 export default {
+  
   setup() {
     let showMenu = ref(false);
     const toggleNav = () => (showMenu.value = !showMenu.value);
     return { showMenu, toggleNav };
+    
   },
+ linkActiveClass: 'router-link-active',
+
 };
+
+
+
+
+
+
 </script>
 
 <template>
@@ -27,26 +41,16 @@ export default {
         data-aos="fade-down" data-aos-duration="1000"
        >
         <div class="flex items-center justify-between">
-          <router-link
-            to="/"
-            class="
-              text-xl
-              font-bold
-              text-gray-100
-              md:text-2xl
-              hover:text-indigo-400
-            ">
-            
-          </router-link>
-
+       
           <!-- Mobile menu button -->
           <div @click="toggleNav" class="flex md:hidden">
             <button
               type="button"
               class="
-                text-gray-100
+                text-white
                 hover:text-gray-400
                 focus:outline-none focus:text-gray-400
+                ml-4
                 
               "
             >
@@ -76,17 +80,18 @@ export default {
             space-y-4
             md:flex md:space-y-0 md:flex-row items-center justify-center md:space-x-10 md:mt-0
             transition duration-500
+            ResNavBar
             
           "
           
         >
           <a href="/"><li class="text-white navbar">Home</li></a>
-          <a href="#"><li class="text-white navbar">News</li></a>
-          <a href="#"><li class="text-white navbar">About us</li></a>
-          <a href="#"><li class="text-white navbar">Learn with us</li></a>
-          <a href="#"><li class="text-white navbar">Resources</li></a>
-          <a href="#"><li class="text-white navbar">Case Studies</li></a>
-          <a href="#"><li class="text-white navbar">Projects</li></a>
+          <a href="/News"><li class="text-white navbar">News</li></a>
+          <a href="/AboutUs"><li class="text-white navbar">About us</li></a>
+          <a href="/LearnWithUs"><li class="text-white navbar">Learn with us</li></a>
+          <a href="/Resources"><li class="text-white navbar">Resources</li></a>
+          <a href="/CaseStudies"><li class="text-white navbar">Case Studies</li></a>
+          <a href="/Projects"><li class="text-white navbar">Projects</li></a>
           
          
         </ul>
@@ -94,8 +99,7 @@ export default {
     </div>
   </template>
 
-  <style>
-  a.router-link-exact-active {
-    color:yellow;
-  }
+  <style scoped>
+  
 </style>
+

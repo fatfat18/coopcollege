@@ -17,6 +17,8 @@ library.add(faPlus);
 <template>
  
 
+
+
     <AuthenticatedLayout>
         
         <template #header> 
@@ -34,4 +36,8 @@ library.add(faPlus);
             </div>
         </div>
     </AuthenticatedLayout>
+
+
+
+
 </template>
