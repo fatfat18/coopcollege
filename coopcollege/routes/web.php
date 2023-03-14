@@ -39,6 +39,17 @@ Route::middleware('auth')->group(function () {
 
 
 
+Route::get('/PostEditor', function () {
+    return Inertia::render('Post/PostEditor');
+})->middleware(['auth', 'verified'])->name('PostEditor');
+
+
+
+
+
+
+
+
 Route::get('/News', function () {
     return Inertia::render('ViewersPage/News');
 });
