@@ -29,7 +29,7 @@ const showingNavigationDropdown = ref(false);
                             
 
                             <!-- Navigation Links -->
-                            <div class="hidden space-x-8 sm:ml-10 sm:flex ">
+                            <div class="hidden space-x-8 sm:ml-10 sm:flex">
                                 <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
                                 </NavLink>
@@ -130,14 +130,14 @@ const showingNavigationDropdown = ref(false);
             </nav>
 
             <!-- Page Heading -->
-            <header class="bg-white shadow" v-if="$slots.header">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <header class="shadow bg-white" v-if="$slots.header">
+                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 ">
                     <slot name="header" />
                 </div>
             </header>
 
             <!-- Page Content -->
-            <main>
+            <main class="bg-theme1">
 
                 <slot />
 
