@@ -11,6 +11,7 @@ import { Link } from '@inertiajs/vue3';
 .postcontainer{
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .9)),
     url('/coopcollege/coopcollege/resources/asset/guestbackg.jpg');
+    background-size: cover;
 }
 </style>
 

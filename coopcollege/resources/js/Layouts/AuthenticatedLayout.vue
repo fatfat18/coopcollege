@@ -137,7 +137,7 @@ const showingNavigationDropdown = ref(false);
             </header>
 
             <!-- Page Content -->
-            <main class="bg-theme1">
+            <main class="bg-theme1 h-max min-h-screen">
 
                 <slot />
 

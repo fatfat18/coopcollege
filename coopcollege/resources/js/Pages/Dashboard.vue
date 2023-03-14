@@ -15,9 +15,11 @@ library.add(faPlus);
 
 
 <style>
+
 .postcontainer{
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .9)),
     url('/coopcollege/coopcollege/resources/asset/editpostbackg.jpg');
+    background-size: cover;
 }
 </style>
 
@@ -34,13 +36,82 @@ library.add(faPlus);
 
         
 
-        <div class="py-8 h-screen postcontainer">
-            
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 overflow-y-hidden " >
-                <a href="/PostEditor"><button class="my-4 mx-8 px-6 py-2 rounded-md bg-theme1 transition duration-150 border border-black text-theme2 hover:scale-110 hover:-translate-y-1"> Create Post  <font-awesome-icon icon="fa-solid fa-plus" class= " pl-2 hover:text-white " /> </button></a>
-                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg " data-aos="fade-up"  data-aos-duration="1300">
-                    <div class="p-6 text-green-700" >You're logged in!</div>
+        <div class="py-8 postcontainer overflow-y-hidden h-max min-h-screen">
+            <a href="/PostEditor"><button class="xl:ml-16 my-4 mx-8 px-6 py-2 rounded-md bg-theme1 transition duration-150 border border-black text-theme2 hover:scale-110 hover:-translate-y-1"> Create Post  <font-awesome-icon icon="fa-solid fa-plus" class= " pl-2 hover:text-white " /> </button></a>
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 overflow-y-auto space-y-1 h-max" data-aos="fade-up" data-aos-duration="1000">
+                
+                
+                <div class="max-w-7xl bg-white px-8 py-4 rounded-md">
+                    TEST CONTENTS
                 </div>
+                <div class="max-w-7xl bg-white px-8 py-4 rounded-md">
+                    TEST CONTENTS
+                </div>
+                <div class="max-w-7xl bg-white px-8 py-4 rounded-md">
+                    TEST CONTENTS
+                </div>
+                <div class="max-w-7xl bg-white px-8 py-4 rounded-md">
+                    TEST CONTENTS
+                </div>
+                <div class="max-w-7xl bg-white px-8 py-4 rounded-md">
+                    TEST CONTENTS
+                </div>
+                <div class="max-w-7xl bg-white px-8 py-4 rounded-md">
+                    TEST CONTENTS
+                </div>
+                <div class="max-w-7xl bg-white px-8 py-4 rounded-md">
+                    TEST CONTENTS
+                </div>
+                <div class="max-w-7xl bg-white px-8 py-4 rounded-md">
+                    TEST CONTENTS
+                </div>
+                <div class="max-w-7xl bg-white px-8 py-4 rounded-md">
+                    TEST CONTENTS
+                </div>
+                <div class="max-w-7xl bg-white px-8 py-4 rounded-md">
+                    TEST CONTENTS
+                </div>
+                <div class="max-w-7xl bg-white px-8 py-4 rounded-md">
+                    TEST CONTENTS
+                </div>
+                <div class="max-w-7xl bg-white px-8 py-4 rounded-md">
+                    TEST CONTENTS
+                </div>
+                <div class="max-w-7xl bg-white px-8 py-4 rounded-md">
+                    TEST CONTENTS
+                </div>
+                <div class="max-w-7xl bg-white px-8 py-4 rounded-md">
+                    TEST CONTENTS
+                </div>
+                <div class="max-w-7xl bg-white px-8 py-4 rounded-md">
+                    TEST CONTENTS
+                </div>
+                <div class="max-w-7xl bg-white px-8 py-4 rounded-md">
+                    TEST CONTENTS
+                </div>
+                <div class="max-w-7xl bg-white px-8 py-4 rounded-md">
+                    TEST CONTENTS
+                </div>
+                <div class="max-w-7xl bg-white px-8 py-4 rounded-md">
+                    TEST CONTENTS
+                </div>
+
+
+             
+                
+                <div class="max-w-7xl bg-white px-8 py-4 rounded-md">
+                    TEST CONTENTS!
+                </div>
+
+
+
+
+
+
+
+
+
+
             </div>
         </div>
        
@@ -53,7 +124,7 @@ library.add(faPlus);
 
 
 <script>
-AOS.init({dataAosDuration:'2000',
-            });
+AOS.init({ once: 'true'
+	});
 AOS.refresh();
 </script>

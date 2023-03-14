@@ -78,27 +78,27 @@ A total of 35 participants coming from 15 co-operatives nationwide joined and ac
 
 <div class=" h-max py-10 my-10 w-screen flex flex-wrap justify-center items-center px-4text-sm ">
 
-    <div class="card px-4 text-justify flex flex-col justify-center items-center my-8 mb-10 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="500" >
+    <div class="card px-4 text-justify flex flex-col justify-center items-center my-8 mb-10 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="1000" >
         <font-awesome-icon icon="fa-solid fa-note-sticky " class="text-theme1 h-10 mb-4" />
             Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor.
     </div>
-    <div class="card px-4 text-justify flex flex-col justify-center items-center my-8 mb-10 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="500" >
+    <div class="card px-4 text-justify flex flex-col justify-center items-center my-8 mb-10 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="1000" >
         <font-awesome-icon icon="fa-solid fa-coins" class="text-theme1 h-10 mb-4" />
         Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor.
     </div>
-    <div class="card px-4 text-justify flex flex-col justify-center items-center my-8 mb-10 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="500" >
+    <div class="card px-4 text-justify flex flex-col justify-center items-center my-8 mb-10 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="1000" >
         <font-awesome-icon icon="fa-solid fa-lightbulb" class="text-theme1 h-10 mb-4" />
         Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor.
     </div>
-    <div class="card px-4 text-justify flex flex-col justify-center items-center my-8 mb-10 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="500" >
+    <div class="card px-4 text-justify flex flex-col justify-center items-center my-8 mb-10 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="1000" >
         <font-awesome-icon icon="fa-solid fa-briefcase-medical" class="text-theme1 h-10 mb-4" />
         Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor.
     </div>
-    <div class="card px-4 text-justify flex flex-col justify-center items-center my-8 mb-10 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="500" >
+    <div class="card px-4 text-justify flex flex-col justify-center items-center my-8 mb-10 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="1000" >
         <font-awesome-icon icon="fa-solid fa-chart-simple" class="text-theme1 h-10 mb-4" />
         Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor.
     </div>
-    <div class="card px-4 text-justify flex flex-col justify-center items-center my-8 mb-10 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="500" >
+    <div class="card px-4 text-justify flex flex-col justify-center items-center my-8 mb-10 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="1000" >
         <font-awesome-icon icon="fa-solid fa-earth-asia" class="text-theme1 h-10 mb-4" />
         Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor.
 
@@ -121,4 +121,7 @@ A total of 35 participants coming from 15 co-operatives nationwide joined and ac
 
 
 </template>
-
+<script>
+AOS.init();
+AOS.refresh();
+</script>
