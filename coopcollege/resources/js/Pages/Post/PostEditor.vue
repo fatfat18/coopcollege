@@ -30,7 +30,7 @@ background: linear-gradient(0deg, #000033 0%, #ffcc00 100%);
 
             <div class=" xl:w-3/4 w-4/5">
                     <form action="">
-                    <button class="py-2 px-4 bg-green-700 rounded-lg mb-10 hover:bg-green-600 hover:translate-y-2 hover:scale-105 transition ease-in duration-300">Save</button>
+                    <button class="text-white py-2 px-4 bg-green-700 rounded-lg mb-10 hover:bg-green-600 hover:translate-y-2 hover:scale-105 transition ease-in duration-300">Save</button>
                     
                         <div class="">
                         
@@ -53,7 +53,7 @@ background: linear-gradient(0deg, #000033 0%, #ffcc00 100%);
                             <Textarea 
                             id="description"
                             type="description"
-                            class="mt-4 h-40 py-2 px-2 block w-full focus:ring-yellow-500 active:ring-yellow-500"
+                            class="mt-4 h-40 py-2 px-2 block w-full rounded-lg focus:ring-yellow-500 active:ring-yellow-500"
                             required
                             autocomplete="current-description"
                             placeholder="Description"
@@ -61,11 +61,12 @@ background: linear-gradient(0deg, #000033 0%, #ffcc00 100%);
                         
                             </Textarea>
                         
-                            <select id="cars" name="cars" class="mt-8">
-                              <option value="volvo">News</option>
-                              <option value="saab">Article</option>
-                              <option value="fiat">Events</option>
-                              <option value="audi">Activity</option>
+                            <select id="posttype" name="posttype" class="mt-4">
+                              <option hidden>Post Type</option>
+                              <option value="News">News</option>
+                              <option value="Article">Article</option>
+                              <option value="Events">Events</option>
+                              <option value="Activity">Activity</option>
                             </select>
                         
                         </div>
