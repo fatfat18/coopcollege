@@ -12,8 +12,19 @@ import {  faPhoneFlip } from "@fortawesome/free-solid-svg-icons"
 
 library.add(faPhoneFlip)
 
+
+
+
+
 </script>
 
+
+<style>
+.card{
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+</style>
 
 <template>
 <div id="welcome" class="h-28 bg-theme1 w-screen text-white  md:text-sm flex xl:flex-row justify-center items-center">
@@ -22,7 +33,7 @@ library.add(faPhoneFlip)
     </div>
     <div class=" flex w-1/4">
 
-       <a href="#footer"><div data-aos="fade-left" data-aos-duration="1000" class=" transition ease-in duration-300 border border-white bg-theme2 text-theme1 hover:bg-theme1 hover:text-theme2 hover:border-theme2 text-l font-bold w-36 h-12 py-4 px-4 rounded-full overflow-y-hidden relative contactus ">
+       <a href="#footer"><div data-aos="fade-left" data-aos-duration="1000" class="card transition ease-in duration-300 border border-white bg-theme2 text-theme1 hover:bg-theme1 hover:text-theme2 hover:border-theme2 text-l font-bold w-36 h-12 py-4 px-4 rounded-full overflow-y-hidden relative contactus ">
             Contact Us<font-awesome-icon icon="fa-solid fa-phone-flip" class="h-4 w-6 ml-2 contactussvg" />  
         
         </div></a>
