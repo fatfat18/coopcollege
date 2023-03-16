@@ -68,18 +68,16 @@ library.add(faPlus);
 
         <!-- DIRI MAG LOOP ANG GIKAN SA DATABASE PAGINATE LANG DAYUN BY 10s -->
 
-               <PostTile />
-               <PostTile />
-               <PostTile />
-               <PostTile />
-               
-              
-
-
-
-
-
-
+               <PostTile description='TESTING DESCRIPTION1' postid='1' />
+               <PostTile description='TESTING DESCRIPTION2' postid='2' />
+               <PostTile description='TESTING DESCRIPTION3' postid='3' />
+               <PostTile description='TESTING DESCRIPTION4' postid='4' />
+               <PostTile description='TESTING DESCRIPTION5' postid='5' />
+               <PostTile description='TESTING DESCRIPTION6' postid='6' />
+               <PostTile description='TESTING DESCRIPTION7' postid='7' />
+               <PostTile description='TESTING DESCRIPTION8' postid='8' />
+               <PostTile description='TESTING DESCRIPTION9' postid='9' />
+               <PostTile description='TESTING DESCRIPTION10' postid='10' />
 
 
             </div>

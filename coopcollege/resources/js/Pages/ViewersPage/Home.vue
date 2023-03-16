@@ -65,7 +65,7 @@ A total of 35 participants coming from 15 co-operatives nationwide joined and ac
     <div class="lpg1 bg-slate-900 h-max w-screen xl:w-1/2 " data-aos="fade-right" data-aos-duration="3000" >
         <img src="../../../asset/lpg1.jpg" class="h-screen w-screen items-stretch" />
     </div>
-    <div class="flex flex-col justify-center items-center h-max w-screen xl:w-1/2" data-aos="zoom-in-left" data-aos-duration="2000" data-aos-anchor-placement="top-center">
+    <div class="flex flex-col justify-center items-center h-max w-screen xl:w-1/2" data-aos="fade-left" data-aos-delay="1000" data-aos-duration="2000" data-aos-anchor-placement="top-center">
         <p class="xl:text-6xl text-sm mt-4 xl:mb-8 text-white"> Cebu Training Session</p>
         <p class=" text-white text-xs xl:text-xl text-justify px-8 py-4 xl:mr-12 ">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspThe morning session on Deepening our Co-operative Identity was facilitated by the <strong>Co-op College PH</strong> team headed by CEO & Principal <strong>Donna Dizon</strong>. This interactive learning activity brought out the creativity of the participants in making their own “Halo-halo” which requires certain key ingredients on embodying our identity as co-op leaders.
 The afternoon session on Co-op Financial Literacy: The Usage of Statutory Funds was conducted by our Resource Speaker and Trainer <strong>Hon. Gervacio Piator, CPA, MBA, DM, PhD.</strong>
