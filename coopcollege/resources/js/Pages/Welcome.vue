@@ -28,7 +28,7 @@ import Home from '@/Pages/ViewersPage/Home.vue';
 
 
 <script>
-AOS.init({once:'true',
-            });
+AOS.init({startEvent: 'load',
+          once : 'true,'});
 AOS.refresh();
 </script>

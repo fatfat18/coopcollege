@@ -92,7 +92,7 @@ library.add(faPlus);
 
 
 <script>
-AOS.init({ once: 'true'
-	});
+AOS.init({startEvent: 'load',
+          once : 'true,'});
 AOS.refresh();
 </script>
