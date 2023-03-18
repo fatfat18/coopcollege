@@ -17,7 +17,7 @@ import NewsRow from '@/NewsComponent/NewsRow.vue'
 
  <div class="h-max w-screen flex flex-col justify-center items-center mt-8">
 
-  <h1 class=" text-xs xl:text-8xl mb-8" data-aos="zoom-in" data-aos-duration="1000"> WHAT'S NEW?</h1>
+  <h1 class=" text-3xl xl:text-8xl mb-8" data-aos="zoom-in" data-aos-duration="1000"> WHAT'S NEW?</h1>
 
     <div class="h-max" data-aos="fade-up" data-aos-duration="1000">
 
@@ -28,15 +28,16 @@ import NewsRow from '@/NewsComponent/NewsRow.vue'
 
     <div class="h-max w-screen bg-theme1 flex xl:flex-row flex-col pb-10 overflow-y-hidden">
 
-    
+
+
       <NewsCol data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000" />
       <NewsCol data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1000" />
       <NewsCol data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1000" />
-      
+   
 
     </div>
 
-    <div class="h-max w-screen bg-theme2 flex flex-col pt-10">
+    <div class="h-max w-screen bg-theme2 flex justify-center items-center flex-col py-10">
 
     <NewsRow data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300" />
     <NewsRow data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400" />
