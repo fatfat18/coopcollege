@@ -8,7 +8,7 @@
 
 <template>
 
-    <div class=" xl:max-w-7xl xl:w-1/3 h-max mt-12 px-12 xl:px-12 xl:py-20">
+    <div class=" xl:max-w-7xl xl:w-1/3 h-max px-12 xl:px-12 xl:py-20">
         <img src="../../asset/newsheading.jpg" class="w-max rounded-md" alt="">
         <p class="max-w-7xl text-xs xl:text-md text-justify mt-4 text-white">
             

@@ -26,7 +26,7 @@ import NewsRow from '@/NewsComponent/NewsRow.vue'
     </div>  
   
 
-    <div class="h-max w-screen bg-theme1 flex xl:flex-row flex-col pb-10 overflow-y-hidden">
+    <div class="h-max w-screen bg-theme1 flex xl:flex-row flex-col  overflow-y-hidden">
 
 
 
