@@ -75,6 +75,13 @@ Route::get('/Projects', function () {
 });
 
 
+Route::get('/ViewPost', function () {
+    return Inertia::render('ViewPost');
+});
+
+
+
+
 
 Route::get('/news',[news::class, 'displayNews'] );
 

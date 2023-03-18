@@ -39,7 +39,7 @@ import NewsRow from '@/NewsComponent/NewsRow.vue'
 
     <div class="h-max w-screen bg-theme2 flex justify-center items-center flex-col py-10">
 
-    <NewsRow data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300" />
+    <a href="/ViewPost"><NewsRow data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300" /></a>
     <NewsRow data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400" />
     <NewsRow data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500"/>
 
