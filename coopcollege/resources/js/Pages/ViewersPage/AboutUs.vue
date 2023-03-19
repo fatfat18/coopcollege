@@ -30,11 +30,13 @@ import ProfileCard from '@/Components/ProfileCard.vue'
   <ProfileCard data-aos="fade-right" data-aos-duration="500"/>
 
   </div>
-  
-  <div class="w-screen max-w-7xl h-screen bg-white mx-40 xl:rounded-2xl px-20 py-10 overflow-y-hidden flex justify-center item-center">
-   <h1 class=" text-xl xl:text-4xl">Our Partners</h1> 
-  </div>
 
+  <div class="max-w-7xl mt-20">
+      <h1 class=" text-xl xl:text-3xl text-white mb-4 ml-8">Our Partners</h1>
+      <div class="w-screen max-w-7xl h-screen bg-white xl:rounded-3xl px-20 py-10 overflow-y-hidden flex justify-center item-center">
+   
+      </div>
+  </div>
   
 </div>
 </template>

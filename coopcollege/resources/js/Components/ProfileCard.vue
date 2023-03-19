@@ -6,7 +6,7 @@
 <template>
 
 <div class="">
-    <div class="w-72 h-96 bg-zinc-300">
+    <div class="w-72 h-96 bg-zinc-400">
 
     </div>
     <div>
