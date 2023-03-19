@@ -41,7 +41,26 @@ import ProfileCard from '@/Components/ProfileCard.vue'
 
   <div class="max-w-7xl mt-20">
       <h1 class=" text-xl xl:text-3xl text-white mb-4 ml-8">Our Partners</h1>
-      <div class="w-screen max-w-7xl h-screen bg-white xl:rounded-3xl px-20 py-10 overflow-y-hidden flex justify-center item-center">
+      <div class="w-screen max-w-7xl h-max xl:rounded-3xl py-10 xl:px-40 bg-white gap-10 flex flex-wrap">
+
+        <img src="../../../asset/partners/1.png" alt="" class="w-max xl:h-24 h-12">
+        <img src="../../../asset/partners/2.png" alt="" class="w-max xl:h-24 h-12">
+        <img src="../../../asset/partners/3.png" alt="" class="w-max xl:h-24 h-12">
+        <img src="../../../asset/partners/4.png" alt="" class="w-max xl:h-24 h-12">
+        <img src="../../../asset/partners/5.png" alt="" class="w-max xl:h-24 h-12">
+        <img src="../../../asset/partners/6.png" alt="" class="w-max xl:h-24 h-12">
+        <img src="../../../asset/partners/7.png" alt="" class="w-max xl:h-24 h-12">
+        <img src="../../../asset/partners/8.png" alt="" class="w-max xl:h-24 h-12">
+        <img src="../../../asset/partners/9.png" alt="" class="w-max xl:h-24 h-12">
+        <img src="../../../asset/partners/10.png" alt="" class="w-max xl:h-24 h-12">
+        <img src="../../../asset/partners/11.png" alt="" class="w-max xl:h-24 h-12">
+        <img src="../../../asset/partners/12.png" alt="" class="w-max xl:h-24 h-12">
+        <img src="../../../asset/partners/13.png" alt="" class="w-max xl:h-24 h-12">
+        <img src="../../../asset/partners/14.png" alt="" class="w-max xl:h-24 h-12">
+       
+
+
+
    
       </div>
   </div>
