@@ -12,8 +12,16 @@ import ProfileCard from '@/Components/ProfileCard.vue'
   <Header />
  <ResponsiveNavBar />
 
-<div class="w-screen flex flex-col justify-center items-center bg-theme1">
-  <div class="w-screen max-w-7xl h-max  pt-20 flex justify-center gap-10 flex-wrap overflow-y-hidden">
+<div class="w-screen flex flex-col justify-center items-center bg-zinc-800">
+
+
+<div class="overflow-y-hidden pt-20  w-3/4 xl:pl-20">
+  <p class="text-white text-4xl xl:text-5xl">Who are we?</p>
+  <p class="text-white text-3xl xl:text-3xl xl:pt-4">BOARD OF TRUSTEES</p>
+
+</div>
+
+  <div class="w-screen max-w-7xl h-max  pt-10 flex justify-center gap-10 flex-wrap overflow-y-hidden">
 
   <ProfileCard data-aos="fade-right" data-aos-duration="500"/>
   <ProfileCard data-aos="fade-right" data-aos-duration="600"/>

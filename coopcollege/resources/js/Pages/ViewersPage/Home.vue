@@ -15,6 +15,8 @@ import { faBriefcaseMedical } from "@fortawesome/free-solid-svg-icons";
 import { faChartSimple } from "@fortawesome/free-solid-svg-icons";
 import { faEarthAsia } from "@fortawesome/free-solid-svg-icons";
 import { ref } from 'vue';
+import Header from "@/Components/Header.vue"
+import ResponsiveNavBar from '@/Components/ResponsiveNavBar.vue'
 
 
 
@@ -41,11 +43,14 @@ function copyEmailAdd() {
 .card{
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
+
+
 </style>
 
 
 <template>
-
+    <Header />
+      <ResponsiveNavBar />
 
 <div id="maincontent" class="flex justify-center items-center h-max w-screen bg-slate-300" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" >
     <img src="../../../asset/landingpage.jpg"/>
@@ -125,4 +130,7 @@ A total of 35 participants coming from 15 co-operatives nationwide joined and ac
 AOS.init({startEvent: 'load',
           once : 'true,'});
 AOS.refresh();
+
 </script>
+
+

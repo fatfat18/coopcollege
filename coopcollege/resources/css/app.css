@@ -18,10 +18,16 @@ div{
   
 }
 
-.navbar:hover{
-    color: #FECB00;
+.navbar{
+    transition: .5s;
 }
 
+.navbar:hover{
+    color: #FFCC00;
+    scale: 1.25;
+   
+
+}
 
 .lpg1{
     border-radius: 0% 25% 61% 0% / 25% 0% 100% 25%;
