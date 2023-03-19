@@ -4,6 +4,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import ResponsiveNavBar from '@/Components/ResponsiveNavBar.vue'
 import Header from '@/Components/Header.vue'
+import ProfileCard from '@/Components/ProfileCard.vue'
 
 </script>
 
@@ -11,22 +12,38 @@ import Header from '@/Components/Header.vue'
   <Header />
  <ResponsiveNavBar />
 
+<div class="w-screen flex flex-col justify-center items-center bg-theme1">
+  <div class="w-screen max-w-7xl h-max  pt-20 flex justify-center gap-10 flex-wrap overflow-y-hidden">
 
- <div class="h-screen w-screen flex justify-center items-center">
+  <ProfileCard data-aos="fade-right" data-aos-duration="500"/>
+  <ProfileCard data-aos="fade-right" data-aos-duration="600"/>
+  <ProfileCard data-aos="fade-right" data-aos-duration="700"/>
+  <ProfileCard data-aos="fade-right" data-aos-duration="800"/>
+  <ProfileCard data-aos="fade-right" data-aos-duration="500"/>
+  <ProfileCard data-aos="fade-right" data-aos-duration="600"/>
+  <ProfileCard data-aos="fade-right" data-aos-duration="700"/>
+  <ProfileCard data-aos="fade-right" data-aos-duration="800"/>
+  <ProfileCard data-aos="fade-right" data-aos-duration="500"/>
+  <ProfileCard data-aos="fade-right" data-aos-duration="600"/>
+  <ProfileCard data-aos="fade-right" data-aos-duration="700"/>
+  <ProfileCard data-aos="fade-right" data-aos-duration="800"/>
+  <ProfileCard data-aos="fade-right" data-aos-duration="500"/>
 
-    <h1>
-        SO MAO NING ABOUT US 
-    </h1>
+  </div>
+  
+  <div class="w-screen max-w-7xl h-screen bg-white mx-40 xl:rounded-2xl px-20 py-10 overflow-y-hidden flex justify-center item-center">
+   <h1 class=" text-xl xl:text-4xl">Our Partners</h1> 
+  </div>
 
- </div>
-
+  
+</div>
 </template>
 
 
 
 
 <script>
-AOS.init({dataAosDuration:'2000',
-            });
+AOS.init({startEvent: 'load',
+          once : 'true,'});
 AOS.refresh();
 </script>
