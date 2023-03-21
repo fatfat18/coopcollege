@@ -18,18 +18,26 @@ export default {
   },
 };
 </script>
->
+
+<style>
+
+
+.trans {
+  transition: 1s ease-in;
+  transition: transform 0.3s ease-in-out;
+}
+
+</style>
 
 <template>
-    <div class="bg-zinc-700 w-screen">
+    <div class="bg-theme1 w-screen">
       <nav
         class="
           py-3
           xl:flex 
           justify-center
-          text-xl
-      
-       
+          text-2xl
+        
       
           
        
@@ -37,7 +45,7 @@ export default {
         "
         data-aos="fade-down" data-aos-duration="1000"
        >
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between trans">
        
           <!-- Mobile menu button -->
           <div @click="toggleNav" class="flex md:hidden">
@@ -48,6 +56,7 @@ export default {
                 hover:text-gray-400
                 focus:outline-none focus:text-gray-400
                 ml-4
+       
                 
               "
             >
@@ -78,6 +87,8 @@ export default {
             md:flex md:space-y-0 md:flex-row items-center justify-center md:space-x-10 md:mt-0
             transition duration-500
             ResNavBar
+            pb-4
+            
             
           "
           

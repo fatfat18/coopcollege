@@ -8,13 +8,19 @@ import CalendarMonth from '@/Components/CalendarMonth.vue';
 
 </script>
 
+<style>
+.bg{
+background: rgb(0,0,51);
+background: linear-gradient(143deg, rgba(0,0,51,1) 60%, rgba(255,204,0,1) 100%);
+}
+</style>
 
 <template>
   <Header />
  <ResponsiveNavBar />
 
 
- <div class="h-max w-screen flex flex-col justify-center items-center bg-theme1 overflow-y-hidden">
+ <div class="h-max w-screen flex flex-col justify-center items-center bg-theme1 overflow-y-hidden bg">
 
   <div class="h-24 w-screen max-w-7xl flex bg-theme2 justify-center items-center mt-10 xl:rounded-full " data-aos="fade-up" data-aos-duration="1000" >
     <p class="xl:text-5xl text-2xl font-thin text-theme1" > Training Calendar 2023</p>

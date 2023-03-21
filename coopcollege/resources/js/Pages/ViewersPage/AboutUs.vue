@@ -8,11 +8,19 @@ import ProfileCard from '@/Components/ProfileCard.vue'
 
 </script>
 
+
+<style>
+.bg{
+background: rgb(0,0,51);
+background: linear-gradient(233deg, rgba(0,0,51,1) 60%, rgba(255,204,0,1) 100%);
+}
+
+</style>
 <template>
   <Header />
  <ResponsiveNavBar />
 
-<div class="w-screen flex flex-col justify-center items-center bg-zinc-800">
+<div class="w-screen flex flex-col justify-center items-center bg ">
 
 
 <div class="overflow-y-hidden pt-20  w-3/4 xl:pl-20">

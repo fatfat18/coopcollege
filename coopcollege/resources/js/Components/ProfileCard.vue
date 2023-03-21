@@ -10,7 +10,7 @@ export default {
 <template>
 
 <div class="">
-    <div class="w-72 h-96 bg-zinc-400">
+    <div class="w-72 h-96 bg-white">
 
     </div>
     <div>
