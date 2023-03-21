@@ -1,4 +1,8 @@
-<script setup>
+<script >
+export default {
+ props: ['Name','Position','Img']
+};
+
 
 </script>
 
