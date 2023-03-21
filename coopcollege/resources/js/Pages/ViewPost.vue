@@ -1,12 +1,13 @@
 <script>
-
+//Template ni sya sa tanan post or mao ni sya ang POST VIEWER sa mga viewers end.
 
 </script>
 
-
 <template>
 
-    <h1> THIS IS THE LAYOUT TO VIEW THE POST </h1>
+    <div class="w-screen h-screen bg-yellow-100">
+
+    </div>
 
 
 </template>

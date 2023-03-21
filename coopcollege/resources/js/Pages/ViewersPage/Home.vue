@@ -52,7 +52,7 @@ function copyEmailAdd() {
     <Header />
       <ResponsiveNavBar />
 
-<div id="maincontent" class="flex justify-center items-center h-max w-screen bg-slate-300" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" >
+<div id="maincontent" class="flex justify-center items-center h-max w-screen bg-white" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" >
     <img src="../../../asset/landingpage.jpg"/>
 </div>
 
