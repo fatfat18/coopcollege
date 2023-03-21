@@ -36,7 +36,8 @@ export default {
           py-3
           xl:flex 
           justify-center
-          text-2xl
+          text-xl
+          xl:text-2xl
         
       
           
