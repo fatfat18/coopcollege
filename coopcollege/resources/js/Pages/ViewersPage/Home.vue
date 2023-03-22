@@ -48,20 +48,18 @@ function copyEmailAdd() {
 </style>
 
 
-<template>
+<template >
     <Header />
       <ResponsiveNavBar />
 
-<div id="maincontent" class="flex justify-center items-center h-max w-screen bg-white" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" >
-    <img src="../../../asset/landingpage.jpg"/>
+<div id="maincontent" class="flex justify-center items-center h-max w-screen bg-cover" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000" >
+    <img src="../../../asset/landingpagenew.jpg" class="bg-cover w-full"  /> 
 </div>
 
 <div class="xl:h-96 md:h-max xl:w-screen  flex justify-center items-center xl:text-2xl text-xs text-justify py-10 px-8" data-aos="fade-up" data-aos-duration="2000">
 
-    <p class="md:mx-8">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspThe morning session on Deepening our Co-operative Identity was facilitated by the <strong>Co-op College PH</strong> team headed by CEO & Principal <strong>Donna Dizon</strong>. This interactive learning activity brought out the creativity of the participants in making their own “Halo-halo” which requires certain key ingredients on embodying our identity as co-op leaders.
-The afternoon session on Co-op Financial Literacy: The Usage of Statutory Funds was conducted by our Resource Speaker and Trainer <strong>Hon. Gervacio Piator, CPA, MBA, DM, PhD.</strong>
-A total of 35 participants coming from 15 co-operatives nationwide joined and actively participated on these sessions. To learn more and be involved with the Co-op College programs (both locally and abroad), join us and be a member of the <strong>National Federation of Cooperative Primaries in the Philippines - Nafecoop</strong> now! </p>
-
+    <p class="md:mx-8">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp On March 14, 2023, the Ceremonial Turn-over of the Purchased 2 ha. lot by CLIMBS Life and General Insurance Cooperative to Co-operative College of the Philippines was carried-out wherein soon to rise will be the latter's campus in El Salvador City, Misamis Oriental, Philippines.
+#CooperativeEducation #CooperativeIdentity #continuouslearning </p>
 </div>
 
 

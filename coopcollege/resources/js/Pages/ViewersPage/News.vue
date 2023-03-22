@@ -30,9 +30,9 @@ import NewsRow from '@/NewsComponent/NewsRow.vue'
 
 
 
-      <NewsCol data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000" />
-      <NewsCol data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1000" />
-      <NewsCol data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1000" />
+      <a href="/ViewPost" class="w-full"><NewsCol data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000" /></a> 
+      <a href="/ViewPost" class="w-full"><NewsCol data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1000" /></a>
+      <a href="/ViewPost" class="w-full"> <NewsCol data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1000" /></a>
    
 
     </div>
@@ -40,8 +40,8 @@ import NewsRow from '@/NewsComponent/NewsRow.vue'
     <div class="h-max w-screen bg-theme2 flex justify-center items-center flex-col py-10">
 
     <a href="/ViewPost"><NewsRow data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300" /></a>
-    <NewsRow data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400" />
-    <NewsRow data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500"/>
+    <a href="/ViewPost"><NewsRow data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400" /></a>
+    <a href="/ViewPost"><NewsRow data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500"/></a>
 
 
 
