@@ -4,6 +4,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import ResponsiveNavBar from '@/Components/ResponsiveNavBar.vue'
 import Header from '@/Components/Header.vue'
+import NoContents from '@/Components/NoContents.vue';
 
 </script>
 
@@ -14,9 +15,8 @@ import Header from '@/Components/Header.vue'
 
  <div class="h-screen w-screen flex justify-center items-center">
 
-    <h1>
-        SO MAO NING CASE STUDIES
-    </h1>
+
+      <NoContents />
 
  </div>
 

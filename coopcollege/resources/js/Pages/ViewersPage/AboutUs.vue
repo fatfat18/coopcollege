@@ -87,7 +87,7 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
   <!-- Item 1 -->
   <li>
     <div class="direction-r" >
-      <div class="flag-wrapper">
+      <div class="flag-wrapper overflow-y-hidden">
         <span class="hexa"></span>
         <span class="flag"></span>
         <span class="time-wrapper" data-aos="fade-right" data-aos-duration="1500"><span class="time">2011</span></span>
@@ -99,7 +99,7 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
   <!-- Item 2 -->
   <li>
     <div class="direction-l" >
-      <div class="flag-wrapper">
+      <div class="flag-wrapper overflow-y-hidden">
         <span class="hexa"></span>
         <span class="flag"></span>
         <span class="time-wrapper" data-aos="fade-left" data-aos-duration="1500"><span class="time">2012</span></span>
@@ -111,7 +111,7 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
   <!-- Item 3 -->
   <li>
     <div class="direction-r" >
-      <div class="flag-wrapper">
+      <div class="flag-wrapper overflow-y-hidden">
         <span class="hexa"></span>
         <span class="flag"></span>
         <span class="time-wrapper" data-aos="fade-right" data-aos-duration="1500"><span class="time">2013</span></span>
@@ -123,7 +123,7 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
   <!-- Item 4 -->
   <li>
     <div class="direction-l" >
-      <div class="flag-wrapper">
+      <div class="flag-wrapper overflow-y-hidden">
         <span class="hexa"></span>
         <span class="flag"></span>
         <span class="time-wrapper" data-aos="fade-left" data-aos-duration="1500"><span class="time">2014</span></span>
@@ -135,7 +135,7 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
   <!-- Item 5 -->
   <li>
     <div class="direction-r" >
-      <div class="flag-wrapper">
+      <div class="flag-wrapper overflow-y-hidden">
         <span class="hexa"></span>
         <span class="flag"></span>
         <span class="time-wrapper" data-aos="fade-right" data-aos-duration="1500"><span class="time">2015</span></span>
@@ -147,7 +147,7 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
   <!-- Item 6 -->
   <li>
     <div class="direction-l" >
-      <div class="flag-wrapper">
+      <div class="flag-wrapper overflow-y-hidden">
         <span class="hexa"></span>
         <span class="flag"></span>
         <span class="time-wrapper" data-aos="fade-left" data-aos-duration="1500"><span class="time">2016</span></span>
@@ -159,7 +159,7 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
   <!-- Item 7 -->
   <li>
     <div class="direction-r" >
-      <div class="flag-wrapper">
+      <div class="flag-wrapper overflow-y-hidden">
         <span class="hexa"></span>
         <span class="flag"></span>
         <span class="time-wrapper" data-aos="fade-right" data-aos-duration="1500"><span class="time">2017</span></span>
@@ -173,7 +173,7 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
   <!-- Item 8 -->
   <li>
     <div class="direction-l">
-      <div class="flag-wrapper">
+      <div class="flag-wrapper overflow-y-hidden">
         <span class="hexa"></span>
         <span class="flag"></span>
         <span class="time-wrapper" data-aos="fade-left" data-aos-duration="1500"><span class="time">2018</span></span>
@@ -186,7 +186,7 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
   <!-- Item 9 -->
   <li>
     <div class="direction-r">
-      <div class="flag-wrapper">
+      <div class="flag-wrapper overflow-y-hidden">
         <span class="hexa"></span>
         <span class="flag"></span>
         <span class="time-wrapper" data-aos="fade-right" data-aos-duration="1500"><span class="time">2019</span></span>
@@ -201,7 +201,7 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
   <!-- Item 10 -->
   <li>
     <div class="direction-l">
-      <div class="flag-wrapper">
+      <div class="flag-wrapper overflow-y-hidden">
         <span class="hexa"></span>
         <span class="flag"></span>
         <span class="time-wrapper" data-aos="fade-left" data-aos-duration="1500"><span class="time">2020</span></span>
@@ -219,7 +219,7 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
    <!-- Item 11 -->
    <li>
     <div class="direction-r" >
-      <div class="flag-wrapper">
+      <div class="flag-wrapper overflow-y-hidden">
         <span class="hexa"></span>
         <span class="flag"></span>
         <span class="time-wrapper" data-aos="fade-right" data-aos-duration="1500"><span class="time">2021</span></span>
@@ -237,7 +237,7 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
   <!-- Item 12 -->
   <li>
     <div class="direction-l" >
-      <div class="flag-wrapper">
+      <div class="flag-wrapper overflow-y-hidden">
         <span class="hexa"></span>
         <span class="flag"></span>
         <span class="time-wrapper" data-aos="fade-left" data-aos-duration="1500"><span class="time">2022</span></span>
