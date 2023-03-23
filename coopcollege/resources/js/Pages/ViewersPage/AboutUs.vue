@@ -259,9 +259,11 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
 
 
     </div>
-    <div class="w-full flex justify-center items-center text-center pt-8 text-2xl">PRESENT</div>
+
+    
   
   </li>
+  <div class="w-full h-max overflow-y-hidden flex justify-center items-center text-center pt-8 text-5xl my-10">PRESENT</div>
 
 
 
