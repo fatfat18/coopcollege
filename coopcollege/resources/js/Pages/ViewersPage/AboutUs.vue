@@ -6,6 +6,7 @@ import '../../../css/timeline.css'
 import ResponsiveNavBar from '@/Components/ResponsiveNavBar.vue'
 import Header from '@/Components/Header.vue'
 import ProfileCard from '@/Components/ProfileCard.vue'
+import Footer from '@/Components/Footer.vue';
 
 </script>
 
@@ -277,6 +278,7 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
 
 </ul>
 
+<Footer />
 
    
     

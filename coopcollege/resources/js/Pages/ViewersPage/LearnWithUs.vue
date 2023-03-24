@@ -5,6 +5,7 @@ import 'aos/dist/aos.css';
 import ResponsiveNavBar from '@/Components/ResponsiveNavBar.vue';
 import Header from '@/Components/Header.vue';
 import CalendarMonth from '@/Components/CalendarMonth.vue';
+import Footer from '@/Components/Footer.vue';
 
 </script>
 
@@ -104,6 +105,7 @@ background: linear-gradient(143deg, rgba(0,0,51,1) 60%, rgba(255,204,0,1) 100%);
             </div>
 
           </div>
+    <Footer />
   
  </div>
 

@@ -7,6 +7,8 @@ import Header from '@/Components/Header.vue';
 import Newsheading from '@/NewsComponent/NewsHeading.vue';
 import NewsCol from '@/NewsComponent/NewsCol.vue'
 import NewsRow from '@/NewsComponent/NewsRow.vue'
+import Footer from '@/Components/Footer.vue';
+
 
 </script>
 
@@ -48,6 +50,7 @@ import NewsRow from '@/NewsComponent/NewsRow.vue'
     </div>
 
 
+    <Footer />
 
 
     

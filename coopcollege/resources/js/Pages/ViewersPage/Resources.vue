@@ -5,6 +5,7 @@ import 'aos/dist/aos.css'
 import ResponsiveNavBar from '@/Components/ResponsiveNavBar.vue'
 import Header from '@/Components/Header.vue'
 import NoContents from '@/Components/NoContents.vue';
+import Footer from '@/Components/Footer.vue';
 
 </script>
 
@@ -15,8 +16,10 @@ import NoContents from '@/Components/NoContents.vue';
 
  <div class="h-screen w-screen flex justify-center items-center">
     <NoContents />
- </div>
 
+
+ </div>
+ <Footer />
 </template>
 
 
