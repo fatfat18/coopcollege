@@ -99,7 +99,6 @@ export default {
           <a href="/AboutUs"><li class="text-white navbar ">About us</li></a>
           <a href="/LearnWithUs"><li class="text-white navbar ">Learn with us</li></a>
           <a href="/Resources"><li class="text-white navbar ">Resources</li></a>
-          <a href="/CaseStudies"><li class="text-white navbar ">Case Studies</li></a>
           <a href="/Projects"><li class="text-white navbar ">Projects</li></a>
           
          

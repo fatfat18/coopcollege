@@ -25,8 +25,10 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
 
 
 <div class="overflow-y-hidden pt-20  w-3/4 xl:pl-20">
-  <p class="text-white text-4xl xl:text-5xl">Who are we?</p>
-  <p class="text-white text-3xl xl:text-3xl xl:pt-4">BOARD OF TRUSTEES</p>
+  <p class="text-white text-4xl xl:text-5xl">Who are we?</p><br><br>
+
+
+  <p class="text-white text-3xl xl:text-3xl xl:pt-4">GOVERNANCE</p>
 
 </div>
 
@@ -79,7 +81,7 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
 
 
     <header class="xl:mt-40 mt-20 flex flex-col">
-      <h1 class="text-white mb-20 text-2xl xl:text-7xl">HISTORY</h1>
+      <h1 class="text-white mb-20 text-2xl xl:text-7xl">OUR HISTORY</h1>
     <div class="w-screen flex justify-center items-center"><br><img src="../../../asset/timeline/climbs_logo_edited_400x400.png" alt="" class="w-32" data-aos="fade-up" data-aos-duration="1000" /></div>
 </header>
 

@@ -20,15 +20,24 @@ use App\Http\Controllers\NavBarController;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
+    return Inertia::render('ViewersPage/Home', [
         'canLogin' => Route::has('login'),        //ADMIN LOGIN
         'canRegister' => Route::has('register'),  //ADMIN REGISTER
     ]);
 });
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/Posts', function () {
+    return Inertia::render('Posts');
+})->middleware(['auth', 'verified'])->name('Posts');
+
+
+Route::get('/BoardOfTrustees', function () {
+    return Inertia::render('BoardOfTrustees');
+})->middleware(['auth', 'verified'])->name('BoardOfTrustees');
+
+
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -66,9 +75,8 @@ Route::get('/Resources', function () {
     return Inertia::render('ViewersPage/Resources');
 });
 
-Route::get('/CaseStudies', function () {
-    return Inertia::render('ViewersPage/CaseStudies');
-});
+
+
 
 Route::get('/Projects', function () {
     return Inertia::render('ViewersPage/Projects');

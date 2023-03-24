@@ -30,10 +30,19 @@ const showingNavigationDropdown = ref(false);
 
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:ml-10 sm:flex">
-                                <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    Dashboard
+                                <NavLink :href="route('Posts')" :active="route().current('Posts')">
+                                    Posts
                                 </NavLink>
+
+                                <NavLink :href="route('BoardOfTrustees')" :active="route().current('BoardOfTrustees')">
+                                    Board of Trustees
+                                </NavLink>
+                                
+
+
                             </div>
+
+
                          
                         </div>
 
@@ -104,8 +113,11 @@ const showingNavigationDropdown = ref(false);
                 <!-- Responsive Navigation Menu -->
                 <div :class="{ block: showingNavigationDropdown, hidden: !showingNavigationDropdown }" class="sm:hidden">
                     <div class="pt-2 pb-3 space-y-1">
-                        <ResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                            Dashboard
+                        <ResponsiveNavLink :href="route('Posts')" :active="route().current('Posts')">
+                            Posts
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink :href="route('BoardOfTrustees')" :active="route().current('BoardOfTrustees')">
+                            Board of Trustees
                         </ResponsiveNavLink>
                     </div>
                     

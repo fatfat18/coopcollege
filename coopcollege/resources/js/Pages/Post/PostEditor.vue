@@ -70,9 +70,8 @@ import 'aos/dist/aos.css'
                                 <select id="posttype" name="posttype" class="mt-4" data-aos="fade-up"  data-aos-duration="700">
                                   <option hidden>Post Type</option>
                                   <option value="News">News</option>
-                                  <option value="Article">Article</option>
-                                  <option value="Events">Events</option>
-                                  <option value="Activity">Activity</option>
+                                  <option value="News">Resources</option>
+                                  <option value="Activity">Projects</option>
                                 </select>
                             
                             </div>

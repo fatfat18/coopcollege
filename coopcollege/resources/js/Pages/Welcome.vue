@@ -9,8 +9,8 @@ import Home from '@/Pages/ViewersPage/Home.vue';
 </script>
 
 <template>
-        <Home />
-
+     
+NOTHING HERE
 
 </template>
 
