@@ -115,7 +115,7 @@ A total of 35 participants coming from 15 co-operatives nationwide joined and ac
     <div class=" h-20 flex justify-center items-center " data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500">
     <a href="https://www.facebook.com/CoopCollegePH" target="_blank"><font-awesome-icon icon="fa-brands fa-facebook" class="transition ease-in duration-150 h-10 text-theme2 mx-4 hover:scale-125 overflow-y-hidden" /></a>
     <button @click="copyMobileNum()" ><font-awesome-icon icon="fa-solid fa-phone" class="transition ease-in duration-150 h-10 text-theme2 mx-4 hover:scale-125 overflow-y-hidden" /></button>
-    <button @click="copyEmailAdd()"><font-awesome-icon icon="fa-solid fa-envelope" class="transition ease-in duration-150 h-10 text-theme2 mx-4 hover:scale-125 overflow-y-hidden" /></button>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=institute@climbs.coop" target="_blank"> <font-awesome-icon icon="fa-solid fa-envelope" class="transition ease-in duration-150 h-10 text-theme2 mx-4 hover:scale-125 overflow-y-hidden" /></a>
     </div>
    
 <p class="text-white text-sm mt-12">©️ Copyright All Rights Reserved 2023 ™️</p>
