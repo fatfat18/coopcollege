@@ -20,7 +20,7 @@ import 'aos/dist/aos.css'
 
     <AuthenticatedLayout>
         <template #header> 
-            <h2 class="font-semibold text-3xl text-black leading-tight h-4 mb-4">Create Post </h2>
+            <h2 class="font-semibold text-3xl text-theme1 leading-tight h-4 mb-4">Post Editor </h2>
         </template>
 
         <div class="">
@@ -45,7 +45,8 @@ import 'aos/dist/aos.css'
                             <div class="overflow-y-hidden">
                                 <TextInput 
                                 id="title"
-                                type="title"
+                                name="title"
+                                type="text"
                                 class="mt-4 py-2 px-2 w-full focus:ring-yellow-500 active:ring-yellow-500"
                                 required
                                 autocomplete="current-title"
@@ -57,7 +58,8 @@ import 'aos/dist/aos.css'
                             
                                 <Textarea 
                                 id="description"
-                                type="description"
+                                name="description"
+                                type="text"
                                 class="mt-4 h-72 py-2 px-2 block w-full rounded-lg focus:ring-yellow-500 active:ring-yellow-500"
                                 required
                                 autocomplete="current-description"

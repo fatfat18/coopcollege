@@ -30,10 +30,16 @@ Route::get('/Posts', function () {
     return Inertia::render('Posts');
 })->middleware(['auth', 'verified'])->name('Posts');
 
-
 Route::get('/BoardOfTrustees', function () {
     return Inertia::render('BoardOfTrustees');
 })->middleware(['auth', 'verified'])->name('BoardOfTrustees');
+
+Route::get('/Partners', function () {
+    return Inertia::render('Partners');
+})->middleware(['auth', 'verified'])->name('Partners');
+
+
+
 
 
 
@@ -48,9 +54,19 @@ Route::middleware('auth')->group(function () {
 
 
 
-Route::get('/PostEditor', function () {
-    return Inertia::render('Post/PostEditor');
-})->middleware(['auth', 'verified'])->name('PostEditor');
+
+
+Route::get('/PostsEditor', function () {
+    return Inertia::render('Editor/PostsEditor');
+})->middleware(['auth', 'verified'])->name('PostsEditor');
+
+Route::get('/BoardOfTrusteesEditor', function () {
+    return Inertia::render('Editor/BoardOfTrusteesEditor');
+})->middleware(['auth', 'verified'])->name('BoardOfTrusteesEditor');
+
+Route::get('/PartnersEditor', function () {
+    return Inertia::render('Editor/PartnersEditor');
+})->middleware(['auth', 'verified'])->name('PartnersEditor');
 
 
 

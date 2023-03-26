@@ -37,6 +37,10 @@ const showingNavigationDropdown = ref(false);
                                 <NavLink :href="route('BoardOfTrustees')" :active="route().current('BoardOfTrustees')">
                                     Board of Trustees
                                 </NavLink>
+
+                                <NavLink :href="route('Partners')" :active="route().current('Partners')">
+                                    Partners
+                                </NavLink>
                                 
 
 
@@ -119,6 +123,9 @@ const showingNavigationDropdown = ref(false);
                         <ResponsiveNavLink :href="route('BoardOfTrustees')" :active="route().current('BoardOfTrustees')">
                             Board of Trustees
                         </ResponsiveNavLink>
+                        <ResponsiveNavLink :href="route('Partners')" :active="route().current('Partners')">
+                            Partners
+                        </ResponsiveNavLink>
                     </div>
                     
 
@@ -149,7 +156,7 @@ const showingNavigationDropdown = ref(false);
             </header>
 
             <!-- Page Content -->
-            <main class="bg-theme1 h-max min-h-screen">
+            <main class="bg-theme1 h-max min-h-screen ">
 
                 <slot />
 
