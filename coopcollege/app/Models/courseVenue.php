@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class courseVenue extends Model
 {
+    public $timestamps = false;
+    protected $guarded = [];
     use HasFactory;
+
+
+ 
 }
+

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\news;
+use App\Http\Controllers\trainingCalendar;
 
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -116,6 +117,15 @@ Route::get('/ViewPost', function () {
 
 
 
-Route::get('/news',[news::class, 'displayNews'] );
+
+// news
+Route::get('/news',[news::class, 'store'] );
+
+// calendar
+Route::post('/storeCalendarTraining',[trainingCalendar::class, 'store'] );
+
+Route::get('/displayCalendarTraining',[trainingCalendar::class, 'display'] );
+
+
 
 require __DIR__.'/auth.php';

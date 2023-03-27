@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 class news extends Controller
 
 {
-    public function storeNews(Request $request){
-        \App\Models\newsContext::create($request->all());
+    public function store(Request $request){
+        \App\Models\post::create($request->all());
 
         return ['msg'=>"successfuly news info."];
     }
@@ -23,7 +23,7 @@ class news extends Controller
     }
 
     public function displayNews(){
-        return \App\Models\newsContext::get();
+        return \App\Models\post::get();
     }
 
 
