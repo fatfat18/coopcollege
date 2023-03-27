@@ -6,6 +6,7 @@ use App\Http\Controllers\news;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\NavBarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,17 +20,35 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
+    return Inertia::render('ViewersPage/Home', [
         'canLogin' => Route::has('login'),        //ADMIN LOGIN
         'canRegister' => Route::has('register'),  //ADMIN REGISTER
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
     ]);
 });
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/Posts', function () {
+    return Inertia::render('Posts');
+})->middleware(['auth', 'verified'])->name('Posts');
+
+Route::get('/BoardOfTrustees', function () {
+    return Inertia::render('BoardOfTrustees');
+})->middleware(['auth', 'verified'])->name('BoardOfTrustees');
+
+Route::get('/Partners', function () {
+    return Inertia::render('Partners');
+})->middleware(['auth', 'verified'])->name('Partners');
+
+Route::get('/TrainingCalendar', function () {
+    return Inertia::render('TrainingCalendar');
+})->middleware(['auth', 'verified'])->name('TrainingCalendar');
+
+
+
+
+
+
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -38,8 +57,65 @@ Route::middleware('auth')->group(function () {
 
 });
 
-Route::inertia('/CreatePost', 'CreatePost');
 
-Route::get('/news', [news::class, 'displayNews']);
+
+
+
+Route::get('/PostsEditor', function () {
+    return Inertia::render('Editor/PostsEditor');
+})->middleware(['auth', 'verified'])->name('PostsEditor');
+
+Route::get('/BoardOfTrusteesEditor', function () {
+    return Inertia::render('Editor/BoardOfTrusteesEditor');
+})->middleware(['auth', 'verified'])->name('BoardOfTrusteesEditor');
+
+Route::get('/PartnersEditor', function () {
+    return Inertia::render('Editor/PartnersEditor');
+})->middleware(['auth', 'verified'])->name('PartnersEditor');
+
+Route::get('/TrainingCalendarEditor', function () {
+    return Inertia::render('Editor/TrainingCalendarEditor');
+})->middleware(['auth', 'verified'])->name('TrainingCalendarEditor');
+
+
+
+
+
+
+
+
+Route::get('/News', function () {
+    return Inertia::render('ViewersPage/News');
+});
+
+Route::get('/AboutUs', function () {
+    return Inertia::render('ViewersPage/AboutUs');
+});
+
+Route::get('/LearnWithUs', function () {
+    return Inertia::render('ViewersPage/LearnWithUs');
+});
+
+Route::get('/Resources', function () {
+    return Inertia::render('ViewersPage/Resources');
+});
+
+
+
+
+Route::get('/Projects', function () {
+    return Inertia::render('ViewersPage/Projects');
+});
+
+
+Route::get('/ViewPost', function () {
+    return Inertia::render('ViewPost');
+});
+
+
+
+
+
+Route::get('/news',[news::class, 'displayNews'] );
 
 require __DIR__.'/auth.php';

@@ -109,7 +109,7 @@ AOS.init();
                     Already registered?
                 </Link>
 
-                <PrimaryButton class="ml-4 w-32 items-center justify-center h-14 bg-blue-900 text-yellow-500 text-m hover:bg-yellow-500 hover:text-blue-900" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                <PrimaryButton class="ml-4 w-32 items-center justify-center h-14 bg-theme1 text-theme2 text-sm hover:bg-theme2 hover:text-theme1" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                     REGISTER
                 </PrimaryButton>
             </div>

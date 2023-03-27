@@ -27,5 +27,5 @@ createInertiaApp({
     },
 });
 
-library.add(faHatWizard,faTwitter)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
+

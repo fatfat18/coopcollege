@@ -18,8 +18,15 @@ div{
   
 }
 
+.navbar{
+    transition: .5s;
+}
+
 .navbar:hover{
-    color: #FECB00;
+    color: #FFCC00;
+    scale: 1.25;
+   
+
 }
 
 .lpg1{

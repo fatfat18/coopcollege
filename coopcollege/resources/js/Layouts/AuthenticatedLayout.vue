@@ -29,11 +29,26 @@ const showingNavigationDropdown = ref(false);
                             
 
                             <!-- Navigation Links -->
-                            <div class="hidden space-x-8 sm:ml-10 sm:flex ">
-                                <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    Dashboard
+                            <div class="hidden space-x-1 sm:ml-10 sm:flex">
+                                <NavLink :href="route('Posts')" :active="route().current('Posts')">
+                                    Posts
                                 </NavLink>
+
+                                <NavLink :href="route('BoardOfTrustees')" :active="route().current('BoardOfTrustees')">
+                                    Board of Trustees
+                                </NavLink>
+
+                                <NavLink :href="route('Partners')" :active="route().current('Partners')">
+                                    Partners
+                                </NavLink>
+                                <NavLink :href="route('TrainingCalendar')" :active="route().current('TrainingCalendar')">
+                                    Training Calendar
+                                </NavLink>
+
+
                             </div>
+
+
                          
                         </div>
 
@@ -104,8 +119,17 @@ const showingNavigationDropdown = ref(false);
                 <!-- Responsive Navigation Menu -->
                 <div :class="{ block: showingNavigationDropdown, hidden: !showingNavigationDropdown }" class="sm:hidden">
                     <div class="pt-2 pb-3 space-y-1">
-                        <ResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                            Dashboard
+                        <ResponsiveNavLink :href="route('Posts')" :active="route().current('Posts')">
+                            Posts
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink :href="route('BoardOfTrustees')" :active="route().current('BoardOfTrustees')">
+                            Board of Trustees
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink :href="route('Partners')" :active="route().current('Partners')">
+                            Partners
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink :href="route('TrainingCalendar')" :active="route().current('TrainingCalendar')">
+                            Training Calendar
                         </ResponsiveNavLink>
                     </div>
                     
@@ -130,14 +154,14 @@ const showingNavigationDropdown = ref(false);
             </nav>
 
             <!-- Page Heading -->
-            <header class="bg-white shadow" v-if="$slots.header">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <header class="shadow bg-white" v-if="$slots.header">
+                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 ">
                     <slot name="header" />
                 </div>
             </header>
 
             <!-- Page Content -->
-            <main>
+            <main class="bg-theme1 h-max min-h-screen ">
 
                 <slot />
 
