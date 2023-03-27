@@ -12,6 +12,6 @@ class trainingCalendar extends Model
     use HasFactory;
 
     public function events(){
-        return $this->hasMany(trainingCalendar::class, 'idCV', 'idCV');
+        return $this->hasMany(courseVenue::class, 'idCV', 'idCV');
     }
 }
