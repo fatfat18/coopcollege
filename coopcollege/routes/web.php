@@ -38,6 +38,11 @@ Route::get('/Partners', function () {
     return Inertia::render('Partners');
 })->middleware(['auth', 'verified'])->name('Partners');
 
+Route::get('/TrainingCalendar', function () {
+    return Inertia::render('TrainingCalendar');
+})->middleware(['auth', 'verified'])->name('TrainingCalendar');
+
+
 
 
 
@@ -67,6 +72,10 @@ Route::get('/BoardOfTrusteesEditor', function () {
 Route::get('/PartnersEditor', function () {
     return Inertia::render('Editor/PartnersEditor');
 })->middleware(['auth', 'verified'])->name('PartnersEditor');
+
+Route::get('/TrainingCalendarEditor', function () {
+    return Inertia::render('Editor/TrainingCalendarEditor');
+})->middleware(['auth', 'verified'])->name('TrainingCalendarEditor');
 
 
 
