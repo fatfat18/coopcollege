@@ -13,10 +13,9 @@ return new class extends Migration
     {
         Schema::create('images', function (Blueprint $table) {
             $table->id('imagesId');
-            $table->integer('idnewsImages');
-            $table->text('newsImageUrl');
+            $table->text('ImageUrl');
             $table->text('imagesInfo');
-            $table->tinyInteger('Status');
+            $table->tinyInteger('Status')->default(1);
         });
     }
 

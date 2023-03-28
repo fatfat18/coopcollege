@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id('Postid');
-            $table->integer('PostCatId');
+            $table->integer('PostCatId');           
+            $table->integer('ImagesId');
             $table->integer('idUser');
             $table->text('Description');
             $table->string('newsTitle');

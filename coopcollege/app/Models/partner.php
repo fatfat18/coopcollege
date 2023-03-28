@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class partner extends Model
 {
+    public $timestamps = false;
+    protected $guarded = [];
     use HasFactory;
+
+    public function image(){
+        return $this->hasOne(images::class, 'imagesId', 'ImagesId');
+    }
 }

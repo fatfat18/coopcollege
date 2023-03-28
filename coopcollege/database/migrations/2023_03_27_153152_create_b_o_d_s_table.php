@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('Fname');
             $table->text('Lname');
             $table->text('Suffix');
-            $table->text('Status');
+            $table->tinyInteger('Status')->default(1);
             $table->text('Position');
             $table->date('startDate');
             $table->date('endDate');

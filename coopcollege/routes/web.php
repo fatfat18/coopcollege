@@ -3,6 +3,9 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\news;
 use App\Http\Controllers\trainingCalendar;
+use App\Http\Controllers\contactUs;
+use App\Http\Controllers\partner;
+
 
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -125,6 +128,14 @@ Route::get('/news',[news::class, 'store'] );
 Route::post('/storeCalendarTraining',[trainingCalendar::class, 'store'] );
 
 Route::get('/displayCalendarTraining',[trainingCalendar::class, 'display'] );
+
+// contact us
+Route::post('/contactUs',[contactUs::class, 'update'] );
+
+// partner
+Route::post('/partner',[partner::class, 'store'] );
+
+Route::get('/displayPartner',[partner::class, 'display'] );
 
 
 
