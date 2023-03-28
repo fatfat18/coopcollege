@@ -20,13 +20,10 @@ use App\Http\Controllers\NavBarController;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('ViewersPage/Home', [
-        'canLogin' => Route::has('login'),        //ADMIN LOGIN
-        'canRegister' => Route::has('register'),  //ADMIN REGISTER
-    ]);
-});
 
+
+
+//ROUTERS FOR ADMIN DASHBOARD
 Route::get('/Posts', function () {
     return Inertia::render('Posts');
 })->middleware(['auth', 'verified'])->name('Posts');
@@ -50,7 +47,7 @@ Route::get('/TrainingCalendar', function () {
 
 
 
-
+//PROFILE CONTROLLER
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -61,7 +58,7 @@ Route::middleware('auth')->group(function () {
 
 
 
-
+//EDITORS SA ADMIN PANEL 
 Route::get('/PostsEditor', function () {
     return Inertia::render('Editor/PostsEditor');
 })->middleware(['auth', 'verified'])->name('PostsEditor');
@@ -84,6 +81,14 @@ Route::get('/TrainingCalendarEditor', function () {
 
 
 
+//ROUTES FOR VIEWERS END
+
+Route::get('/', function () {
+    return Inertia::render('ViewersPage/Home', [
+        'canLogin' => Route::has('login'),        //ADMIN LOGIN
+        'canRegister' => Route::has('register'),  //ADMIN REGISTER
+    ]);
+});
 
 Route::get('/News', function () {
     return Inertia::render('ViewersPage/News');
