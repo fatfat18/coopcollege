@@ -126,7 +126,7 @@ Route::get('/ViewPost', function () {
 
 
 
-// news
+// post
 Route::get('/news',[news::class, 'store'] );
 
 // calendar
@@ -141,6 +141,9 @@ Route::post('/contactUs',[contactUs::class, 'update'] );
 Route::post('/partner',[partner::class, 'store'] );
 
 Route::get('/displayPartner',[partner::class, 'display'] );
+
+
+// bod
 
 
 
