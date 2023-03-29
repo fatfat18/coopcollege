@@ -10,11 +10,11 @@
 ## run this command
 required php version v8.1
 
--[composer install]
--[php artisan migrate]
--[php artisan db:seed]
-
-
+<ul>
+    <li>composer install</li>
+    <li>php artisan migrate</li>
+    <li>php artisan db:seed</li>
+</ul>
 
 
 
