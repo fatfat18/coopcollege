@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('b_o_d_s', function (Blueprint $table) {
             $table->id('idBOD');
+            $table->integer('ImagesId');
             $table->text('Prefix');
             $table->text('Fname');
             $table->text('Lname');

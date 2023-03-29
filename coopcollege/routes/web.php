@@ -4,9 +4,9 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\news;
 use App\Http\Controllers\trainingCalendar;
 use App\Http\Controllers\contactUs;
+use App\Http\Controllers\post;
 use App\Http\Controllers\partner;
-
-
+use App\Http\Controllers\bod;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -127,7 +127,15 @@ Route::get('/ViewPost', function () {
 
 
 // post
-Route::get('/news',[news::class, 'store'] );
+Route::post('/storePost',[post::class, 'store'] );
+
+Route::get('/displayPost',[post::class, 'display'] );
+
+Route::put('/updateCategory',[post::class, 'update'] );
+
+Route::get('/postCategory',[post::class, 'postCategory'] );
+
+
 
 // calendar
 Route::post('/storeCalendarTraining',[trainingCalendar::class, 'store'] );
@@ -135,7 +143,7 @@ Route::post('/storeCalendarTraining',[trainingCalendar::class, 'store'] );
 Route::get('/displayCalendarTraining',[trainingCalendar::class, 'display'] );
 
 // contact us
-Route::post('/contactUs',[contactUs::class, 'update'] );
+Route::put('/contactUs',[contactUs::class, 'update'] );
 
 // partner
 Route::post('/partner',[partner::class, 'store'] );
@@ -144,6 +152,11 @@ Route::get('/displayPartner',[partner::class, 'display'] );
 
 
 // bod
+Route::post('/storeBOD',[bod::class, 'store'] );
+
+Route::put('/updateBOD',[bod::class, 'update'] );
+
+Route::get('/displayBOD',[bod::class, 'display'] );
 
 
 

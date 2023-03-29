@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('contact_us', function (Blueprint $table) {
             $table->id('idcontactUs');
-            $table->string('emailAdd');
-            $table->string('phoneNum');
-            $table->string('telNum');
-            $table->string('faceboolLink');
-            $table->string('websiteLink');
-            $table->tinyInteger('Status');
+            $table->text('emailAdd');
+            $table->text('phoneNum');
+            $table->text('telNum');
+            $table->text('faceboolLink');
+            $table->text('websiteLink');
+            $table->tinyInteger('Status')->default(1);
         });
     }
 

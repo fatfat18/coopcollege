@@ -10,4 +10,9 @@ class BOD extends Model
     public $timestamps = false;
     protected $guarded = [];
     use HasFactory;
+
+
+    public function image(){
+        return $this->hasOne(images::class, 'imagesId', 'ImagesId');
+    }
 }
