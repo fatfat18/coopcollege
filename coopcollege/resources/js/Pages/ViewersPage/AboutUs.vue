@@ -91,7 +91,7 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
   
 
   <div class="max-w-7xl h-max pt-4 w-screen bg-theme2 rounded-2xl text-theme1 overflow-y-hidden xl:px-8 mb-10">
-    <p class="text-theme1 text-2xl px-4 mb-10">Our Focus Areas: <br>(1) Risk Management <br>(2) Financial Literacy <br>(3) Executive Management <br>(4) Leadership Management and Development</p>
+    <p class="text-theme1 text-2xl px-4 " data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">Our Focus Areas: <p class="text-2xl px-4" data-aos="fade-left" data-aos-delay="400" data-aos-duration="1000">(1) Risk Management</p> <p class="text-2xl px-4" data-aos="fade-left" data-aos-delay="600" data-aos-duration="1000">(2) Financial Literacy</p> <p class="text-2xl px-4" data-aos="fade-left" data-aos-delay="800" data-aos-duration="1000">(3) Executive Management</p> <p class="mb-10 text-2xl px-4" data-aos="fade-left" data-aos-delay="1000" data-aos-duration="1000">(4) Leadership Management and Development</p></p>
             <p class="text-theme1 xl:text-4xl text-2xl" data-aos="fade-right" data-aos-duration="1000">What We Offer :</p>
             
             <div class="bg-zinc-200 h-max w-1/1 px-8 xl:px-0 my-4 rounded-2xl flex justify-center xl:flex-row flex-col items-center xl:gap-10 xl:text-xl text-sm" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">
