@@ -57,7 +57,7 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
 
 <section class="flex flex-col justify-center items-center text-justify">
   
-  <p class="text-white text-xl"><span id="typewriter" style="font-size: 32px; font-weight:100;"></span><span id="cursor">|</span></p>
+  <p class="text-white text-xl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="typewriter" style="font-size: 32px; font-weight:100;"></span><span id="cursor">|</span></p>
 
 
 </section>
