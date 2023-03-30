@@ -50,7 +50,7 @@ Route::get('/TrainingCalendar', function () {
 
 
 
-//PROFILE CONTROLLER
+//PROFILE
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -85,7 +85,6 @@ Route::get('/TrainingCalendarEditor', function () {
 
 
 //ROUTES FOR VIEWERS END
-
 Route::get('/', function () {
     return Inertia::render('ViewersPage/Home', [
         'canLogin' => Route::has('login'),        //ADMIN LOGIN
@@ -110,8 +109,6 @@ Route::get('/Resources', function () {
 });
 
 
-
-
 Route::get('/Projects', function () {
     return Inertia::render('ViewersPage/Projects');
 });
@@ -120,6 +117,8 @@ Route::get('/Projects', function () {
 Route::get('/ViewPost', function () {
     return Inertia::render('ViewPost');
 });
+
+
 
 
 
