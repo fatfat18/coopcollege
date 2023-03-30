@@ -43,7 +43,9 @@ Route::get('/TrainingCalendar', function () {
     return Inertia::render('TrainingCalendar');
 })->middleware(['auth', 'verified'])->name('TrainingCalendar');
 
-
+Route::get('/Contacts', function () {
+    return Inertia::render('Contacts');
+})->middleware(['auth', 'verified'])->name('Contacts');
 
 
 

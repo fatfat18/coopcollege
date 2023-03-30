@@ -3,7 +3,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import {  faPhoneFlip } from "@fortawesome/free-solid-svg-icons"
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
@@ -21,7 +20,7 @@ import Footer from '@/Components/Footer.vue';
 
 
 
-library.add(faTwitter,faPhoneFlip,faFacebook,faPhone,faEnvelope,faNoteSticky,faCoins,faBriefcaseMedical,faChartSimple,faLightbulb,faEarthAsia)
+library.add(faPhoneFlip,faFacebook,faPhone,faEnvelope,faNoteSticky,faCoins,faBriefcaseMedical,faChartSimple,faLightbulb,faEarthAsia)
 
 
 const pixCodeInput = ref(null);
