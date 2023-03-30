@@ -8,6 +8,10 @@ import Header from '@/Components/Header.vue'
 import ProfileCard from '@/Components/ProfileCard.vue'
 import Footer from '@/Components/Footer.vue';
 
+
+
+
+
 </script>
 
 
@@ -16,6 +20,29 @@ import Footer from '@/Components/Footer.vue';
 background: rgb(0,0,51);
 background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
 }
+
+
+#typewriter {
+    color: white;
+    font-weight: bold;
+    }
+
+
+    #cursor {
+        color: rgb(255, 255, 255);
+        animation: blink .5s linear infinite;
+    }
+
+
+    @keyframes blink {
+    
+        0% {
+            opacity: 100%;
+        }
+        50% {
+            opacity: 0%;
+        }
+    }
 
 </style>
 <template>
@@ -28,10 +55,21 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
 <div class="overflow-y-hidden pt-20  w-3/4 xl:pl-20">
   <p class="text-white text-4xl xl:text-5xl">Who are we?</p><br><br>
 
+<section class="flex flex-col justify-center items-center text-justify">
+  
+  <p class="text-white text-xl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="typewriter" style="font-size: 32px; font-weight:100;"></span><span id="cursor">|</span></p>
 
-  <p class="text-white text-3xl xl:text-3xl xl:pt-4">GOVERNANCE</p>
+
+</section>
+
+
+
+
+
+  
 
 </div>
+<p class="text-white text-3xl xl:text-5xl xl:pt-20">Governance</p>
 
   <div class="w-screen max-w-7xl h-max  pt-10 flex justify-center gap-10 flex-wrap overflow-y-hidden">
 
@@ -50,6 +88,71 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
   <ProfileCard data-aos="fade-right" data-aos-duration="500"/>
 
   </div>
+  
+
+  <div class="max-w-7xl h-max pt-4 w-screen bg-theme2 rounded-2xl text-theme1 overflow-y-hidden xl:px-8 mb-10">
+    <p class="text-theme1 text-4xl px-4 " data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">Our Focus Areas: <p class="text-2xl px-4" data-aos="fade-left" data-aos-delay="400" data-aos-duration="1000">(1) Risk Management</p> <p class="text-2xl px-4" data-aos="fade-left" data-aos-delay="600" data-aos-duration="1000">(2) Financial Literacy</p> <p class="text-2xl px-4" data-aos="fade-left" data-aos-delay="800" data-aos-duration="1000">(3) Executive Management</p> <p class="mb-10 text-2xl px-4" data-aos="fade-left" data-aos-delay="1000" data-aos-duration="1000">(4) Leadership Management and Development</p></p>
+            <p class="text-theme1 xl:text-4xl text-2xl" data-aos="fade-right" data-aos-duration="1000">What We Offer :</p>
+            
+            <div class="bg-zinc-200 h-max w-1/1 px-8 xl:px-0 my-4 rounded-2xl flex justify-center xl:flex-row flex-col items-center xl:gap-10 xl:text-xl text-sm" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">
+              
+              <div class=" xl:w-1/2 xl:px-8 py-8 h-max pb-4 xl:pb-8 ">
+                    <div class="">
+                      <h1 class="xl:text-3xl text-xl italic">Executive Courses (E)</h1>
+                    
+                      &#x2022; Post - Graduate Certificate in Cooperative Management (PGC CM)<br>
+                      &#x2022; Global Co-operative Executives Masterclass<br>
+                      &#x2022; Strategic Planning and Thinking Management<br>
+                      &#x2022; Human Capital Management<br>
+                      &#x2022; Cooperative Digital Transformation<br>
+                    </div>
+                    <br>
+                    <div>
+                      <h1 class="xl:text-3xl text-xl italic">Leadership Courses (L)</h1>
+                    
+                      &#x2022; Cooperative Leadership Program<br>
+                      &#x2022; Cooperative Management Training<br>
+                      &#x2022; Raising Cooperative Leaders<br>
+                      &#x2022; Advcanced Cooperative Business Management<br>
+                   
+                    </div>
+
+                
+              </div>
+              <div class=" xl:w-1/2 xl:px-8 py-8 pt-0 h-max xl:pt-8">
+                <div>
+                      <h1 class="xl:text-3xl text-xl italic">Risk Manangement Courses (R)</h1>
+                    
+                      &#x2022; Business Continuity Planning<br>
+                      &#x2022; Financial Literacy and Management<br>
+                      &#x2022; Environmental, Social and Corporate Governance (ESG)<br>
+                      &#x2022; Corporate Governance and Enterprise Risk Management (ERM)<br>
+                   
+                    </div>
+                    <br>
+                    <div>
+                      <h1 class="xl:text-3xl text-xl italic">Others (O)</h1>
+                    
+                      &#x2022; Coommunity Engagement through our Community Development Fund (CDF): A Collective Action Initiative<br>
+                      &#x2022; Digital Marketing Strategy for Managers and Entrepreneurs<br>
+                      &#x2022; Diversity and Inclusivity / Social Concerns<br>
+                      &#x2022; The Cooperative Culture and Sustainable Development Goals<br>
+                      &#x2022; Customized E-Learning<br>
+                      &#x2022; Customized Face-to-Face Programs<br>
+                   
+                    </div>
+
+
+
+
+
+            
+
+              </div>
+
+            </div>
+
+          </div>
 
   <div class="max-w-7xl mt-20">
       <h1 class=" text-xl xl:text-3xl text-white mb-4 ml-8">Our Partners</h1>
@@ -295,4 +398,39 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
 AOS.init({startEvent: 'load',
           once : 'true,'});
 AOS.refresh();
+
+function sleep(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+     }
+
+
+     const phrases = ["We are the sole-training needs provider of the National Federation of Cooperative Primaries of the Philippines (NaFeCOOP). We Strategically pivoted from CLIMBS Institute for Financial Literacy (CIFL) to CLIMBS Institute of Management (CIM), and now, the Co-operative College of the Philippines (Co-op College PH) to further cooperative education both locally and globally, embodies the cooperative values and principles, and upgrades its educational platforms."];
+     const el = document.getElementById("typewriter")
+
+     let sleepTime = 40;
+
+     let curPhraseIndex = 0;
+
+     const writeLoop = async () => {
+        while(true) {
+            let curWord = phrases[curPhraseIndex];
+
+
+        for (let i=0; i<curWord.length;i++){
+            el.innerText = curWord.substring(0,i+1);
+            await sleep(sleepTime);
+        }
+
+
+        await sleep(sleepTime * 99999);
+
+        
+
+     }
+
+    };
+
+    writeLoop();
+
+
 </script>
