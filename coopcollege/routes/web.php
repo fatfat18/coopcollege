@@ -142,6 +142,9 @@ Route::post('/storeCalendarTraining',[trainingCalendar::class, 'store'] );
 
 Route::get('/displayCalendarTraining',[trainingCalendar::class, 'display'] );
 
+Route::put('/updateCalendarTraining',[trainingCalendar::class, 'update'] );
+
+
 // contact us
 Route::put('/contactUs',[contactUs::class, 'update'] );
 
@@ -149,6 +152,9 @@ Route::put('/contactUs',[contactUs::class, 'update'] );
 Route::post('/partner',[partner::class, 'store'] );
 
 Route::get('/displayPartner',[partner::class, 'display'] );
+
+Route::delete('/removePartner',[partner::class, 'delete'] );
+
 
 
 // bod

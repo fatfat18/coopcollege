@@ -5,18 +5,28 @@ use DateTime;
 use Illuminate\Support\Facades\Storage;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class post extends Controller
 {
     public function store(Request $request){
 
-        Storage::disk('public')->put('POST/1.txt', "df");
+        $validator = Validator::make($request->all(), [
+            'PostCatId'=> 'required',
+            'idUser'=> 'required|numeric',
+            'Description'=> 'required', 
+            'newsTitle'=> 'required', 
+            'Context'=> 'required', 
+            'news_DateCreated'=> 'required|date',
+            'file.*' => 'required|mimetypes:image/jpg,image/jpeg,image/bmp'
+        ]);
+ 
+        if ($validator->fails()) {
+            return $validator->errors();
+        }
 
-        $data = \App\Models\images::create(['ImageUrl'=> Storage::url('POST/1.txt'), 'imagesInfo'=>'this is  info' ]);
-
-        \App\Models\post::create([
+        $data = \App\Models\post::create([
             'PostCatId'=>$request->PostCatId, 
-            'ImagesId'=>$data->id, 
             'idUser'=>$request->idUser, 
             'Description'=>$request->Description, 
             'newsTitle'=>$request->newsTitle, 
@@ -24,10 +34,25 @@ class post extends Controller
             'news_DateCreated'=>new DateTime(), 
         ]);
 
+        foreach ($request->file('file') as $row) {
+            $filename= Storage::putFile('public/POST', $row);
+            
+            \App\Models\images::create(['ImageUrl'=> \URL::to('/').Storage::url($filename), 'imagesInfo'=>$row->getClientOriginalName(), 'Postid'=>$data->id ]);
+        }
+
         return ['msg'=>"successfuly saved news info."];
     }
 
     public function update(Request $request){
+
+        $validator = Validator::make($request->all(), [
+            'Postid' => 'required',
+        ]);
+ 
+        if ($validator->fails()) {
+            return $validator->errors();
+        }
+
         \App\Models\post::where('Postid', $request->Postid)->update([
             'PostCatId'=>$request->PostCatId, 
             'idUser'=>$request->idUser, 

@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('images', function (Blueprint $table) {
             $table->id('imagesId');
+            $table->integer('Postid')->nullable();
             $table->text('ImageUrl');
             $table->text('imagesInfo');
             $table->tinyInteger('Status')->default(1);
