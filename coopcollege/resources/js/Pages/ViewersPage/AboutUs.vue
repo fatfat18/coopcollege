@@ -407,7 +407,7 @@ function sleep(ms) {
      const phrases = ["We are the sole-training needs provider of the National Federation of Cooperative Primaries of the Philippines (NaFeCOOP). We Strategically pivoted from CLIMBS Institute for Financial Literacy (CIFL) to CLIMBS Institute of Management (CIM), and now, the Co-operative College of the Philippines (Co-op College PH) to further cooperative education both locally and globally, embodies the cooperative values and principles, and upgrades its educational platforms."];
      const el = document.getElementById("typewriter")
 
-     let sleepTime = 50;
+     let sleepTime = 40;
 
      let curPhraseIndex = 0;
 
