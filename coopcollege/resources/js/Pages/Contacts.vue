@@ -90,7 +90,7 @@ library.add(faPlus,faFacebook,faEnvelope,faPhone,faTty,faGlobe);
                 <TextInput 
                                 id="title"
                                 name="title"
-                                type="text"
+                                type="number"
                                 class="px-2 xl:w-1/3 w:1/2 focus:ring-yellow-500 active:ring-yellow-500 "
                                 required
                                 autocomplete="current-phonenum"
@@ -107,7 +107,7 @@ library.add(faPlus,faFacebook,faEnvelope,faPhone,faTty,faGlobe);
                 <TextInput 
                                 id="title"
                                 name="title"
-                                type="text"
+                                type="number"
                                 class="px-2 xl:w-1/3 w:1/2 focus:ring-yellow-500 active:ring-yellow-500 "
                                 required
                                 autocomplete="current-telephone"
