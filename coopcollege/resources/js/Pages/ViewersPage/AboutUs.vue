@@ -395,9 +395,6 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
 
 
 <script>
-AOS.init({startEvent: 'load',
-          once : 'true,'});
-AOS.refresh();
 
 function sleep(ms) {
         return new Promise((resolve) => setTimeout(resolve, ms));
@@ -431,6 +428,10 @@ function sleep(ms) {
     };
 
     writeLoop();
+
+AOS.init({startEvent: 'load',
+          once : 'true,'});
+AOS.refresh();
 
 
 </script>
