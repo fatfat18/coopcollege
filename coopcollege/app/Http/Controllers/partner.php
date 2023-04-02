@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 
 use Illuminate\Http\Request;
 
@@ -9,14 +10,37 @@ class partner extends Controller
 {
     public function store(Request $request){
 
-        Storage::disk('public')->put('partner/1.txt', "fsfsd");
-
-        $data = \App\Models\images::create(['ImageUrl'=> Storage::url('partner/1.txt'), 'imagesInfo'=>'this is  info' ]);
+        $validator = Validator::make($request->all(), [
+            'partnerName' => 'required',
+            'file'  => 'required|image|mimes:jpeg,png,jpg,gif,svg'
+        ]);
+ 
+        if ($validator->fails()) {
+            return $validator->errors();
+        }
+        $filename= Storage::putFile('public/partner', $request->file('file'));
+      
+        $data = \App\Models\images::create(['ImageUrl'=> \URL::to('/').Storage::url($filename), 'imagesInfo'=>$request->file('file')->getClientOriginalName() ]);
 
         \App\Models\partner::create(['partnerName'=>$request->partnerName, 'ImagesId'=>$data->id ]);
 
         return ['msg'=>"Successfuly saved partner."];
 
+    }
+
+    public function delete(Request $request){
+
+        $validator = Validator::make($request->all(), [
+            'idPartner' => 'required'
+        ]);
+ 
+        if ($validator->fails()) {
+            return $validator->errors();
+        }
+
+        \App\Models\partner::where('idPartner', $request->idPartner)->delete();
+
+        return ['msg'=>"Successfuly deleted partner."];
     }
 
     public function display(){

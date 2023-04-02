@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
+
 
 use Illuminate\Http\Request;
 
@@ -9,9 +11,26 @@ class bod extends Controller
 {
     public function store(Request $request){
 
-        Storage::disk('public')->put('BOD/1.txt', "df");
+        $validator = Validator::make($request->all(), [
+            'Prefix' => 'required',
+            'Fname' => 'required',
+            'Lname' => 'required',
+            'Suffix' => 'required',
+            'Position' => 'required',
+            'startDate' => 'required|date',
+            'endDate' => 'required|date',
+            'Address' => 'required',
+            'file'  => 'required|image|mimes:jpeg,png,jpg,gif,svg'
+        ]);
+ 
+        if ($validator->fails()) {
+            return $validator->errors();
+        }
 
-        $data = \App\Models\images::create(['ImageUrl'=> Storage::url('BOD/1.txt'), 'imagesInfo'=>'this is  info' ]);
+
+        $filename= Storage::putFile('public/BOD', $request->file('file'));
+
+        $data = \App\Models\images::create(['ImageUrl'=> \URL::to('/').Storage::url($filename), 'imagesInfo'=>$request->file('file')->getClientOriginalName() ]);
 
         \App\Models\BOD::create([
             'ImagesId'=>$data->id,  
@@ -32,6 +51,15 @@ class bod extends Controller
 
 
     public function update(Request $request){
+
+        $validator = Validator::make($request->all(), [
+            'idBOD' => 'required',
+        ]);
+ 
+        if ($validator->fails()) {
+            return $validator->errors();
+        }
+
         \App\Models\BOD::where('idBOD', $request->idBOD)->update($request->all());
 
         return ['msg'=>"successfuly update bod"];

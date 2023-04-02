@@ -12,7 +12,7 @@ class post extends Model
     use HasFactory;
 
     public function image(){
-        return $this->hasMany(images::class, 'imagesId', 'ImagesId');
+        return $this->hasMany(images::class, 'Postid', 'Postid');
     }
 
     public function category(){
