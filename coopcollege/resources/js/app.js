@@ -27,5 +27,3 @@ createInertiaApp({
     },
 });
 
-Vue.component('font-awesome-icon', FontAwesomeIcon)
-

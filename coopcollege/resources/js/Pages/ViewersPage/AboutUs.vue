@@ -11,7 +11,6 @@ import Footer from '@/Components/Footer.vue';
 
 
 
-
 </script>
 
 
@@ -31,6 +30,7 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
     #cursor {
         color: rgb(255, 255, 255);
         animation: blink .5s linear infinite;
+        font-size:clamp(1rem,2.5vw,2rem);
     }
 
 
@@ -57,7 +57,7 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
 
 <section class="flex flex-col justify-center items-center text-justify">
   
-  <p class="text-white text-xl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="typewriter" style="font-size: 32px; font-weight:100;"></span><span id="cursor">|</span></p>
+  <p class="text-white text-xl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span ref="typewriter" style="font-size: 32px; font-weight:100;"></span><span id="cursor">|</span></p>
 
 
 </section>
@@ -395,39 +395,39 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
 
 
 <script>
+export default {
+  data() {
+    return {
+      phrases: ["We are the sole-training needs provider of the National Federation of Cooperative Primaries of the Philippines (NaFeCOOP). We Strategically pivoted from CLIMBS Institute for Financial Literacy (CIFL) to CLIMBS Institute of Management (CIM), and now, the Co-operative College of the Philippines (Co-op College PH) to further cooperative education both locally and globally, embodies the cooperative values and principles, and upgrades its educational platforms."],
+      sleepTime: 40,
+      curPhraseIndex: 0,
+    };
+  },
+  mounted() {
+    this.writeLoop();
+  },
+  methods: {
+    sleep(ms) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
+    },
+    async writeLoop() {
+      while (true) {
+        let curWord = this.phrases[this.curPhraseIndex];
 
-function sleep(ms) {
-        return new Promise((resolve) => setTimeout(resolve, ms));
-     }
-
-
-     const phrases = ["We are the sole-training needs provider of the National Federation of Cooperative Primaries of the Philippines (NaFeCOOP). We Strategically pivoted from CLIMBS Institute for Financial Literacy (CIFL) to CLIMBS Institute of Management (CIM), and now, the Co-operative College of the Philippines (Co-op College PH) to further cooperative education both locally and globally, embodies the cooperative values and principles, and upgrades its educational platforms."];
-     const el = document.getElementById("typewriter")
-
-     let sleepTime = 40;
-
-     let curPhraseIndex = 0;
-
-     const writeLoop = async () => {
-        while(true) {
-            let curWord = phrases[curPhraseIndex];
-
-
-        for (let i=0; i<curWord.length;i++){
-            el.innerText = curWord.substring(0,i+1);
-            await sleep(sleepTime);
+        for (let i = 0; i < curWord.length; i++) {
+          this.$refs.typewriter.textContent = curWord.substring(0, i + 1);
+          await this.sleep(this.sleepTime);
         }
 
-
-        await sleep(sleepTime * 99999);
+        await this.sleep(this.sleepTime * 9999);
+      
 
         
+      }
+    },
+  },
+};
 
-     }
-
-    };
-
-    writeLoop();
 
 AOS.init({startEvent: 'load',
           once : 'true,'});
