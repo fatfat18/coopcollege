@@ -14,6 +14,9 @@ import 'aos/dist/aos.css'
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .9)),
     url('/coopcollege/coopcollege/resources/asset/editpostbackg.jpg');
 }
+#img {
+  display: none;
+}
 </style>
 <template>
 
@@ -36,10 +39,10 @@ import 'aos/dist/aos.css'
                     <form action="">
                         <button class="border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg mb-10 hover:bg-green-600 transition ease-in duration-100">Save</button>
                         
-                             <div class="text-white" data-aos="fade-up"  data-aos-duration="1500" >
-                                  <label for="img">Select Image :<br></label>
-                                 <input type="file" accept="image/*" multiple @change="onFilesSelected">
-                             </div>
+                        <div class="text-white xl:h-20 w-max flex justify-center items-center" data-aos="fade-up"  data-aos-duration="1500" >
+                             <label for="img" class="text-2xl text-white rounded-2xl border-theme2 py-5 px-5 border-dashed border-2 hover:border-white hover:text-theme2 transiton duration-300">Upload Images<br></label>
+                            <input type="file" accept="image/*" multiple @change="onFilesSelected" id="img" >
+                        </div>
 
                                   
                             <div class="text-white flex" data-aos="fade-up"  data-aos-duration="1500"  >
