@@ -41,10 +41,16 @@ import 'aos/dist/aos.css'
                         
                             <div class="overflow-y-hidden space-x-2">
 
-                                <div class="text-white" data-aos="fade-up"  data-aos-duration="1500">
-                            
-                            <label for="img">Select Images :<br></label>
-                            <input type="file" id="img" name="img" accept="image/*"  >
+                                <div class="text-white" data-aos="fade-up"  data-aos-duration="1500" >
+                                    <label for="img">Select Image :<br></label>
+                                    <input type="file" accept="image/*" multiple @change="onFilesSelected">
+                                </div>
+
+                                  
+                                <div class="text-white flex" data-aos="fade-up"  data-aos-duration="1500"  >
+                                      <div v-for="(url, index) in imagePreviewUrls" :key="index" >
+                                        <img :src="url" class="h-20 w-20">
+                                      </div>
                                 </div>
 
                                 <TextInput 
@@ -229,6 +235,27 @@ import 'aos/dist/aos.css'
 </template>
 
 <script>
+export default {
+  data() {
+    return {
+      imagePreviewUrls: []
+    }
+  },
+  methods: {
+    onFilesSelected(event) {
+      const files = event.target.files;
+      for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          this.imagePreviewUrls.push(event.target.result);
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+  }
+}
+
 AOS.init();
 AOS.refresh();
 </script>
