@@ -45,8 +45,8 @@ import 'aos/dist/aos.css'
                             <div class="overflow-y-hidden space-x-2">
 
                               <div class="text-white xl:h-20 w-max flex justify-center items-center" data-aos="fade-up"  data-aos-duration="1500" >
-                             <label for="img" class="text-2xl text-white rounded-2xl border-theme2 py-5 px-5 border-dashed border-2 hover:border-white hover:text-theme2 transiton duration-300">Upload Images<br></label>
-                            <input type="file" accept="image/*" multiple @change="onFilesSelected" id="img" >
+                             <label for="img" class="text-2xl text-white rounded-2xl border-theme2 py-5 px-5 border-dashed border-2 hover:border-white hover:text-theme2 transiton duration-300">Upload Image<br></label>
+                            <input type="file" accept="image/*"  @change="onFilesSelected" id="img" >
                         </div>
 
                                   
