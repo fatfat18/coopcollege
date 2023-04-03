@@ -7,6 +7,7 @@ import 'aos/dist/aos.css'
 
 
 
+
 </script>
 
 <style>
@@ -33,25 +34,11 @@ import 'aos/dist/aos.css'
             <div class=" xl:w-3/4 w-4/5 xl:mt-16 overflow-y-hidden">
 
 
-                    <form action="">
-                        <button class="border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg mb-10 hover:bg-green-600 transition ease-in duration-100">Save</button>
-                    
-                        
+                    <form @submit.prevent="submitData">
+                        <button type="submit" class="border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg mb-10 hover:bg-green-600 transition ease-in duration-100">Save</button>
                             <div class="overflow-y-hidden space-x-4">
 
-                                <TextInput 
-                                id="name"
-                                name="id"
-                                type="text"
-                                class="mt-4 py-2 px-2 w-40 focus:ring-yellow-500 active:ring-yellow-500"
-                                required
-                                autocomplete=""
-                                placeholder="ID"
-                                data-aos="fade-up"  data-aos-duration="1300"
-                                >
-                        
-                                </TextInput>
-
+                            
 
 
                                 <TextInput 
@@ -61,6 +48,7 @@ import 'aos/dist/aos.css'
                                 class="mt-4 py-2 px-2 w-40 focus:ring-yellow-500 active:ring-yellow-500"
                                 required
                                 autocomplete=""
+                                v-model="month"
                                 placeholder="Month"
                                 data-aos="fade-up"  data-aos-duration="1300"
                                 >
@@ -74,6 +62,7 @@ import 'aos/dist/aos.css'
                                 class="mt-4 py-2 px-2 w-96 focus:ring-yellow-500 active:ring-yellow-500"
                                 required
                                 autocomplete=""
+                                v-model="course_title"
                                 placeholder="Course Title"
                                 data-aos="fade-up"  data-aos-duration="1300"
                                 >
@@ -88,6 +77,7 @@ import 'aos/dist/aos.css'
                                 required
                                 autocomplete=""
                                 placeholder="Venue"
+                                v-model="venue"
                                 data-aos="fade-up"  data-aos-duration="1300"
                                 >
                         
@@ -101,13 +91,14 @@ import 'aos/dist/aos.css'
                                 required
                                 autocomplete=""
                                 placeholder="Year"
+                                v-model="year"
                                 data-aos="fade-up"  data-aos-duration="1300"
                                 >
                         
                                 </TextInput>
 
 
-                    
+                                
                             
                     
                             
@@ -126,7 +117,7 @@ import 'aos/dist/aos.css'
 
 
 
-            </form>
+                    </form>
 
 
 
@@ -142,6 +133,35 @@ import 'aos/dist/aos.css'
 </template>
 
 <script>
+import axios from 'axios';
+
+export default {
+  name: 'TextInput',
+  data() {
+    return {
+      month: '',
+      course_title: '',
+      year: '',
+      venue: '',
+    }
+  },
+  methods: {
+    submitData() {
+      axios.post('http://127.0.0.1:8000/storeCalendarTraining', {
+        month: this.month,
+        course_title: this.course_title,
+        year: this.year,
+        venue: this.venue,
+      })
+      .then(response => {
+        console.log(response);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+    }
+  }
+}
 AOS.init();
 AOS.refresh();
 </script>
