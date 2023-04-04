@@ -78,31 +78,52 @@ A total of 35 participants coming from 15 co-operatives nationwide joined and ac
 
 </div>
 
-<div class=" h-max py-10 my-10 w-screen flex flex-wrap justify-center items-center px-4text-sm ">
+<div class=" h-max py-10 my-10 w-screen flex flex-wrap justify-center items-center px-4 text-sm ">
 
-    <div class="card px-4 text-justify flex flex-col justify-center items-center my-8 mb-10 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="100" >
+    <div class="card text-xl px-4 text-center flex flex-col justify-center items-center my-8 mb-10 h-80 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="100" >
         <font-awesome-icon icon="fa-solid fa-note-sticky " class="text-theme1 h-10 mb-4" />
-            Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor.
+        The sole training-needs provider of the National Federation of Cooperative Primaries
+of the Philippines (NaFeCOOP).
     </div>
-    <div class="card px-4 text-justify flex flex-col justify-center items-center my-8 mb-10 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="300" >
+    <div class="card px-4 text-center flex flex-col justify-center items-center my-8 mb-10 h-80 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="300" >
         <font-awesome-icon icon="fa-solid fa-coins" class="text-theme1 h-10 mb-4" />
-        Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor.
+        <span class="text-xl">The NaFeCOOP and its relationship to CCP:</span><br>
+        70% Consumable - for education,
+        training and other
+        related expenditures.<br>
+        20% Redeemable - If not used in 5
+        years subject to
+        terms and
+        conditions
+        <br>
+        10% Advocacy Fund - For Federation,
+        Education and
+        Training Advocacy.<br>
     </div>
-    <div class="card px-4 text-justify flex flex-col justify-center items-center my-8 mb-10 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="500" >
+    <div class="card px-4  flex flex-col justify-center items-center my-8 mb-10 h-80 w-96 bg-theme2 mx-8 rounded-xl text-center" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="500" >
         <font-awesome-icon icon="fa-solid fa-lightbulb" class="text-theme1 h-10 mb-4" />
-        Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor.
+        <span class="text-xl">The KoopSkwela </span><br>
+        A cooperative mobile hub and an educational initiative by CLIMBS life and General Insurance Cooperative, CIM, CLIFSA, MASS-SPECC Cooperative Development Center, Natcco Network and the National Federation of Cooperative Primaries in the Philippines-Nafecoop, and in cooperation with RCDC-Region X.
     </div>
-    <div class="card px-4 text-justify flex flex-col justify-center items-center my-8 mb-10 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="700" >
+    <div class="card px-4 text-center flex flex-col justify-center items-center my-8 mb-10 h-80 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="700" >
         <font-awesome-icon icon="fa-solid fa-briefcase-medical" class="text-theme1 h-10 mb-4" />
-        Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor.
+        Strategically pivoted from CLIMBS Institute for Financial Literacy (CIFL) to CLIMBS
+Institute of Management (CIM), and now, the Co-operative College of the Philippines
+(CCP) aims to further cooperative education through higher level of trainings by
+embodying the cooperative values and principles, upgrades its educational platforms,
+and widen partnerships both locally and abroad.
     </div>
-    <div class="card px-4 text-justify flex flex-col justify-center items-center my-8 mb-10 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="900" >
+    <div class="card px-4 text-center flex flex-col justify-center items-center my-8 mb-10 h-80 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="900" >
         <font-awesome-icon icon="fa-solid fa-chart-simple" class="text-theme1 h-10 mb-4" />
-        Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor.
+        <span class="text-xl">Cooperative Management</span><br>
+in partnership with the Asian Institute of
+Management (AIM)
     </div>
-    <div class="card px-4 text-justify flex flex-col justify-center items-center my-8 mb-10 h-60 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="1100" >
+    <div class="card px-4 text-center flex flex-col justify-center items-center my-8 mb-10 h-80 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="1100" >
         <font-awesome-icon icon="fa-solid fa-earth-asia" class="text-theme1 h-10 mb-4" />
-        Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor.
+        <span class="text-xl"> The Global Co-operative Executive Masterclass</span><br>
+        A first to be held in Manchester, United Kingdom, the heart of the birthplace of the
+modern co-operative movement, following in the footsteps of the Rochdale Pioneers. 
 
     </div>
 
