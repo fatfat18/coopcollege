@@ -4,7 +4,7 @@ import InputError from '@/Components/InputError.vue';
 import TextInput from '@/Components/TextInput.vue';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-
+import Modal from '@/Components/Modal.vue';
 
 
 </script>
@@ -36,20 +36,21 @@ import 'aos/dist/aos.css'
             <div class=" xl:w-3/4 w-4/5 xl:mt-16 overflow-y-hidden">
 
 
-                    <form action="">
+                    <form @submit.prevent="submitData">
                         <button class="border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg mb-10 hover:bg-green-600 transition ease-in duration-100">Save</button>
                         
                         <div class="text-white xl:h-20 w-max flex justify-center items-center" data-aos="fade-up"  data-aos-duration="1500" >
-                             <label for="img" class="text-2xl text-white rounded-2xl border-theme2 py-5 px-5 border-dashed border-2 hover:border-white hover:text-theme2 transiton duration-300">Upload Image<br></label>
-                            <input type="file" accept="image/*" @change="onFilesSelected" id="img" >
+                             <label for="img" class="text-2xl text-white rounded-2xl border-theme2 py-5 px-5 border-dashed border-2 hover:border-white hover:text-theme2 transiton duration-300" >Upload Image<br></label>
+                            <input type="file" accept="image/*" @change="uploadFile" id="img" ref="file" required  >
+                   
                         </div>
 
                                   
-                            <div class="text-white flex" data-aos="fade-up"  data-aos-duration="1500"  >
-                                  <div v-for="(url, index) in imagePreviewUrls" :key="index" >
-                                    <img :src="url" class="h-20 w-20">
-                                  </div>
-                            </div>
+                                <div class="text-white flex" data-aos="fade-up"  data-aos-duration="1500"  >
+                                      <div v-if="imagePreviewUrlholder" >
+                                        <img :src="imagePreviewUrlholder" class="h-40 w-60 object-cover my-5 mx-5" >
+                                      </div>
+                                </div>
                         
                             <div class="overflow-y-hidden">
                                 <TextInput 
@@ -60,6 +61,7 @@ import 'aos/dist/aos.css'
                                 required
                                 autocomplete="current-title"
                                 placeholder="Name"
+                                v-model="name"
                                 data-aos="fade-up"  data-aos-duration="1300"
                                 >
                         
@@ -74,6 +76,10 @@ import 'aos/dist/aos.css'
                         
 
 
+                            <Modal :show="showModal" @close="showModal = false" class="text-center">
+                                <h2 class="text-theme1 text-2xl">Added Partners</h2>
+                                <p class="text-theme2 text-4xl">Success!</p>
+                            </Modal>
                 
 
 
@@ -104,21 +110,62 @@ import 'aos/dist/aos.css'
 export default {
   data() {
     return {
-      imagePreviewUrls: []
+      imagePreviewUrl:null,
+      imagePreviewUrlholder:null,
+      name: '',
+      showModal: false,
     }
   },
   methods: {
-    onFilesSelected(event) {
-      const files = event.target.files;
-      for (let i = 0; i < files.length; i++) {
-        const file = files[i];
-        const reader = new FileReader();
-        reader.onload = (event) => {
-          this.imagePreviewUrls.push(event.target.result);
-        };
-        reader.readAsDataURL(file);
-      }
-    }
+    uploadFile(event) {
+    this.imagePreviewUrlholder = this.imagePreviewUrl;
+    this.imagePreviewUrl = this.$refs.file.files[0]; 
+    const file = event.target.files[0];
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        this.imagePreviewUrlholder = event.target.result;
+      };
+      reader.readAsDataURL(file);
+
+    },
+    submitData() {
+      this.showModal = true
+      const formData = new FormData();
+      formData.append('file', this.imagePreviewUrl);
+      formData.append('partnerName', this.name);
+    
+
+      let url = "http://127.0.0.1:8000/partner";
+   
+      // Append additional form data to the same FormData object
+      
+      axios.post(url,formData,{
+
+      headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      }).then(response => {
+        console.log(response);
+        
+     
+      }).catch(error => {
+        console.log(error);
+      });
+
+      this.imagePreviewUrl = '';
+      this.imagePreviewUrlholder = '';
+      this.name =  '';
+  
+    },
+    
+    
+    closeModal() {
+      // Reset any necessary data properties and hide the modal
+  
+      this.showModal = false;
+    },
+
+    
   }
 }
 

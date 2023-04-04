@@ -49,6 +49,7 @@ onUnmounted(() => {
     document.body.style.overflow = null;
 });
 
+
 const maxWidthClass = computed(() => {
     return {
         sm: 'sm:max-w-sm',
@@ -73,7 +74,7 @@ const maxWidthClass = computed(() => {
                     leave-to-class="opacity-0"
                 >
                     <div v-show="show" class="fixed inset-0 transform transition-all" @click="close">
-                        <div class="absolute inset-0 bg-gray-500 opacity-75" />
+                        <div class="absolute inset-0 bg-gray-100 backdrop-blur-md opacity-75" />
                     </div>
                 </transition>
 

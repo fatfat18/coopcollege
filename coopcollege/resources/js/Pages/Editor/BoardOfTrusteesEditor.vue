@@ -18,7 +18,7 @@ import Modal from '@/Components/Modal.vue'
     url('/coopcollege/coopcollege/resources/asset/editpostbackg.jpg');
 }
 #img {
-
+display: none;
 }
 </style>
 <template>
@@ -48,13 +48,14 @@ import Modal from '@/Components/Modal.vue'
 
                               <div class="text-white xl:h-20 w-max flex justify-center items-center" data-aos="fade-up"  data-aos-duration="1500" >
                              <label for="img" class="text-2xl text-white rounded-2xl border-theme2 py-5 px-5 border-dashed border-2 hover:border-white hover:text-theme2 transiton duration-300" >Upload Image<br></label>
-                            <input type="file" accept="image/*" @change="onFileSelected" id="img" required  >
+                            <input type="file" accept="image/*" @change="uploadFile" id="img" ref="file" required  >
+                   
                         </div>
 
                                   
                                 <div class="text-white flex" data-aos="fade-up"  data-aos-duration="1500"  >
-                                      <div v-if="imagePreviewUrl" >
-                                        <img :src="imagePreviewUrl" class="h-20 w-20" >
+                                      <div v-if="imagePreviewUrlholder" >
+                                        <img :src="imagePreviewUrlholder" class="h-40 w-60 object-cover my-5 mx-5" >
                                       </div>
                                 </div>
 
@@ -228,7 +229,7 @@ import Modal from '@/Components/Modal.vue'
                 
 
                             <Modal :show="showModal" @close="showModal = false" class="text-center">
-                                <h2 class="text-theme1 text-2xl">Added Board of Trustees!</h2>
+                                <h2 class="text-theme1 text-2xl">Added Board of Trustees</h2>
                                 <p class="text-theme2 text-4xl">Success!</p>
                             </Modal>
 
@@ -255,12 +256,14 @@ import Modal from '@/Components/Modal.vue'
 </template>
 
 <script>
+import axios from 'axios';
 
 
 export default {
   data() {
     return {
-      imagePreviewUrl:'',
+      imagePreviewUrl:null,
+      imagePreviewUrlholder:null,
       firstname: '',
       lastname: '',
       prefix: '',
@@ -273,18 +276,19 @@ export default {
     }
   },
   methods: {
-    onFileSelected(event) {
-      const file = event.target.files[0];
+    uploadFile(event) {
+    this.imagePreviewUrlholder = this.imagePreviewUrl;
+    this.imagePreviewUrl = this.$refs.file.files[0]; 
+    const file = event.target.files[0];
       const reader = new FileReader();
       reader.onload = (event) => {
-        this.imagePreviewUrl = event.target.result;
+        this.imagePreviewUrlholder = event.target.result;
       };
       reader.readAsDataURL(file);
+
     },
     submitData() {
       this.showModal = true
-
-
       const formData = new FormData();
       formData.append('file', this.imagePreviewUrl);
       formData.append('Fname', this.firstname);
@@ -312,15 +316,29 @@ export default {
       }).catch(error => {
         console.log(error);
       });
-      
+
+      this.imagePreviewUrl = '';
+      this.imagePreviewUrlholder = '';
+      this.firstname =  '';
+      this.lastname = '';
+      this.prefix =  '';
+      this.suffix =  '';
+      this.position =  '';
+      this.address =  '';
+      this.start_date =  '';
+      this.end_date =  '';
     },
+    
     
     closeModal() {
       // Reset any necessary data properties and hide the modal
   
       this.showModal = false;
     },
+
+    
   }
+  
   
 }
 
