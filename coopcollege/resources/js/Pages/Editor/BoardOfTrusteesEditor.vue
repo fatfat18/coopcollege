@@ -48,7 +48,7 @@ import Modal from '@/Components/Modal.vue'
 
                               <div class="text-white xl:h-20 w-max flex justify-center items-center" data-aos="fade-up"  data-aos-duration="1500" >
                              <label for="img" class="text-2xl text-white rounded-2xl border-theme2 py-5 px-5 border-dashed border-2 hover:border-white hover:text-theme2 transiton duration-300" >Upload Image<br></label>
-                            <input type="file" accept="image/*"  @change="onFileSelected" id="img" name="file"  required  >
+                            <input type="file" accept="image/*" @change="onFileSelected" id="img" required  >
                         </div>
 
                                   
@@ -260,8 +260,7 @@ import Modal from '@/Components/Modal.vue'
 export default {
   data() {
     return {
-      imagePreviewUrl:null,
-      file:null,
+      imagePreviewUrl:'',
       firstname: '',
       lastname: '',
       prefix: '',
@@ -287,7 +286,7 @@ export default {
 
 
       const formData = new FormData();
-      formData.append('file', this.file);
+      formData.append('file', this.imagePreviewUrl);
       formData.append('Fname', this.firstname);
       formData.append('Lname', this.lastname);
       formData.append('Address', this.address);
@@ -297,11 +296,11 @@ export default {
       formData.append('startDate', this.start_date);
       formData.append('endDate', this.end_date);
 
-      
+      let url = "http://127.0.0.1:8000/storeBOD";
    
       // Append additional form data to the same FormData object
       
-      axios.post('http://127.0.0.1:8000/storeBOD',formData,{
+      axios.post(url,formData,{
 
       headers: {
           'Content-Type': 'multipart/form-data'

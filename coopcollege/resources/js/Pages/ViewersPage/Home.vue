@@ -52,13 +52,16 @@ function copyEmailAdd() {
       <ResponsiveNavBar />
 
 <div id="maincontent" class="flex justify-center items-center h-max w-screen bg-cover" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000" >
-    <img src="../../../asset/landingpagenew.jpg" class="bg-cover w-full"  /> 
+    <img src="../../../asset/landingpagenewest.jpg" class="bg-cover w-full"  /> 
 </div>
 
 <div class="xl:h-96 md:h-max xl:w-screen  flex justify-center items-center xl:text-2xl text-xs text-justify py-10 px-8" data-aos="fade-up" data-aos-duration="2000">
 
-    <p class="md:mx-8">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp On March 14, 2023, the Ceremonial Turn-over of the Purchased 2 ha. lot by CLIMBS Life and General Insurance Cooperative to Co-operative College of the Philippines was carried-out wherein soon to rise will be the latter's campus in El Salvador City, Misamis Oriental, Philippines.
-#CooperativeEducation #CooperativeIdentity #continuouslearning </p>
+    <p class="md:mx-8">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp One of our esteemed speakers for this afternoon for the topic on Succession Planning and Importance of Strengthening Middle Management in the Co-ops: Atty. Marc Castrodes of Areté Leadership.
+A leader’s lasting value is measured by succession indeed, most especially in the co-op movement.<br><br>
+To learn more, send us a message at:<br>
+institute@climbs.coop (Co-op College PH)<br>
+nafemarketing22@climbs.coop (NaFeCOOP)<br> </p>
 </div>
 
 
@@ -111,7 +114,7 @@ of the Philippines (NaFeCOOP).
 Institute of Management (CIM), and now, the Co-operative College of the Philippines
 (CCP) aims to further cooperative education through higher level of trainings by
 embodying the cooperative values and principles, upgrades its educational platforms,
-and widen partnerships both locally and abroad.
+and widen partnerships both locally and abroad. 
     </div>
     <div class="card px-4 text-center flex flex-col justify-center items-center my-8 mb-10 h-80 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="900" >
         <font-awesome-icon icon="fa-solid fa-chart-simple" class="text-theme1 h-10 mb-4" />
