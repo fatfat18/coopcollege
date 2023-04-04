@@ -23,10 +23,6 @@ class contactUs extends Controller
 }
 
 
-
-
-
-
 //CONTACTUS CONTROLLER NGA GA 500 SERVER ERROR
 
 //class contactUs extends Controller
