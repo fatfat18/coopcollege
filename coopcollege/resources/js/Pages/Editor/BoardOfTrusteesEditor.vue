@@ -5,6 +5,8 @@ import TextInput from '@/Components/TextInput.vue';
 import InputLabel from '@/Components/InputLabel.vue';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import Modal from '@/Components/Modal.vue'
+
 
 
 
@@ -16,7 +18,7 @@ import 'aos/dist/aos.css'
     url('/coopcollege/coopcollege/resources/asset/editpostbackg.jpg');
 }
 #img {
-  display: none;
+
 }
 </style>
 <template>
@@ -37,7 +39,7 @@ import 'aos/dist/aos.css'
             <div class=" xl:w-3/4 w-4/5 xl:mt-16 overflow-y-hidden">
 
 
-                    <form action="">
+                    <form @submit.prevent="submitData">
                         <button class="border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg mb-10 hover:bg-green-600 transition ease-in duration-100">Save</button>
                         
                            
@@ -45,14 +47,14 @@ import 'aos/dist/aos.css'
                             <div class="overflow-y-hidden space-x-2">
 
                               <div class="text-white xl:h-20 w-max flex justify-center items-center" data-aos="fade-up"  data-aos-duration="1500" >
-                             <label for="img" class="text-2xl text-white rounded-2xl border-theme2 py-5 px-5 border-dashed border-2 hover:border-white hover:text-theme2 transiton duration-300">Upload Image<br></label>
-                            <input type="file" accept="image/*"  @change="onFilesSelected" id="img" >
+                             <label for="img" class="text-2xl text-white rounded-2xl border-theme2 py-5 px-5 border-dashed border-2 hover:border-white hover:text-theme2 transiton duration-300" >Upload Image<br></label>
+                            <input type="file" accept="image/*"  @change="onFileSelected" id="img" name="file"  required  >
                         </div>
 
                                   
                                 <div class="text-white flex" data-aos="fade-up"  data-aos-duration="1500"  >
-                                      <div v-for="(url, index) in imagePreviewUrls" :key="index" >
-                                        <img :src="url" class="h-20 w-20">
+                                      <div v-if="imagePreviewUrl" >
+                                        <img :src="imagePreviewUrl" class="h-20 w-20" >
                                       </div>
                                 </div>
 
@@ -63,8 +65,10 @@ import 'aos/dist/aos.css'
                                 class="mt-4 py-2 px-2  max-w-4xl w-66 focus:ring-yellow-500 active:ring-yellow-500"
                                 required
                                 autocomplete="current-title"
-                                placeholder="Firstname"
+                                placeholder="Fname"
+                                v-model="firstname"
                                 data-aos="fade-up"  data-aos-duration="1300"
+                                @click.stop
                                 >
                             
                                 </TextInput>
@@ -75,25 +79,16 @@ import 'aos/dist/aos.css'
                                 type="text"
                                 class="mt-4 py-2 px-2  max-w-4xl w-66 focus:ring-yellow-500 active:ring-yellow-500"
                                 required
-                                autocomplete="current-title"
+                                autocomplete="Lname"
                                 placeholder="Lastname"
+                                v-model="lastname"
                                 data-aos="fade-up"  data-aos-duration="1300"
+                                @click.stop
                                 >
             
                                 </TextInput>
 
-                                <TextInput 
-                                id="middlename"
-                                name="middlename"
-                                type="text"
-                                class="mt-4 py-2 px-2  max-w-4xl w-66 focus:ring-yellow-500 active:ring-yellow-500"
-                                required
-                                autocomplete="current-title"
-                                placeholder="Middle Name"
-                                data-aos="fade-up"  data-aos-duration="1300"
-                                >
-            
-                                </TextInput>
+                              
 
 
                                 <TextInput 
@@ -102,9 +97,11 @@ import 'aos/dist/aos.css'
                                 type="text"
                                 class="mt-4 py-2 px-2  max-w-4xl w-66 focus:ring-yellow-500 active:ring-yellow-500"
                                 required
-                                autocomplete="current-title"
+                                autocomplete="Suffix"
                                 placeholder="Suffix"
+                                v-model="suffix"
                                 data-aos="fade-up"  data-aos-duration="1300"
+                                @click.stop
                                 >
             
                                 </TextInput>
@@ -116,11 +113,13 @@ import 'aos/dist/aos.css'
                                 required
                                 autocomplete=""
                                 placeholder="Position"
+                                v-model="position"
                                 data-aos="fade-up"  data-aos-duration="1300"
+                                @click.stop
                                 >
             
                                 </TextInput>
-                                <TextInput 
+                                <!-- <TextInput 
                                 id="status"
                                 name="status"
                                 type="text"
@@ -128,10 +127,12 @@ import 'aos/dist/aos.css'
                                 required
                                 autocomplete=""
                                 placeholder="Status"
+                                v-model="status"
                                 data-aos="fade-up"  data-aos-duration="1300"
+                                @click.stop
                                 >
             
-                                </TextInput>
+                                </TextInput> -->
 
                                 <TextInput 
                                 id="prefix"
@@ -141,7 +142,9 @@ import 'aos/dist/aos.css'
                                 required
                                 autocomplete=""
                                 placeholder="Prefix"
+                                v-model="prefix"
                                 data-aos="fade-up"  data-aos-duration="1300"
+                                @click.stop
                                 >
             
                                 </TextInput>
@@ -154,11 +157,15 @@ import 'aos/dist/aos.css'
                                 required
                                 autocomplete=""
                                 placeholder="Address"
+                                v-model="address"
                                 data-aos="fade-up"  data-aos-duration="1300"
+                                @click.stop
                                 >
             
-                                </TextInput>
+                               </TextInput>
 
+
+                            <!-- 
                                 <TextInput 
                                 id="coop_name"
                                 name="coop_name"
@@ -166,11 +173,13 @@ import 'aos/dist/aos.css'
                                 class="mt-4 py-2 px-2  max-w-4xl w-66 focus:ring-yellow-500 active:ring-yellow-500"
                                 required
                                 autocomplete=""
-                                placeholder="Coop ID"
+                                placeholder="Coop Name"
+                                v-model="coop_name"
                                 data-aos="fade-up"  data-aos-duration="1300"
+                                @click.stop
                                 >
             
-                                </TextInput>
+                                </TextInput> -->
 
                                 <br>
 
@@ -182,13 +191,15 @@ import 'aos/dist/aos.css'
                                 required
                                 autocomplete=""
                                 placeholder="Start Date"
+                                v-model="start_date"
                                 data-aos="fade-up"  data-aos-duration="1300"
+                                @click.stop
                                 >
                                
                                 </TextInput>
 
 
-                                <InputLabel>Start Date</InputLabel>
+                                <InputLabel @click.stop>Start Date</InputLabel>
                                 
                                 <TextInput 
                                 id="end_date"
@@ -198,7 +209,9 @@ import 'aos/dist/aos.css'
                                 required
                                 autocomplete=""
                                 placeholder="End Date"
+                                v-model="end_date"
                                 data-aos="fade-up"  data-aos-duration="1300"
+                                @click.stop
                                 >
             
                                 </TextInput>
@@ -214,6 +227,10 @@ import 'aos/dist/aos.css'
 
                 
 
+                            <Modal :show="showModal" @close="showModal = false" class="text-center">
+                                <h2 class="text-theme1 text-2xl">Added Board of Trustees!</h2>
+                                <p class="text-theme2 text-4xl">Success!</p>
+                            </Modal>
 
 
 
@@ -238,25 +255,74 @@ import 'aos/dist/aos.css'
 </template>
 
 <script>
+
+
 export default {
   data() {
     return {
-      imagePreviewUrls: []
+      imagePreviewUrl:null,
+      file:null,
+      firstname: '',
+      lastname: '',
+      prefix: '',
+      suffix: '',
+      position: '',
+      address: '',
+      start_date: '',
+      end_date: '',
+      showModal: false,
     }
   },
   methods: {
-    onFilesSelected(event) {
-      const files = event.target.files;
-      for (let i = 0; i < files.length; i++) {
-        const file = files[i];
-        const reader = new FileReader();
-        reader.onload = (event) => {
-          this.imagePreviewUrls.push(event.target.result);
-        };
-        reader.readAsDataURL(file);
-      }
-    }
+    onFileSelected(event) {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        this.imagePreviewUrl = event.target.result;
+      };
+      reader.readAsDataURL(file);
+    },
+    submitData() {
+      this.showModal = true
+
+
+      const formData = new FormData();
+      formData.append('file', this.file);
+      formData.append('Fname', this.firstname);
+      formData.append('Lname', this.lastname);
+      formData.append('Address', this.address);
+      formData.append('Prefix', this.prefix);
+      formData.append('Suffix', this.suffix);
+      formData.append('Position', this.position);
+      formData.append('startDate', this.start_date);
+      formData.append('endDate', this.end_date);
+
+      
+   
+      // Append additional form data to the same FormData object
+      
+      axios.post('http://127.0.0.1:8000/storeBOD',formData,{
+
+      headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      }).then(response => {
+        console.log(response);
+        
+     
+      }).catch(error => {
+        console.log(error);
+      });
+      
+    },
+    
+    closeModal() {
+      // Reset any necessary data properties and hide the modal
+  
+      this.showModal = false;
+    },
   }
+  
 }
 
 AOS.init();

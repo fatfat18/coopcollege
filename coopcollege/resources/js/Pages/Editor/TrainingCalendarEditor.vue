@@ -8,20 +8,25 @@ import 'aos/dist/aos.css'
 
 
 
+
 </script>
 
 <style>
 .postcontainer{
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .9)),
     url('/coopcollege/coopcollege/resources/asset/editpostbackg.jpg');
+
+
 }
+
+
 </style>
 <template>
 
 
     <AuthenticatedLayout>
         <template #header> 
-            <h2 class="font-semibold text-3xl text-theme1 leading-tight h-4 mb-4">Partners Editor </h2>
+            <h2 class="font-semibold text-3xl text-theme1 leading-tight h-4 mb-4">Training Calendar Editor </h2>
         </template>
 
         <div class="">
@@ -51,6 +56,7 @@ import 'aos/dist/aos.css'
                                 v-model="month"
                                 placeholder="Month"
                                 data-aos="fade-up"  data-aos-duration="1300"
+                                @click.stop
                                 >
                         
                                 </TextInput>
@@ -65,6 +71,7 @@ import 'aos/dist/aos.css'
                                 v-model="course_title"
                                 placeholder="Course Title"
                                 data-aos="fade-up"  data-aos-duration="1300"
+                                @click.stop
                                 >
                         
                                 </TextInput>
@@ -79,6 +86,7 @@ import 'aos/dist/aos.css'
                                 placeholder="Venue"
                                 v-model="venue"
                                 data-aos="fade-up"  data-aos-duration="1300"
+                                @click.stop
                                 >
                         
                                 </TextInput>
@@ -93,35 +101,23 @@ import 'aos/dist/aos.css'
                                 placeholder="Year"
                                 v-model="year"
                                 data-aos="fade-up"  data-aos-duration="1300"
+                                @click.stop
                                 >
                         
                                 </TextInput>
-
-
-                                
-                            
-                    
                             
                             
                             </div>
-                        
 
+                           
+                              <Modal :show="showModal" @close="showModal = false" class="text-center">
+                                <h2 class="text-theme1 text-2xl">Added Training Calendar!</h2>
+                                <p class="text-theme2 text-4xl">Success!</p>
+                              </Modal>
 
-                
-
-
-
-
-
-
-
-
+                       
 
                     </form>
-
-
-
-
 
         </div>
     </div>
@@ -134,24 +130,36 @@ import 'aos/dist/aos.css'
 
 <script>
 import axios from 'axios';
+import Modal from '@/Components/Modal.vue'
+
+
 
 export default {
-  name: 'TextInput',
+  components: {
+    Modal,
+  },
   data() {
     return {
       month: '',
       course_title: '',
       year: '',
       venue: '',
+      showModal: false,
     }
+    
   },
   methods: {
     submitData() {
-      axios.post('http://127.0.0.1:8000/storeCalendarTraining', {
-        month: this.month,
-        course_title: this.course_title,
-        year: this.year,
-        venue: this.venue,
+      this.showModal = true
+
+      const formData = new FormData();
+      formData.append('month', this.month);
+      formData.append('courseTitle', this.course_title);
+      formData.append('year', this.year);
+      formData.append('venue', this.venue);
+
+      axios.post('http://127.0.0.1:8000/storeCalendarTraining',formData, {
+    
       })
       .then(response => {
         console.log(response);
@@ -159,9 +167,23 @@ export default {
       .catch(error => {
         console.log(error);
       });
-    }
+      this.showModal = true;
+      console.log(this.showModal);
+    },
+    closeModal() {
+      // Reset any necessary data properties and hide the modal
+  
+      this.showModal = false;
+    },
   }
 }
+
+
+
+
+
+
+
 AOS.init();
 AOS.refresh();
 </script>
