@@ -68,7 +68,7 @@ nafemarketing22@climbs.coop (NaFeCOOP)<br> </p>
         <img src="../../../asset/lpg1.jpg" class="h-screen w-screen items-stretch z-50" />
     </div>
 
-    <img src="../../../asset/sample.jpg" class="absolute h-screen w-full z-1 opacity-20 " />
+    <img src="../../../asset/sample.jpg" class="absolute xl:h-screen h-2/3 w-full z-1 opacity-20 " />
     <div class="flex flex-col justify-center items-center h-max w-screen xl:w-1/2" data-aos="fade-left" data-aos-delay="800" data-aos-duration="1000" >
         
         <p class="xl:text-6xl text-sm mt-4 xl:mb-8 text-white z-10"> Cebu Training Session</p>
