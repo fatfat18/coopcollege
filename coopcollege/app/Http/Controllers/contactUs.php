@@ -12,4 +12,11 @@ class contactUs extends Controller
         \App\Models\contactUs::where('idcontactUs','1')->update($request->all());
         return ['msg'=>"Successfuly updated contacts"];
     }
+
+    public function display(){
+        return \App\Models\contactUs::where('idcontactUs','1')->get();
+    }
+
+   
+
 }

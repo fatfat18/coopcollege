@@ -154,6 +154,9 @@ Route::put('/updateCalendarTraining',[trainingCalendar::class, 'update'] );
 // contact us
 Route::put('/contactUs',[contactUs::class, 'update'] );
 
+Route::get('/displayContactUs',[contactUs::class, 'display'] );
+
+
 // partner
 Route::post('/partner',[partner::class, 'store'] );
 
