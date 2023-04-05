@@ -104,27 +104,10 @@ import Modal from '@/Components/Modal.vue';
                             
                                 </textarea>
 
-                                <TextInput 
-                                id="DateCreated"
-                                name="DateCreated"
-                                type="date"
-                                class="mt-4 py-2 px-2  max-w-4xl w-66 focus:ring-yellow-500 active:ring-yellow-500"
-                                required
-                                autocomplete=""
-                                placeholder="Date_Created"
-                                v-model="date_created"
-                           
-                                @click.stop
-                                >
-                               
-                                </TextInput>
-
-
-                                <InputLabel @click.stop>Date Created</InputLabel>
                             
                                 <select id="posttype" name="posttype" class="mt-4" v-model="posttype">
                                    <option hidden>Post Type</option>
-                                   <option v-for="item in items" :key="item.id" :value="item.category">{{ item.category }}</option>
+                                   <option v-for="item in items" :key="item.id" :value="item.id">{{ item.category }}</option>
                                  </select>
                             
                             </div>
@@ -177,7 +160,7 @@ data() {
     description: '',
     title: '',
     context: '',
-    date_created: '',
+  
     items: [],
     showModal: false,
 
@@ -214,13 +197,15 @@ methods: {
   submitData() {
     
     const formData = new FormData();
-    formData.append('file[]', this.imagePreviewUrl);
+    for (let i = 0; i < this.imagePreviewUrlholder.length; i++) {
+        formData.append('file[]', this.imagePreviewUrlholder[i]);
+      }
     formData.append('PostCatId', this.posttype);
     formData.append('idUser', this.idUser);
     formData.append('Description', this.description);
     formData.append('newsTitle', this.title);
     formData.append('Context', this.context);
-    formData.append('news_DateCreated', this.date_created);
+   
 
     let urlPost = "http://127.0.0.1:8000/storePost";
  

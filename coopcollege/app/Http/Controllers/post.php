@@ -17,7 +17,7 @@ class post extends Controller
             'Description'=> 'required', 
             'newsTitle'=> 'required', 
             'Context'=> 'required', 
-            'news_DateCreated'=> 'required|date',
+            'news_DateCreated'=> 'nullable|date',
             'file.*' => 'required|mimetypes:image/jpg,image/jpeg,image/bmp,image/png'
         ]);
  
