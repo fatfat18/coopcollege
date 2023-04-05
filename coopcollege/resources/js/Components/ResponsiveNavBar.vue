@@ -22,7 +22,7 @@ const showingNavigationDropdown = ref(false);
 
 <template>
     <div class="bg-theme1 w-screen overflow-x-hidden">
-      <nav class="bg-theme1 w-screen border-b border-gray-100">
+      <nav class="bg-theme1 w-screen  border-gray-100">
                 <!-- Primary Navigation Menu -->
                 <div class="flex xl:justify-center justify-end">
                     <div class="flex w-max justify-center h-16">
