@@ -18,7 +18,7 @@ class post extends Controller
             'newsTitle'=> 'required', 
             'Context'=> 'required', 
             'news_DateCreated'=> 'required|date',
-            'file.*' => 'required|mimetypes:image/jpg,image/jpeg,image/bmp'
+            'file.*' => 'required|mimetypes:image/jpg,image/jpeg,image/bmp,image/png'
         ]);
  
         if ($validator->fails()) {

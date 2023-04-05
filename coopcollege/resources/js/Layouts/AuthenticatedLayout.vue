@@ -3,7 +3,7 @@ import { ref } from 'vue';
 import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 import Dropdown from '@/Components/Dropdown.vue';
 import DropdownLink from '@/Components/DropdownLink.vue';
-import NavLink from '@/Components/NavLink.vue';
+import NavLinkAdmin from '@/Components/NavLinkAdmin.vue';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 import { Link } from '@inertiajs/vue3';
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -30,23 +30,23 @@ const showingNavigationDropdown = ref(false);
 
                             <!-- Navigation Links -->
                             <div class="hidden space-x-1 sm:ml-10 sm:flex">
-                                <NavLink :href="route('Posts')" :active="route().current('Posts')">
+                                <NavLinkAdmin :href="route('Posts')" :active="route().current('Posts')">
                                     Posts
-                                </NavLink>
+                                </NavLinkAdmin>
 
-                                <NavLink :href="route('BoardOfTrustees')" :active="route().current('BoardOfTrustees')">
+                                <NavLinkAdmin :href="route('BoardOfTrustees')" :active="route().current('BoardOfTrustees')">
                                     Board of Trustees
-                                </NavLink>
+                                </NavLinkAdmin>
 
-                                <NavLink :href="route('Partners')" :active="route().current('Partners')">
+                                <NavLinkAdmin :href="route('Partners')" :active="route().current('Partners')">
                                     Partners
-                                </NavLink>
-                                <NavLink :href="route('TrainingCalendar')" :active="route().current('TrainingCalendar')">
+                                </NavLinkAdmin>
+                                <NavLinkAdmin :href="route('TrainingCalendar')" :active="route().current('TrainingCalendar')">
                                     Training Calendar
-                                </NavLink>
-                                <NavLink :href="route('Contacts')" :active="route().current('Contacts')">
+                                </NavLinkAdmin>
+                                <NavLinkAdmin :href="route('Contacts')" :active="route().current('Contacts')">
                                     Contacts
-                                </NavLink>
+                                </NavLinkAdmin>
 
 
                             </div>

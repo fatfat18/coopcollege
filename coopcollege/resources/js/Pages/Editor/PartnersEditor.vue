@@ -169,7 +169,7 @@ export default {
     
   }
 }
-
-AOS.init();
+AOS.init({startEvent: 'load',
+          once : 'true,'});
 AOS.refresh();
 </script>
