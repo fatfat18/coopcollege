@@ -399,7 +399,7 @@ export default {
   data() {
     return {
       phrases: ["We are the sole-training needs provider of the National Federation of Cooperative Primaries of the Philippines (NaFeCOOP). We Strategically pivoted from CLIMBS Institute for Financial Literacy (CIFL) to CLIMBS Institute of Management (CIM), and now, the Co-operative College of the Philippines (Co-op College PH) to further cooperative education both locally and globally, embodies the cooperative values and principles, and upgrades its educational platforms."],
-      sleepTime: 40,
+      sleepTime: 30,
       curPhraseIndex: 0,
     };
   },
