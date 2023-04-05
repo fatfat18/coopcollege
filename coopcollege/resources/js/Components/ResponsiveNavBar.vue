@@ -57,6 +57,7 @@ export default {
                 hover:text-gray-400
                 focus:outline-none focus:text-gray-400
                 ml-4
+           
        
                 
               "
@@ -89,6 +90,7 @@ export default {
             transition duration-500
             ResNavBar
             pb-4
+      
             
             
           "

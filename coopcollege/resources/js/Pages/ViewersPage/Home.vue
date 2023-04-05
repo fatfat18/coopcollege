@@ -23,16 +23,6 @@ import Footer from '@/Components/Footer.vue';
 library.add(faPhoneFlip,faFacebook,faPhone,faEnvelope,faNoteSticky,faCoins,faBriefcaseMedical,faChartSimple,faLightbulb,faEarthAsia)
 
 
-const pixCodeInput = ref(null);
-
-function copyMobileNum() {
-    navigator.clipboard.writeText("09175085263");
-    alert("Mobile Phone Copied to Clipboard");
-}
-function copyEmailAdd() {
-    navigator.clipboard.writeText("institute@climbs.coop");
-    alert("Email Address Copied to Clipboard");
-}
 
 </script>
 
@@ -40,8 +30,15 @@ function copyEmailAdd() {
 
 <style>
 .card{
+    
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
+.cardcontainer{
+background-color: #eaeaee;
+opacity: 1;
+background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #eaeaee 10px ), repeating-linear-gradient( #fffefe55, #fffefe );
+}
+
 
 
 </style>
@@ -51,7 +48,7 @@ function copyEmailAdd() {
     <Header />
       <ResponsiveNavBar />
 
-<div id="maincontent" class="flex justify-center items-center h-max w-screen bg-cover" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000" >
+<div id="maincontent" class="flex justify-center items-center h-max w-screen bg-cover" data-aos="fade-in" data-aos-delay="500" data-aos-duration="1000" >
     <img src="../../../asset/landingpagenewest.jpg" class="bg-cover w-full"  /> 
 </div>
 
@@ -67,12 +64,15 @@ nafemarketing22@climbs.coop (NaFeCOOP)<br> </p>
 
 <div class=" bg-theme1 h-max w-screen flex flex-col xl:flex-row justify-center items-center ">
 
-    <div class="lpg1 bg-slate-900 h-max w-screen xl:w-1/2 " data-aos="fade-right" data-aos-duration="1000" >
-        <img src="../../../asset/lpg1.jpg" class="h-screen w-screen items-stretch" />
+    <div class="lpg1 bg-slate-900 h-max w-screen xl:w-1/2 z-50" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" >
+        <img src="../../../asset/lpg1.jpg" class="h-screen w-screen items-stretch z-50" />
     </div>
-    <div class="flex flex-col justify-center items-center h-max w-screen xl:w-1/2" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000" >
-        <p class="xl:text-6xl text-sm mt-4 xl:mb-8 text-white"> Cebu Training Session</p>
-        <p class=" text-white text-xs xl:text-xl text-justify px-8 py-4 xl:mr-12 ">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspThe morning session on Deepening our Co-operative Identity was facilitated by the <strong>Co-op College PH</strong> team headed by CEO & Principal <strong>Donna Dizon</strong>. This interactive learning activity brought out the creativity of the participants in making their own “Halo-halo” which requires certain key ingredients on embodying our identity as co-op leaders.
+
+    <img src="../../../asset/sample.jpg" class="absolute h-screen w-full z-1 opacity-20 " />
+    <div class="flex flex-col justify-center items-center h-max w-screen xl:w-1/2" data-aos="fade-left" data-aos-delay="800" data-aos-duration="1000" >
+        
+        <p class="xl:text-6xl text-sm mt-4 xl:mb-8 text-white z-10"> Cebu Training Session</p>
+        <p class=" text-white text-xs xl:text-xl text-justify px-8 py-4 xl:mr-12 z-10 ">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspThe morning session on Deepening our Co-operative Identity was facilitated by the <strong>Co-op College PH</strong> team headed by CEO & Principal <strong>Donna Dizon</strong>. This interactive learning activity brought out the creativity of the participants in making their own “Halo-halo” which requires certain key ingredients on embodying our identity as co-op leaders.
 The afternoon session on Co-op Financial Literacy: The Usage of Statutory Funds was conducted by our Resource Speaker and Trainer <strong>Hon. Gervacio Piator, CPA, MBA, DM, PhD.</strong>
 A total of 35 participants coming from 15 co-operatives nationwide joined and actively participated on these sessions. To learn more and be involved with the Co-op College programs (both locally and abroad), join us and be a member of the <strong>National Federation of Cooperative Primaries in the Philippines - Nafecoop</strong> now! </p>
 
@@ -81,7 +81,9 @@ A total of 35 participants coming from 15 co-operatives nationwide joined and ac
 
 </div>
 
-<div class=" h-max py-10 my-10 w-screen flex flex-wrap justify-center items-center px-4 text-sm ">
+<div class=" h-max py-10  w-screen flex flex-wrap justify-center items-center px-4 text-sm cardcontainer ">
+
+ 
 
     <div class="card text-xl px-4 text-center flex flex-col justify-center items-center my-8 mb-10 h-80 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="100" >
         <font-awesome-icon icon="fa-solid fa-note-sticky " class="text-theme1 h-10 mb-4" />
