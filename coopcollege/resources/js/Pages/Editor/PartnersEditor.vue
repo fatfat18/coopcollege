@@ -4,7 +4,7 @@ import InputError from '@/Components/InputError.vue';
 import TextInput from '@/Components/TextInput.vue';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import Modal from '@/Components/Modal.vue';
+
 
 
 </script>
@@ -76,11 +76,11 @@ import Modal from '@/Components/Modal.vue';
                         
 
 
-                            <Modal :show="showModal" @close="showModal = false" class="text-center">
+                            <Modal :show="showModal" @close="showModal = false" >
                                 <h2 class="text-theme1 text-2xl">Added Partners</h2>
                                 <p class="text-theme2 text-4xl">Success!</p>
                             </Modal>
-                
+
 
 
 
@@ -107,6 +107,7 @@ import Modal from '@/Components/Modal.vue';
 
 
 <script>
+import Modal from '@/Components/Modal.vue';
 export default {
   data() {
     return {

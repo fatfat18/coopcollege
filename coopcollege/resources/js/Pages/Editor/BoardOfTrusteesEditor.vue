@@ -97,7 +97,7 @@ display: none;
                                 name="suffix"
                                 type="text"
                                 class="mt-4 py-2 px-2  max-w-4xl w-66 focus:ring-yellow-500 active:ring-yellow-500"
-                                required
+                      
                                 autocomplete="Suffix"
                                 placeholder="Suffix"
                                 v-model="suffix"
@@ -140,7 +140,7 @@ display: none;
                                 name="prefix"
                                 type="text"
                                 class="mt-4 py-2 px-2  max-w-4xl w-66 focus:ring-yellow-500 active:ring-yellow-500"
-                                required
+                          
                                 autocomplete=""
                                 placeholder="Prefix"
                                 v-model="prefix"
@@ -228,13 +228,13 @@ display: none;
 
                 
 
-                            <Modal :show="showModal" @close="showModal = false" class="text-center">
+                            <Modal :show="showModal" @close="showModal = false">
                                 <h2 class="text-theme1 text-2xl">Added Board of Trustees</h2>
                                 <p class="text-theme2 text-4xl">Success!</p>
                             </Modal>
 
-
-
+                         
+                       
 
 
 
@@ -260,19 +260,21 @@ import axios from 'axios';
 
 
 export default {
+
   data() {
     return {
       imagePreviewUrl:null,
       imagePreviewUrlholder:null,
       firstname: '',
       lastname: '',
-      prefix: '',
-      suffix: '',
+      prefix: null,
+      suffix: null,
       position: '',
       address: '',
       start_date: '',
       end_date: '',
       showModal: false,
+
     }
   },
   methods: {
@@ -288,7 +290,7 @@ export default {
 
     },
     submitData() {
-      this.showModal = true
+      
       const formData = new FormData();
       formData.append('file', this.imagePreviewUrl);
       formData.append('Fname', this.firstname);
@@ -311,8 +313,7 @@ export default {
         }
       }).then(response => {
         console.log(response);
-        
-     
+        this.showModal = true;
       }).catch(error => {
         console.log(error);
       });

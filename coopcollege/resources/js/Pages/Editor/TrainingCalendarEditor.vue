@@ -110,7 +110,7 @@ import 'aos/dist/aos.css'
                             </div>
 
                            
-                              <Modal :show="showModal" @close="showModal = false" class="text-center">
+                              <Modal :show="showModal" @close="showModal = false">
                                 <h2 class="text-theme1 text-2xl">Added Training Calendar!</h2>
                                 <p class="text-theme2 text-4xl">Success!</p>
                               </Modal>
