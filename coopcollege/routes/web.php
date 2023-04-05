@@ -90,30 +90,35 @@ Route::get('/TrainingCalendarEditor', function () {
 Route::get('/', function () {
     return Inertia::render('ViewersPage/Home', [
         'canLogin' => Route::has('login'),        //ADMIN LOGIN
-        'canRegister' => Route::has('register'),  //ADMIN REGISTER
+        'canRegister' => Route::has('register'),
+          //ADMIN REGISTER
     ]);
-});
+})->name('Home');
 
 Route::get('/News', function () {
     return Inertia::render('ViewersPage/News');
-});
+})->name('News');
 
 Route::get('/AboutUs', function () {
     return Inertia::render('ViewersPage/AboutUs');
-});
+})->name('AboutUs');
 
 Route::get('/LearnWithUs', function () {
     return Inertia::render('ViewersPage/LearnWithUs');
-});
+})->name('LearnWithUs');
 
 Route::get('/Resources', function () {
     return Inertia::render('ViewersPage/Resources');
-});
+})->name('Resources');
 
 
 Route::get('/Projects', function () {
     return Inertia::render('ViewersPage/Projects');
-});
+})->name('Projects');
+
+
+
+
 
 
 Route::get('/ViewPost', function () {
