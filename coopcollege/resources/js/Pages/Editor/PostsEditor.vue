@@ -105,9 +105,9 @@ import Modal from '@/Components/Modal.vue';
                                 </textarea>
 
                             
-                                <select id="posttype" name="posttype" class="mt-4" v-model="posttype">
+                                <select class="mt-4" v-model="posttype" name="posttype">
                                    <option hidden>Post Type</option>
-                                   <option v-for="item in items" :key="item.id" :value="item.id">{{ item.category }}</option>
+                                   <option v-for="item in items" :key="item.id" :value="item.PostCatId">{{ item.category }}</option>
                                  </select>
                             
                             </div>
@@ -149,13 +149,15 @@ import Modal from '@/Components/Modal.vue';
 
 <script>
 
+
 export default {
+
 
 data() {
   return {
     imagePreviewUrl:[],
     imagePreviewUrlholder: [],
-    posttype: 'Post Type',
+    posttype: null,
     idUser: 1,
     description: '',
     title: '',
@@ -182,8 +184,10 @@ mounted() {
 
 methods: {
   uploadFile(event) {
-  
+  console.log(this.imagePreviewUrlholder);
 
+ 
+  
   const files = event.target.files;
   for (let i = 0; i < files.length; i++) {
   const file = files[i];
@@ -191,15 +195,31 @@ methods: {
   reader.onload = (event) => {
     this.imagePreviewUrlholder.push(event.target.result);
   };
-  reader.readAsDataURL(file);;
+  reader.readAsDataURL(file);
+
   }
+
+  const images = this.$refs.file.files;
+  for (let i = 0; i < images.length; i++) {
+        const image = images[i];
+        this.imagePreviewUrl.push(image);
+        
+  }
+  console.log(this.imagePreviewUrl);
+  
+
   },
   submitData() {
-    
+
+
     const formData = new FormData();
-    for (let i = 0; i < this.imagePreviewUrlholder.length; i++) {
-        formData.append('file[]', this.imagePreviewUrlholder[i]);
-      }
+    
+    for (let i = 0; i < this.imagePreviewUrl.length; i++) {
+    // Generate a unique key for the image data
+    const key = `file[${i}]`;
+    // Append the image data to the formData object with the unique key
+    formData.append(key, this.imagePreviewUrl[i]);
+}
     formData.append('PostCatId', this.posttype);
     formData.append('idUser', this.idUser);
     formData.append('Description', this.description);
@@ -223,14 +243,14 @@ methods: {
       console.log(error);
     });
 
-    imagePreviewUrl = [];
-    imagePreviewUrlholder =  [];
-    posttype =  this.item.postCatId;
-    idUser =  1;
-    description =  '';
-    title =  '';
-    context =  '';
-    date_created =  '';
+    this.imagePreviewUrl = '';
+    this.imagePreviewUrlholder = '';
+    this.posttype =  '';
+    this.idUser =  1;
+    this.description =  '';
+    this.title =  '';
+    this.context =  '';
+    this.date_created =  '';
 
   },
   
