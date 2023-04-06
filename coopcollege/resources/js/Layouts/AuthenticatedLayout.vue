@@ -4,7 +4,7 @@ import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 import Dropdown from '@/Components/Dropdown.vue';
 import DropdownLink from '@/Components/DropdownLink.vue';
 import NavLinkAdmin from '@/Components/NavLinkAdmin.vue';
-import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
+import ResponsiveNavLinkAdmin from '@/Components/ResponsiveNavLinkAdmin.vue';
 import { Link } from '@inertiajs/vue3';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -22,8 +22,8 @@ const showingNavigationDropdown = ref(false);
         <div class="min-h-screen bg-gray-100">
             <nav class="bg-white border-b border-gray-100">
                 <!-- Primary Navigation Menu -->
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="flex justify-between h-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+                    <div class="flex justify-between h-16 my-4">
                         <div class="flex">
                             <!-- Logo -->
                             
@@ -122,21 +122,21 @@ const showingNavigationDropdown = ref(false);
                 <!-- Responsive Navigation Menu -->
                 <div :class="{ block: showingNavigationDropdown, hidden: !showingNavigationDropdown }" class="sm:hidden">
                     <div class="pt-2 pb-3 space-y-1">
-                        <ResponsiveNavLink :href="route('Posts')" :active="route().current('Posts')">
+                        <ResponsiveNavLinkAdmin :href="route('Posts')" :active="route().current('Posts')">
                             Posts
-                        </ResponsiveNavLink>
-                        <ResponsiveNavLink :href="route('BoardOfTrustees')" :active="route().current('BoardOfTrustees')">
+                        </ResponsiveNavLinkAdmin>
+                        <ResponsiveNavLinkAdmin :href="route('BoardOfTrustees')" :active="route().current('BoardOfTrustees')">
                             Board of Trustees
-                        </ResponsiveNavLink>
-                        <ResponsiveNavLink :href="route('Partners')" :active="route().current('Partners')">
+                        </ResponsiveNavLinkAdmin>
+                        <ResponsiveNavLinkAdmin :href="route('Partners')" :active="route().current('Partners')">
                             Partners
-                        </ResponsiveNavLink>
-                        <ResponsiveNavLink :href="route('TrainingCalendar')" :active="route().current('TrainingCalendar')">
+                        </ResponsiveNavLinkAdmin>
+                        <ResponsiveNavLinkAdmin :href="route('TrainingCalendar')" :active="route().current('TrainingCalendar')">
                             Training Calendar
-                        </ResponsiveNavLink>
-                        <ResponsiveNavLink :href="route('Contacts')" :active="route().current('Contacts')">
+                        </ResponsiveNavLinkAdmin>
+                        <ResponsiveNavLinkAdmin :href="route('Contacts')" :active="route().current('Contacts')">
                             Contacts
-                        </ResponsiveNavLink>
+                        </ResponsiveNavLinkAdmin>
                     </div>
                     
 
@@ -150,10 +150,10 @@ const showingNavigationDropdown = ref(false);
                         </div>
 
                         <div class="mt-3 space-y-1">
-                            <ResponsiveNavLink :href="route('profile.edit')" class="text-theme2"> Profile <font-awesome-icon icon="fa-solid fa-address-card" class="ml-2" /> </ResponsiveNavLink>
-                            <ResponsiveNavLink :href="route('logout')" method="post" as="button" class="text-red-500">
-                                Log Out <font-awesome-icon icon="fa-solid fa-right-from-bracket" class="ml-2"/> 
-                            </ResponsiveNavLink>
+                            <ResponsiveNavLinkAdmin :href="route('profile.edit')" class="text-theme2"> Profile <font-awesome-icon icon="fa-solid fa-address-card" class="ml-2" /> </ResponsiveNavLinkAdmin>
+                            <ResponsiveNavLinkAdmin :href="route('logout')" method="post" as="button" >
+                                <span class="text-red-500">Log Out <font-awesome-icon icon="fa-solid fa-right-from-bracket" class="ml-2"/> </span>
+                            </ResponsiveNavLinkAdmin>
                         </div>
                     </div>
                 </div>
