@@ -107,7 +107,7 @@ import Modal from '@/Components/Modal.vue';
                             
                                 <select class="mt-4" v-model="posttype" name="posttype">
                                    <option hidden>Post Type</option>
-                                   <option v-for="item in items" :key="item.id" :value="item.PostCatId">{{ item.category }}</option>
+                                   <option v-for="item in items" :key="item.postCatId" :value="item.PostCatId">{{ item.category }}</option>
                                  </select>
                             
                             </div>
