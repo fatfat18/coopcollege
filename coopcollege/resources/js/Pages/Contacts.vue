@@ -1,7 +1,7 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Head } from '@inertiajs/vue3';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
@@ -10,8 +10,9 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faTty } from '@fortawesome/free-solid-svg-icons';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import TextInput from '@/Components/TextInput.vue';
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Modal from '@/Components/Modal.vue';
 
 
 
@@ -52,14 +53,14 @@ library.add(faPlus,faFacebook,faEnvelope,faPhone,faTty,faGlobe);
     
         <div class="max-w-7xl bg-white xl:px-8 xl:py-4 py-4 rounded-lg flex flex-col gap-4 text-xs xl:text-l w-screen h-max" v-for="(item, index) in contactUs" :key="index"> 
 
-            <button class="border  w-24 text-white py-4 px-4 bg-green-800 rounded-lg  hover:bg-green-600 transition ease-in duration-100">Save</button>
+            <button @click="updateContactUs(item.idcontactUs)" class="border  w-24 text-white py-4 px-4 bg-green-800 rounded-lg  hover:bg-green-600 transition ease-in duration-100"  >Save</button>
 
             <div class="xl:flex overflow-y-hidden justify-center" >
                 
                 <font-awesome-icon icon="fa-solid fa-envelope" class="transition ease-in duration-150 h-10 text-theme1 mx-4 overflow-y-hidden" data-aos="fade-right"  data-aos-duration="1300" />
                 <TextInput 
-                                id="title"
-                                name="title"
+                                id="emailAdd"
+                                name="emailAdd"
                                 type="text"
                                 class="px-2 xl:w-1/3 w:1/2 focus:ring-yellow-500 active:ring-yellow-500 "
                                 required
@@ -74,8 +75,8 @@ library.add(faPlus,faFacebook,faEnvelope,faPhone,faTty,faGlobe);
             <div class="xl:flex overflow-y-hidden justify-center">
                 <font-awesome-icon icon="fa-brands fa-facebook" class="transition ease-in duration-150 h-10 text-theme1 mx-4 overflow-y-hidden" data-aos="fade-right"  data-aos-duration="1300" />
                 <TextInput 
-                                id="title"
-                                name="title"
+                                id="facebookLink"
+                                name="facebookLink"
                                 type="text"
                                 class="px-2 xl:w-1/3 w:1/2 focus:ring-yellow-500 active:ring-yellow-500 "
                                 required
@@ -92,8 +93,8 @@ library.add(faPlus,faFacebook,faEnvelope,faPhone,faTty,faGlobe);
             <div class="xl:flex overflow-y-hidden justify-center">
                 <font-awesome-icon icon="fa-solid fa-phone" class="transition ease-in duration-150 h-10 text-theme1 mx-4 overflow-y-hidden" data-aos="fade-right"  data-aos-duration="1300" />
                 <TextInput 
-                                id="title"
-                                name="title"
+                                id="phoneNum"
+                                name="phoneNum"
                                 type="number"
                                 class="px-2 xl:w-1/3 w:1/2 focus:ring-yellow-500 active:ring-yellow-500 "
                                 required
@@ -110,8 +111,8 @@ library.add(faPlus,faFacebook,faEnvelope,faPhone,faTty,faGlobe);
             <div class="xl:flex overflow-y-hidden justify-center">
                 <font-awesome-icon icon="fa-solid fa-tty" class="transition ease-in duration-150 h-10 text-theme1 mx-4 overflow-y-hidden" data-aos="fade-right"  data-aos-duration="1300" />
                 <TextInput 
-                                id="title"
-                                name="title"
+                                id="telNum"
+                                name="telNum"
                                 type="number"
                                 class="px-2 xl:w-1/3 w:1/2 focus:ring-yellow-500 active:ring-yellow-500 "
                                 required
@@ -128,8 +129,8 @@ library.add(faPlus,faFacebook,faEnvelope,faPhone,faTty,faGlobe);
             <div class="xl:flex overflow-y-hidden justify-center">
                 <font-awesome-icon icon="fa-solid fa-globe" class="transition ease-in duration-150 h-10 text-theme1 mx-4 overflow-y-hidden" data-aos="fade-right"  data-aos-duration="1300" />
                 <TextInput 
-                                id="title"
-                                name="title"
+                                id="websiteLink"
+                                name="websiteLink"
                                 type="text"
                                 class="px-2 xl:w-1/3 w:1/2 focus:ring-yellow-500 active:ring-yellow-500 "
                                 required
@@ -146,6 +147,11 @@ library.add(faPlus,faFacebook,faEnvelope,faPhone,faTty,faGlobe);
     
         </div>
     </form>      
+
+                      <Modal :show="showModal" @close="showModal = false" >
+                                <h2 class="text-theme1 text-2xl">Updated Contacts</h2>
+                                <p class="text-theme2 text-4xl">Success!</p>
+                            </Modal>
 
             </div>
         </div>
@@ -167,11 +173,8 @@ export default {
     return {
       contactUs: [],
       idcontactUs: 1,
-      emailAdd: '',
-      telNum: '',
-      phoneNum: '',
-      facebookLink: '',
-      websiteLink: '',
+      showModal: false,
+    
       
     };
   },
@@ -180,7 +183,6 @@ export default {
     axios.get(getUrl)
       .then(response => {
         this.contactUs = response.data;
-        console.log(this.contactUs);
       })
       .catch(error => {
         console.log(error);
@@ -188,20 +190,20 @@ export default {
   },
   methods: {
     updateContactUs() {
-     let updateUrl = "http://127.0.0.1:8000/contactUs";
+     let updateUrl = "http://127.0.0.1:8000/contactUs/";
      let params = new URLSearchParams();
-     params.append("emailAdd", this.emailAdd);
-     params.append("phoneNum", this.phoneNum);
-     params.append("telNum", this.telNum);
-     params.append("facebookLink", this.facebookLink);
-     params.append("websiteLink", this.websiteLink);
+     let item = this.contactUs.find(item => item.idcontactUs === this.idcontactUs);
+     params.append("emailAdd", item.emailAdd);
+     params.append("phoneNum", item.phoneNum);
+     params.append("telNum", item.telNum);
+     params.append("facebookLink", item.facebookLink);
+     params.append("websiteLink", item.websiteLink);
      params.append("Status", 1); // Assuming Status is a number
-
-     console.log(params);
      
      axios.put(updateUrl + '?' + params.toString())
        .then(response => {
          console.log(response.data);
+         this.showModal= true;
        })
        .catch(error => {
          console.log(error);
