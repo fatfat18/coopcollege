@@ -12,10 +12,10 @@ class bod extends Controller
     public function store(Request $request){
 
         $validator = Validator::make($request->all(), [
-            'Prefix' => 'required',
+            'Prefix' => 'nullable',
             'Fname' => 'required',
             'Lname' => 'required',
-            'Suffix' => 'required',
+            'Suffix' => 'nullable',
             'Position' => 'required',
             'startDate' => 'required|date',
             'endDate' => 'required|date',
@@ -34,10 +34,10 @@ class bod extends Controller
 
         \App\Models\BOD::create([
             'ImagesId'=>$data->id,  
-            'Prefix'=>$request->Prefix, 
+            'Prefix'=>$request->Prefix ?: null, 
             'Fname'=>$request->Fname, 
             'Lname'=>$request->Lname, 
-            'Suffix'=>$request->Suffix, 
+            'Suffix'=>$request->Suffix ?: null, 
             'Position'=>$request->Position, 
             'startDate'=>$request->startDate, 
             'endDate'=>$request->endDate, 

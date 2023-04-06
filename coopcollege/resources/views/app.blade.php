@@ -7,6 +7,11 @@
 
         <title>Co-op College of the Philippines</title>
 
+        <style>
+            html{
+                overflow-x: hidden;
+            }
+        </style>
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
@@ -21,10 +26,4 @@
     </body>
 </html>
 
-<script>
-import AOS from 'aos'
-import 'aos/dist/aos.css'
-AOS.init();
-AOS.refresh();
-</script>
 

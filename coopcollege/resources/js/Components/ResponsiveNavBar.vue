@@ -1,22 +1,13 @@
-<script>
+<script setup>  
 import { ref } from 'vue';
-import { RouterLink } from 'vue-router';
+import Dropdown from '@/Components/Dropdown.vue';
+import DropdownLink from '@/Components/DropdownLink.vue';
+import NavLink from '@/Components/NavLink.vue';
+import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 
 
- 
+const showingNavigationDropdown = ref(false);
 
-export default {
-  setup() {
-    let showMenu = ref(false);
-    const toggleNav = () => (showMenu.value = !showMenu.value);
-    return { showMenu, toggleNav };
-  },
-  computed: {
-    linkActiveClass() {
-      return 'router-link-active';
-    },
-  },
-};
 </script>
 
 <style>
@@ -30,82 +21,98 @@ export default {
 </style>
 
 <template>
-    <div class="bg-theme1 w-screen">
-      <nav
-        class="
-          py-3
-          xl:flex 
-          justify-center
-          text-xl
-          xl:text-2xl
-        
-      
-          
-       
+    <div class="bg-theme1 w-screen overflow-x-hidden">
+      <nav class="bg-theme1 w-screen  border-gray-100">
+                <!-- Primary Navigation Menu -->
+                <div class="flex xl:justify-center justify-end">
+                    <div class="flex w-max justify-center h-16">
+                        <div class="flex">
 
-        "
-        data-aos="fade-down" data-aos-duration="1000"
-       >
-        <div class="flex items-center justify-between trans">
-       
-          <!-- Mobile menu button -->
-          <div @click="toggleNav" class="flex md:hidden">
-            <button
-              type="button"
-              class="
-                text-white
-                hover:text-gray-400
-                focus:outline-none focus:text-gray-400
-                ml-4
-       
-                
-              "
-            >
-              <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
-                <path
-                  fill-rule="evenodd"
-                  d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-                ></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-  
+                            <!-- Navigation Links -->
+                            <div class="hidden text-white space-x-1 text-2xl sm:flex">
+                                <NavLink :href="route('Home')" :active="route().current('Home')">
+                                    Home
+                                </NavLink>
+
+                                <NavLink :href="route('News')" :active="route().current('News')">
+                                    News
+                                </NavLink>
+
+                                <NavLink :href="route('AboutUs')" :active="route().current('AboutUs')">
+                                    About Us
+                                </NavLink>
+                                <NavLink :href="route('LearnWithUs')" :active="route().current('LearnWithUs')">
+                                    Learn With Us
+                                </NavLink>
+                                <NavLink :href="route('Resources')" :active="route().current('Resources')">
+                                    Resources
+                                </NavLink>
+                                <NavLink :href="route('Projects')" :active="route().current('Projects')">
+                                    Projects
+                                </NavLink>
+
+
+                            </div>
+
+
+                         
+                        </div>
 
 
 
+                        
+                        <!-- Hamburger -->
+                        <div class=" flex items-center sm:hidden">
+                            <button @click="showingNavigationDropdown = !showingNavigationDropdown"
+                                class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
+                                <svg class="h-6 w-8" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                                    <path :class="{
+                                        hidden: showingNavigationDropdown,
+                                        'inline-flex': !showingNavigationDropdown,
+                                    }" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h16M4 18h16" />
+                                    <path :class="{
+                                        hidden: !showingNavigationDropdown,
+                                        'inline-flex': showingNavigationDropdown,
+                                    }" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Responsive Navigation Menu -->
+                <div :class="{ block: showingNavigationDropdown, hidden: !showingNavigationDropdown }" class="sm:hidden">
+                    <div class="pt-2 pb-3 space-y-1">
+                       <ResponsiveNavLink :href="route('Home')" :active="route().current('Home')" >
+                                    Home
+                        </ResponsiveNavLink>
 
+                        <ResponsiveNavLink :href="route('News')" :active="route().current('News')">
+                                    News
+                        </ResponsiveNavLink>
 
+                        <ResponsiveNavLink :href="route('AboutUs')" :active="route().current('AboutUs')">
+                                    Partners
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink :href="route('LearnWithUs')" :active="route().current('LearnWithUs')">
+                                    Training Calendar
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink :href="route('Resources')" :active="route().current('Resources')">
+                                    Contacts
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink :href="route('Projects')" :active="route().current('Projects')">
+                                    Projects
+                        </ResponsiveNavLink>
+                    </div>
+                    
 
-        <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-        <ul
-          :class="showMenu ? 'flex' : 'hidden'"
-          class="
-            flex-col
-            mt-8
-            space-y-4
-            md:flex md:space-y-0 md:flex-row items-center justify-center md:space-x-10 md:mt-0
-            transition duration-500
-            ResNavBar
-            pb-4
             
-            
-          "
-          
-        >
-          <a href="/"><li class="text-white navbar">Home</li></a>
-          <a href="/News"><li class="text-white navbar">News</li></a>
-          <a href="/AboutUs"><li class="text-white navbar ">About us</li></a>
-          <a href="/LearnWithUs"><li class="text-white navbar ">Learn with us</li></a>
-          <a href="/Resources"><li class="text-white navbar ">Resources</li></a>
-          <a href="/Projects"><li class="text-white navbar ">Projects</li></a>
-          
-         
-        </ul>
-      </nav>
+                    
+                </div>
+            </nav>
     </div>
 
 
   </template>
-

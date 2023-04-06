@@ -16,7 +16,7 @@ class contactUs extends Seeder
             'emailAdd'=>'head@climbs.coop', 
             'phoneNum'=>'0936545878', 
             'telNum'=>'819400', 
-            'faceboolLink'=>'facebook.com/coop', 
+            'facebookLink'=>'facebook.com/coop', 
             'websiteLink'=>'www.climbs.coop',
             'Status'=>1
         ]);

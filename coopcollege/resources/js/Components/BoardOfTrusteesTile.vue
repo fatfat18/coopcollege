@@ -2,7 +2,7 @@
 
 
 export default {
- props: ['id','img','firstname','lastname','middlename','suffix','position','status','start_date','end_date','prefix','address','coop_id' ]
+ props: ['id','img','firstname','lastname','middlename','suffix','position','status','start_date','end_date','prefix','address','coop_name' ]
 }
 
 </script>
@@ -80,7 +80,7 @@ export default {
 
             </div>
             <div class=" flex justify-center text-center items-center ">
-                {{ coop_id }}
+                {{ coop_name }}
 
             </div>
 

@@ -97,9 +97,9 @@ library.add(faPlus);
 
         <!-- DIRI MAG LOOP ANG GIKAN SA DATABASE PAGINATE LANG DAYUN BY 10s -->
 
-               <BoardOfTrusteesTile id='1' firstname='firstname' lastname='lastname' middlename='middlename' suffix='suffix' position='position' status='status' start_date='start_date' end_date='end_date' prefix='prefix' address='address' coop_id='coopid' />
-               <BoardOfTrusteesTile id='2' firstname='firstname' lastname='lastname' middlename='middlename' suffix='suffix' position='position' status='status' start_date='start_date' end_date='end_date' prefix='prefix' address='address' coop_id='coopid' />
-               <BoardOfTrusteesTile id='3' firstname='firstname' lastname='lastname' middlename='middlename' suffix='suffix' position='position' status='status' start_date='start_date' end_date='end_date' prefix='prefix' address='address' coop_id='coopid' />
+               <BoardOfTrusteesTile id='1' firstname='firstname' lastname='lastname' middlename='middlename' suffix='suffix' position='position' status='status' start_date='start_date' end_date='end_date' prefix='prefix' address='address' coop_name='coopname' />
+               <BoardOfTrusteesTile id='2' firstname='firstname' lastname='lastname' middlename='middlename' suffix='suffix' position='position' status='status' start_date='start_date' end_date='end_date' prefix='prefix' address='address' coop_name='coopname' />
+               <BoardOfTrusteesTile id='3' firstname='firstname' lastname='lastname' middlename='middlename' suffix='suffix' position='position' status='status' start_date='start_date' end_date='end_date' prefix='prefix' address='address' coop_name='coopname' />
        
 
 
