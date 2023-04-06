@@ -133,45 +133,45 @@ Route::get('/ViewPost', function () {
 
 
 // post
-Route::post('/storePost',[post::class, 'store'] )->middleware(['auth', 'verified']);
+Route::post('/storePost',[post::class, 'store'] );
 
-Route::get('/displayPost',[post::class, 'display'] )->middleware(['auth', 'verified']);
+Route::get('/displayPost',[post::class, 'display'] );
 
-Route::put('/updateCategory',[post::class, 'update'] )->middleware(['auth', 'verified']);
+Route::put('/updateCategory',[post::class, 'update'] );
 
-Route::get('/postCategory',[post::class, 'postCategory'] )->middleware(['auth', 'verified']);
+Route::get('/postCategory',[post::class, 'postCategory'] );
 
 
 
 // calendar
-Route::post('/storeCalendarTraining',[trainingCalendar::class, 'store'] )->middleware(['auth', 'verified']);
+Route::post('/storeCalendarTraining',[trainingCalendar::class, 'store'] );
 
-Route::get('/displayCalendarTraining',[trainingCalendar::class, 'display'] )->middleware(['auth', 'verified']);
+Route::get('/displayCalendarTraining',[trainingCalendar::class, 'display'] );
 
-Route::put('/updateCalendarTraining',[trainingCalendar::class, 'update'] )->middleware(['auth', 'verified']);
+Route::put('/updateCalendarTraining',[trainingCalendar::class, 'update'] );
 
 
 // contact us
-Route::put('/contactUs',[contactUs::class, 'update'] )->middleware(['auth', 'verified']);
+Route::put('/contactUs',[contactUs::class, 'update'] );
 
-Route::get('/displayContactUs',[contactUs::class, 'display'] )->middleware(['auth', 'verified']);
+Route::get('/displayContactUs',[contactUs::class, 'display'] );
 
 
 // partner
-Route::post('/partner',[partner::class, 'store'] )->middleware(['auth', 'verified']);
+Route::post('/partner',[partner::class, 'store'] );
 
-Route::get('/displayPartner',[partner::class, 'display'] )->middleware(['auth', 'verified']);
+Route::get('/displayPartner',[partner::class, 'display'] );
 
-Route::delete('/removePartner',[partner::class, 'delete'] )->middleware(['auth', 'verified']);
+Route::delete('/removePartner',[partner::class, 'delete'] );
 
 
 
 // bod
-Route::post('/storeBOD',[bod::class, 'store'] )->middleware(['auth', 'verified']);
+Route::post('/storeBOD',[bod::class, 'store'] );
 
-Route::put('/updateBOD',[bod::class, 'update'] )->middleware(['auth', 'verified']);
+Route::put('/updateBOD',[bod::class, 'update'] );
 
-Route::get('/displayBOD',[bod::class, 'display'] )->middleware(['auth', 'verified']);
+Route::get('/displayBOD',[bod::class, 'display'] );
 
 
 
