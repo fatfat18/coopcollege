@@ -19,5 +19,9 @@ class post extends Model
         return $this->hasOne(postCat::class, 'PostCatId', 'PostCatId');
     }
 
+    public function avatar(){
+        return $this->hasOne(images::class, 'Postid', 'Postid');
+    }
+
 
 }

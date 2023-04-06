@@ -16,7 +16,7 @@ return new class extends Migration
             $table->text('emailAdd');
             $table->text('phoneNum');
             $table->text('telNum');
-            $table->text('faceboolLink');
+            $table->text('facebookLink');
             $table->text('websiteLink');
             $table->tinyInteger('Status')->default(1);
         });

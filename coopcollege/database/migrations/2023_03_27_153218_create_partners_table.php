@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id('idPartner');
             $table->integer('ImagesId');  
             $table->text('partnerName');
+            $table->tinyInteger('status')->default('1');
         });
     }
 

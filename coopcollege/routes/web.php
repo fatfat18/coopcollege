@@ -162,7 +162,7 @@ Route::post('/partner',[partner::class, 'store'] );
 
 Route::get('/displayPartner',[partner::class, 'display'] );
 
-Route::delete('/removePartner',[partner::class, 'delete'] );
+Route::post('/updatePartnerStatus',[partner::class, 'update'] );
 
 
 

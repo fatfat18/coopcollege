@@ -28,7 +28,7 @@ class partner extends Controller
 
     }
 
-    public function delete(Request $request){
+    public function update(Request $request){
 
         $validator = Validator::make($request->all(), [
             'idPartner' => 'required'
@@ -38,7 +38,7 @@ class partner extends Controller
             return $validator->errors();
         }
 
-        \App\Models\partner::where('idPartner', $request->idPartner)->delete();
+        \App\Models\partner::where('idPartner', $request->idPartner)->update(['status'=> $request->status]);
 
         return ['msg'=>"Successfuly deleted partner."];
     }
