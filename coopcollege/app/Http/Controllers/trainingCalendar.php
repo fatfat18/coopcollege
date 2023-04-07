@@ -39,8 +39,7 @@ class trainingCalendar extends Controller
     public function update(Request $request){
 
         $validator = Validator::make($request->all(), [
-            'idTC' => 'required|numeric',
-           
+            'idTC' => 'required|numeric'
         ]);
  
         if ($validator->fails()) {
@@ -61,9 +60,18 @@ class trainingCalendar extends Controller
     }
 
 
-
     public function display(){
-        return \App\Models\trainingCalendar::with('events')->get();
+        return \App\Models\trainingCalendar::groupBy('year','month')
+        
+        ->get()
+        ->map(function($q){
+         
+            $id= \App\Models\trainingCalendar::where('year', $q->year)->where('month', $q->month)->pluck('idCV');
+           
+            $q['events']= \App\Models\courseVenue::whereIn('idCV', $id)->get();
+
+            return $q;
+        });
     }
    
 }
