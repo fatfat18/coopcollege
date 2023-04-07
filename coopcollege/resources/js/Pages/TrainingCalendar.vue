@@ -7,6 +7,8 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import TrainingCalendarTile from '@/Components/TrainingCalendarTile.vue'
+import Modal from '@/Components/Modal.vue';
+
 
 
 
@@ -70,13 +72,20 @@ library.add(faPlus);
                 
 
         <!-- DIRI MAG LOOP ANG GIKAN SA DATABASE PAGINATE LANG DAYUN BY 10s -->
-
-               <TrainingCalendarTile month='month' id='1' coursetitle='coursetitle'  venue='venue' year='year' />
-               <TrainingCalendarTile month='month' id='2' coursetitle='coursetitle'  venue='venue' year='year' />
-               <TrainingCalendarTile month='month' id='3' coursetitle='coursetitle'  venue='venue' year='year' />
-               <TrainingCalendarTile month='month' id='4' coursetitle='coursetitle'  venue='venue' year='year' />
-               <TrainingCalendarTile month='month' id='5' coursetitle='coursetitle'  venue='venue' year='year' />
- 
+        
+        <template v-for="(item, index) in items" :key="item.idTC">
+         
+              <TrainingCalendarTile
+                :month="item.month"
+                :id="item.idTC"
+                :coursetitle="item.events[0].courseTitle"
+                :venue="item.events[0].Venue"
+                :year="item.year"
+              />
+        
+        </template>
+  
+    
 
 
             </div>
@@ -93,6 +102,33 @@ library.add(faPlus);
 <script>
 
 
+export default {
+
+
+data() {
+  return {
+ 
+    items: [],
+    showModal: false,
+
+
+  }
+},
+
+mounted() {
+  let urlGet = "http://127.0.0.1:8000/displayCalendarTraining";
+
+    axios.get(urlGet)
+      .then(response => {
+        this.items = response.data;
+        console.log(this.items);
+    
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  },
+}
 
 
 

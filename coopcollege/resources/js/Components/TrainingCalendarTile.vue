@@ -2,7 +2,28 @@
 
 
 export default {
- props: ['id','month','coursetitle','venue','year']
+    props: {
+  id: {
+    type: Number,
+    required: true,
+  },
+  month: {
+    type: String,
+    required: true,
+  },
+  coursetitle: {
+    type: String,
+    required: true,
+  },
+  venue: {
+    type: String,
+    required: true,
+  },
+  year: {
+    type: String,
+    required: true,
+  },
+},
 }
 
 </script>

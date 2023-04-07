@@ -62,13 +62,17 @@ library.add(faPlus);
 
         <!-- DIRI MAG LOOP ANG GIKAN SA DATABASE PAGINATE LANG DAYUN BY 10s -->
 
-               <PartnersTile name='name' id='1' />
-               <PartnersTile name='name' id='2' />
-               <PartnersTile name='name' id='3' />
-               <PartnersTile name='name' id='4' />
-               <PartnersTile name='name' id='5' />
+        <template v-for="(item, index) in items" :key="item.idPartner">
+         
+         <PartnersTile
+           :id="item.idPartner"
+           :image="item.image.ImageUrl"
+           :name="item.partnerName"
+         />
+   
+         </template>
  
-
+       
 
             </div>
         </div>
@@ -82,6 +86,38 @@ library.add(faPlus);
 
 
 <script>
+
+export default {
+
+
+data() {
+  return {
+ 
+    items: [],
+    showModal: false,
+
+
+  }
+},
+
+mounted() {
+  let urlGet = "http://127.0.0.1:8000/displayPartner";
+
+    axios.get(urlGet)
+      .then(response => {
+        this.items = response.data;
+        console.log(this.items);
+    
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  },
+}
+
+
+
+
 AOS.init({startEvent: 'load',
           once : 'true,'});
 AOS.refresh();
