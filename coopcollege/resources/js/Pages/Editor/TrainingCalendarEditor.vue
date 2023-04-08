@@ -169,6 +169,12 @@ export default {
       });
       this.showModal = true;
       console.log(this.showModal);
+
+      this.month =  '';
+      this.course_title =  '';
+      this.year =  '';
+      this.venue =  '';
+ 
     },
     closeModal() {
       // Reset any necessary data properties and hide the modal

@@ -52,7 +52,7 @@ export default {
       required: true,
     },
     coop_name: {
-      type: String,
+      type: Number,
       required: true,
     },
   },
@@ -86,7 +86,7 @@ export default {
 </style>
 
 <template>
-      <div class="h-24 xl:h-32 max-w-7xl bg-white xl:px-4 xl:py-4 rounded-lg grid grid-cols-15 gap-1 max-h-30 xl:max-h-40 text-sm xl:text-md pr-4">
+      <div class="h-24 xl:h-32 max-w-7xl bg-white xl:px-4 xl:py-4 rounded-lg grid grid-cols-14 gap-1 max-h-30 xl:max-h-40 text-sm xl:text-md pr-4">
             <div class=" flex justify-center text-center items-center">
                 {{ id }}
             </div>
@@ -99,10 +99,6 @@ export default {
             </div>
             <div class=" flex justify-center text-center items-center ">
                 {{ lastname }}
-
-            </div>
-            <div class=" flex justify-center text-center items-center  ">
-                {{ middlename }}
 
             </div>
             <div class=" flex justify-center text-center items-center ">

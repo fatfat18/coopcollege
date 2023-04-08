@@ -44,7 +44,7 @@ library.add(faPlus);
             
         <!-- HEADER NI SA POST TILE  -->
     <div class="max-w-7xl cont w-screen mx-auto sm:px-6 lg:px-8 space-y-1 h-max overflow-y-hidden" data-aos="fade-up" data-aos-duration="1000" >
-        <div class="max-w-7xl  bg-white xl:px-8 xl:py-4 py-4 rounded-sm grid grid-cols-15 gap-4 text-xs xl:text-l"> 
+        <div class="max-w-7xl  bg-white xl:px-8 xl:py-4 py-4 rounded-sm grid grid-cols-14 gap-4 text-xs xl:text-l"> 
             <div class=" flex justify-center text-center items-center">
                 ID
             </div>
@@ -57,9 +57,7 @@ library.add(faPlus);
             <div class=" flex justify-center text-center items-center">
                 LASTNAME
             </div>
-            <div class=" flex justify-center text-center items-center">
-                MIDDLE NAME
-            </div>
+    
             <div class=" flex justify-center text-center items-center">
                 SUFFIX
             </div>
@@ -102,10 +100,10 @@ library.add(faPlus);
          <BoardOfTrusteesTile
            :id="item.idBOD"
            :image="item.image.ImageUrl"
-           :prefix="item.Prefix"
+           :prefix="item.Prefix !== 'null' ? item.Prefix : ' '"
            :firstname="item.Fname"
            :lastname="item.Lname"
-           :suffix="item.Suffix"
+           :suffix="item.Suffix !== 'null' ? item.Prefix : ' '"
            :status="item.Status"
            :position="item.Position"
            :start_date="item.startDate"
@@ -161,6 +159,7 @@ mounted() {
     reversedItems() {
       return this.items.slice().reverse();
     },
+ 
   },
 }
 
