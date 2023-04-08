@@ -81,7 +81,7 @@ library.add(faPlus);
            :description="item.Description"
            :image="item.avatar.ImageUrl"
            :title="item.newsTitle"
-           :context="item.Context"
+           :context="sliceText(item.Context, 150)"
            :date_created="item.news_DateCreated"
 
        
@@ -132,6 +132,15 @@ mounted() {
   computed: {
     reversedItems() {
       return this.items.slice().reverse();
+    },
+  },
+  methods: {
+    sliceText(text, limit) {
+      if (text.length > limit) {
+        return text.slice(0, 150) + '......';
+      } else {
+        return text;
+      }
     },
   },
 }

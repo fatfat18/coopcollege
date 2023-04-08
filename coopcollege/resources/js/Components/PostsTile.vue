@@ -51,6 +51,10 @@ export default {
     color:red;
     transition: .5s;
 }
+.test{
+  text-overflow: ellipsis;
+  max-width: max-content;
+}
 
 
 </style>
@@ -71,7 +75,7 @@ export default {
                 {{ description }}
 
             </div>
-            <div class=" flex justify-center text-center items-center col-span-3">
+            <div class=" flex justify-center text-xs text-center items-center col-span-3 overflow-y-hidden test">
                 {{ context }}
 
             </div>
