@@ -62,7 +62,7 @@ library.add(faPlus);
 
         <!-- DIRI MAG LOOP ANG GIKAN SA DATABASE PAGINATE LANG DAYUN BY 10s -->
 
-        <template v-for="(item, index) in items" :key="item.idPartner">
+        <template v-for="(item, index) in reversedItems" :key="item.idPartner">
          
          <PartnersTile
            :id="item.idPartner"
@@ -112,6 +112,11 @@ mounted() {
       .catch(error => {
         console.log(error);
       });
+  },
+  computed: {
+    reversedItems() {
+      return this.items.slice().reverse();
+    },
   },
 }
 

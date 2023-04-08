@@ -41,28 +41,31 @@ library.add(faPlus);
             <a href="/PostsEditor"><button class="xl:ml-16 my-4 mx-8 px-6 py-2 rounded-md bg-theme1 transition duration-150 border border-black text-theme2 hover:scale-110 hover:-translate-y-1"> Add Post  <font-awesome-icon icon="fa-solid fa-plus" class= " pl-2 hover:text-white " /> </button></a>
             
         <!-- HEADER NI SA POST TILE  -->
-    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 overflow-y-auto space-y-1 h-max" data-aos="fade-up" data-aos-duration="1000">
-        <div class="max-w-7xl bg-white xl:px-8 xl:py-4 py-4 rounded-sm grid grid-cols-8 gap-4 text-xs xl:text-l"> 
-            <div class=" flex justify-center text-center items-center">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8  space-y-1 h-max overflow-y-hidden" data-aos="fade-up" data-aos-duration="1000" >
+        <div class="max-w-7xl bg-white xl:px-8 xl:py-4 py-4 rounded-sm grid grid-cols-10 gap-4 text-xs xl:text-l"> 
+            <div class=" flex justify-center text-center items-center col-span-1">
                 ID
             </div>
-            <div class=" flex justify-center text-center items-center"> 
+            <div class=" flex justify-center text-center items-center col-span-1"> 
                 IMAGE
             </div>
             <div class=" flex justify-center text-center items-center col-span-1">
                 TITLE
             </div>
-            <div class=" flex justify-center text-center items-center col-span-2">
+            <div class=" flex justify-center text-center items-center col-span-1">
                 DESCRIPTION
             </div>
-          
-            <div class=" flex justify-center text-center items-center">
-                      
+
+            <div class=" flex justify-center text-center items-center col-span-3">
+                   CONTEXT   
             </div>
-            <div class=" flex justify-center text-center items-center">
+            <div class=" flex justify-center text-center items-center col-span-1">
+                   DATE CREATED   
+            </div>
+            <div class=" flex justify-center text-center items-center col-span-1">
                      
             </div>
-            <div class=" flex justify-center text-center items-center">
+            <div class=" flex justify-center text-center items-center col-span-1">
                        
             </div>
             
@@ -71,17 +74,21 @@ library.add(faPlus);
 
         <!-- DIRI MAG LOOP ANG GIKAN SA DATABASE PAGINATE LANG DAYUN BY 10s -->
 
-               <PostsTile title="title" description='TESTING DESCRIPTION1' id='1' />
-               <PostsTile title="title" description='TESTING DESCRIPTION2' id='2' />
-               <PostsTile title="title" description='TESTING DESCRIPTION3' id='3' />
-               <PostsTile title="title" description='TESTING DESCRIPTION4' id='4' />
-               <PostsTile title="title" description='TESTING DESCRIPTION5' id='5' />
-               <PostsTile title="title" description='TESTING DESCRIPTION6' id='6' />
-               <PostsTile title="title" description='TESTING DESCRIPTION7' id='7' />
-               <PostsTile title="title" description='TESTING DESCRIPTION8' id='8' />
-               <PostsTile title="title" description='TESTING DESCRIPTION9' id='9' />
-               <PostsTile title="title" description='TESTING DESCRIPTION10' id='10' />
+        <template v-for="(item, index) in reversedItems" :key="item.Postid" >
+         
+         <PostsTile
+           :id="item.Postid"
+           :description="item.Description"
+           :image="item.avatar[0].ImageUrl"
+           :title="item.newsTitle"
+           :context="item.Context"
+           :date_created="item.news_DateCreated"
 
+       
+           data-aos="fade-up" data-aos-duration="500"
+         />
+   
+   </template>
 
             </div>
         </div>
@@ -95,6 +102,40 @@ library.add(faPlus);
 
 
 <script>
+
+export default {
+
+
+data() {
+  return {
+ 
+    items: [],
+    showModal: false,
+
+
+  }
+},
+
+mounted() {
+  let urlGet = "http://127.0.0.1:8000/displayPost";
+
+    axios.get(urlGet)
+      .then(response => {
+        this.items = response.data;
+        console.log(this.items);
+    
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  },
+  computed: {
+    reversedItems() {
+      return this.items.slice().reverse();
+    },
+  },
+}
+
 AOS.init({startEvent: 'load',
           once : 'true,'});
 AOS.refresh();

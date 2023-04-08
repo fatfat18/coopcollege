@@ -43,7 +43,7 @@ library.add(faPlus);
             <a href="/BoardOfTrusteesEditor"><button class="xl:ml-16 my-4 mx-8 px-6 py-2 rounded-md bg-theme1 transition duration-150 border border-black text-theme2 hover:scale-110 hover:-translate-y-1"> Add Member  <font-awesome-icon icon="fa-solid fa-plus" class= " pl-2 hover:text-white " /> </button></a>
             
         <!-- HEADER NI SA POST TILE  -->
-    <div class="max-w-7xl cont w-screen mx-auto sm:px-6 lg:px-8 space-y-1 h-max" data-aos="fade-up" data-aos-duration="1000">
+    <div class="max-w-7xl cont w-screen mx-auto sm:px-6 lg:px-8 space-y-1 h-max overflow-y-hidden" data-aos="fade-up" data-aos-duration="1000" >
         <div class="max-w-7xl  bg-white xl:px-8 xl:py-4 py-4 rounded-sm grid grid-cols-15 gap-4 text-xs xl:text-l"> 
             <div class=" flex justify-center text-center items-center">
                 ID
@@ -97,11 +97,26 @@ library.add(faPlus);
 
         <!-- DIRI MAG LOOP ANG GIKAN SA DATABASE PAGINATE LANG DAYUN BY 10s -->
 
-               <BoardOfTrusteesTile id='1' firstname='firstname' lastname='lastname' middlename='middlename' suffix='suffix' position='position' status='status' start_date='start_date' end_date='end_date' prefix='prefix' address='address' coop_name='coopname' />
-               <BoardOfTrusteesTile id='2' firstname='firstname' lastname='lastname' middlename='middlename' suffix='suffix' position='position' status='status' start_date='start_date' end_date='end_date' prefix='prefix' address='address' coop_name='coopname' />
-               <BoardOfTrusteesTile id='3' firstname='firstname' lastname='lastname' middlename='middlename' suffix='suffix' position='position' status='status' start_date='start_date' end_date='end_date' prefix='prefix' address='address' coop_name='coopname' />
+        <template v-for="(item, index) in reversedItems" :key="item.idBOD" >
+         
+         <BoardOfTrusteesTile
+           :id="item.idBOD"
+           :image="item.image.ImageUrl"
+           :prefix="item.Prefix"
+           :firstname="item.Fname"
+           :lastname="item.Lname"
+           :suffix="item.Suffix"
+           :status="item.Status"
+           :position="item.Position"
+           :start_date="item.startDate"
+           :end_date="item.endDate"
+           :address="item.Address"
+           :coop_name="item.coopId"
        
-
+           data-aos="fade-up" data-aos-duration="500"
+         />
+   
+   </template>
 
             </div>
         </div>
@@ -115,6 +130,40 @@ library.add(faPlus);
 
 
 <script>
+
+export default {
+
+
+data() {
+  return {
+ 
+    items: [],
+    showModal: false,
+
+
+  }
+},
+
+mounted() {
+  let urlGet = "http://127.0.0.1:8000/displayBOD";
+
+    axios.get(urlGet)
+      .then(response => {
+        this.items = response.data;
+        console.log(this.items);
+    
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  },
+  computed: {
+    reversedItems() {
+      return this.items.slice().reverse();
+    },
+  },
+}
+
 AOS.init({startEvent: 'load',
           once : 'true,'});
 AOS.refresh();

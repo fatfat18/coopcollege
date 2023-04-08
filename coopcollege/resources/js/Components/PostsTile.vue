@@ -2,9 +2,33 @@
 
 
 export default {
- props: ['description','id','img','title']
+    props: {
+  id: {
+    type: Number,
+    required: true,
+  },
+  title: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+    required: true,
+  },
+  context: {
+    type: String,
+    required: true,
+  },
+  date_created: {
+    type: String,
+    required: true,
+  },
+  image: {
+    type: String,
+    //required: true,
+  },
+},
 }
-
 </script>
 
 <style>
@@ -32,26 +56,34 @@ export default {
 </style>
 
 <template>
-      <div class="h-24 xl:h-32 max-w-7xl bg-white xl:px-8 xl:py-4 rounded-lg grid grid-cols-7 gap-4 max-h-30 xl:max-h-40 text-sm xl:text-md pr-4">
-            <div class=" flex justify-center text-center items-center">
+      <div class="h-24 xl:h-32 max-w-7xl bg-white xl:px-8 xl:py-4 rounded-lg grid grid-cols-10 gap-4 max-h-30 xl:max-h-40 text-sm xl:text-md pr-4">
+            <div class=" flex justify-center text-center items-center col-span-1">
                 {{ id }}
             </div>
-            <div class=" flex justify-center text-center items-center"> 
-                <img src="../../asset/sample.jpg" class=" xl:h-24 xl:w-32 h-12 w-24">
+            <div class=" flex justify-center text-center items-center col-span-1"> 
+                <img :src="image" alt="Images" class=" xl:h-24 xl:w-32 h-12 w-24">
             </div>
             <div class=" flex justify-center text-center items-center col-span-1">
                 {{ title }}
 
             </div>
-            <div class=" flex justify-center text-center items-center col-span-2">
+            <div class=" flex justify-center text-center items-center col-span-1">
                 {{ description }}
 
             </div>
+            <div class=" flex justify-center text-center items-center col-span-3">
+                {{ context }}
+
+            </div>
+            <div class=" flex justify-center text-center items-center col-span-1">
+                {{ date_created }}
+
+            </div>
           
-            <div class=" flex justify-center text-center items-center">
+            <div class=" flex justify-center text-center items-center col-span-1">
                         <button class="py-2 px-8  rounded-full bg-blue-400 xl:rounded-lg text-white text-xs xl:text-md buttonedit border-2 border-blue-400">Edit</button>
             </div>
-            <div class=" flex justify-center text-center items-center ">
+            <div class=" flex justify-center text-center items-center col-span-1 ">
                         <button class="py-2 px-8  rounded-full bg-red-500 xl:rounded-lg text-white text-xs xl:text-md buttondelete border-2 border-red-500">Delete</button>
             </div>
         </div>

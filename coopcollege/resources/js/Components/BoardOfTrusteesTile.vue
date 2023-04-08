@@ -2,7 +2,61 @@
 
 
 export default {
- props: ['id','img','firstname','lastname','middlename','suffix','position','status','start_date','end_date','prefix','address','coop_name' ]
+    props: {
+    id: {
+      type: Number,
+      required: true,
+    },
+    image: {
+      type: String,
+      required: true,
+    },
+    firstname: {
+      type: String,
+      required: true,
+    },
+    lastname: {
+      type: String,
+      required: true,
+    },
+    middlename: {
+      type: String,
+      default: '',
+    },
+    suffix: {
+      type: String,
+      default: '',
+    },
+    position: {
+      type: String,
+      required: true,
+    },
+    status: {
+      type: Number,
+      required: true,
+    },
+    start_date: {
+      type: String,
+      required: true,
+    },
+    end_date: {
+      type: String,
+      required: true,
+    },
+    prefix: {
+      type: String,
+      default: '',
+    },
+    address: {
+      type: String,
+      required: true,
+    },
+    coop_name: {
+      type: String,
+      required: true,
+    },
+  },
+
 }
 
 </script>
@@ -37,7 +91,7 @@ export default {
                 {{ id }}
             </div>
             <div class=" flex justify-center text-center items-center"> 
-                <img src="../../asset/sample.jpg" class=" xl:h-24 xl:w-40 h-12 w-16">
+                <img :src="image" class=" xl:h-24 xl:w-40 h-12 w-16">
             </div>
             <div class=" flex justify-center text-center items-center ">
                 {{ firstname }}

@@ -50,7 +50,7 @@ export default {
                 {{ id }}
             </div>
             <div class=" flex justify-center text-center items-center"> 
-                <img :src="image" alt="Image">
+                <img :src="image" alt="Image" class=" xl:h-24 xl:w-32 h-12 w-24">
             </div>
             <div class=" flex justify-center text-center items-center col-span-3">
                 {{ name }}
