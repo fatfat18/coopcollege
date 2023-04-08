@@ -79,7 +79,7 @@ library.add(faPlus);
          <PostsTile
            :id="item.Postid"
            :description="item.Description"
-           :image="item.avatar[0].ImageUrl"
+           :image="item.avatar.ImageUrl"
            :title="item.newsTitle"
            :context="item.Context"
            :date_created="item.news_DateCreated"
