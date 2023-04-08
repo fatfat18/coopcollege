@@ -85,9 +85,10 @@ A total of 35 participants coming from 15 co-operatives nationwide joined and ac
 
  
 
-    <div class="card text-xl px-4 text-center flex flex-col justify-center items-center my-8 mb-10 h-80 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="100" >
+    <div class="card text-xl px-4 text-center flex flex-col justify-center items-center my-8 mb-10 h-80 w-96 bg-theme2 mx-8 rounded-xl " data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="100" >
         <font-awesome-icon icon="fa-solid fa-note-sticky " class="text-theme1 h-10 mb-4" />
-        National Federation of Cooperative Primaries in the Philippines -(NaFeCOOP)National Federation of Cooperative Primaries in the Philippines - (NaFeCOOP)
+        National Federation of Cooperative Primaries in the Philippines -(NaFeCOOP)National Federation of Cooperative Primaries in the Philippines - (NaFeCOOP).
+   
     </div>
     <div class="card px-4 text-center flex flex-col justify-center items-center my-8 mb-10 h-80 w-96 bg-theme2 mx-8 rounded-xl" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="300" >
         <font-awesome-icon icon="fa-solid fa-coins" class="text-theme1 h-10 mb-4" />
