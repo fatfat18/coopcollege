@@ -39,6 +39,7 @@ import Modal from '@/Components/Modal.vue'
 
             <div class=" xl:w-3/4 w-4/5 xl:mt-16 overflow-y-hidden">
 
+                <h1 class="text-5xl text-white"> THIS IS THE UPDATE</h1>
 
                     <form @submit.prevent="submitData">
                         <button type="submit" class="border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg mb-10 hover:bg-green-600 transition ease-in duration-100">Save</button>
@@ -132,59 +133,59 @@ import Modal from '@/Components/Modal.vue'
 <script>
 
 
-
-
 export default {
   components: {
     Modal,
   },
   data() {
     return {
-      month: '',
-      course_title: '',
-      year: '',
-      venue: '',
       showModal: false,
       items: [],
+
     }
     
   },
   
   methods: {
-    submitData() {
-      this.showModal = true
-
-      const formData = new FormData();
-      formData.append('month', this.month);
-      formData.append('courseTitle', this.course_title);
-      formData.append('year', this.year);
-      formData.append('venue', this.venue);
-
-      axios.post('http://127.0.0.1:8000/storeCalendarTraining',formData, {
-    
+    mounted() {
+    const itemId = this.$route.params.idTC;
+    axios.get(`localhost:8000/displayCalendarTraining`)
+      .then((response) => {
+        this.item = response.data;
       })
-      .then(response => {
-        console.log(response);
-      })
-      .catch(error => {
-        console.log(error);
+      .catch((error) => {
+        // Handle error
       });
-      this.showModal = true;
-      console.log(this.showModal);
-
-      this.month =  '';
-      this.course_title =  '';
-      this.year =  '';
-      this.venue =  '';
- 
-    },
-    
+  },
+  
     closeModal() {
       // Reset any necessary data properties and hide the modal
   
       this.showModal = false;
     },
-  }
+  },
+  methods: {
+    updateContactUs() {
+     let updateUrl = "http://127.0.0.1:8000/updateCalendarTraining/";
+     let params = new URLSearchParams();
+     let item = this.contactUs.find(item => item.idcontactUs === this.idcontactUs);
+     params.append("emailAdd", item.emailAdd);
+     params.append("phoneNum", item.phoneNum);
+     params.append("telNum", item.telNum);
+     params.append("facebookLink", item.facebookLink);
+     params.append("websiteLink", item.websiteLink);
+     params.append("Status", 1); // Assuming Status is a number
+     
+     axios.put(updateUrl + '?' + params.toString())
+       .then(response => {
+         console.log(response.data);
+         this.showModal= true;
+       })
+       .catch(error => {
+         console.log(error);
+       });
+    },
+  },
 }
 
 

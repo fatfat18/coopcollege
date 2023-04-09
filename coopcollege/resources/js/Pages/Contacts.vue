@@ -183,6 +183,7 @@ export default {
     axios.get(getUrl)
       .then(response => {
         this.contactUs = response.data;
+        console.log(response.data);
       })
       .catch(error => {
         console.log(error);

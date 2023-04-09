@@ -81,7 +81,14 @@ library.add(faPlus);
                 :coursetitle="item.events[0].courseTitle"
                 :venue="item.events[0].Venue"
                 :year="item.year"
-              />
+              >
+              <div class=" flex justify-center text-center items-center">
+                          <button class="py-2 px-8  rounded-full bg-blue-400 xl:rounded-lg text-white text-xs xl:text-md buttonedit border-2 border-blue-400">Edit</button>
+              </div>
+              <div class=" flex justify-center text-center items-center ">
+                          <button class="py-2 px-8  rounded-full bg-red-500 xl:rounded-lg text-white text-xs xl:text-md buttondelete border-2 border-red-500">Delete</button>
+              </div>
+              </TrainingCalendarTile>
         
         </template>
   
@@ -102,10 +109,12 @@ library.add(faPlus);
 <script>
 
 
+
 export default {
 
 
 data() {
+  
   return {
  
     items: [],
@@ -128,6 +137,12 @@ mounted() {
         console.log(error);
       });
   },
+  methods: {
+    handleEvent(data) {
+      // Access the object data here
+      console.log(`Name: ${data.name}, Age: ${data.age}`)
+    }
+  }
 }
 
 
