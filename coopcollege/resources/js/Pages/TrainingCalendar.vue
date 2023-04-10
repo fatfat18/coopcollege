@@ -43,7 +43,7 @@ library.add(faPlus);
             <a href="/TrainingCalendarEditor"><button class="xl:ml-16 my-4 mx-8 px-6 py-2 rounded-md bg-theme1 transition duration-150 border border-black text-theme2 hover:scale-110 hover:-translate-y-1"> Add Training Calendar  <font-awesome-icon icon="fa-solid fa-plus" class= " pl-2 hover:text-white " /> </button></a>
             
         <!-- HEADER NI SA POST TILE  -->
-    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 overflow-y-auto space-y-1 h-max" data-aos="fade-up" data-aos-duration="1000">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 overflow-y-hidden space-y-1 h-max" data-aos="fade-up" data-aos-duration="1000">
         <div class="max-w-7xl bg-white xl:px-8 xl:py-4 py-4 rounded-sm grid grid-cols-7 gap-4 text-xs xl:text-l"> 
             <div class=" flex justify-center text-center items-center">
                 ID
@@ -73,7 +73,7 @@ library.add(faPlus);
 
         <!-- DIRI MAG LOOP ANG GIKAN SA DATABASE PAGINATE LANG DAYUN BY 10s -->
         
-        <template v-for="(item, index) in items" :key="item.idTC">
+        <template v-for="(item, index) in reversedItems" :key="item.idTC">
          
               <TrainingCalendarTile
                 :month="item.month"
@@ -81,13 +81,18 @@ library.add(faPlus);
                 :coursetitle="item.events[0].courseTitle"
                 :venue="item.events[0].Venue"
                 :year="item.year"
+                :buttonid="item.idTC"
+                data-aos="fade-up" data-aos-duration="500"
               >
               <div class=" flex justify-center text-center items-center">
-                          <button class="py-2 px-8  rounded-full bg-blue-400 xl:rounded-lg text-white text-xs xl:text-md buttonedit border-2 border-blue-400">Edit</button>
+               
+                <button @click="navigateToUpdate(item.idTC)" class="py-2 px-8  rounded-full bg-blue-400 xl:rounded-lg text-white text-xs xl:text-md buttonedit border-2 border-blue-400">Edit</button>
+              
               </div>
               <div class=" flex justify-center text-center items-center ">
                           <button class="py-2 px-8  rounded-full bg-red-500 xl:rounded-lg text-white text-xs xl:text-md buttondelete border-2 border-red-500">Delete</button>
               </div>
+              
               </TrainingCalendarTile>
         
         </template>
@@ -121,6 +126,7 @@ data() {
     showModal: false,
 
 
+
   }
 },
 
@@ -137,12 +143,17 @@ mounted() {
         console.log(error);
       });
   },
+  computed: {
+    reversedItems() {
+      return this.items.slice().reverse();
+    },
+  },
   methods: {
-    handleEvent(data) {
-      // Access the object data here
-      console.log(`Name: ${data.name}, Age: ${data.age}`)
-    }
+  navigateToUpdate(idTC) {
+    window.location.href = this.route('TrainingCalendarUpdate', {idTC: idTC});
   }
+}
+ 
 }
 
 

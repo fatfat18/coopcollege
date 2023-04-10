@@ -83,9 +83,16 @@ Route::get('/TrainingCalendarEditor', function () {
 
 
 
-Route::get('/TrainingCalendarUpdate', function () {
+
+Route::get('/TrainingCalendarUpdate/{idTC}', function ($idTC) {
     return Inertia::render('Editor/TrainingCalendarUpdate');
-})->middleware(['auth', 'verified'])->name('TrainingCalendarUpdate');
+})->name('TrainingCalendarUpdate');
+
+
+
+
+
+
 
 
 

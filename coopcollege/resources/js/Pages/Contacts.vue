@@ -166,6 +166,7 @@ library.add(faPlus,faFacebook,faEnvelope,faPhone,faTty,faGlobe);
 
 <script>
 
+
 import axios from 'axios';
 
 export default {
@@ -210,6 +211,7 @@ export default {
          console.log(error);
        });
     },
+ 
   },
 };
 

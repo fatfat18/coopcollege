@@ -23,6 +23,10 @@ export default {
     type: String,
     required: true,
   },
+  buttonid: {
+    type: Number,
+    required: true,
+  },
 },
 }
 
@@ -72,6 +76,7 @@ export default {
                 {{ year }}
 
             </div>
+            
           
             <slot />
         </div>
