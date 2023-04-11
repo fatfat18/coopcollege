@@ -230,7 +230,7 @@ display: none;
 
                             <Modal :show="showModal" @close="showModal = false">
                                 <h2 class="text-theme1 text-2xl">Added Board of Trustees</h2>
-                                <p class="text-theme2 text-4xl">Success!</p>
+                                <p class="text-theme2 text-4xl mb-5">Success!</p>
                             </Modal>
 
                          
@@ -314,6 +314,11 @@ export default {
       }).then(response => {
         console.log(response);
         this.showModal = true;
+        async function redirectWithDelay() {
+           await new Promise(resolve => setTimeout(resolve, 1000)); // wait for 3 seconds
+           window.location.href = route('Posts'); // redirect to the TrainingCalendar URL
+         }
+      redirectWithDelay(); 
       }).catch(error => {
         console.log(error);
       });
