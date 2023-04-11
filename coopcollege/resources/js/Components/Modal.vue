@@ -59,7 +59,47 @@ const maxWidthClass = computed(() => {
         '2xl': 'sm:max-w-2xl',
     }[props.maxWidth];
 });
+
 </script>
+
+<style>
+.loader {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #000033;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  overflow:hidden;
+ 
+}
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-left: 4px solid #FFCC00;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
+
+
+</style>
 
 <template>
     <teleport to="body">
@@ -88,10 +128,10 @@ const maxWidthClass = computed(() => {
                 >
                     <div
                         v-show="show"
-                        class="mb-6 bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:w-full sm:mx-auto  py-10 px-6 text-center"
+                        class="mb-6 bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:w-full sm:mx-auto pb-10 py-10 px-6 text-center"
                         :class="maxWidthClass"
                     >
-                        <slot v-if="show" />
+                        <slot v-if="show" /> <div class=" loader flex items-center justify-center h-full w-full" id="loader"></div><p class="text-black text-sm mb-5">Redirecting to Dashboard</p>
                     </div>
                 </transition>
             </div>

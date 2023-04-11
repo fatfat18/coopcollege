@@ -66,7 +66,7 @@ import Modal from '@/Components/Modal.vue'
                                 id="name"
                                 name="coursetitle"
                                 type="text"
-                                class="mt-4 py-2 px-2 w-96 focus:ring-yellow-500 active:ring-yellow-500"
+                                class="mt-4 py-2 px-2 w-80 focus:ring-yellow-500 active:ring-yellow-500"
                                 required
                                 autocomplete=""
                                 v-model="course_title"
@@ -81,7 +81,7 @@ import Modal from '@/Components/Modal.vue'
                                 id="name"
                                 name="venue"
                                 type="text"
-                                class="mt-4 py-2 px-2 w-40 focus:ring-yellow-500 active:ring-yellow-500"
+                                class="mt-4 py-2 px-2 w-72 focus:ring-yellow-500 active:ring-yellow-500"
                                 required
                                 autocomplete=""
                                 placeholder="Venue"
@@ -96,7 +96,7 @@ import Modal from '@/Components/Modal.vue'
                                 id="name"
                                 name="year"
                                 type="text"
-                                class="mt-4 py-2 px-2 w-40 focus:ring-yellow-500 active:ring-yellow-500"
+                                class="mt-4 py-2 px-2 w-32 focus:ring-yellow-500 active:ring-yellow-500"
                                 required
                                 autocomplete=""
                                 placeholder="Year"
@@ -113,7 +113,7 @@ import Modal from '@/Components/Modal.vue'
                            
                               <Modal :show="showModal" @close="showModal = false">
                                 <h2 class="text-theme1 text-2xl">Added Training Calendar!</h2>
-                                <p class="text-theme2 text-4xl">Success!</p>
+                                <p class="text-theme2 text-4xl mb-5">Success!</p>
                               </Modal>
 
                        
@@ -171,6 +171,11 @@ export default {
       });
       this.showModal = true;
       console.log(this.showModal);
+      async function redirectWithDelay() {
+           await new Promise(resolve => setTimeout(resolve, 3000)); // wait for 3 seconds
+           window.location.href = route('TrainingCalendar'); // redirect to the TrainingCalendar URL
+         }
+      redirectWithDelay();  
 
       this.month =  '';
       this.course_title =  '';

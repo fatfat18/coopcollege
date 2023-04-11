@@ -40,7 +40,7 @@ class trainingCalendar extends Controller
 
         $validator = Validator::make($request->all(), [
             'idTC' => 'required|numeric',
-            'month' => 'required|numeric',
+            'month' => 'required|',
             'year' => 'required|numeric'
         ]);
  
