@@ -39,7 +39,7 @@ import Modal from '@/Components/Modal.vue';
 
             <div class=" xl:w-3/4 w-4/5 h-max xl:mt-4">
 
-<h1>MAO NI UPDATE SA POST </h1>
+<h1 class="text-5xl text-white">MAO NI UPDATE SA POST </h1>
 
                     <form @submit.prevent="submitData">
                         <button class="border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg mb-10 hover:bg-green-600 transition ease-in duration-100">Save</button>
@@ -99,14 +99,14 @@ import Modal from '@/Components/Modal.vue';
                                 required
                                 autocomplete="current-Context"
                                 placeholder="Context"
-                                v-model="context"
+                                v-model="this.context"
                                 data-aos="fade-up"  data-aos-duration="1000"
                                 >
                             
                                 </textarea>
 
                             
-                                <select class="mt-4" v-model="posttype" name="posttype">
+                                <select class="mt-4" v-model="this.items.category" name="posttype">
                                    <option hidden>Post Type</option>
                                    <option v-for="item in items" :key="item.postCatId" :value="item.PostCatId">{{ item.category }}</option>
                                  </select>
@@ -206,10 +206,10 @@ mounted() {
           
 
         //assign the selected object to all mounted
-        this.month = this.items.month;
-        this.year = this.items.year;
-        this.course_title = this.items.events[0].courseTitle;
-        this.venue = this.items.events[0].Venue;
+        this.description = this.items.Description;
+        this.title = this.items.newsTitle;
+        this.context = this.items.context;
+ 
 
         
       })

@@ -153,7 +153,7 @@ mounted() {
     },
     
     navigateToUpdate(Postid) {
-    window.location.href = this.route('TrainingCalendarUpdate', {Postid: Postid});
+    window.location.href = this.route('PostsUpdate', {Postid: Postid});
   }
 
 
