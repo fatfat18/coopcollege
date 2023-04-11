@@ -39,7 +39,9 @@ class trainingCalendar extends Controller
     public function update(Request $request){
 
         $validator = Validator::make($request->all(), [
-            'idTC' => 'required|numeric'
+            'idTC' => 'required|numeric',
+            'month' => 'required|numeric',
+            'year' => 'required|numeric'
         ]);
  
         if ($validator->fails()) {
