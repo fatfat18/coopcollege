@@ -39,9 +39,9 @@ import Modal from '@/Components/Modal.vue'
 
             <div class=" xl:w-3/4 w-4/5 xl:mt-16 overflow-y-hidden">
 
-                <h1 class="text-5xl text-white"> THIS IS THE UPDATE</h1>
+        
 
-                    <form @submit.prevent="submitData">
+                    <form @submit.prevent="updateContactUs(this.intNum)">
                         <button type="submit" class="border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg mb-10 hover:bg-green-600 transition ease-in duration-100">Save</button>
                             <div class="overflow-y-hidden space-x-4" >
 
@@ -197,7 +197,6 @@ export default {
 
         const pathSegments = path.split('/');
         this.itemId = pathSegments[pathSegments.length - 1];
-        this.BASEID = this.itemId;
         console.log(this.itemId);
         
         const intNum = parseInt(this.itemId); // convert to an integer
@@ -233,6 +232,32 @@ export default {
         // Handle error
       });
       
+  },
+  methods: {
+    updateContactUs() {
+     let updateUrl = "http://127.0.0.1:8000/updateCalendarTraining/";
+     let params = new URLSearchParams();
+     //let item = this.items.find(item => item.idTC === this.selectedItem);
+     
+     let num = parseInt(this.itemId);
+     
+     params.append("courseTitle", this.course_title);
+     params.append("Venue", this.venue);
+     params.append("month", this.month);
+     params.append("year", this.year);
+     params.append("idTC", num);
+ 
+     
+     axios.put(updateUrl + '?' + params.toString())
+       .then(response => {
+         console.log(response.data);
+         this.showModal= true;
+       })
+       .catch(error => {
+         console.log(error);
+       });
+    },
+ 
   },
  
   
