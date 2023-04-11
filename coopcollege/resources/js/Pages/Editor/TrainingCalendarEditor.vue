@@ -112,7 +112,7 @@ import Modal from '@/Components/Modal.vue'
 
                            
                               <Modal :show="showModal" @close="showModal = false">
-                                <h2 class="text-theme1 text-2xl">Added Training Calendar!</h2>
+                                <h2 class="text-theme1 text-2xl">Added Training Calendar</h2>
                                 <p class="text-theme2 text-4xl mb-5">Success!</p>
                               </Modal>
 
