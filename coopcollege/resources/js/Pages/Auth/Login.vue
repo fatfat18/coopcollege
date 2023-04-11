@@ -8,6 +8,17 @@ import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 import { Head, Link, useForm } from '@inertiajs/vue3';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { faUnlockKeyhole } from "@fortawesome/free-solid-svg-icons";
+import { faKey } from '@fortawesome/free-solid-svg-icons';
+import { faLock } from "@fortawesome/free-solid-svg-icons";
+import { library } from '@fortawesome/fontawesome-svg-core';
+
+
+library.add(faLock,faKey);
+
+
+
 
 defineProps({
     canResetPassword: Boolean,
@@ -45,9 +56,9 @@ AOS.init();
         </div>
 
         <form @submit.prevent="submit" >
-            <div>
+            <div class="flex justify-center items-center">
 
-
+                <p class="text-theme1 text-2xl pr-2"><font-awesome-icon icon="fa-solid fa-lock" /></p>
                 <TextInput
                     id="email"
                     type="email"
@@ -58,13 +69,12 @@ AOS.init();
                     autocomplete="username"
                     placeholder="Email"
                 />
-
                 <InputError class="mt-2" :message="form.errors.email" />
             </div>
 
-            <div class="mt-4">
+            <div class="mt-4 flex justify-center items-center">
               
-
+                <p class="text-theme1 text-xl pr-2"><font-awesome-icon icon="fa-solid fa-key" /></p>
                 <TextInput
                     id="password"
                     type="password"

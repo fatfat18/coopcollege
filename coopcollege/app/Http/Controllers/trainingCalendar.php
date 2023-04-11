@@ -75,5 +75,7 @@ class trainingCalendar extends Controller
             return $q;
         });
     }
+
+    
    
 }

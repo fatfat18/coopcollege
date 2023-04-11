@@ -19,7 +19,7 @@ import Footer from '@/Components/Footer.vue';
 
  <div class="h-max w-screen flex flex-col justify-center items-center mt-8">
 
-  <h1 class=" text-3xl xl:text-8xl mb-8" data-aos="zoom-in" data-aos-duration="1000"> WHAT'S NEW?</h1>
+  <h1 class=" text-3xl xl:text-8xl mb-8 text-theme1" data-aos="zoom-in" data-aos-duration="1000"> WHAT'S NEW?</h1>
 
     <div class="h-max" data-aos="fade-up" data-aos-duration="1000">
 

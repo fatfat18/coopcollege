@@ -2,7 +2,20 @@
 
 
 export default {
- props: ['id','img','name']
+    props: {
+  id: {
+    type: Number,
+    required: true,
+  },
+  name: {
+    type: String,
+    required: true,
+  },
+  image: {
+    type: String,
+    //required: true,
+  },
+},
 }
 
 </script>
@@ -37,7 +50,7 @@ export default {
                 {{ id }}
             </div>
             <div class=" flex justify-center text-center items-center"> 
-                <img src="../../asset/sample.jpg" class=" xl:h-24 xl:w-32 h-12 w-24">
+                <img :src="image" alt="Image" class=" xl:h-24 xl:w-32 h-12 w-24">
             </div>
             <div class=" flex justify-center text-center items-center col-span-3">
                 {{ name }}

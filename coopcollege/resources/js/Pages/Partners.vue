@@ -41,7 +41,7 @@ library.add(faPlus);
             <a href="/PartnersEditor"><button class="xl:ml-16 my-4 mx-8 px-6 py-2 rounded-md bg-theme1 transition duration-150 border border-black text-theme2 hover:scale-110 hover:-translate-y-1"> Add Partner  <font-awesome-icon icon="fa-solid fa-plus" class= " pl-2 hover:text-white " /> </button></a>
             
         <!-- HEADER NI SA POST TILE  -->
-    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 overflow-y-auto space-y-1 h-max" data-aos="fade-up" data-aos-duration="1000">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 overflow-y-hidden space-y-1 h-max" data-aos="fade-up" data-aos-duration="1000" >
         <div class="max-w-7xl bg-white xl:px-8 xl:py-4 py-4 rounded-sm grid grid-cols-7 gap-4 text-xs xl:text-l"> 
             <div class=" flex justify-center text-center items-center">
                 ID
@@ -62,13 +62,18 @@ library.add(faPlus);
 
         <!-- DIRI MAG LOOP ANG GIKAN SA DATABASE PAGINATE LANG DAYUN BY 10s -->
 
-               <PartnersTile name='name' id='1' />
-               <PartnersTile name='name' id='2' />
-               <PartnersTile name='name' id='3' />
-               <PartnersTile name='name' id='4' />
-               <PartnersTile name='name' id='5' />
+        <template v-for="(item, index) in reversedItems" :key="item.idPartner">
+         
+         <PartnersTile
+           :id="item.idPartner"
+           :image="item.image.ImageUrl"
+           :name="item.partnerName"
+           data-aos="fade-up" data-aos-duration="500"
+         />
+   
+         </template>
  
-
+       
 
             </div>
         </div>
@@ -82,6 +87,43 @@ library.add(faPlus);
 
 
 <script>
+
+export default {
+
+
+data() {
+  return {
+ 
+    items: [],
+    showModal: false,
+
+
+  }
+},
+
+mounted() {
+  let urlGet = "http://127.0.0.1:8000/displayPartner";
+
+    axios.get(urlGet)
+      .then(response => {
+        this.items = response.data;
+        console.log(this.items);
+    
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  },
+  computed: {
+    reversedItems() {
+      return this.items.slice().reverse();
+    },
+  },
+}
+
+
+
+
 AOS.init({startEvent: 'load',
           once : 'true,'});
 AOS.refresh();

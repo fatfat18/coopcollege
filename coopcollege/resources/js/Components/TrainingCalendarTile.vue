@@ -2,7 +2,32 @@
 
 
 export default {
- props: ['id','month','coursetitle','venue','year']
+    props: {
+  id: {
+    type: Number,
+    required: true,
+  },
+  month: {
+    type: String,
+    required: true,
+  },
+  coursetitle: {
+    type: String,
+    required: true,
+  },
+  venue: {
+    type: String,
+    required: true,
+  },
+  year: {
+    type: String,
+    required: true,
+  },
+  buttonid: {
+    type: Number,
+    required: true,
+  },
+},
 }
 
 </script>
@@ -51,12 +76,10 @@ export default {
                 {{ year }}
 
             </div>
+            
           
-            <div class=" flex justify-center text-center items-center">
-                        <button class="py-2 px-8  rounded-full bg-blue-400 xl:rounded-lg text-white text-xs xl:text-md buttonedit border-2 border-blue-400">Edit</button>
-            </div>
-            <div class=" flex justify-center text-center items-center ">
-                        <button class="py-2 px-8  rounded-full bg-red-500 xl:rounded-lg text-white text-xs xl:text-md buttondelete border-2 border-red-500">Delete</button>
-            </div>
+            <slot />
         </div>
 </template>
+
+

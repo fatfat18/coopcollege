@@ -166,6 +166,7 @@ library.add(faPlus,faFacebook,faEnvelope,faPhone,faTty,faGlobe);
 
 <script>
 
+
 import axios from 'axios';
 
 export default {
@@ -183,6 +184,7 @@ export default {
     axios.get(getUrl)
       .then(response => {
         this.contactUs = response.data;
+        console.log(response.data);
       })
       .catch(error => {
         console.log(error);
@@ -209,6 +211,7 @@ export default {
          console.log(error);
        });
     },
+ 
   },
 };
 
