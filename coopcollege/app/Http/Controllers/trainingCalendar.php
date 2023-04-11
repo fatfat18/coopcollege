@@ -14,7 +14,7 @@ class trainingCalendar extends Controller
             'courseTitle' => 'required',
             'venue'=>'required',
             'month'=>'required',
-            'year'=>'required'
+            'year'=>'required|numeric'
         ]);
  
         if ($validator->fails()) {

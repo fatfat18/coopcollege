@@ -174,7 +174,7 @@ data() {
 },
 
 mounted() {
-    let urlGet = "http://127.0.0.1:8000/displayPost/";
+    let urlGet = "http://127.0.0.1:8000/displayPost";
     axios.get(urlGet)
       .then((response) => {
         const path = window.location.pathname;

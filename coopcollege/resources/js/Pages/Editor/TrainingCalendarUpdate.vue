@@ -97,7 +97,7 @@ import Modal from '@/Components/Modal.vue'
                                 <TextInput 
                                 id="name"
                                 name="year"
-                                type="text"
+                                type="number"
                                 class="mt-4 py-2 px-2 w-32 focus:ring-yellow-500 active:ring-yellow-500"
                                 required
                                 autocomplete=""
