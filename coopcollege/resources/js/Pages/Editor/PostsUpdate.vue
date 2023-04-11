@@ -106,9 +106,9 @@ import Modal from '@/Components/Modal.vue';
                                 </textarea>
 
                             
-                                <select class="mt-4" v-model="this.items.category" name="posttype">
+                                <select class="mt-4" v-model="posttype" name="posttype">
                                    <option hidden>Post Type</option>
-                                   <option v-for="item in items" :key="item.postCatId" :value="item.PostCatId">{{ item.category }}</option>
+                                   <option v-for="item in category" :key="item.postCatId" :value="item.PostCatId">{{ item.category }}</option>
                                  </select>
                             
                             </div>
@@ -161,19 +161,20 @@ data() {
   return {
     imagePreviewUrl:[],
     imagePreviewUrlholder: [],
-    posttype: null,
+    posttype: '',
     idUser: 1,
     description: '',
     title: '',
     context: '',
-  
     items: [],
+    category:[],
+    selectedItem:this.itemId,
     showModal: false,
 
   }
 },
 
-mounted() {
+mounted(event) {
     let urlGet = "http://127.0.0.1:8000/displayPost";
     axios.get(urlGet)
       .then((response) => {
@@ -195,7 +196,7 @@ mounted() {
 
         for (let x = 0; x < this.items.length; x++) {
             const y = this.items[x];
-            if( y.idTC == this.itemId){
+            if( y.Postid == this.itemId){
               console.log(y);
               this.items = y;
               console.log(this.items);
@@ -204,11 +205,31 @@ mounted() {
           
             }
           
+      
+    let urlGet = "http://127.0.0.1:8000/postCategory";
+
+    axios.get(urlGet)
+      .then(response => {
+        this.category = response.data;
+       
+      })
+      .catch(error => {
+        console.log(error);
+      });
+
+
 
         //assign the selected object to all mounted
+ 
+        for (let i = 0 ; i < this.items.image.length ; i++){
+            this.imagePreviewUrlholder[i] = this.items.image[i].ImageUrl;
+        }
+        console.log(this.imagePreviewUrlholder)
         this.description = this.items.Description;
         this.title = this.items.newsTitle;
-        this.context = this.items.context;
+        this.context = this.items.Context;
+   
+
  
 
         
@@ -244,52 +265,8 @@ methods: {
   }
   console.log(this.imagePreviewUrl);
   
-
   },
-  submitData() {
-
-
-    const formData = new FormData();
-    
-    for (let i = 0; i < this.imagePreviewUrl.length; i++) {
-    // Generate a unique key for the image data
-    const key = `file[${i}]`;
-    // Append the image data to the formData object with the unique key
-    formData.append(key, this.imagePreviewUrl[i]);
-}
-    formData.append('PostCatId', this.posttype);
-    formData.append('idUser', this.idUser);
-    formData.append('Description', this.description);
-    formData.append('newsTitle', this.title);
-    formData.append('Context', this.context);
-   
-
-    let urlPost = "http://127.0.0.1:8000/storePost";
  
-    // Append additional form data to the same FormData object
-    
-    axios.post(urlPost,formData,{
-
-    headers: {
-        'Content-Type': 'multipart/form-data'
-      }
-    }).then(response => {
-      console.log(response);
-      this.showModal = true;
-    }).catch(error => {
-      console.log(error);
-    });
-
-    this.imagePreviewUrl = '';
-    this.imagePreviewUrlholder = '';
-    this.posttype =  '';
-    this.idUser =  1;
-    this.description =  '';
-    this.title =  '';
-    this.context =  '';
-    this.date_created =  '';
-
-  },
   
   
   closeModal() {

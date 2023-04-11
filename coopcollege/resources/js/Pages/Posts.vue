@@ -84,6 +84,7 @@ library.add(faPlus);
            :context="sliceText(item.Context, 150)"
            :date_created="item.news_DateCreated"
 
+     
        
            data-aos="fade-up" data-aos-duration="500"
          > 
