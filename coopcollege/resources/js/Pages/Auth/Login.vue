@@ -56,8 +56,8 @@ AOS.init();
         </div>
 
         <form @submit.prevent="submit" >
-            <div class="flex justify-center items-center">
-
+            <div>
+                <div class="flex justify-center items-center">
                 <p class="text-theme1 text-2xl pr-2"><font-awesome-icon icon="fa-solid fa-lock" /></p>
                 <TextInput
                     id="email"
@@ -69,11 +69,12 @@ AOS.init();
                     autocomplete="username"
                     placeholder="Email"
                 />
+                </div>
                 <InputError class="mt-2" :message="form.errors.email" />
             </div>
 
-            <div class="mt-4 flex justify-center items-center">
-              
+            <div>
+              <div class="mt-4 flex justify-center items-center">
                 <p class="text-theme1 text-xl pr-2"><font-awesome-icon icon="fa-solid fa-key" /></p>
                 <TextInput
                     id="password"
@@ -84,7 +85,7 @@ AOS.init();
                     autocomplete="current-password"
                     placeholder="Password"
                 />
-
+            </div>
                 <InputError class="mt-2" :message="form.errors.password" />
             </div>
 

@@ -88,6 +88,10 @@ Route::get('/TrainingCalendarUpdate/{idTC}', function ($idTC) {
     return Inertia::render('Editor/TrainingCalendarUpdate');
 })->name('TrainingCalendarUpdate');
 
+Route::get('/PostsUpdate/{Postid}', function ($idTC) {
+    return Inertia::render('Editor/PostsUpdate');
+})->name('PostsUpdate');
+
 
 
 

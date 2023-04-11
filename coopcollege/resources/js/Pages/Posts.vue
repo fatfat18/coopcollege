@@ -86,7 +86,16 @@ library.add(faPlus);
 
        
            data-aos="fade-up" data-aos-duration="500"
-         />
+         > 
+
+          <div class=" flex justify-center text-center items-center col-span-1">
+                        <button button @click="navigateToUpdate(item.Postid)"  class="py-2 px-8  rounded-full bg-blue-400 xl:rounded-lg text-white text-xs xl:text-md buttonedit border-2 border-blue-400">Edit</button>
+            </div>
+            <div class=" flex justify-center text-center items-center col-span-1 ">
+                        <button class="py-2 px-8  rounded-full bg-red-500 xl:rounded-lg text-white text-xs xl:text-md buttondelete border-2 border-red-500">Delete</button>
+            </div>
+        
+        </PostsTile>
    
    </template>
 
@@ -142,7 +151,16 @@ mounted() {
         return text;
       }
     },
+    
+    navigateToUpdate(Postid) {
+    window.location.href = this.route('TrainingCalendarUpdate', {Postid: Postid});
+  }
+
+
+
+
   },
+
 }
 
 AOS.init({startEvent: 'load',
