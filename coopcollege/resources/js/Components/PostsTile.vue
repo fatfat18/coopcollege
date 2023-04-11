@@ -83,12 +83,7 @@ export default {
                 {{ date_created }}
 
             </div>
+          <slot />
           
-            <div class=" flex justify-center text-center items-center col-span-1">
-                        <button class="py-2 px-8  rounded-full bg-blue-400 xl:rounded-lg text-white text-xs xl:text-md buttonedit border-2 border-blue-400">Edit</button>
-            </div>
-            <div class=" flex justify-center text-center items-center col-span-1 ">
-                        <button class="py-2 px-8  rounded-full bg-red-500 xl:rounded-lg text-white text-xs xl:text-md buttondelete border-2 border-red-500">Delete</button>
-            </div>
         </div>
 </template>
