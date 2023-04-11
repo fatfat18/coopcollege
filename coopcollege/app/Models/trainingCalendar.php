@@ -10,6 +10,7 @@ class trainingCalendar extends Model
     public $timestamps = false;
     protected $guarded = [];
     use HasFactory;
+    protected $primaryKey = 'idCV';
 
     public function events(){
         return $this->hasMany(courseVenue::class, 'idCV', 'idCV');
