@@ -42,7 +42,7 @@ import Modal from '@/Components/Modal.vue'
 
         
 
-                    <form @submit.prevent="updateContactUs(this.intNum)">
+                    <form @submit.prevent="updateTrainingcalendar(this.intNum)">
                         <button type="submit" class="border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg mb-10 hover:bg-green-600 transition ease-in duration-100">Save</button>
                             <div class="overflow-y-hidden space-x-4" >
 
@@ -215,7 +215,7 @@ export default {
       
   },
   methods: {
-    updateContactUs() {
+    updateTrainingcalendar() {
      let updateUrl = "http://127.0.0.1:8000/updateCalendarTraining";
      let params = new URLSearchParams();
      //let item = this.items.find(item => item.idTC === this.selectedItem);

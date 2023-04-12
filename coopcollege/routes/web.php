@@ -84,7 +84,7 @@ Route::get('/TrainingCalendarEditor', function () {
 
 
 
-
+//route with ID for update
 Route::get('/TrainingCalendarUpdate/{idTC}', function ($idTC) {
     return Inertia::render('Editor/TrainingCalendarUpdate');
 })->name('TrainingCalendarUpdate');
@@ -92,6 +92,11 @@ Route::get('/TrainingCalendarUpdate/{idTC}', function ($idTC) {
 Route::get('/PostsUpdate/{Postid}', function ($Postid) {
     return Inertia::render('Editor/PostsUpdate');
 })->name('PostsUpdate');
+
+Route::get('/BoardOfTrusteesUpdate/{idBOD}', function ($idBOD) {
+    return Inertia::render('Editor/BoardOfTrusteesUpdate');
+})->name('BoardOfTrusteesUpdate');
+
 
 
 

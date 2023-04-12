@@ -80,7 +80,7 @@ library.add(faPlus);
                 ADDRESS
             </div>
             <div class=" flex justify-center text-center items-center">
-                COOP NAME
+           
             </div>
 
             <div class=" flex justify-center text-center items-center">
@@ -112,7 +112,17 @@ library.add(faPlus);
            :coop_name="item.coopId"
        
            data-aos="fade-up" data-aos-duration="500"
-         />
+         >
+
+         <div class=" flex justify-center text-center items-center col-span-2 ">
+                        <button button @click="navigateToUpdate(item.idBOD)"  class="py-2 px-6  rounded-full bg-blue-400 xl:rounded-lg text-white text-xs xl:text-md buttonedit border-2 border-blue-400">Edit</button>
+            </div>
+            <div class=" flex justify-center text-center items-center ">
+                        <button class="py-2 px-4  rounded-full bg-red-500 xl:rounded-lg text-white text-xs xl:text-md buttondelete border-2 border-red-500">Delete</button>
+            </div>
+          
+        </BoardOfTrusteesTile>
+         
    
    </template>
 
@@ -159,8 +169,13 @@ mounted() {
     reversedItems() {
       return this.items.slice().reverse();
     },
- 
+    
   },
+  methods:{
+    navigateToUpdate(idBOD) {
+    window.location.href = this.route('BoardOfTrusteesUpdate', {idBOD: idBOD});
+  }
+  }
 }
 
 AOS.init({startEvent: 'load',

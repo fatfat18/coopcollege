@@ -39,16 +39,15 @@ import Modal from '@/Components/Modal.vue';
 
             <div class=" xl:w-3/4 w-4/5 h-max xl:mt-4">
 
-<h1 class="text-5xl text-white">MAO NI UPDATE SA POST </h1>
 
-                    <form @submit.prevent="submitData">
+                    <form @submit.prevent="updatePosts(this.intNum)">
                         <button class="border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg mb-10 hover:bg-green-600 transition ease-in duration-100">Save</button>
                                  
                     
 
                         <div class="text-white xl:h-20 w-max flex justify-center items-center" data-aos="fade-up"  data-aos-duration="1500" >
                              <label for="img" class="text-2xl text-white rounded-2xl border-theme2 py-5 px-5 border-dashed border-2 hover:border-white hover:text-theme2 transiton duration-300" >Upload Images<br></label>
-                            <input type="file" accept="image/*" multiple @change="uploadFile" id="img" ref="file" required  >
+                            <input type="file" accept="image/*" multiple @change="uploadFile" id="img" ref="file" >
                    
                         </div>
 
@@ -70,7 +69,7 @@ import Modal from '@/Components/Modal.vue';
                                 required
                                 autocomplete="current-title"
                                 placeholder="Title"
-                                v-model="title"
+                                v-model="this.title"
                                 data-aos="fade-up"  data-aos-duration="1300"
                                 >
                             
@@ -85,7 +84,7 @@ import Modal from '@/Components/Modal.vue';
                                 required
                                 autocomplete="current-description"
                                 placeholder="Description"
-                                v-model="description"
+                                v-model="this.description"
                                 data-aos="fade-up"  data-aos-duration="1000"
                                 >
                             
@@ -106,7 +105,7 @@ import Modal from '@/Components/Modal.vue';
                                 </textarea>
 
                             
-                                <select class="mt-4" v-model="posttype" name="posttype">
+                                <select class="mt-4" v-model="this.posttype" name="posttype">
                                    <option hidden>Post Type</option>
                                    <option v-for="item in category" :key="item.postCatId" :value="item.PostCatId">{{ item.category }}</option>
                                  </select>
@@ -228,6 +227,7 @@ mounted(event) {
         this.description = this.items.Description;
         this.title = this.items.newsTitle;
         this.context = this.items.Context;
+        this.posttype = this.items.PostCatId;
    
 
  
@@ -275,6 +275,47 @@ methods: {
     this.showModal = false;
   },
 
+  updatePosts() {
+     let updateUrl = "http://127.0.0.1:8000/updateCategory";
+     let params = new URLSearchParams();
+     //let item = this.items.find(item => item.idTC === this.selectedItem);
+     
+     let num = parseInt(this.itemId);
+
+
+     params.append("PostCatId", this.posttype);
+     params.append("idUser", this.idUser);
+     params.append("Description", this.description);
+     params.append("newsTitle", this.title);
+     params.append("Context", this.context);
+     params.append("Postid", num);
+   
+     
+     
+     
+
+ 
+     
+     axios.put(updateUrl + '?' + params.toString())
+       .then(response => {
+         console.log(response.data);
+         this.showModal= true;
+         
+        
+          
+        async function redirectWithDelay() {
+           await new Promise(resolve => setTimeout(resolve, 1000)); // wait for 3 seconds
+           window.location.href = route('Posts'); // redirect to the TrainingCalendar URL
+         }
+      redirectWithDelay();  
+      
+         
+       })
+       .catch(error => {
+         console.log(error);
+       });
+       console.log(updateUrl + '?' + params.toString());
+    },
 
   
 }
