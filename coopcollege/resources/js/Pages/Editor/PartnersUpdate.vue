@@ -62,7 +62,7 @@ import InputLabel from '@/Components/InputLabel.vue';
                                 required
                                 autocomplete="current-title"
                                 placeholder="Name"
-                                v-model="name"
+                                v-model="this.name"
                                 data-aos="fade-up"  data-aos-duration="1300"
                                 >
                         
@@ -78,7 +78,7 @@ import InputLabel from '@/Components/InputLabel.vue';
                                 required
                                 autocomplete="current-title"
                                 placeholder="Status "
-                                v-model="status "
+                                v-model="this.status "
                                 data-aos="fade-up"  data-aos-duration="1300"
                               
                                 >
@@ -210,10 +210,13 @@ export default {
      //let item = this.items.find(item => item.idTC === this.selectedItem);
      
      let num = parseInt(this.itemId);
-     
-     params.append("partnerName", this.name);
-     params.append("status", this.status);
+
      params.append("idPartner", num);
+     params.append("status", this.status);
+     params.append("partnerName", this.name);
+     
+     
+     
  
      
      axios.put(updateUrl + '?' + params.toString())

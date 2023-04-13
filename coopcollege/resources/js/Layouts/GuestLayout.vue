@@ -20,7 +20,7 @@ import { Link } from '@inertiajs/vue3';
    
     <div class="min-h-screen flex xl:flex-row flex-col-reverse sm:justify-center items-center xl:pt-6 sm:pt-0 bg-gray-100 justify-center postcontainer" >
    
-        <div class="bg-white w-screen xl:py-20  xl:w-96" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000">
+        <div class="bg-white w-screen xl:py-20 py-10 xl:w-96" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000">
 
             <div class="flex justify-center items-center max-w-screen " >
             <a href="/"><img src="../../asset/logo.png" class="pt-5 h-60"></a>
@@ -31,7 +31,7 @@ import { Link } from '@inertiajs/vue3';
 
         </div>
         <div
-            class=" w-full  sm:max-w-md px-6 xl:py-32  xl:flex xl:justify-center xl:items-center bg-zinc-50 shadow-2xl overflow-hidden" data-aos="fade-right" data-aos-duration="1000"
+            class=" w-full  sm:max-w-md px-6 xl:py-32 py-5  xl:flex xl:justify-center xl:items-center bg-zinc-50 shadow-2xl overflow-hidden" data-aos="fade-right" data-aos-duration="1000"
         >
        
             <slot />

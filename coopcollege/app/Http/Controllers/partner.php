@@ -38,7 +38,7 @@ class partner extends Controller
             return $validator->errors();
         }
 
-        \App\Models\partner::where('idPartner', $request->idPartner)->update(['status'=> $request->status]);
+        \App\Models\partner::where('idPartner', $request->idPartner)->update(['status'=> $request->status,'partnerName' => $request->partnerName]);
 
         return ['msg'=>"Successfuly deleted partner."];
     }
