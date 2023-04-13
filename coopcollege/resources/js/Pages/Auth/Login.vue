@@ -45,7 +45,7 @@ AOS.init();
 .form-control {
   position: relative;
 
-  width: 250px;
+  width: 300px;
 }
 
 .form-control input {
@@ -55,9 +55,10 @@ AOS.init();
   display: block;
   width: 100%;
   padding-top: 35px;
-  padding-left: 10px;
+  padding-left: 45px;
   padding-bottom: 0px;
-  font-size: 18px;
+  font-size: 15px;
+  letter-spacing: 1px;
   color: black;
   overflow-y: hidden;
 }
@@ -77,7 +78,7 @@ AOS.init();
 
 .form-control label span {
   display: inline-block;
-  font-size: 15px;
+  font-size: 13px;
   min-width: 5px;
   color: rgba(39, 39, 39, 0.534);
   transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -122,7 +123,7 @@ AOS.init();
         <div class="flex justify-center items-center max-w-screen " >
             <a href="/"><img src="../../../asset/logo.png" class="w-20"></a>
         </div>
-        <div class="text-center text-2xl">
+        <div class="text-center text-2xl font-semibold">
             CO-OPERATIVE COLLEGE OF THE PHILIPPINES
         </div>
 
@@ -133,11 +134,12 @@ AOS.init();
         <form @submit.prevent="submit" >
             <div>
                 <div class="flex justify-center items-center">
-                <p class="text-theme1 text-2xl pr-2 flex items-center justify-center text-center"><font-awesome-icon icon="fa-solid fa-lock" /></p>
-
+            
                 <div class="form-control">
-                <input type="text" required autofocus v-model="form.email" >
+                <input class="" type="text" required autofocus v-model="form.email" >
+            
                 <label>
+                    <i class="text-theme2 text-xl pr-4"><font-awesome-icon icon="fa-solid fa-lock" /></i>
                     <span style="transition-delay:0ms">E</span><span style="transition-delay:50ms">m</span><span style="transition-delay:100ms">a</span><span style="transition-delay:150ms">i</span><span style="transition-delay:200ms">l</span>
                 </label>
             </div>
@@ -160,16 +162,17 @@ AOS.init();
                     placeholder="Email"
                 /> -->
                 </div>
-                <InputError class="mt-2" :message="form.errors.email" />
+                <InputError class="mt-2 text-center" :message="form.errors.email" />
             </div>
 
             <div>
               <div class="mt-4 flex justify-center items-center">
-                <p class="text-theme1 text-xl pr-2"><font-awesome-icon icon="fa-solid fa-key" /></p>
+                
 
                 <div class="form-control">
                 <input type="password" required autofocus v-model="form.password" >
                 <label>
+                    <i class="text-theme2 text-xl pr-4"><font-awesome-icon icon="fa-solid fa-key" /></i>
                     <span style="transition-delay:0ms">P</span><span style="transition-delay:50ms">a</span><span style="transition-delay:100ms">s</span><span style="transition-delay:150ms">s</span><span style="transition-delay:200ms">w</span><span style="transition-delay:250ms">o</span><span style="transition-delay:300ms">r</span><span style="transition-delay:350ms">d</span>
                 </label>
             </div>
@@ -185,7 +188,7 @@ AOS.init();
                     placeholder="Password"
                 /> -->
             </div>
-                <InputError class="mt-2" :message="form.errors.password" />
+               <InputError class="mt-2 text-center" :message="form.errors.password" />
             </div>
 
             <div class="block mt-4">
