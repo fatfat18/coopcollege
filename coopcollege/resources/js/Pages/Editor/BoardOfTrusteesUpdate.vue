@@ -164,7 +164,8 @@ display: none;
                                 >
             
                                </TextInput>
-
+                               <br><br>
+                               <InputLabel class="text-xl text-white -mb-5">Status : ( 1 - Active) (2 - Inactive) </InputLabel>
                                <TextInput 
                                 id="status"
                                 name="status"
@@ -179,7 +180,7 @@ display: none;
                                 >
             
                                </TextInput>
-
+                               
 
                             <!-- 
                                 <TextInput 
@@ -244,7 +245,7 @@ display: none;
                 
 
                             <Modal :show="showModal" @close="showModal = false">
-                                <h2 class="text-theme1 text-2xl">Added Board of Trustees</h2>
+                                <h2 class="text-theme1 text-2xl">Update Board of Trustees</h2>
                                 <p class="text-theme2 text-4xl mb-5">Success!</p>
                             </Modal>
 

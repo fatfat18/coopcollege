@@ -44,6 +44,6 @@ class partner extends Controller
     }
 
     public function display(){
-        return \App\Models\partner::with('image')->get();
+        return \App\Models\partner::where('Status', 1)->with('image')->get();
     }
 }

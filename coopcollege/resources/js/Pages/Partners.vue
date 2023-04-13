@@ -69,7 +69,16 @@ library.add(faPlus);
            :image="item.image.ImageUrl"
            :name="item.partnerName"
            data-aos="fade-up" data-aos-duration="500"
-         />
+         >
+        
+         <div class=" flex justify-center text-center items-center col-span-1">
+                        <button button @click="navigateToUpdate(item.idPartner)"  class="py-2 px-8  rounded-full bg-blue-400 xl:rounded-lg text-white text-xs xl:text-md buttonedit border-2 border-blue-400">Edit</button>
+            </div>
+            <div class=" flex justify-center text-center items-center col-span-1 ">
+                        <button class="py-2 px-8  rounded-full bg-red-500 xl:rounded-lg text-white text-xs xl:text-md buttondelete border-2 border-red-500">Delete</button>
+            </div>
+        
+        </PartnersTile>
    
          </template>
  
@@ -119,6 +128,12 @@ mounted() {
       return this.items.slice().reverse();
     },
   },
+  methods:{
+    navigateToUpdate(idPartner) {
+    window.location.href = this.route('PartnersUpdate', {idPartner: idPartner});
+  }
+
+  }
 }
 
 

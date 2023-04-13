@@ -97,6 +97,10 @@ Route::get('/BoardOfTrusteesUpdate/{idBOD}', function ($idBOD) {
     return Inertia::render('Editor/BoardOfTrusteesUpdate');
 })->name('BoardOfTrusteesUpdate');
 
+Route::get('/PartnersUpdate/{idPartner}', function ($idPartner) {
+    return Inertia::render('Editor/PartnersUpdate');
+})->name('PartnersUpdate');
+
 
 
 
@@ -186,7 +190,7 @@ Route::post('/partner',[partner::class, 'store'] );
 
 Route::get('/displayPartner',[partner::class, 'display'] );
 
-Route::post('/updatePartnerStatus',[partner::class, 'update'] );
+Route::put('/updatePartnerStatus',[partner::class, 'update'] );
 
 
 

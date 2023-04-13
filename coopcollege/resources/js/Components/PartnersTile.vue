@@ -57,11 +57,6 @@ export default {
 
             </div>
           
-            <div class=" flex justify-center text-center items-center">
-                        <button class="py-2 px-8  rounded-full bg-blue-400 xl:rounded-lg text-white text-xs xl:text-md buttonedit border-2 border-blue-400">Edit</button>
-            </div>
-            <div class=" flex justify-center text-center items-center ">
-                        <button class="py-2 px-8  rounded-full bg-red-500 xl:rounded-lg text-white text-xs xl:text-md buttondelete border-2 border-red-500">Delete</button>
-            </div>
+          <slot />
         </div>
 </template>

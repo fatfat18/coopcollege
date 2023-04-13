@@ -40,6 +40,81 @@ const submit = () => {
 AOS.init();
 </script>
 
+
+<style>
+.form-control {
+  position: relative;
+
+  width: 250px;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #000033 solid;
+  display: block;
+  width: 100%;
+  padding-top: 35px;
+  padding-left: 10px;
+  padding-bottom: 0px;
+  font-size: 18px;
+  color: black;
+  overflow-y: hidden;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: #000033;
+}
+
+.form-control label {
+  position: absolute;
+  top: 25px;
+  left: 10px;
+  pointer-events: none;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 15px;
+  min-width: 5px;
+  color: rgba(39, 39, 39, 0.534);
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus+label span,
+.form-control input:valid+label span {
+  color: #000033;
+  transform: translateY(-20px);
+}
+
+
+.login {
+  position: relative;
+  display: inline-block;
+  margin: 15px;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: white;
+  background-color: #000033;
+  cursor: pointer;
+  transition: ease-out .7s;
+  border: 2px solid #FFCC00;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 #FFCC00;
+}
+
+.login:hover {
+  color: white;
+  box-shadow: inset 0 -100px 0 0 #FFCC00;
+  border: 2px solid #000033;
+}
+</style>
+
 <template>
     
     <GuestLayout>
@@ -58,8 +133,23 @@ AOS.init();
         <form @submit.prevent="submit" >
             <div>
                 <div class="flex justify-center items-center">
-                <p class="text-theme1 text-2xl pr-2"><font-awesome-icon icon="fa-solid fa-lock" /></p>
-                <TextInput
+                <p class="text-theme1 text-2xl pr-2 flex items-center justify-center text-center"><font-awesome-icon icon="fa-solid fa-lock" /></p>
+
+                <div class="form-control">
+                <input type="text" required autofocus v-model="form.email" >
+                <label>
+                    <span style="transition-delay:0ms">E</span><span style="transition-delay:50ms">m</span><span style="transition-delay:100ms">a</span><span style="transition-delay:150ms">i</span><span style="transition-delay:200ms">l</span>
+                </label>
+            </div>
+
+
+
+
+
+
+
+
+                <!-- <TextInput
                     id="email"
                     type="email"
                     class="mt-1 block w-full focus:ring-yellow-500 active:ring-yellow-500"
@@ -68,7 +158,7 @@ AOS.init();
                     autofocus
                     autocomplete="username"
                     placeholder="Email"
-                />
+                /> -->
                 </div>
                 <InputError class="mt-2" :message="form.errors.email" />
             </div>
@@ -76,7 +166,16 @@ AOS.init();
             <div>
               <div class="mt-4 flex justify-center items-center">
                 <p class="text-theme1 text-xl pr-2"><font-awesome-icon icon="fa-solid fa-key" /></p>
-                <TextInput
+
+                <div class="form-control">
+                <input type="password" required autofocus v-model="form.password" >
+                <label>
+                    <span style="transition-delay:0ms">P</span><span style="transition-delay:50ms">a</span><span style="transition-delay:100ms">s</span><span style="transition-delay:150ms">s</span><span style="transition-delay:200ms">w</span><span style="transition-delay:250ms">o</span><span style="transition-delay:300ms">r</span><span style="transition-delay:350ms">d</span>
+                </label>
+            </div>
+
+
+                <!-- <TextInput
                     id="password"
                     type="password"
                     class="mt-1 block w-full focus:ring-yellow-500 active:ring-yellow-500"
@@ -84,7 +183,7 @@ AOS.init();
                     required
                     autocomplete="current-password"
                     placeholder="Password"
-                />
+                /> -->
             </div>
                 <InputError class="mt-2" :message="form.errors.password" />
             </div>
@@ -105,7 +204,7 @@ AOS.init();
                     Forgot your password?
                 </Link>
 
-                <PrimaryButton class="ml-4 text-l w-32 items-center justify-center h-14 bg-theme1 text-theme2 text-sm hover:bg-theme2 hover:text-theme1" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                <PrimaryButton class="login ml-4 text-l w-32 items-center justify-center h-14 bg-theme1 text-white text-sm " :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                     LOGIN
                 </PrimaryButton>
             </div>
