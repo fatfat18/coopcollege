@@ -304,7 +304,7 @@ methods: {
         
           
         async function redirectWithDelay() {
-           await new Promise(resolve => setTimeout(resolve, 1000)); // wait for 3 seconds
+           await new Promise(resolve => setTimeout(resolve, 1000)); // wait for 1 second
            window.location.href = route('Posts'); // redirect to the TrainingCalendar URL
          }
       redirectWithDelay();  

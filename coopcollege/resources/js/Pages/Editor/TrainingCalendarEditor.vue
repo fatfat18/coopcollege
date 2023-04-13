@@ -172,7 +172,7 @@ export default {
       this.showModal = true;
       console.log(this.showModal);
       async function redirectWithDelay() {
-           await new Promise(resolve => setTimeout(resolve, 3000)); // wait for 3 seconds
+           await new Promise(resolve => setTimeout(resolve, 1000)); // wait for 1 seconds
            window.location.href = route('TrainingCalendar'); // redirect to the TrainingCalendar URL
          }
       redirectWithDelay();  
