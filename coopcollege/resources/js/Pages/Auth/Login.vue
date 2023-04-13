@@ -112,26 +112,30 @@ AOS.init();
   box-shadow: inset 0 -100px 0 0 #FFCC00;
   border: 2px solid #000033;
 }
+
+.test {
+    background: rgba(255,255,255,0.5);
+-webkit-backdrop-filter: blur(1px);
+backdrop-filter: blur(1px);
+border: 1px solid rgba(255,255,255,0.25);
+}
 </style>
 
-<template>
+<template >
     
     <GuestLayout>
         <Head title="Log in" />
-        <div class="flex justify-center items-center max-w-screen " >
-            <a href="/"><img src="../../../asset/logo.png" class="w-20"></a>
-        </div>
-        <div class="text-center text-2xl font-semibold">
-            CO-OPERATIVE COLLEGE OF THE PHILIPPINES
-        </div>
-
+        
         <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
             {{ status }}
         </div>
 
+        
+
         <form @submit.prevent="submit" >
-            <div>
-                <div class="flex justify-center items-center">
+            <div class="w-full text-center text-4xl mb-10 text-theme1 overflow-y-hidden">LOGIN</div>
+            <div class="">
+                <div class="flex justify-center items-center ">
             
                 <div class="form-control">
                 <input class="" type="text" required autofocus v-model="form.email" >

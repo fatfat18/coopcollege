@@ -28,15 +28,9 @@ AOS.init();
 <template>
     <GuestLayout>
         <Head title="Register" />
-        <div class="flex justify-center items-center max-w-screen ">
-            <a href="/"><img src="../../../asset/logo.png" class="w-20"></a>
-        </div>
-        <div class="text-center text-2xl">
-            CO-OPERATIVE COLLEGE OF THE PHILIPPINES
-        </div>
-
+        
         <form @submit.prevent="submit">
-            <div>
+            <div class="">
            
 
                 <TextInput
