@@ -58,7 +58,6 @@ AOS.init();
   padding-left: 45px;
   padding-bottom: 0px;
   font-size: 15px;
-  letter-spacing: 1px;
   color: black;
   overflow-y: hidden;
 }
@@ -98,7 +97,6 @@ AOS.init();
   padding: 15px 30px;
   text-align: center;
   font-size: 12px;
-  letter-spacing: 2px;
   text-decoration: none;
   color: white;
   background-color: #000033;
