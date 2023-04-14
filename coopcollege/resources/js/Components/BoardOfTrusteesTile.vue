@@ -91,7 +91,7 @@ export default {
                 {{ id }}
             </div>
             <div class=" flex justify-center text-center items-center"> 
-                <img :src="image" class=" xl:h-24 xl:w-40 h-12 w-16">
+                <img :src="image" class=" xl:h-16 xl:w-40 h-12 w-16">
             </div>
             <div class=" flex justify-center text-center items-center ">
                 {{ firstname }}

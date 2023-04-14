@@ -137,6 +137,7 @@ mounted() {
       .then(response => {
         this.items = response.data;
         console.log(this.items);
+        console.log(env.AXIOSBASE)
     
       })
       .catch(error => {

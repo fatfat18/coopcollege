@@ -133,7 +133,6 @@ mounted() {
       .then(response => {
         this.items = response.data;
         console.log(this.items);
-    
       })
       .catch(error => {
         console.log(error);

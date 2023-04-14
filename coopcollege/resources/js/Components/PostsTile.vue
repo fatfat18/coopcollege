@@ -65,7 +65,9 @@ export default {
                 {{ id }}
             </div>
             <div class=" flex justify-center text-center items-center col-span-1"> 
-                <img :src="image" alt="Images" class=" xl:h-24 xl:w-32 h-12 w-24">
+       
+                <img :src="image" alt="Images" class=" xl:h-16 xl:w-32 h-12 w-24 cover">
+            
             </div>
             <div class=" flex justify-center text-center items-center col-span-1">
                 {{ title }}
