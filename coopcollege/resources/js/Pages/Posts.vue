@@ -42,7 +42,7 @@ library.add(faPlus);
             
         <!-- HEADER NI SA POST TILE  -->
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8  space-y-1 h-max overflow-y-hidden" data-aos="fade-up" data-aos-duration="1000" >
-        <div class="max-w-7xl bg-white xl:px-8 xl:py-4 py-4 rounded-sm grid grid-cols-10 gap-4 text-xs xl:text-l"> 
+        <div class="max-w-7xl bg-white xl:px-8 xl:py-4 py-4 rounded-sm grid grid-cols-10 gap-4 text-xs xl:text-md"> 
             <div class=" flex justify-center text-center items-center col-span-1">
                 ID
             </div>
