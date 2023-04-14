@@ -196,7 +196,7 @@ border: 1px solid rgba(255,255,255,0.25);
             <div class="block mt-4">
                 <label class="flex items-center">
                     <Checkbox name="remember" v-model:checked="form.remember" />
-                    <span class="ml-2 text-sm text-gray-600">Remember me</span>
+                    <span class="ml-2 text-sm text-black">Remember me</span>
                 </label>
             </div>
 
@@ -204,14 +204,26 @@ border: 1px solid rgba(255,255,255,0.25);
                 <Link
                     v-if="canResetPassword"
                     :href="route('password.request')"
-                    class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
+                    class="underline text-sm text-black hover:text-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
                 >
                     Forgot your password?
                 </Link>
+                
 
                 <PrimaryButton class="login ml-4 text-l w-32 items-center justify-center h-14 bg-theme1 text-white text-sm " :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                     LOGIN
                 </PrimaryButton>
+
+                
+            </div>
+            <div class="h-20 display flex justify-center items-center">
+                <Link
+                    
+                    :href="route('register')"
+                    class="underline text-sm  text-black hover:text-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
+                >
+                    Don't have an account? Register now!
+                </Link>
             </div>
         </form>
     </GuestLayout>

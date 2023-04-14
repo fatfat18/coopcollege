@@ -41,7 +41,7 @@ import Modal from '@/Components/Modal.vue';
 
 
                     <form @submit.prevent="updatePosts(this.intNum)">
-                        <button class="border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg mb-10 hover:bg-green-600 transition ease-in duration-100">Save</button>
+                        <button class="mt-16 border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg mb-10 hover:bg-green-600 transition ease-in duration-100">Save</button>
                                  
                     
 

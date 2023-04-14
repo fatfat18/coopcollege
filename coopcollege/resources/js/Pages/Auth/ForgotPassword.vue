@@ -32,7 +32,7 @@ const submit = () => {
             {{ status }}
         </div>
 
-        <form @submit.prevent="submit">
+        <form @submit.prevent="submit" class="py-28" >
             <div>
                 <InputLabel for="email" value="Email" />
 

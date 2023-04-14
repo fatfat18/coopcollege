@@ -29,7 +29,7 @@ AOS.init();
     <GuestLayout>
         <Head title="Register" />
         
-        <form @submit.prevent="submit">
+        <form @submit.prevent="submit" class="xl:py-16">
             <div class="">
            
 
