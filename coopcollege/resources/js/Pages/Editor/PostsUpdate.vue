@@ -152,6 +152,7 @@ import Modal from '@/Components/Modal.vue';
 
 
 <script>
+import { BASE_URL } from '../../baseurl';
 
 export default {
 
@@ -174,8 +175,8 @@ data() {
 },
 
 mounted(event) {
-    let urlGet = "http://127.0.0.1:8000/displayPost";
-    axios.get(urlGet)
+
+    axios.get(BASE_URL + '/displayPost')
       .then((response) => {
         const path = window.location.pathname;
         // Extract specific data from path
@@ -203,11 +204,9 @@ mounted(event) {
             }
           
             }
-          
-      
-    let urlGet = "http://127.0.0.1:8000/postCategory";
 
-    axios.get(urlGet)
+
+    axios.get(BASE_URL + '/postCategory')
       .then(response => {
         this.category = response.data;
        
@@ -276,7 +275,7 @@ methods: {
   },
 
   updatePosts() {
-     let updateUrl = "http://127.0.0.1:8000/updateCategory";
+ 
      let params = new URLSearchParams();
      //let item = this.items.find(item => item.idTC === this.selectedItem);
      
@@ -296,7 +295,7 @@ methods: {
 
  
      
-     axios.put(updateUrl + '?' + params.toString())
+     axios.put(BASE_URL +'/updateCategory' + '?' + params.toString())
        .then(response => {
          console.log(response.data);
          this.showModal= true;
@@ -314,7 +313,7 @@ methods: {
        .catch(error => {
          console.log(error);
        });
-       console.log(updateUrl + '?' + params.toString());
+       console.log(BASE_URL + '/updateCategory' + '?' + params.toString());
     },
 
   

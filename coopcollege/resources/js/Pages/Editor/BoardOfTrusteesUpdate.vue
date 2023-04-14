@@ -272,6 +272,9 @@ display: none;
 </template>
 
 <script>
+
+import { BASE_URL } from '../../baseurl';
+
 import axios from 'axios';
 
 
@@ -295,8 +298,8 @@ export default {
     }
   },
   mounted(event) {
-    let urlGet = "http://127.0.0.1:8000/displayBOD";
-    axios.get(urlGet)
+
+    axios.get(BASE_URL +'/displayBOD')
       .then((response) => {
         const path = window.location.pathname;
         // Extract specific data from path
@@ -364,7 +367,7 @@ export default {
     },
 
     updateBOD() {
-     let updateUrl = "http://127.0.0.1:8000/updateBOD";
+
      let params = new URLSearchParams();
      //let item = this.items.find(item => item.idTC === this.selectedItem);
      
@@ -384,7 +387,7 @@ export default {
 
     
      
-     axios.put(updateUrl + '?' + params.toString())
+     axios.put(BASE_URL +'/updateBOD' + '?' + params.toString())
        .then(response => {
          console.log(response.data);
          this.showModal= true;
@@ -402,7 +405,7 @@ export default {
        .catch(error => {
          console.log(error);
        });
-       console.log(updateUrl + '?' + params.toString());
+       console.log(BASE_URL + '/updateBOD' + '?' + params.toString());
     },
 
     

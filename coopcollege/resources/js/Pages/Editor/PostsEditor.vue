@@ -149,6 +149,7 @@ import Modal from '@/Components/Modal.vue';
 
 <script>
 
+import { BASE_URL } from '../../baseurl';
 
 export default {
 
@@ -170,9 +171,9 @@ data() {
 },
 
 mounted() {
-  let urlGet = "http://127.0.0.1:8000/postCategory";
 
-    axios.get(urlGet)
+
+    axios.get(BASE_URL + '/postCategory')
       .then(response => {
         this.items = response.data;
       })
@@ -227,11 +228,11 @@ methods: {
     formData.append('Context', this.context);
    
 
-    let urlPost = "http://127.0.0.1:8000/storePost";
+
  
     // Append additional form data to the same FormData object
     
-    axios.post(urlPost,formData,{
+    axios.post(BASE_URL + '/storePost',formData,{
 
     headers: {
         'Content-Type': 'multipart/form-data'

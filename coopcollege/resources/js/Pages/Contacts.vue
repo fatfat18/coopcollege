@@ -165,7 +165,7 @@ library.add(faPlus,faFacebook,faEnvelope,faPhone,faTty,faGlobe);
 
 
 <script>
-
+import { BASE_URL } from '../baseurl';
 
 import axios from 'axios';
 
@@ -180,8 +180,7 @@ export default {
     };
   },
   created() {
-    let getUrl = "http://127.0.0.1:8000/displayContactUs"
-    axios.get(getUrl)
+    axios.get(BASE_URL + '/displayContactUs')
       .then(response => {
         this.contactUs = response.data;
         console.log(response.data);

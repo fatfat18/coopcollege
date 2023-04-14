@@ -108,6 +108,8 @@ import 'aos/dist/aos.css'
 
 <script>
 import Modal from '@/Components/Modal.vue';
+import { BASE_URL } from '../../baseurl';
+
 export default {
   data() {
     return {
@@ -137,11 +139,11 @@ export default {
       formData.append('partnerName', this.name);
     
 
-      let url = "http://127.0.0.1:8000/partner";
+
    
       // Append additional form data to the same FormData object
       
-      axios.post(url,formData,{
+      axios.post(BASE_URL + '/partner',formData,{
 
       headers: {
           'Content-Type': 'multipart/form-data'

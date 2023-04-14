@@ -130,7 +130,7 @@ import Modal from '@/Components/Modal.vue'
 </template>
 
 <script>
-
+import { BASE_URL } from '../../baseurl';
 
 
 
@@ -160,7 +160,7 @@ export default {
       formData.append('year', this.year);
       formData.append('venue', this.venue);
 
-      axios.post('http://127.0.0.1:8000/storeCalendarTraining',formData, {
+      axios.post(BASE_URL + '/storeCalendarTraining',formData, {
     
       })
       .then(response => {

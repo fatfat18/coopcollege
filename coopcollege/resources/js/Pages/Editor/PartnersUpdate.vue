@@ -126,6 +126,9 @@ import InputLabel from '@/Components/InputLabel.vue';
 
 <script>
 import Modal from '@/Components/Modal.vue';
+import { BASE_URL } from '../../baseurl';
+
+
 export default {
   data() {
     return {
@@ -138,8 +141,8 @@ export default {
   },
 
   mounted(){
-    let urlGet = "http://127.0.0.1:8000/displayPartner";
-    axios.get(urlGet)
+
+    axios.get(BASE_URL + '/displayPartner')
       .then((response) => {
         const path = window.location.pathname;
         // Extract specific data from path
@@ -205,7 +208,7 @@ export default {
     },
 
     updatePartners() {
-     let updateUrl = "http://127.0.0.1:8000/updatePartnerStatus";
+
      let params = new URLSearchParams();
      //let item = this.items.find(item => item.idTC === this.selectedItem);
      
@@ -219,7 +222,7 @@ export default {
      
  
      
-     axios.put(updateUrl + '?' + params.toString())
+     axios.put(BASE_URL + '/updatePartnerStatus' + '?' + params.toString())
        .then(response => {
          console.log(response.data);
          this.showModal= true;
@@ -237,7 +240,7 @@ export default {
        .catch(error => {
          console.log(error);
        });
-       console.log(updateUrl + '?' + params.toString());
+       console.log(BASE_URL + '/updatePartnerStatus' + '?' + params.toString());
     },
     
     closeModal() {

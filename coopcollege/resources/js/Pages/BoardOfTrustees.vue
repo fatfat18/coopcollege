@@ -138,7 +138,7 @@ library.add(faPlus);
 
 
 <script>
-
+import { BASE_URL } from '../baseurl';
 export default {
 
 
@@ -153,9 +153,8 @@ data() {
 },
 
 mounted() {
-  let urlGet = "http://127.0.0.1:8000/displayBOD";
 
-    axios.get(urlGet)
+    axios.get(BASE_URL + '/displayBOD')
       .then(response => {
         this.items = response.data;
         console.log(this.items);

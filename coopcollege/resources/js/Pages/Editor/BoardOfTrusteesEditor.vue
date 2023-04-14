@@ -257,6 +257,7 @@ display: none;
 
 <script>
 import axios from 'axios';
+import { BASE_URL } from '../../baseurl';
 
 
 export default {
@@ -302,11 +303,11 @@ export default {
       formData.append('startDate', this.start_date);
       formData.append('endDate', this.end_date);
 
-      let url = "http://127.0.0.1:8000/storeBOD";
+
    
       // Append additional form data to the same FormData object
       
-      axios.post(url,formData,{
+      axios.post(BASE_URL + '/storeBOD',formData,{
 
       headers: {
           'Content-Type': 'multipart/form-data'
