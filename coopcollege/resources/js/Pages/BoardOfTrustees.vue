@@ -44,38 +44,19 @@ library.add(faPlus);
             
         <!-- HEADER NI SA POST TILE  -->
     <div class="max-w-7xl cont w-screen mx-auto sm:px-6 lg:px-8 space-y-1 h-max overflow-y-hidden" data-aos="fade-up" data-aos-duration="1000" >
-        <div class="max-w-7xl  bg-white xl:px-8 xl:py-4 py-4 rounded-sm grid grid-cols-14 gap-4 text-xs xl:text-md"> 
-            <div class=" flex justify-center text-center items-center">
-                ID
-            </div>
+
+
+        <div class="max-w-7xl  bg-white xl:px-8 xl:py-4 py-4 rounded-sm grid grid-cols-6  text-xs xl:text-md"> 
             <div class=" flex justify-center text-center items-center"> 
                 IMAGE
             </div>
             <div class=" flex justify-center text-center items-center">
-                FIRSTNAME
-            </div>
-            <div class=" flex justify-center text-center items-center">
-                LASTNAME
-            </div>
-    
-            <div class=" flex justify-center text-center items-center">
-                SUFFIX
+                FULLNAME
             </div>
             <div class=" flex justify-center text-center items-center">
                 POSITION
             </div>
-            <div class=" flex justify-center text-center items-center">
-                STATUS
-            </div>
-            <div class=" flex justify-center text-center items-center">
-                START DATE
-            </div>
-            <div class=" flex justify-center text-center items-center">
-                END DATE
-            </div>
-            <div class=" flex justify-center text-center items-center">
-                PREFIX
-            </div>
+
             <div class=" flex justify-center text-center items-center">
                 ADDRESS
             </div>
@@ -98,23 +79,16 @@ library.add(faPlus);
         <template v-for="(item, index) in reversedItems" :key="item.idBOD" >
          
          <BoardOfTrusteesTile
-           :id="item.idBOD"
            :image="item.image.ImageUrl"
-           :prefix="item.Prefix !== 'null' ? item.Prefix : ' '"
-           :firstname="item.Fname"
-           :lastname="item.Lname"
-           :suffix="item.Suffix !== 'null' ? item.Prefix : ' '"
-           :status="item.Status"
+           :fullname="(item.Prefix !== 'null' ? item.Prefix + ' ' : '') + item.Fname + ' ' + item.Lname + (item.Suffix !== 'null' ? ' ' + item.Suffix : '')"
            :position="item.Position"
-           :start_date="item.startDate"
-           :end_date="item.endDate"
            :address="item.Address"
-           :coop_name="item.coopId"
+    
        
            data-aos="fade-up" data-aos-duration="500"
          >
 
-         <div class=" flex justify-center text-center items-center col-span-2 ">
+         <div class=" flex justify-center text-center items-center col-span-1">
                         <button button @click="navigateToUpdate(item.idBOD)"  class="py-2 px-6  rounded-full bg-blue-400 xl:rounded-lg text-white text-xs xl:text-md buttonedit border-2 border-blue-400">Edit</button>
             </div>
             <div class=" flex justify-center text-center items-center ">

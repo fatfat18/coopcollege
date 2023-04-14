@@ -60,6 +60,21 @@ display: none;
                                 </div>
 
                                 <TextInput 
+                                id="prefix"
+                                name="prefix"
+                                type="text"
+                                class="mt-4 py-2 px-2  max-w-4xl w-66 focus:ring-yellow-500 active:ring-yellow-500"
+                          
+                                autocomplete=""
+                                placeholder="Prefix"
+                                v-model="this.prefix"
+                                data-aos="fade-up"  data-aos-duration="1300"
+                                @click.stop
+                                >
+            
+                                </TextInput>
+
+                                <TextInput 
                                 id="firstname"
                                 name="firstname"
                                 type="text"
@@ -88,10 +103,7 @@ display: none;
                                 >
             
                                 </TextInput>
-
-                              
-
-
+                                
                                 <TextInput 
                                 id="suffix"
                                 name="suffix"
@@ -106,6 +118,11 @@ display: none;
                                 >
             
                                 </TextInput>
+
+                              
+
+
+                                
                                 <TextInput 
                                 id="position"
                                 name="position"
@@ -135,20 +152,8 @@ display: none;
             
                                 </TextInput> -->
 
-                                <TextInput 
-                                id="prefix"
-                                name="prefix"
-                                type="text"
-                                class="mt-4 py-2 px-2  max-w-4xl w-66 focus:ring-yellow-500 active:ring-yellow-500"
-                          
-                                autocomplete=""
-                                placeholder="Prefix"
-                                v-model="this.prefix"
-                                data-aos="fade-up"  data-aos-duration="1300"
-                                @click.stop
-                                >
-            
-                                </TextInput>
+                                
+
 
                                 <TextInput 
                                 id="address"

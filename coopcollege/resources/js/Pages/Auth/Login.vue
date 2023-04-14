@@ -133,7 +133,7 @@ border: 1px solid rgba(255,255,255,0.25);
         
 
         <form @submit.prevent="submit" >
-            <div class="w-full text-center text-4xl xl:mb-10 mb-2 text-theme1 overflow-y-hidden">LOGIN</div>
+        
             <div class="">
                 <div class="flex justify-center items-center ">
             
