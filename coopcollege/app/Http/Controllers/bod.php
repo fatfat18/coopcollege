@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
-
+use Image;
 
 use Illuminate\Http\Request;
 
@@ -27,10 +27,17 @@ class bod extends Controller
             return $validator->errors();
         }
 
+       
+        $filename=base64_encode(now().$request->file('file')->getClientOriginalName()).'.'.$request->file('file')->getClientOriginalExtension(); 
 
-        $filename= Storage::putFile('public/BOD', $request->file('file'));
+        $img = Image::make($request->file('file'))->resize(594, 841, function ($constraint) {
+            $constraint->aspectRatio();
+            $constraint->upsize();
+        });
+        
+        $img->save(storage_path('/app/public/BOD/'.$filename), 50);   
 
-        $data = \App\Models\images::create(['ImageUrl'=> \URL::to('/').Storage::url($filename), 'imagesInfo'=>$request->file('file')->getClientOriginalName() ]);
+        $data =\App\Models\images::create(['ImageUrl'=> \URL::to('/').Storage::url('BOD/'.$filename), 'imagesInfo'=> $request->file('file')->getClientOriginalName()]);
 
         \App\Models\BOD::create([
             'ImagesId'=>$data->id,  
@@ -68,5 +75,28 @@ class bod extends Controller
 
     public function display(){
         return \App\Models\BOD::where('Status', 1)->with('image')->get();
+    }
+
+
+    public function delete(Request $request){
+
+        $validator = Validator::make($request->all(), [
+            'idBOD' => 'required|exists:b_o_d_s,idBOD',
+        ],[
+            'idBOD.exists'=>"idBOD does not exist."
+        ]);
+ 
+        if ($validator->fails()) {
+            return $validator->errors();
+        }
+
+        $data= \App\Models\BOD::where('idBOD', $request->idBOD)->first();
+       
+        \App\Models\BOD::where('idBOD', $data->idBOD)->delete();
+
+        \App\Models\images::where('imagesId', $data->ImagesId)->delete();
+
+        return ['msg'=> "successfully deleted"];
+
     }
 }

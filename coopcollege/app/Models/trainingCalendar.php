@@ -15,4 +15,8 @@ class trainingCalendar extends Model
     public function events(){
         return $this->hasMany(courseVenue::class, 'idCV', 'idCV');
     }
+
+    public function event(){
+        return $this->hasOne(courseVenue::class, 'idCV', 'idCV');
+    }
 }

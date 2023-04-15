@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use DateTime;
 use Illuminate\Support\Facades\Storage;
-
+use Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -35,9 +35,17 @@ class post extends Controller
         ]);
 
         foreach ($request->file('file') as $row) {
-            $filename= Storage::putFile('public/POST', $row);
+
+            $filename=base64_encode(now().$row->getClientOriginalName()).'.'.$row->getClientOriginalExtension(); 
+
+            $img = Image::make($row)->resize(594, 841, function ($constraint) {
+                $constraint->aspectRatio();
+                $constraint->upsize();
+            });
             
-            \App\Models\images::create(['ImageUrl'=> \URL::to('/').Storage::url($filename), 'imagesInfo'=>$row->getClientOriginalName(), 'Postid'=>$data->id ]);
+            $img->save(storage_path('/app/public/POST/'.$filename), 50);   
+            
+            \App\Models\images::create(['ImageUrl'=> \URL::to('/').Storage::url('POST/'.$filename), 'imagesInfo'=>$row->getClientOriginalName(), 'Postid'=>$data->id ]);
         }
 
         return ['msg'=>"successfuly saved news info."];
@@ -74,6 +82,35 @@ class post extends Controller
     public function postCategory(){
         return \App\Models\postCat::get();
     }
+
+
+    public function delete(Request $request){
+
+        $validator = Validator::make($request->all(), [
+            'Postid' => 'required|exists:posts,Postid',
+        ],[
+            'Postid.exists'=>"Postid does not exist."
+        ]);
+ 
+        if ($validator->fails()) {
+            return $validator->errors();
+        }
+
+        \App\Models\post::where('Postid', $request->Postid)->delete();
+
+        \App\Models\images::where('Postid', $request->Postid)->delete();
+
+
+        return ['msg'=> "successfuly deleted."];
+    }
+
+
+    public function paginateDisplay(Request $request){
+        return \App\Models\post::with('image','category','avatar')->where('Status', 1)->paginate($request->per_page);
+    }
+
+
+
 
 
 	

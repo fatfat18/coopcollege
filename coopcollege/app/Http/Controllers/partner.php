@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
+use Image;
 
 use Illuminate\Http\Request;
 
@@ -18,15 +19,25 @@ class partner extends Controller
         if ($validator->fails()) {
             return $validator->errors();
         }
-        $filename= Storage::putFile('public/partner', $request->file('file'));
-      
-        $data = \App\Models\images::create(['ImageUrl'=> \URL::to('/').Storage::url($filename), 'imagesInfo'=>$request->file('file')->getClientOriginalName() ]);
+       
+        $filename=base64_encode(now().$request->file('file')->getClientOriginalName()).'.'.$request->file('file')->getClientOriginalExtension(); 
+
+        $img = Image::make($request->file('file'))->resize(400, 400, function ($constraint) {
+            $constraint->aspectRatio();
+            $constraint->upsize();
+        });
+        
+        $img->save(storage_path('/app/public/partner/'.$filename), 50);   
+
+        $data =\App\Models\images::create(['ImageUrl'=> \URL::to('/').Storage::url('partner/'.$filename), 'imagesInfo'=> $request->file('file')->getClientOriginalName()]);
 
         \App\Models\partner::create(['partnerName'=>$request->partnerName, 'ImagesId'=>$data->id ]);
 
         return ['msg'=>"Successfuly saved partner."];
-
     }
+
+
+
 
     public function update(Request $request){
 
@@ -45,5 +56,28 @@ class partner extends Controller
 
     public function display(){
         return \App\Models\partner::where('Status', 1)->with('image')->get();
+    }
+
+
+    public function delete(Request $request){
+
+        $validator = Validator::make($request->all(), [
+            'idPartner' => 'required|exists:partners,idPartner',
+        ],[
+            'idPartner.exists'=>"idPartner does not exist."
+        ]);
+ 
+        if ($validator->fails()) {
+            return $validator->errors();
+        }
+
+        $data= \App\Models\partner::where('idPartner', $request->idPartner)->first();
+       
+        \App\Models\partner::where('idPartner', $data->idPartner)->delete();
+
+        \App\Models\images::where('imagesId', $data->ImagesId)->delete();
+
+        return ['msg'=> "successfully deleted"];
+
     }
 }

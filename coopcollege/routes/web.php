@@ -169,6 +169,12 @@ Route::put('/updateCategory',[post::class, 'update'] );
 
 Route::get('/postCategory',[post::class, 'postCategory'] );
 
+Route::delete('/deleteCategory',[post::class, 'delete'] );
+
+Route::get('/paginateDisplayPost',[post::class, 'paginateDisplay'] );
+
+
+
 
 
 // calendar
@@ -177,6 +183,12 @@ Route::post('/storeCalendarTraining',[trainingCalendar::class, 'store'] );
 Route::get('/displayCalendarTraining',[trainingCalendar::class, 'display'] );
 
 Route::put('/updateCalendarTraining',[trainingCalendar::class, 'update'] );
+
+Route::get('/displayCalendarTrainingAdmin',[trainingCalendar::class, 'displayAdmin'] );
+
+
+Route::delete('/deleteCalendar',[trainingCalendar::class, 'delete'] );
+
 
 
 // contact us
@@ -192,6 +204,9 @@ Route::get('/displayPartner',[partner::class, 'display'] );
 
 Route::put('/updatePartnerStatus',[partner::class, 'update'] );
 
+Route::delete('/deletePartner',[partner::class, 'delete'] );
+
+
 
 
 // bod
@@ -200,6 +215,9 @@ Route::post('/storeBOD',[bod::class, 'store'] );
 Route::put('/updateBOD',[bod::class, 'update'] );
 
 Route::get('/displayBOD',[bod::class, 'display'] );
+
+Route::delete('/deleteBOD',[bod::class, 'delete'] );
+
 
 
 

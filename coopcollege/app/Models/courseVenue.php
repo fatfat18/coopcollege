@@ -12,6 +12,9 @@ class courseVenue extends Model
     use HasFactory;
 
 
+    public function tcalendar(){
+        return $this->belongsTo('trainingCalendar', 'idCV');
+    } 
  
 }
 

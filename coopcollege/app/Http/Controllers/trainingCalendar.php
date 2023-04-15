@@ -76,6 +76,32 @@ class trainingCalendar extends Controller
         });
     }
 
+    public function displayAdmin(){
+        return \App\Models\trainingCalendar::with('event')->orderBy( 'idTC','DESC')->get();
+    }
+
+
+    public function delete(Request $request){
+
+        $validator = Validator::make($request->all(), [
+            'idCV' => 'required|exists:training_calendars,idCV'
+        ],
+        [
+            'idCV.exists'=> "idCV does not exist."
+        ]
+        );
+ 
+        if ($validator->fails()) {
+            return $validator->errors();
+        }
+
+       \App\Models\trainingCalendar::where('idCV', $request->idCV)->delete();
+
+       \App\Models\courseVenue::where('idCV', $request->idCV)->delete();
+
+        return ['msg'=> "Deleted successfuly"];
+    }
+
     
    
 }
