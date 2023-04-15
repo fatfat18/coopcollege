@@ -13,15 +13,36 @@ library.add(faFacebook,faPhone,faEnvelope);
 
 </script>
 
-<template>
-<div id="footer" class="w-screen h-80 bg-theme1 flex flex-col justify-center items-center" >
 
-    <p class="text-white text-xl" data-aos="fade-down" data-aos-duration="400" data-aos-delay="500"> Contact Us Now!</p>
-    <div class=" h-20 flex justify-center items-center " data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500">
-    <a :href="this.fb"  target="_blank"><font-awesome-icon icon="fa-brands fa-facebook" class="transition ease-in duration-150 h-10 text-theme2 mx-4 hover:scale-125 overflow-y-hidden" /></a>
-    <button ><font-awesome-icon icon="fa-solid fa-phone" class="transition ease-in duration-150 h-10 text-theme2 mx-4 hover:scale-125 overflow-y-hidden" /></button>
-    <a :href="this.email" target="_blank"> <font-awesome-icon icon="fa-solid fa-envelope" class="transition ease-in duration-150 h-10 text-theme2 mx-4 hover:scale-125 overflow-y-hidden" /></a>
+
+<style>
+.ftr{
+    background:url("../../asset/footerimg.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+</style>
+
+
+<template>
+<div id="footer" class="ftr w-screen h-60 bg-theme1 flex flex-col justify-center items-center" >
+
+
+<p class="text-white text-xl" data-aos="fade-down" data-aos-duration="400" data-aos-delay="500"> Contact Us Now!</p>
+  <div class=" flex justify-center items-center space-x-2 py-4 px-2 " data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500">
+
+      <div class="bg-white py-2 px-4 rounded-xl transition ease-in duration-150 hover:scale-125 ">
+    <a :href="this.fb"  target="_blank"><font-awesome-icon icon="fa-brands fa-facebook" class="  text-theme1 overflow-y-hidden" /></a>
+      </div>
+    <div class="bg-white py-2 px-4 rounded-xl transition ease-in duration-150 hover:scale-125 ">
+    <button ><font-awesome-icon icon="fa-solid fa-phone" class=" text-theme1 overflow-y-hidden" /></button>
     </div>
+    <a :href="this.email" target="_blank"><div class="bg-white py-2 px-4 rounded-xl transition ease-in duration-150 hover:scale-125 ">
+     <font-awesome-icon icon="fa-solid fa-envelope" class="  text-theme1  overflow-y-hidden" />
+    </div></a>
+  </div>
+
    
 </div>
 </template>

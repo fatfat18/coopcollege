@@ -94,13 +94,13 @@ const showingNavigationDropdown = ref(false);
                         </ResponsiveNavLink>
 
                         <ResponsiveNavLink :href="route('AboutUs')" :active="route().current('AboutUs')">
-                                    Partners
+                                    About Us
                         </ResponsiveNavLink>
                         <ResponsiveNavLink :href="route('LearnWithUs')" :active="route().current('LearnWithUs')">
-                                    Training Calendar
+                                    Learn With Us
                         </ResponsiveNavLink>
                         <ResponsiveNavLink :href="route('Resources')" :active="route().current('Resources')">
-                                    Contacts
+                                    Resources
                         </ResponsiveNavLink>
                         <ResponsiveNavLink :href="route('Projects')" :active="route().current('Projects')">
                                     Projects
