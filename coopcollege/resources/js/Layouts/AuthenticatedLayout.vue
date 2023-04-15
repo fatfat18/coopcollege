@@ -29,13 +29,13 @@ const showingNavigationDropdown = ref(false);
                             
 
                             <!-- Navigation Links -->
-                            <div class="hidden space-x-1 sm:ml-10 sm:flex">
+                            <div class="hidden space-x-1 sm:flex">
                                 <NavLinkAdmin :href="route('Posts')" :active="route().current('Posts')">
                                     Posts
                                 </NavLinkAdmin>
 
                                 <NavLinkAdmin :href="route('BoardOfTrustees')" :active="route().current('BoardOfTrustees')">
-                                    Board of Trustees
+                                   Board of Trustees
                                 </NavLinkAdmin>
 
                                 <NavLinkAdmin :href="route('Partners')" :active="route().current('Partners')">

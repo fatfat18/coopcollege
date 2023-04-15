@@ -13,7 +13,6 @@ import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 import { faBriefcaseMedical } from "@fortawesome/free-solid-svg-icons";
 import { faChartSimple } from "@fortawesome/free-solid-svg-icons";
 import { faEarthAsia } from "@fortawesome/free-solid-svg-icons";
-import { ref } from 'vue';
 import Header from "@/Components/Header.vue"
 import ResponsiveNavBar from '@/Components/ResponsiveNavBar.vue'
 import Footer from '@/Components/Footer.vue';

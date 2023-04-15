@@ -41,7 +41,7 @@ import Modal from '@/Components/Modal.vue'
 
 
                     <form @submit.prevent="submitData">
-                        <button type="submit" class="border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg mb-10 hover:bg-green-600 transition ease-in duration-100">Save</button>
+                        <button type="submit" class="mt-16 border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg mb-10 hover:bg-green-600 transition ease-in duration-100">Save</button>
                             <div class="overflow-y-hidden space-x-4">
 
                             
@@ -130,7 +130,7 @@ import Modal from '@/Components/Modal.vue'
 </template>
 
 <script>
-
+import { BASE_URL } from '../../baseurl';
 
 
 
@@ -160,7 +160,7 @@ export default {
       formData.append('year', this.year);
       formData.append('venue', this.venue);
 
-      axios.post('http://127.0.0.1:8000/storeCalendarTraining',formData, {
+      axios.post(BASE_URL + '/storeCalendarTraining',formData, {
     
       })
       .then(response => {

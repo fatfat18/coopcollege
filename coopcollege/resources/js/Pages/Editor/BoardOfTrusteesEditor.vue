@@ -40,7 +40,7 @@ display: none;
 
 
                     <form @submit.prevent="submitData">
-                        <button class="border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg mb-10 hover:bg-green-600 transition ease-in duration-100">Save</button>
+                        <button class="mt-16 border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg mb-10 hover:bg-green-600 transition ease-in duration-100">Save</button>
                         
                            
                         
@@ -59,6 +59,23 @@ display: none;
                                       </div>
                                 </div>
 
+
+                                <TextInput 
+                                id="prefix"
+                                name="prefix"
+                                type="text"
+                                class="mt-4 py-2 px-2  max-w-4xl w-66 focus:ring-yellow-500 active:ring-yellow-500"
+                          
+                                autocomplete=""
+                                placeholder="Prefix"
+                                v-model="prefix"
+                                data-aos="fade-up"  data-aos-duration="1300"
+                                @click.stop
+                                >
+            
+                                </TextInput>
+
+                                
                                 <TextInput 
                                 id="firstname"
                                 name="firstname"
@@ -135,20 +152,7 @@ display: none;
             
                                 </TextInput> -->
 
-                                <TextInput 
-                                id="prefix"
-                                name="prefix"
-                                type="text"
-                                class="mt-4 py-2 px-2  max-w-4xl w-66 focus:ring-yellow-500 active:ring-yellow-500"
-                          
-                                autocomplete=""
-                                placeholder="Prefix"
-                                v-model="prefix"
-                                data-aos="fade-up"  data-aos-duration="1300"
-                                @click.stop
-                                >
-            
-                                </TextInput>
+                               
 
                                 <TextInput 
                                 id="address"
@@ -257,6 +261,7 @@ display: none;
 
 <script>
 import axios from 'axios';
+import { BASE_URL } from '../../baseurl';
 
 
 export default {
@@ -302,11 +307,11 @@ export default {
       formData.append('startDate', this.start_date);
       formData.append('endDate', this.end_date);
 
-      let url = "http://127.0.0.1:8000/storeBOD";
+
    
       // Append additional form data to the same FormData object
       
-      axios.post(url,formData,{
+      axios.post(BASE_URL + '/storeBOD',formData,{
 
       headers: {
           'Content-Type': 'multipart/form-data'

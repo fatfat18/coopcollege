@@ -40,7 +40,7 @@ display: none;
 
 
                     <form @submit.prevent="updateBOD(this.intNum)">
-                        <button class="border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg mb-10 hover:bg-green-600 transition ease-in duration-100">Save</button>
+                        <button class="mt-16 border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg mb-10 hover:bg-green-600 transition ease-in duration-100">Save</button>
                         
                            
                         
@@ -58,6 +58,21 @@ display: none;
                                         <img :src="imagePreviewUrlholder" class="h-40 w-60 object-cover my-5 mx-5" >
                                       </div>
                                 </div>
+
+                                <TextInput 
+                                id="prefix"
+                                name="prefix"
+                                type="text"
+                                class="mt-4 py-2 px-2  max-w-4xl w-66 focus:ring-yellow-500 active:ring-yellow-500"
+                          
+                                autocomplete=""
+                                placeholder="Prefix"
+                                v-model="this.prefix"
+                                data-aos="fade-up"  data-aos-duration="1300"
+                                @click.stop
+                                >
+            
+                                </TextInput>
 
                                 <TextInput 
                                 id="firstname"
@@ -88,10 +103,7 @@ display: none;
                                 >
             
                                 </TextInput>
-
-                              
-
-
+                                
                                 <TextInput 
                                 id="suffix"
                                 name="suffix"
@@ -106,6 +118,11 @@ display: none;
                                 >
             
                                 </TextInput>
+
+                              
+
+
+                                
                                 <TextInput 
                                 id="position"
                                 name="position"
@@ -135,20 +152,8 @@ display: none;
             
                                 </TextInput> -->
 
-                                <TextInput 
-                                id="prefix"
-                                name="prefix"
-                                type="text"
-                                class="mt-4 py-2 px-2  max-w-4xl w-66 focus:ring-yellow-500 active:ring-yellow-500"
-                          
-                                autocomplete=""
-                                placeholder="Prefix"
-                                v-model="this.prefix"
-                                data-aos="fade-up"  data-aos-duration="1300"
-                                @click.stop
-                                >
-            
-                                </TextInput>
+                                
+
 
                                 <TextInput 
                                 id="address"
@@ -272,6 +277,9 @@ display: none;
 </template>
 
 <script>
+
+import { BASE_URL } from '../../baseurl';
+
 import axios from 'axios';
 
 
@@ -295,8 +303,8 @@ export default {
     }
   },
   mounted(event) {
-    let urlGet = "http://127.0.0.1:8000/displayBOD";
-    axios.get(urlGet)
+
+    axios.get(BASE_URL +'/displayBOD')
       .then((response) => {
         const path = window.location.pathname;
         // Extract specific data from path
@@ -364,7 +372,7 @@ export default {
     },
 
     updateBOD() {
-     let updateUrl = "http://127.0.0.1:8000/updateBOD";
+
      let params = new URLSearchParams();
      //let item = this.items.find(item => item.idTC === this.selectedItem);
      
@@ -384,7 +392,7 @@ export default {
 
     
      
-     axios.put(updateUrl + '?' + params.toString())
+     axios.put(BASE_URL +'/updateBOD' + '?' + params.toString())
        .then(response => {
          console.log(response.data);
          this.showModal= true;
@@ -402,7 +410,7 @@ export default {
        .catch(error => {
          console.log(error);
        });
-       console.log(updateUrl + '?' + params.toString());
+       console.log(BASE_URL + '/updateBOD' + '?' + params.toString());
     },
 
     

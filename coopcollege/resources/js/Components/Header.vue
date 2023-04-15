@@ -34,18 +34,30 @@ library.add(faPhoneFlip)
 
 <template>
 <div id="welcome" class="xl:h-60 h-28 bg-theme1 w-screen text-white  md:text-sm flex xl:flex-row justify-center items-center py-20 overflow-y-hidden welcome ">
-    <div class=" flex xl:justify-center xl:items-center md:items-start md:justify-center w-3/4 ">
-        <a href="/"><img src="../../asset/logo.png" class="mx-2 xl:h-32 h-20 xl:mr-8 md:mr-4 min-w-fit" data-aos="fade-right" data-aos-duration="1000" /></a> <p class="pt-2 overflow-y-hidden xl:text-3xl tracking-wider" data-aos="fade-right" data-aos-duration="1000">CO-OPERATIVE COLLEGE <br><span class="xl:text-xl text-xs absolute">OF THE</span><span class="mx-6 xl:mx-10"></span>PHILIPPINES</p>
-    </div>
-    <div class=" flex w-1/4  transition ease-in duration-300">
 
-       <a href="#footer"><div data-aos="fade-left" data-aos-duration="1000" class=" border border-white bg-theme2 text-theme1 hover:bg-theme1 hover:text-theme2 hover:border-theme2 text-l font-bold w-36 h-12 py-4 px-4 rounded-full overflow-y-hidden relative contactus ">
-            Contact Us<font-awesome-icon icon="fa-solid fa-phone-flip" class="h-4 w-6 ml-2 contactussvg" />  
-        
-        </div></a>
 
-       
+    <div class=" flex xl:justify-center xl:items-center md:items-start md:justify-center  ">
+        <a href="/"><img src="../../asset/logo.png" class="mx-2 xl:h-32 h-20 xl:mr-8 md:mr-4 min-w-fit" data-aos="fade-right" data-aos-delay="300"  data-aos-duration="800" /></a> <p class="pt-2 overflow-y-hidden xl:text-3xl tracking-wider pl-2 xl:pl-0" data-aos="fade-right" data-aos-delay="100" data-aos-duration="500">CO-OPERATIVE COLLEGE <br><span class="xl:text-xl text-xs absolute">OF THE</span><span class="mx-6 xl:mx-10"></span>PHILIPPINES</p>
     </div>
+
+    <div class="h-40 w-40  xl:ml-60 flex justify-center items-center"  data-aos="fade" data-aos-delay="300"  data-aos-duration="1000">
+
+        <a href="#footer"><button class="xl:w-32 w-24 h-15 border text-xs xl:text-sm border-white rounded-md bg-theme1 text-theme2 transition duration-500 py-2 px-2 hover:bg-theme2 hover:text-theme1">Contact Us<br><font-awesome-icon icon="fa-solid fa-phone-flip" class="" /> </button></a>
+
+    </div>
+
+
+
           
+
+
 </div>
 </template>
+
+
+<script>
+AOS.init({startEvent: 'load',
+          once : 'true,'});
+AOS.refresh();
+
+</script>

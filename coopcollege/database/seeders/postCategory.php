@@ -13,7 +13,7 @@ class postCategory extends Seeder
     public function run(): void
     {
         
-        foreach ([ 'News', 'Project' ] as $row) {
+        foreach ([ 'News', 'Resources', 'Project' ] as $row) {
             \App\Models\postCat::create([
                 'category'=>$row, 
               
