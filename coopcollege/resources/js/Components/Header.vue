@@ -42,7 +42,7 @@ library.add(faPhoneFlip)
 
     <div class="h-40 w-40  xl:ml-60 flex justify-center items-center"  data-aos="fade" data-aos-delay="300"  data-aos-duration="1000">
 
-        <a href="#footer"><button class="xl:w-32 w-24 h-15 border text-xs border-white rounded-md bg-theme1 text-theme2 transition duration-500 py-2 px-2 hover:bg-theme2 hover:text-theme1">Contact Us<br><font-awesome-icon icon="fa-solid fa-phone-flip" class="" /> </button></a>
+        <a href="#footer"><button class="xl:w-32 w-24 h-15 border text-xs xl:text-sm border-white rounded-md bg-theme1 text-theme2 transition duration-500 py-2 px-2 hover:bg-theme2 hover:text-theme1">Contact Us<br><font-awesome-icon icon="fa-solid fa-phone-flip" class="" /> </button></a>
 
     </div>
 
