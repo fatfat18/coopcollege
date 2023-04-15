@@ -45,7 +45,7 @@ class post extends Controller
             
             $img->save(storage_path('/app/public/POST/'.$filename), 50);   
             
-            \App\Models\images::create(['ImageUrl'=> \URL::to('/').Storage::url('POST/'.$filename), 'imagesInfo'=>$row->getClientOriginalName(), 'Postid'=>$data->id ]);
+            \App\Models\images::create(['ImageUrl'=> \URL::to('/').Storage::url('POST/'.$filename), 'imagesInfo'=>$filename, 'Postid'=>$data->id ]);
         }
 
         return ['msg'=>"successfuly saved news info."];
@@ -96,10 +96,14 @@ class post extends Controller
             return $validator->errors();
         }
 
+        foreach (\App\Models\images::where('Postid', $request->Postid)->get() as $row) {
+
+            Storage::disk('public')->delete('POST/'.$row->imagesInfo);
+        }
+
         \App\Models\post::where('Postid', $request->Postid)->delete();
 
         \App\Models\images::where('Postid', $request->Postid)->delete();
-
 
         return ['msg'=> "successfuly deleted."];
     }

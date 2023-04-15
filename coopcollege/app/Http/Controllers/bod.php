@@ -37,7 +37,7 @@ class bod extends Controller
         
         $img->save(storage_path('/app/public/BOD/'.$filename), 50);   
 
-        $data =\App\Models\images::create(['ImageUrl'=> \URL::to('/').Storage::url('BOD/'.$filename), 'imagesInfo'=> $request->file('file')->getClientOriginalName()]);
+        $data =\App\Models\images::create(['ImageUrl'=> \URL::to('/').Storage::url('BOD/'.$filename), 'imagesInfo'=> $filename]);
 
         \App\Models\BOD::create([
             'ImagesId'=>$data->id,  
@@ -90,7 +90,12 @@ class bod extends Controller
             return $validator->errors();
         }
 
-        $data= \App\Models\BOD::where('idBOD', $request->idBOD)->first();
+        $data= \App\Models\BOD::where('idBOD', $request->idBOD)->with('image')->first();
+
+     
+
+        Storage::disk('public')->delete('BOD/'.$data->image->imagesInfo);
+        
        
         \App\Models\BOD::where('idBOD', $data->idBOD)->delete();
 

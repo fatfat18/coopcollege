@@ -29,7 +29,7 @@ class partner extends Controller
         
         $img->save(storage_path('/app/public/partner/'.$filename), 50);   
 
-        $data =\App\Models\images::create(['ImageUrl'=> \URL::to('/').Storage::url('partner/'.$filename), 'imagesInfo'=> $request->file('file')->getClientOriginalName()]);
+        $data =\App\Models\images::create(['ImageUrl'=> \URL::to('/').Storage::url('partner/'.$filename), 'imagesInfo'=> $filename]);
 
         \App\Models\partner::create(['partnerName'=>$request->partnerName, 'ImagesId'=>$data->id ]);
 
@@ -71,7 +71,11 @@ class partner extends Controller
             return $validator->errors();
         }
 
-        $data= \App\Models\partner::where('idPartner', $request->idPartner)->first();
+
+        $data= \App\Models\partner::where('idPartner', $request->idPartner)->with('image')->first();
+
+        Storage::disk('public')->delete('partner/'.$data->image->imagesInfo);
+        
        
         \App\Models\partner::where('idPartner', $data->idPartner)->delete();
 
