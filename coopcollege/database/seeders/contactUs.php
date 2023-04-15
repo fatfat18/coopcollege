@@ -13,10 +13,10 @@ class contactUs extends Seeder
     public function run(): void
     {
         \App\Models\contactUs::create([
-            'emailAdd'=>'head@climbs.coop', 
+            'emailAdd'=>'institute@climbs.coop', 
             'phoneNum'=>'0936545878', 
             'telNum'=>'819400', 
-            'facebookLink'=>'facebook.com/coop', 
+            'facebookLink'=>'https://www.facebook.com/CoopCollegePH', 
             'websiteLink'=>'www.climbs.coop',
             'Status'=>1
         ]);
