@@ -7,7 +7,8 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import BoardOfTrusteesTile from '@/Components/BoardOfTrusteesTile.vue'
-
+import DeleteModal from '@/Components/DeleteModal.vue'
+import Modal from '@/Components/Modal.vue'
 
 
 library.add(faPlus);
@@ -92,10 +93,22 @@ library.add(faPlus);
                         <button button @click="navigateToUpdate(item.idBOD)"  class="py-2 px-6  rounded-full bg-blue-400 xl:rounded-lg text-white text-[10px] xl:text-xs transition duration-300 hover:text-blue-400 hover:bg-white border-2 border-blue-400">Edit</button>
             </div>
             <div class=" flex justify-center text-center items-center ">
-                        <button class="py-2 px-4  rounded-full bg-red-500 xl:rounded-lg text-white text-[11px] xl:text-xs transition duration-300 hover:text-red-500 hover:bg-white border-2 border-red-500">Delete</button>
+                        <button @click.prevent="confirmdel(item)" class="py-2 px-4  rounded-full bg-red-500 xl:rounded-lg text-white text-[11px] xl:text-xs transition duration-300 hover:text-red-500 hover:bg-white border-2 border-red-500">Delete</button>
             </div>
+
+            <DeleteModal :show="showModal" @close="showModal = false">
+                                <h2 class="text-black text-l">Are You Sure You Want to Remove <br> <span class="text-theme1">{{ this.confirmname}}</span> as Board of Trustees?</h2><br>
+                                <button @click.prevent="navigatetoDelete()" class="transition duration-300 rounded-lg hover:text-red-500 hover:bg-white border border-red-500 px-4 py-4 bg-red-500 text-white mx-2 text-sm"> CONFIRM</button>
+                                <button class="transition duration-300 rounded-lg hover:text-black hover:bg-white border border-zinc-400 px-4 py-4 bg-zinc-400 text-white mx-2 text-sm" @click="showModal=false"> CANCEL </button>
+              </DeleteModal>
           
         </BoardOfTrusteesTile>
+
+        <Modal :show="confirmdelmodal" @close="confirmdelmodal = false">
+                                <h2 class="text-red-500 text-2xl">Delete Board of Trustees</h2>
+                                <p class="text-theme2 text-4xl mb-5">Success!</p>
+                                
+              </Modal>
          
    
    </template>
@@ -121,6 +134,9 @@ data() {
  
     items: [],
     showModal: false,
+    confirmdelmodal: false,
+    confirmname:'',
+    itemcv:'',
 
 
   }
@@ -147,7 +163,44 @@ mounted() {
   methods:{
     navigateToUpdate(idBOD) {
     window.location.href = this.route('BoardOfTrusteesUpdate', {idBOD: idBOD});
-  }
+  },
+  confirmdel(item) {
+    this.showModal= true;
+    this.confirmname = (item.Prefix !== 'null' ? item.Prefix + ' ' : '') + item.Fname + ' ' + item.Lname + (item.Suffix !== 'null' ? ' ' + item.Suffix : '');
+    this.itemid = item.idBOD;
+   
+    
+  },
+  navigatetoDelete() {
+     this.showModal= false;
+     this.confirmdelmodal = true ;
+     console.log(this.itemid)
+
+     let params = new URLSearchParams();
+     let num = parseInt(this.itemid);
+
+     params.append("idBOD", num);
+     
+
+     axios.delete(BASE_URL + '/deleteBOD' + '?' + params.toString())
+       .then(response => {
+         console.log(response.data);
+
+         async function redirectWithDelay() {
+           await new Promise(resolve => setTimeout(resolve, 1000)); // wait for 1 seconds
+           window.location.href = route('BoardOfTrustees'); // redirect to the TrainingCalendar URL
+         }
+      redirectWithDelay();  
+         
+      })
+      .catch(error => {
+        console.log(error);
+      });
+    
+
+
+  },
+
   }
 }
 

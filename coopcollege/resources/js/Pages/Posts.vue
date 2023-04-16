@@ -7,6 +7,9 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import PostsTile from '@/Components/PostsTile.vue'
+import DeleteModal from '@/Components/DeleteModal.vue'
+import Modal from '@/Components/Modal.vue'
+
 
 
 
@@ -91,10 +94,26 @@ library.add(faPlus);
                         <button button @click="navigateToUpdate(item.Postid)"  class="py-2 px-8  rounded-full bg-blue-400 xl:rounded-lg text-white text-[11px] xl:text-md transition duration-300 hover:text-blue-400 hover:bg-white border-2 border-blue-400">Edit</button>
             </div>
             <div class=" flex justify-center text-center items-center col-span-1 ">
-                        <button class=" transition duration-300 hover:text-red-500 hover:bg-white py-2 px-6  rounded-full bg-red-500 xl:rounded-lg text-white text-[11px] xl:text-md  border-2 border-red-500">Delete</button>
+                        <button @click.prevent="confirmdel(item)" class=" transition duration-300 hover:text-red-500 hover:bg-white py-2 px-6  rounded-full bg-red-500 xl:rounded-lg text-white text-[11px] xl:text-md  border-2 border-red-500">Delete</button>
             </div>
+
+            <DeleteModal :show="showModal" @close="showModal = false">
+                                <h2 class="text-black text-l">Are You Sure You Want to Delete Post <br> <span class="text-theme1">{{ this.confirmname}}</span>?</h2><br>
+                                <button @click.prevent="navigatetoDelete()" class="transition duration-300 rounded-lg hover:text-red-500 hover:bg-white border border-red-500 px-4 py-4 bg-red-500 text-white mx-2 text-sm"> CONFIRM</button>
+                                <button class="transition duration-300 rounded-lg hover:text-black hover:bg-white border border-zinc-400 px-4 py-4 bg-zinc-400 text-white mx-2 text-sm" @click="showModal=false"> CANCEL </button>
+              </DeleteModal>
+
         
         </PostsTile>
+
+        <Modal :show="confirmdelmodal" @close="confirmdelmodal = false">
+                                <h2 class="text-red-500 text-2xl">Delete Post</h2>
+                                <p class="text-theme2 text-4xl mb-5">Success!</p>
+                                
+              </Modal>
+
+
+        
    
    </template>
 
@@ -120,6 +139,9 @@ data() {
  
     items: [],
     showModal: false,
+    confirmdelmodal: false,
+    confirmname:'',
+    itemcv:'',
 
 
   }
@@ -152,7 +174,44 @@ mounted() {
     
     navigateToUpdate(Postid) {
     window.location.href = this.route('PostsUpdate', {Postid: Postid});
-  }
+  },
+  confirmdel(item) {
+    this.showModal= true;
+    this.confirmname = item.newsTitle;
+    this.itemid = item.Postid;
+   
+    
+  },
+  navigatetoDelete() {
+     this.showModal= false;
+     this.confirmdelmodal = true ;
+     console.log(this.Postid)
+
+     let params = new URLSearchParams();
+     let num = parseInt(this.itemid);
+
+     params.append("Postid", num);
+     
+
+     axios.delete(BASE_URL + '/deleteCategory' + '?' + params.toString())
+       .then(response => {
+         console.log(response.data);
+
+         async function redirectWithDelay() {
+           await new Promise(resolve => setTimeout(resolve, 1000)); // wait for 1 seconds
+           window.location.href = route('Posts'); // redirect to the TrainingCalendar URL
+         }
+      redirectWithDelay();  
+         
+      })
+      .catch(error => {
+        console.log(error);
+      });
+    
+
+
+  },
+
 
 
 
