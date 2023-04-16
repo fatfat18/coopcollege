@@ -23,7 +23,7 @@ background: linear-gradient(143deg, rgba(0,0,51,1) 60%, rgba(255,204,0,1) 100%);
 
  <div class="h-max w-screen flex flex-col justify-center items-center bg-theme1 overflow-y-hidden bg">
 
-  <div class="h-24 w-screen max-w-7xl flex bg-theme2 justify-center items-center mt-10 xl:rounded-full " data-aos="fade-up" data-aos-duration="1000" >
+  <div class="h-24 w-screen max-w-7xl flex bg-theme2 justify-center items-center mt-10 xl:rounded-lg " data-aos="fade-up" data-aos-duration="1000" >
     <p class="xl:text-5xl text-2xl font-thin text-theme1" > Training Calendar {{ currentYear }}</p>
         </div>
          <div class="h-max w-screen max-w-7xl flex flex-col bg-white xL:mt-20  my-10 py-4 px-2 gap-2 xl:rounded-3xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" >

@@ -7,6 +7,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import TrainingCalendarTile from '@/Components/TrainingCalendarTile.vue'
+import DeleteModal from '@/Components/DeleteModal.vue';
 import Modal from '@/Components/Modal.vue';
 
 
@@ -75,23 +76,37 @@ library.add(faPlus);
          
               <TrainingCalendarTile
                 :month="item.month"
-                :coursetitle="item.events[0].courseTitle"
-                :venue="item.events[0].Venue"
+                :coursetitle="item.event.courseTitle"
+                :venue="item.event.Venue"
                 :year="item.year"
                 :buttonid="item.idTC"
                 data-aos="fade-up" data-aos-duration="500"
               >
               <div class=" flex justify-center text-center items-center">
                
-                <button @click="navigateToUpdate(item.idTC)" class="py-2 px-8  rounded-full bg-blue-400 xl:rounded-lg text-white text-xs xl:text-md buttonedit border-2 border-blue-400">Edit</button>
+                <button @click="navigateToUpdate(item.idTC)" class="py-2 px-8  rounded-full bg-blue-400 xl:rounded-lg text-white text-[11px] xl:text-md transition duration-300 hover:text-blue-400 hover:bg-white border-2 border-blue-400">Edit</button>
               
               </div>
               <div class=" flex justify-center text-center items-center ">
-                          <button class="py-2 px-8  rounded-full bg-red-500 xl:rounded-lg text-white text-xs xl:text-md buttondelete border-2 border-red-500">Delete</button>
+                          <button @click.prevent="confirmdel(item)"  class="py-2 px-8  rounded-full bg-red-500 xl:rounded-lg text-white text-[11px] xl:text-md transition duration-300 hover:text-red-500 hover:bg-white border-2 border-red-500">Delete</button>
               </div>
+
+              <DeleteModal :show="showModal" @close="showModal = false">
+                                <h2 class="text-black text-l">Are You Sure You Want to Delete <br> <span class="text-theme1">{{ this.confirmname}}</span> on <span class="text-theme1">{{ this.confirmdate }} {{ this.confirmyear }} <span class="text-black">at</span> {{ this.confirmvenue }}</span>?</h2><br>
+                                <button @click.prevent="navigatetoDelete()" class="transition duration-300 rounded-lg hover:text-red-500 hover:bg-white border border-red-500 px-4 py-4 bg-red-500 text-white mx-2 text-sm"> CONFIRM</button>
+                                <button class="transition duration-300 rounded-lg hover:text-black hover:bg-white border border-zinc-400 px-4 py-4 bg-zinc-400 text-white mx-2 text-sm" @click="showModal=false"> CANCEL </button>
+              </DeleteModal>
+
+              
               
               </TrainingCalendarTile>
-        
+
+              <Modal :show="confirmdelmodal" @close="confirmdelmodal = false">
+                                <h2 class="text-red-500 text-2xl">Delete Training Calendar</h2>
+                                <p class="text-theme2 text-4xl mb-5">Success!</p>
+                                
+              </Modal>
+             
         </template>
   
     
@@ -121,6 +136,13 @@ data() {
  
     items: [],
     showModal: false,
+    confirmdelmodal: false,
+    confirmname:'',
+    confirmdate:'',
+    confirmyear:'',
+    confirmvenue:'',
+    itemcv:'',
+
 
 
 
@@ -129,7 +151,7 @@ data() {
 
 mounted() {
 
-    axios.get(BASE_URL + '/displayCalendarTraining')
+    axios.get(BASE_URL + '/displayCalendarTrainingAdmin')
       .then(response => {
         this.items = response.data;
         console.log(this.items);
@@ -148,7 +170,48 @@ mounted() {
   methods: {
   navigateToUpdate(idTC) {
     window.location.href = this.route('TrainingCalendarUpdate', {idTC: idTC});
-  }
+  },
+
+  confirmdel(item) {
+    this.showModal= true;
+    this.confirmname = item.event.courseTitle;
+    this.confirmdate = item.month;
+    this.confirmyear = item.year;
+    this.confirmvenue = item.event.Venue;
+    this.itemcv = item.idCV;
+   
+    
+  },
+  navigatetoDelete() {
+     this.showModal= false;
+     this.confirmdelmodal = true ;
+     console.log(this.itemcv)
+
+     let params = new URLSearchParams();
+     let num = parseInt(this.itemcv);
+
+     params.append("idCV", num);
+     
+
+     axios.delete(BASE_URL + '/deleteCalendar' + '?' + params.toString())
+       .then(response => {
+         console.log(response.data);
+
+         async function redirectWithDelay() {
+           await new Promise(resolve => setTimeout(resolve, 1000)); // wait for 1 seconds
+           window.location.href = route('TrainingCalendar'); // redirect to the TrainingCalendar URL
+         }
+      redirectWithDelay();  
+         
+      })
+      .catch(error => {
+        console.log(error);
+      });
+    
+
+
+  },
+  
 }
  
 }

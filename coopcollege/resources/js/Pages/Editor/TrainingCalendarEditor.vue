@@ -42,7 +42,7 @@ import Modal from '@/Components/Modal.vue'
 
                     <form @submit.prevent="submitData">
                         <button type="submit" class="mt-16 border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg mb-10 hover:bg-green-600 transition ease-in duration-100">Save</button>
-                            <div class="overflow-y-hidden space-x-4">
+                            <div class="overflow-y-hidden space-x-1">
 
                             
 

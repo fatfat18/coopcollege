@@ -57,7 +57,7 @@ export default {
 </style>
 
 <template>
-      <div class="h-24 xl:h-32 max-w-7xl bg-white xl:px-8 xl:py-4 rounded-lg grid grid-cols-9 gap-4 max-h-30 xl:max-h-40 text-xs xl:text-md pr-2 pl-2">
+      <div class="h-24 xl:h-32 max-w-7xl bg-white xl:px-8 xl:py-4 rounded-lg grid grid-cols-9 xl:gap-2 max-h-30 xl:max-h-40 text-[12px] xl:text-md pr-2 pl-2">
 
             <div class=" flex justify-center text-center items-center col-span-1"> 
        
@@ -72,7 +72,7 @@ export default {
                 {{ description }}
 
             </div>
-            <div class=" flex justify-center text-xs text-center items-center col-span-3 overflow-y-hidden test">
+            <div class=" flex justify-center text-xs text-center items-center col-span-3 overflow-y-hidden text-[10px]">
                 {{ context }}
 
             </div>

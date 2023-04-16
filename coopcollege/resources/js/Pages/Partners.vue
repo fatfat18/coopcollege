@@ -42,12 +42,12 @@ library.add(faPlus);
             
         <!-- HEADER NI SA POST TILE  -->
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 overflow-y-hidden space-y-1 h-max" data-aos="fade-up" data-aos-duration="1000" >
-        <div class="max-w-7xl bg-white xl:px-8 xl:py-4 py-4 rounded-sm grid grid-cols-6 gap-4 text-xs xl:text-md"> 
+        <div class="max-w-7xl bg-white xl:px-8 xl:py-4 py-4 rounded-sm grid grid-cols-5 gap-4 text-xs xl:text-md"> 
 
             <div class=" flex justify-center text-center items-center"> 
                 IMAGE
             </div>
-            <div class=" flex justify-center text-center items-center col-span-3">
+            <div class=" flex justify-center text-center items-center col-span-2">
                 NAME
             </div>
 
@@ -69,10 +69,10 @@ library.add(faPlus);
          >
         
          <div class=" flex justify-center text-center items-center col-span-1">
-                        <button button @click="navigateToUpdate(item.idPartner)"  class="py-2 px-8  rounded-full bg-blue-400 xl:rounded-lg text-white text-xs xl:text-md buttonedit border-2 border-blue-400">Edit</button>
+                        <button button @click="navigateToUpdate(item.idPartner)"  class="py-2 px-8  rounded-full bg-blue-400 xl:rounded-lg text-white text-xs xl:text-md transition duration-300 hover:text-blue-400 hover:bg-white border-2 border-blue-400">Edit</button>
             </div>
             <div class=" flex justify-center text-center items-center col-span-1 ">
-                        <button class="py-2 px-8  rounded-full bg-red-500 xl:rounded-lg text-white text-xs xl:text-md buttondelete border-2 border-red-500">Delete</button>
+                        <button class="transition duration-300 hover:text-red-500 hover:bg-white py-2 px-8  rounded-full bg-red-500 xl:rounded-lg text-white text-xs xl:text-md  border-2 border-red-500">Delete</button>
             </div>
         
         </PartnersTile>

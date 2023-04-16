@@ -17,12 +17,7 @@ import { Link } from '@inertiajs/vue3';
     background: rgb(0,0,50);
 background: linear-gradient(90deg, rgba(0,0,51,0.7959558823529411) 48%, rgba(255,204,0,1) 100%);
 }
-.logtest{
-background: rgba(255,255,255,0.5);
--webkit-backdrop-filter: blur(5px);
-backdrop-filter: blur(5px);
-border: 1px solid rgba(255,255,255,0.25);
-}
+
 </style>
 
 <template>
@@ -40,7 +35,7 @@ border: 1px solid rgba(255,255,255,0.25);
 
         </div>
         <div
-            class="logtest w-full z-50 sm:max-w-md px-6 xl:py-24 py-5  xl:flex flex-col xl:justify-center xl:items-center bg-zinc-50 shadow-2xl overflow-hidden" data-aos="fade-right" data-aos-duration="1000"
+            class="logtest rounded-sm w-full z-50 sm:max-w-md px-6 xl:py-24 py-5  xl:flex flex-col xl:justify-center xl:items-center bg-zinc-50 shadow-2xl overflow-hidden" data-aos="fade-right" data-aos-duration="1000"
         >
        
             <slot />
