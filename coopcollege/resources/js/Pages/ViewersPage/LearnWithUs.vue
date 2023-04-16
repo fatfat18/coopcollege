@@ -26,7 +26,7 @@ background: linear-gradient(143deg, rgba(0,0,51,1) 60%, rgba(255,204,0,1) 100%);
   <div class="h-24 w-screen max-w-7xl flex bg-theme2 justify-center items-center mt-10 xl:rounded-lg " data-aos="fade-up" data-aos-duration="1000" >
     <p class="xl:text-5xl text-2xl font-thin text-theme1" > Training Calendar {{ currentYear }}</p>
         </div>
-         <div class="h-max w-screen max-w-7xl flex flex-col bg-white xL:mt-20  my-10 py-4 px-2 gap-2 xl:rounded-3xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" >
+         <div class="h-max w-screen max-w-7xl flex flex-col bg-white xl:mt-5 xl:my-0 my-10 py-4 px-2 gap-2 xl:rounded-3xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" >
 
             <CalendarMonth Month="Month" CourseTitle1="Course Title" Venue1="Venue" class="max-w-7xl rounded-3xl " />
             <CalendarMonth Month="January" CourseTitle1="&#x2022; Deepening our Co-operative Identity Through Education" CourseTitle2="&#x2022; Global Co-operative Executive Masterclass (Manchester, UK)" Venue1="&#x2022; Seda Centrio, CDO" Venue2="&#x2022; Manchester, United Kingdom" class="max-w-7xl rounded-3xl shadow-md" data-aos="zoom-in" data-aos-duration="1000" />
