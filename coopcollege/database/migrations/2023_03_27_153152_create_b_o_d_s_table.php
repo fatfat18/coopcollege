@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('b_o_d_s', function (Blueprint $table) {
             $table->id('idBOD');
             $table->integer('ImagesId');
-            $table->text('Prefix')-nullable();
+            $table->text('Prefix')->nullable();
             $table->text('Fname');
             $table->text('Lname');
-            $table->text('Suffix')-nullable();
+            $table->text('Suffix')->nullable();
             $table->tinyInteger('Status')->default(1);
             $table->text('Position');
             $table->date('startDate');
