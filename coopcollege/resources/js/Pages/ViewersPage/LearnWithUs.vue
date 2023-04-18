@@ -28,25 +28,25 @@ background: linear-gradient(143deg, rgba(0,0,51,1) 60%, rgba(255,204,0,1) 100%);
         </div>
 
      
-    <div class="max-w-7xl w-screen bg-white mt-5 py-2 flex  items-center"> <div class="w-1/3 text-center">Month</div> <div class="w-1/3 text-center">Course Title</div><div class="w-1/3 text-center">Venue</div></div>
+    <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" class="max-w-7xl w-screen bg-white mt-5 py-2 flex  items-center text-xl"> <div class="w-1/3 text-center">Month</div> <div class="w-1/3 text-center">Course Title</div><div class="w-1/3 text-center">Venue</div></div>
     
 
 
-
-    <div v-for="(eventData, index) in calendar" :key="index" class=" flex justify-center items-center h-max w-screen max-w-7xl bg-zinc-300 xl:mt-1 py-2  xl:rounded-md" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" >
+<div class="py-5 h-max overflow-y-hidden max-w-7xl w-full bg-white flex justify-center items-center flex-col " data-aos="fade" data-aos-delay="500" data-aos-duration="1000">
+    <div v-for="(eventData, index) in calendar" :key="index" class=" flex justify-center items-center h-max w-screen max-w-6xl bg-zinc-300 xl:mx-5 xl:mt-1 mt-1 py-2  xl:rounded-md" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" >
 
   
             <div  class="flex text-center justify-center items-center">
 
-              <div class="xl:w-3/4 lg:w-2/3 w-1/3 text-center flex justify-center items-center py-5">{{ eventData.month }}</div>
+              <div class="xl:w-3/5 lg:w-2/3 w-1/3 text-center flex justify-center items-center py-5">{{ eventData.month }}</div>
 
 
               <div class="w-screen">
 
                 <div v-for="(event, index) in calendar[index].events" :key="index" class="flex space-x-5 ">
                    
-                <div class="w-2/3 text-center  flex justify-center items-center py-2">&#x2022; {{ event.courseTitle }}</div>
-                <div class="w-2/3 text-center flex justify-center items-center py-2">&#x2022; {{ event.Venue }}</div>
+                <div class="w-3/4 text-center  flex justify-center items-center py-2">&#x2022; {{ event.courseTitle }}</div>
+                <div class="w-1/2 text-center flex justify-center items-center py-2">&#x2022; {{ event.Venue }}</div>
 
 
                   <br>
@@ -56,14 +56,17 @@ background: linear-gradient(143deg, rgba(0,0,51,1) 60%, rgba(255,204,0,1) 100%);
               </div>
 
 
-        
-          
+      </div> 
+  </div>
 
 
 
-    </div> 
+
+
+
   </div>
     
+  <div class="py-5"></div>
     
     <Footer />
   

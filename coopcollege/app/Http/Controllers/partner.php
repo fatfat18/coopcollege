@@ -22,7 +22,7 @@ class partner extends Controller
        
         $filename=base64_encode(now().$request->file('file')->getClientOriginalName()).'.'.$request->file('file')->getClientOriginalExtension(); 
 
-        $img = Image::make($request->file('file'))->resize(400, 400, function ($constraint) {
+        $img = Image::make($request->file('file'))->resize(1080, 720, function ($constraint) {
             $constraint->aspectRatio();
             $constraint->upsize();
         });

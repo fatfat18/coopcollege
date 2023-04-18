@@ -6,6 +6,7 @@ import ResponsiveNavBar from '@/Components/ResponsiveNavBar.vue'
 import Header from '@/Components/Header.vue'
 import ProfileCard from '@/Components/ProfileCard.vue'
 import Footer from '@/Components/Footer.vue';
+import PartnersPic from '@/Components/PartnersPic.vue'
 
 
 
@@ -153,25 +154,23 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
 
           </div>
 
+
+
+
   <div class="max-w-7xl mt-20">
       <h1 class=" text-xl xl:text-3xl text-white mb-4 ml-8">Our Partners</h1>
-      <div class="w-screen max-w-7xl h-max xl:rounded-3xl py-10 xl:px-40 bg-white gap-10 flex flex-wrap px-10">
+      <div class="w-screen max-w-7xl h-max xl:rounded-3xl py-10 xl:px-20 bg-white  flex flex-wrap">
 
-        <img src="../../../asset/partners/1.png" alt="" class="w-max xl:h-24 h-12" data-aos="zoom-in" data-aos-duration="1500">
-        <img src="../../../asset/partners/2.png" alt="" class="w-max xl:h-24 h-12" data-aos="zoom-in" data-aos-duration="1500">
-        <img src="../../../asset/partners/3.png" alt="" class="w-max xl:h-24 h-12" data-aos="zoom-in" data-aos-duration="1500">
-        <img src="../../../asset/partners/4.png" alt="" class="w-max xl:h-24 h-12" data-aos="zoom-in" data-aos-duration="1500">
-        <img src="../../../asset/partners/5.png" alt="" class="w-max xl:h-24 h-12" data-aos="zoom-in" data-aos-duration="1500">
-        <img src="../../../asset/partners/6.png" alt="" class="w-max xl:h-24 h-12" data-aos="zoom-in" data-aos-duration="1500">
-        <img src="../../../asset/partners/7.png" alt="" class="w-max xl:h-24 h-12" data-aos="zoom-in" data-aos-duration="1500">
-        <img src="../../../asset/partners/8.png" alt="" class="w-max xl:h-24 h-12" data-aos="zoom-in" data-aos-duration="1500">
-        <img src="../../../asset/partners/9.png" alt="" class="w-max xl:h-24 h-12" data-aos="zoom-in" data-aos-duration="1500">
-        <img src="../../../asset/partners/10.png" alt="" class="w-max xl:h-24 h-12" data-aos="zoom-in" data-aos-duration="1500">
-        <img src="../../../asset/partners/11.png" alt="" class="w-max xl:h-24 h-12" data-aos="zoom-in" data-aos-duration="1500">
-        <img src="../../../asset/partners/12.png" alt="" class="w-max xl:h-24 h-12" data-aos="zoom-in" data-aos-duration="1500">
-        <img src="../../../asset/partners/13.png" alt="" class="w-max xl:h-24 h-12" data-aos="zoom-in" data-aos-duration="1500">
-        <img src="../../../asset/partners/14.png" alt="" class="w-max xl:h-24 h-12" data-aos="zoom-in" data-aos-duration="1500">
-       
+<template v-for="partner in partners" :key="partner.idPartner" >
+        <PartnersPic :image="partner.image.ImageUrl" class="mx-4 my-2" > </PartnersPic> 
+</template>      
+
+
+
+
+
+
+
 
 
 
@@ -394,17 +393,35 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
 
 
 <script>
+import { BASE_URL } from '../../baseurl';
 export default {
   data() {
     return {
       phrases: ["We are the sole-training needs provider of the National Federation of Cooperative Primaries of the Philippines (NaFeCOOP). We Strategically pivoted from CLIMBS Institute for Financial Literacy (CIFL) to CLIMBS Institute of Management (CIM), and now, the Co-operative College of the Philippines (Co-op College PH) to further cooperative education both locally and globally, embodies the cooperative values and principles, and upgrades its educational platforms."],
       sleepTime: 30,
       curPhraseIndex: 0,
+      partners:[],
     };
   },
   mounted() {
+    axios.get(BASE_URL + '/displayPartner')
+      .then(response => {
+        this.partners = response.data;
+        console.log(this.partners);
+        
+      
+      })
+      .catch(error => {
+        console.log(error);
+      });
+
+
     this.writeLoop();
+
+   
+
   },
+  
   methods: {
     sleep(ms) {
       return new Promise((resolve) => setTimeout(resolve, ms));
