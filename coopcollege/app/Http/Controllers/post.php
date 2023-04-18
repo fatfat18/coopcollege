@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use DateTime;
+
 use Illuminate\Support\Facades\Storage;
 use Image;
 use Illuminate\Http\Request;
@@ -24,6 +25,10 @@ class post extends Controller
         if ($validator->fails()) {
             return $validator->errors();
         }
+
+
+    
+
 
         $data = \App\Models\post::create([
             'PostCatId'=>$request->PostCatId, 
