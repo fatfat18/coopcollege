@@ -162,7 +162,7 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
       <div class="w-screen max-w-7xl h-max xl:rounded-3xl py-10 xl:px-20 bg-white  flex flex-wrap">
 
 <template v-for="partner in partners" :key="partner.idPartner" >
-        <PartnersPic :image="partner.image.ImageUrl" class="mx-4 my-2" > </PartnersPic> 
+        <PartnersPic :image="partner.image.ImageUrl" class="mx-4 my-2" data-aos="fade" data-aos-duration="1000"> </PartnersPic> 
 </template>      
 
 
