@@ -14,6 +14,7 @@ import Modal from '@/Components/Modal.vue';
 .postcontainer{
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .9)),
     url('/coopcollege/coopcollege/resources/asset/editpostbackg.jpg');
+
 }
 
 #img {
@@ -34,7 +35,7 @@ import Modal from '@/Components/Modal.vue';
            
         </div>
 
-        <div class="postcontainer flex justify-center h-max pb-60 w-screen xl:px-10 pt-20 overflow-y-hidden ">
+        <div class="postcontainer flex justify-center h-max w-screen xl:px-10 xl:pb-96 py-20 overflow-y-hidden ">
 
 
             <div class=" xl:w-3/4 w-4/5 h-max xl:mt-4">

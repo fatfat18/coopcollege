@@ -72,7 +72,7 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
 <p class="text-white text-3xl xl:text-5xl xl:pt-20">Governance</p>
 
 
-  <div class="w-screen h-max max-w-7xl bg-white  pt-10 flex justify-center gap-10 flex-wrap overflow-y-hidden" >
+  <div class="w-screen h-max max-w-7xl bg-white  pt-10 flex justify-center gap-10 mb-5 mt-1 flex-wrap overflow-y-hidden" >
       <div v-for="bod in bods" :key="bod.idBOD" class=" bg-white h-max my-5 mx-5" data-aos="fade-right" data-aos-duration="1000">
         <ProfileCard 
           :fullname="(bod.Prefix !== 'null' ? bod.Prefix + ' ' : '') + bod.Fname + ' ' + bod.Lname + (bod.Suffix !== 'null' ? ' ' + bod.Suffix : '')" 
@@ -172,7 +172,7 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
 
 <!-- MAO NI ANG DISPLAY SA PARTNER IMAGES-->
 <template v-for="partner in partners" :key="partner.idPartner" >
-        <PartnersPic :name="partner.partnerName" :image="partner.image.ImageUrl" class="mx-4 my-2" data-aos="zoom-outcd" data-aos-duration="1000"> </PartnersPic> 
+        <PartnersPic :name="partner.partnerName" :image="partner.image.ImageUrl" class="mx-4 my-2" data-aos="zoom-out" data-aos-duration="1000"> </PartnersPic> 
 </template>      
 
 

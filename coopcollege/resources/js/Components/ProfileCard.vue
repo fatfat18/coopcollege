@@ -24,7 +24,7 @@ props:{
 <template>
 
     <div>
-        <img :src="image" alt="BOD" class="w-60 h-80">
+        <img :src="image" alt="BOD" class="w-60 h-80 object-cover object-center">
     </div>
 
     <div>

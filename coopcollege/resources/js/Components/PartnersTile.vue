@@ -45,7 +45,7 @@ export default {
       <div class="h-24 xl:h-32 max-w-7xl bg-white xl:px-8 xl:py-4 rounded-lg grid grid-cols-5 xl:gap-2 max-h-30 xl:max-h-40 text-[12px] xl:text-md pr-4">
       
             <div class=" flex justify-center text-center items-center"> 
-                <img :src="image" alt="Image" class="xl:ml-0 ml-4 xl:h-16 xl:w-32 h-12 w-24">
+                <img :src="image" alt="Image" class="xl:ml-0 ml-4 xl:h-16 xl:w-32 h-12 w-24 object-contain object-top">
             </div>
             <div class=" flex justify-center text-center items-center col-span-2">
                 {{ name }}

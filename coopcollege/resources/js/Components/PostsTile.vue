@@ -61,7 +61,7 @@ export default {
 
             <div class=" flex justify-center text-center items-center col-span-1"> 
        
-                <img :src="image" alt="Images" class=" xl:h-16 xl:w-32 h-12 w-24 cover">
+                <img :src="image" alt="Images" class=" xl:h-16 xl:w-32 h-12 w-24 object-contain object-top">
             
             </div>
             <div class=" flex justify-center text-center items-center col-span-1">
