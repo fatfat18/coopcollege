@@ -83,7 +83,7 @@ library.add(faPlus);
            :image="item.avatar.ImageUrl"
            :title="item.newsTitle"
            :context="sliceText(item.Context, 150)"
-           :date_created="moment(item.news_DateCreated).tz(this.timezone).format('YYYY-MM-DD HH:mm:ss')"
+           :date_created="item.news_DateCreated"
 
      
        
@@ -130,7 +130,7 @@ library.add(faPlus);
 
 <script>
 import { BASE_URL } from '../baseurl';
-import moment from 'moment-timezone';
+
 
 export default {
 
@@ -143,7 +143,7 @@ data() {
     confirmdelmodal: false,
     confirmname:'',
     itemcv:'',
-    timezone: 'Asia/Manila',
+
 
 
   }
