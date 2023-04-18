@@ -13,6 +13,7 @@ class trainingCalendar extends Controller
         $validator = Validator::make($request->all(), [
             'courseTitle' => 'required',
             'venue'=>'required',
+            'month_num'=>'required|numeric',
             'month'=>'required',
             'year'=>'required|numeric'
         ]);
@@ -28,6 +29,7 @@ class trainingCalendar extends Controller
 
         \App\Models\trainingCalendar::create([
             'idCV' => $data->id,
+            'month_num' => $request->month_num,
             'month' => $request->month,
             'year' => $request->year
         ]);
@@ -63,7 +65,7 @@ class trainingCalendar extends Controller
 
 
     public function display(){
-        return \App\Models\trainingCalendar::groupBy('year','month')
+        return \App\Models\trainingCalendar::groupBy('year','month')->orderBy('month_num', 'asc')
         
         ->get()
         ->map(function($q){

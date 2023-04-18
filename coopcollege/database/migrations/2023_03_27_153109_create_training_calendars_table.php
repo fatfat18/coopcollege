@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('training_calendars', function (Blueprint $table) {
             $table->id('idTC');
             $table->integer('idCV');
+            $table->integer('month_num');
             $table->text('month');
             $table->text('year');
         });

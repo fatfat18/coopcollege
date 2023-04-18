@@ -46,6 +46,20 @@ import Modal from '@/Components/Modal.vue'
 
                             
 
+                              <TextInput 
+                                id="name"
+                                name="month_num"
+                                type="text"
+                                class="mt-4 py-2 px-2 w-24 focus:ring-yellow-500 active:ring-yellow-500"
+                                required
+                                autocomplete=""
+                                v-model="month_num"
+                                placeholder="Month No."
+                                data-aos="fade-up"  data-aos-duration="1300"
+                                @click.stop
+                                >
+                        
+                                </TextInput>
 
                                 <TextInput 
                                 id="name"
@@ -140,6 +154,7 @@ export default {
   },
   data() {
     return {
+      month_num: '',
       month: '',
       course_title: '',
       year: '',
@@ -155,6 +170,8 @@ export default {
       this.showModal = true
 
       const formData = new FormData();
+      let no = parseInt(this.month_num)
+      formData.append('month_num',no);
       formData.append('month', this.month);
       formData.append('courseTitle', this.course_title);
       formData.append('year', this.year);
@@ -177,6 +194,7 @@ export default {
          }
       redirectWithDelay();  
 
+      this.month_num =  '';
       this.month =  '';
       this.course_title =  '';
       this.year =  '';
