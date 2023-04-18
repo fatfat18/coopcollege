@@ -32,7 +32,7 @@ background: linear-gradient(143deg, rgba(0,0,51,1) 60%, rgba(255,204,0,1) 100%);
     
 
 
-<div class="py-5 h-max overflow-y-hidden max-w-7xl w-full bg-white flex justify-center items-center flex-col " data-aos="fade" data-aos-delay="500" data-aos-duration="1000">
+<div class="pb-5 h-max overflow-y-hidden max-w-7xl w-full bg-white flex justify-center items-center flex-col " data-aos="fade" data-aos-delay="500" data-aos-duration="1000">
     <div v-for="(eventData, index) in calendar" :key="index" class=" flex justify-center items-center h-max w-screen max-w-6xl bg-zinc-300 xl:mx-5 xl:mt-1 mt-1 py-2  xl:rounded-md" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" >
 
   

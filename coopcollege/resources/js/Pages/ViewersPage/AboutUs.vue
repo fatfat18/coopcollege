@@ -172,7 +172,7 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
 
 <!-- MAO NI ANG DISPLAY SA PARTNER IMAGES-->
 <template v-for="partner in partners" :key="partner.idPartner" >
-        <PartnersPic :image="partner.image.ImageUrl" class="mx-4 my-2" data-aos="zoom-outcd" data-aos-duration="1000"> </PartnersPic> 
+        <PartnersPic :name="partner.partnerName" :image="partner.image.ImageUrl" class="mx-4 my-2" data-aos="zoom-outcd" data-aos-duration="1000"> </PartnersPic> 
 </template>      
 
 
