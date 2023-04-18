@@ -62,32 +62,40 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
 
 </section>
 
-
-
-
-
-  
-
 </div>
+
+
+
+
+
+
 <p class="text-white text-3xl xl:text-5xl xl:pt-20">Governance</p>
 
-  <div class="w-screen max-w-7xl h-max  pt-10 flex justify-center gap-10 flex-wrap overflow-y-hidden">
 
-  <ProfileCard data-aos="fade-right" data-aos-duration="500"/>
-  <ProfileCard data-aos="fade-right" data-aos-duration="600"/>
-  <ProfileCard data-aos="fade-right" data-aos-duration="700"/>
-  <ProfileCard data-aos="fade-right" data-aos-duration="800"/>
-  <ProfileCard data-aos="fade-right" data-aos-duration="500"/>
-  <ProfileCard data-aos="fade-right" data-aos-duration="600"/>
-  <ProfileCard data-aos="fade-right" data-aos-duration="700"/>
-  <ProfileCard data-aos="fade-right" data-aos-duration="800"/>
-  <ProfileCard data-aos="fade-right" data-aos-duration="500"/>
-  <ProfileCard data-aos="fade-right" data-aos-duration="600"/>
-  <ProfileCard data-aos="fade-right" data-aos-duration="700"/>
-  <ProfileCard data-aos="fade-right" data-aos-duration="800"/>
-  <ProfileCard data-aos="fade-right" data-aos-duration="500"/>
-
+  <div class="w-screen h-max max-w-7xl bg-white  pt-10 flex justify-center gap-10 flex-wrap overflow-y-hidden" >
+      <div v-for="bod in bods" :key="bod.idBOD" class=" bg-white h-max my-5 mx-5" data-aos="fade-right" data-aos-duration="1000">
+        <ProfileCard 
+          :fullname="(bod.Prefix !== 'null' ? bod.Prefix + ' ' : '') + bod.Fname + ' ' + bod.Lname + (bod.Suffix !== 'null' ? ' ' + bod.Suffix : '')" 
+          :position="bod.Position"
+          :image="bod.image.ImageUrl" 
+      
+          >
+          </ProfileCard>
+      </div>
   </div>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
   
 
   <div class="max-w-7xl h-max pt-4 w-screen bg-theme2 rounded-2xl text-theme1 overflow-y-hidden xl:px-8 mb-10">
@@ -161,8 +169,10 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
       <h1 class=" text-xl xl:text-3xl text-white mb-4 ml-8">Our Partners</h1>
       <div class="w-screen max-w-7xl h-max xl:rounded-3xl py-10 xl:px-20 bg-white  flex flex-wrap">
 
+
+<!-- MAO NI ANG DISPLAY SA PARTNER IMAGES-->
 <template v-for="partner in partners" :key="partner.idPartner" >
-        <PartnersPic :image="partner.image.ImageUrl" class="mx-4 my-2" data-aos="zoom-out" data-aos-duration="1000"> </PartnersPic> 
+        <PartnersPic :image="partner.image.ImageUrl" class="mx-4 my-2" data-aos="zoom-outcd" data-aos-duration="1000"> </PartnersPic> 
 </template>      
 
 
@@ -401,6 +411,7 @@ export default {
       sleepTime: 30,
       curPhraseIndex: 0,
       partners:[],
+      bods:[],
     };
   },
   mounted() {
@@ -416,6 +427,17 @@ export default {
       });
 
 
+      axios.get(BASE_URL + '/displayBOD')
+    .then(response => {
+      this.bods = response.data;
+      console.log(this.bods);
+
+    })
+    .catch(error => {
+      console.log(error);
+     });
+
+     
     this.writeLoop();
 
    

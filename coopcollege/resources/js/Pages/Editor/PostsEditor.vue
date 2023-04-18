@@ -34,7 +34,7 @@ import Modal from '@/Components/Modal.vue';
            
         </div>
 
-        <div class="postcontainer flex justify-center h-max pb-60 w-screen xl:px-10 py-10 overflow-y-hidden ">
+        <div class="postcontainer flex justify-center h-max pb-60 w-screen xl:px-10 pt-20 overflow-y-hidden ">
 
 
             <div class=" xl:w-3/4 w-4/5 h-max xl:mt-4">

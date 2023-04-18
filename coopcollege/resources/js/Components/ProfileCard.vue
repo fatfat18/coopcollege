@@ -1,6 +1,20 @@
 <script >
 export default {
- props: ['Name','Position','Img']
+props:{
+    fullname: {
+    type: String,
+    required: true,
+  },
+  position: {
+    type: String,
+    required: true,
+  },
+  image: {
+    type: String,
+    //required: true,
+  },
+  
+}
 };
 
 
@@ -9,19 +23,13 @@ export default {
 
 <template>
 
-<div class="">
-    <div class="w-72 h-96 bg-white">
-
-    </div>
     <div>
-        <p class="text-2xl text-white"> Name </p>
-        <p class="text-l text-white"> Postion </p><br>
-
-        
+        <img :src="image" alt="BOD" class="w-60 h-80">
     </div>
-   
 
-</div>
-
+    <div>
+        <p class="text-l text-theme1"> {{ fullname }} </p>
+        <p class="text-xl text-theme2"> {{ position }} </p>
+    </div>
 
 </template>

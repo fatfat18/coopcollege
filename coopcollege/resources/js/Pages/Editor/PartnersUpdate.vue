@@ -31,7 +31,7 @@ import InputLabel from '@/Components/InputLabel.vue';
            
         </div>
 
-        <div class="postcontainer flex justify-center h-screen w-screen xl:px-10 py-10 ">
+        <div class="postcontainer flex justify-center h-max w-screen xl:px-10 py-20 ">
 
 
             <div class=" xl:w-3/4 w-4/5 xl:mt-16 overflow-y-hidden">

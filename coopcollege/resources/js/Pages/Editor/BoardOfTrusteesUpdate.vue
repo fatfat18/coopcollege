@@ -33,7 +33,7 @@ display: none;
            
         </div>
 
-        <div class="postcontainer flex justify-center h-screen w-screen xl:px-10 py-10 ">
+        <div class="postcontainer flex justify-center h-max w-screen xl:px-10 py-20 ">
 
 
             <div class=" xl:w-3/4 w-4/5 xl:mt-16 overflow-y-hidden">
@@ -55,7 +55,7 @@ display: none;
                                   
                                 <div class="text-white flex" data-aos="fade-up"  data-aos-duration="1500"  >
                                       <div v-if="imagePreviewUrlholder" >
-                                        <img :src="imagePreviewUrlholder" class="h-40 w-60 object-cover my-5 mx-5" >
+                                        <img :src="imagePreviewUrlholder" class="h-60 w-40 object-cover my-5 mx-5" >
                                       </div>
                                 </div>
 

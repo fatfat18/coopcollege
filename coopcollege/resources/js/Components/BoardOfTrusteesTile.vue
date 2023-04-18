@@ -53,7 +53,7 @@ export default {
       <div class="h-24 xl:h-32 max-w-7xl bg-white xl:px-4 xl:py-4 rounded-lg grid grid-cols-6 xl:gap-2 max-h-30 xl:max-h-40 text-[12px] xl:text-md pr-4">
 
             <div class=" flex justify-center text-center items-center"> 
-                <img :src="image" class=" xl:h-16 xl:w-24 h-12 w-16">
+                <img :src="image" class=" xl:h-24 xl:w-20 h-16 w-12">
             </div>
             <div class=" flex justify-center text-center items-center ">
                 {{ fullname }}
