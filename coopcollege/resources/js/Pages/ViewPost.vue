@@ -33,17 +33,17 @@ import ResponsiveNavBar from '@/Components/ResponsiveNavBar.vue';
 
             </div>
         
-            <div class="h-screen xl:w-1/2  flex flex-col text-center  pt-10 px-10">
+            <div class="h-max xl:w-1/2  flex flex-col text-center  pt-10 px-10">
 
                 <h1 class="text-5xl text-theme1 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]" data-aos="zoom-out" data-aos-duration="1000"> {{ title }}</h1><br>
                 <h1 class="text-2xl text-theme2 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] " data-aos="zoom-out" data-aos-duration="1000"> {{ description }}</h1><br>
 
-                <p class="text-slate-900 text-xs xl:text-lg flex items-center justify-center text-justify px-10" data-aos="zoom-out" data-aos-duration="1000">
+                <p class="text-slate-900 text-xs xl:text-lg flex items-center justify-center text-justify " data-aos="zoom-out" data-aos-duration="1000">
                     {{ context }}
                 </p>
 
 
-                <div class="mt-10 w-full  overflow-y-hidden   flex justify-center  items-center"><img src="../../asset/logo.png" alt="" class="w-32" data-aos="zoom-out" data-aos-duration="1000"></div>
+                <div class="mt-10 w-full  overflow-y-hidden h-full  flex justify-center  items-center"><img src="../../asset/logo.png" alt="" class="w-32" data-aos="zoom-out" data-aos-duration="1000"></div>
             </div>
     </div>
 

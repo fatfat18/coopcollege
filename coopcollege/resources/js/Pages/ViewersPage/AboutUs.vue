@@ -193,7 +193,7 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
 
 
     <header class="xl:mt-40 mt-20 flex flex-col">
-      <h1 class="text-white mb-20 text-2xl xl:text-7xl">OUR HISTORY</h1>
+      <h1 class="text-white mb-20 text-2xl xl:text-5xl">OUR HISTORY</h1>
     <div class="w-screen flex justify-center items-center"><br><img src="../../../asset/timeline/climbs_logo_edited_400x400.png" alt="" class="w-32" data-aos="fade-up" data-aos-duration="1000" /></div>
 </header>
 
@@ -408,7 +408,7 @@ export default {
   data() {
     return {
       phrases: ["We are the sole-training needs provider of the National Federation of Cooperative Primaries of the Philippines (NaFeCOOP). We Strategically pivoted from CLIMBS Institute for Financial Literacy (CIFL) to CLIMBS Institute of Management (CIM), and now, the Co-operative College of the Philippines (Co-op College PH) to further cooperative education both locally and globally, embodies the cooperative values and principles, and upgrades its educational platforms."],
-      sleepTime: 30,
+      sleepTime: 20,
       curPhraseIndex: 0,
       partners:[],
       bods:[],

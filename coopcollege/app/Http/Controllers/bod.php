@@ -44,7 +44,7 @@ class bod extends Controller
             'Prefix'=>$request->Prefix ?: null , 
             'Fname'=>$request->Fname, 
             'Lname'=>$request->Lname, 
-            'Suffix'=>$request->Suffix ?: null, 
+            'Suffix'=>$request->Suffix ?: null , 
             'Position'=>$request->Position, 
             'startDate'=>$request->startDate, 
             'endDate'=>$request->endDate, 
