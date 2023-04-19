@@ -102,6 +102,10 @@ Route::get('/PartnersUpdate/{idPartner}', function ($idPartner) {
 })->name('PartnersUpdate');
 
 
+Route::get('/ViewPost/{Postid}', function ($Postid) {
+    return Inertia::render('ViewPost');
+})->name('ViewPost');
+
 
 
 

@@ -6,38 +6,44 @@ import Header from '@/Components/Header.vue';
 import ResponsiveNavBar from '@/Components/ResponsiveNavBar.vue';
 
 </script>
+<style>
+.clickable-div {
+  cursor: pointer;
+}
 
+</style>
 <template>
 
 <Header />
 <ResponsiveNavBar />
 
-<div class="w-screen h-max bg-zinc-200  flex justify-center items-center text-theme1">
+<div class="w-screen h-max bg-zinc-200  flex justify-center items-center ">
 
     <div class="h-max max-w-7xl w-screen  flex xl:flex-row flex-col">
-            <div class="h-max xl:w-1/2   flex-col min-h-screen">
-                <img src="../../asset/newsheading.jpg" alt="" class="w-full h-1/2 my-10" data-aos="fade-up" data-aos-duration="1000">
-                <div class="flex flex-wrap  gap-5 justify-center  overflow-y-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
-                    <img src="../../asset/newsheading.jpg" alt="" class="w-40" >
-                    <img src="../../asset/newsheading.jpg" alt="" class="w-40" >
-                    <img src="../../asset/newsheading.jpg" alt="" class="w-40" >
-                    <img src="../../asset/newsheading.jpg" alt="" class="w-40" >
-                    <img src="../../asset/newsheading.jpg" alt="" class="w-40" >
-                </div>
+        
+            <div class="h-max xl:w-1/2  flex-col min-h-max" >
+                <img :src="this.img" alt="" id="dispimg"  class="transition duration-300 w-full xl:h-96 object-cover my-10" data-aos="fade-down"  data-aos-duration="1000" >
                 
+                <div class="flex flex-wrap justify-center items-center" data-aos="fade" data-aos-delay="500" data-aos-duration="1000">
+                    <div v-for="imageUrl in imagePreviewUrlholder" :key="imageUrl" >
+                                  <img @click="changeImage(imageUrl)" :src="imageUrl" class="transition duration-300 clickable-div h-32 w-40 object-cover my-5 mx-5">
+                    </div>
+              
+                </div>            
 
             </div>
         
-            <div class="h-screen xl:w-1/2  flex flex-col text-center  pt-10 text-5xl">
+            <div class="h-screen xl:w-1/2  flex flex-col text-center  pt-10 px-10">
 
-                <h1 class="" data-aos="zoom-out" data-aos-duration="1000"> TITLE</h1><br>
+                <h1 class="text-5xl text-theme1 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]" data-aos="zoom-out" data-aos-duration="1000"> {{ title }}</h1><br>
+                <h1 class="text-2xl text-theme2 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] " data-aos="zoom-out" data-aos-duration="1000"> {{ description }}</h1><br>
 
-                <p class="text-xs xl:text-xl flex items-center justify-center text-justify px-10" data-aos="zoom-out" data-aos-duration="1000">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                <p class="text-slate-900 text-xs xl:text-lg flex items-center justify-center text-justify px-10" data-aos="zoom-out" data-aos-duration="1000">
+                    {{ context }}
                 </p>
 
 
-                <div class="mt-20 w-full  overflow-y-hidden   flex justify-center  items-center"><img src="../../asset/logo.png" alt="" class="w-32" data-aos="zoom-out" data-aos-duration="1000"></div>
+                <div class="mt-10 w-full  overflow-y-hidden   flex justify-center  items-center"><img src="../../asset/logo.png" alt="" class="w-32" data-aos="zoom-out" data-aos-duration="1000"></div>
             </div>
     </div>
 
@@ -61,6 +67,95 @@ import ResponsiveNavBar from '@/Components/ResponsiveNavBar.vue';
 
 </template>
 <script>
+import { BASE_URL } from '../baseurl';
+
+
+export default {
+
+
+data() {
+  return {
+ 
+    items: [],
+    imagePreviewUrl:[],
+    imagePreviewUrlholder:[],
+    title:'',
+    description:'',
+    context:'',
+    img:'',
+
+  }
+},
+
+created() {
+
+    axios.get(BASE_URL + '/displayPost')
+      .then(response => {
+        this.items = response.data;
+        console.log(this.items);
+
+            const path = window.location.pathname;
+        // Extract specific data from path
+
+        const pathSegments = path.split('/');
+        this.itemId = pathSegments[pathSegments.length - 1];
+        console.log(this.itemId);
+        
+        const intNum = parseInt(this.itemId); // convert to an integer
+        console.log(intNum);
+
+        //all object from get
+        this.items = response.data;
+        console.log(this.items);
+
+        for (let x = 0; x < this.items.length; x++) {
+            const y = this.items[x];
+            if( y.Postid == this.itemId){
+              console.log(y);
+              this.items = y;
+              console.log(this.items);
+              
+            }
+          
+            }
+   
+        this.title = this.items.newsTitle;
+        this.description = this.items.Description;
+        this.context = this.items.Context;
+        this.img = this.items.avatar.ImageUrl;
+        for (let i = 0 ; i < this.items.image.length ; i++){
+            this.imagePreviewUrlholder[i] = this.items.image[i].ImageUrl;
+        }
+
+        console.log(this.imagePreviewUrlholder)
+   
+
+
+
+
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  },
+  methods: {
+    changeImage(pushedimage) {
+
+    this.img = pushedimage;
+}
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
 
 AOS.init({startEvent: 'load',
           once : 'true,'});

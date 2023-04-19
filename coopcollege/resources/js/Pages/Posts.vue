@@ -25,6 +25,7 @@ library.add(faPlus);
     url('/coopcollege/coopcollege/resources/asset/editpostbackg.jpg');
     background-size: cover;
 }
+
 </style>
 
 <template>
