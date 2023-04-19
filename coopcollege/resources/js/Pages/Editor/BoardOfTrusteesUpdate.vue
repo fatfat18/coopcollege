@@ -292,8 +292,8 @@ export default {
       imagePreviewUrlholder:null,
       firstname: '',
       lastname: '',
-      prefix: null,
-      suffix: null,
+      prefix: '',
+      suffix: '',
       position: '',
       address: '',
       start_date: '',
@@ -339,7 +339,8 @@ export default {
         console.log(this.imagePreviewUrlholder)
         this.firstname = this.items.Fname;
         this.lastname = this.items.Lname;
-        this.suffix = this.items.Suffix;
+        this.suffix = this.items.Suffix ? this.items.Suffix : "";
+        this.prefix = this.items.Prefix ? this.items.Prefix : "";
         this.position = this.items.Position;
         this.start_date = this.items.startDate;
         this.end_date = this.items.endDate;

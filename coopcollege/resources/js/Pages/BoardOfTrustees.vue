@@ -81,7 +81,7 @@ library.add(faPlus);
          
          <BoardOfTrusteesTile
            :image="item.image.ImageUrl"
-           :fullname="(item.Prefix !== 'null' ? item.Prefix + ' ' : '') + item.Fname + ' ' + item.Lname + (item.Suffix !== 'null' ? ' ' + item.Suffix : '')"
+           :fullname="(item.Prefix === null ?  '' : item.Prefix + ' ') + item.Fname + ' ' + item.Lname + (item.Suffix === null ? ' ' : ' ' + item.Suffix)"
            :position="item.Position"
            :address="item.Address"
     

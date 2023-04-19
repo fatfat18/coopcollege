@@ -75,7 +75,7 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
   <div class="w-screen h-max max-w-7xl bg-zinc-200  pt-10 flex justify-center gap-10 mb-5 mt-1 flex-wrap overflow-y-hidden" >
       <div v-for="bod in bods" :key="bod.idBOD" class=" bg-zinc-200 h-max my-5 mx-5" data-aos="fade-right" data-aos-duration="1000">
         <ProfileCard 
-          :fullname="(bod.Prefix !== 'null' ? bod.Prefix + ' ' : '') + bod.Fname + ' ' + bod.Lname + (bod.Suffix !== 'null' ? ' ' + bod.Suffix : '')" 
+          :fullname="(bod.Prefix === null ?  '' : bod.Prefix + ' ') + bod.Fname + ' ' + bod.Lname + (bod.Suffix === null ? ' ' : ' ' + bod.Suffix)"
           :position="bod.Position"
           :image="bod.image.ImageUrl" 
       
