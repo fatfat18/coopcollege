@@ -72,7 +72,7 @@ export default {
                 {{ description }}
 
             </div>
-            <div class=" flex justify-center text-xs text-center items-center col-span-3 overflow-y-hidden text-[10px]">
+            <div class=" flex justify-center xl:text-xs text-center items-center col-span-3 overflow-y-hidden text-[8px]">
                 {{ context }}
 
             </div>

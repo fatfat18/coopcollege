@@ -26,7 +26,7 @@ import ResponsiveNavBar from '@/Components/ResponsiveNavBar.vue';
                 
                 <div class="flex flex-wrap justify-center items-center" data-aos="fade" data-aos-delay="500" data-aos-duration="1000">
                     <div v-for="imageUrl in imagePreviewUrlholder" :key="imageUrl" >
-                                  <img @click="changeImage(imageUrl)" :src="imageUrl" class="transition duration-300 clickable-div h-32 w-40 object-cover my-5 mx-5">
+                                  <img @click="changeImage(imageUrl)" :src="imageUrl" class="transition duration-300 hover:scale-110 clickable-div h-32 w-40 object-cover my-5 mx-5">
                     </div>
               
                 </div>            

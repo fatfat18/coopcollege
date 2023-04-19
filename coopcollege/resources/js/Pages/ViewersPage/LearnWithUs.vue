@@ -24,7 +24,7 @@ background: linear-gradient(143deg, rgba(0,0,51,1) 60%, rgba(255,204,0,1) 100%);
  <div class="h-max w-screen flex flex-col justify-center items-center bg-theme1 overflow-y-hidden bg ">
 
   <div class="h-24 w-screen max-w-7xl flex bg-theme2 justify-center items-center mt-10 xl:rounded-lg " data-aos="fade-up" data-aos-duration="1000" >
-    <p class="xl:text-5xl text-2xl font-thin text-theme1" > Training Calendar {{ currentYear }}</p>
+    <p class="xl:text-5xl text-2xl font-thin text-theme1 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]" > Training Calendar {{ currentYear }}</p>
         </div>
 
      
@@ -33,10 +33,10 @@ background: linear-gradient(143deg, rgba(0,0,51,1) 60%, rgba(255,204,0,1) 100%);
 
 
 <div class="rounded-t pb-5 h-max overflow-y-hidden max-w-7xl w-full  bg-zinc-300  flex justify-center items-center flex-col text-theme1 " data-aos="fade-up" data-aos-duration="1000">
-    <div v-for="(eventData, index) in calendar" :key="index" class=" flex justify-center items-center h-max w-screen max-w-6xl bg-white border-2 border-theme1 xl:mx-5 xl:mt-1 mt-1 py-2 rounded-2xl xl:rounded-xl" data-aos="zoom-in" data-aos-duration="1000" >
+    <div v-for="(eventData, index) in calendar" :key="index" class=" flex justify-center items-center h-max w-screen max-w-6xl  bg-white border-2 border-theme1  xl:mx-5 xl:mt-1 mt-1 py-2 rounded-2xl xl:rounded-xl" data-aos="zoom-in" data-aos-duration="1000" >
 
   
-            <div  class="flex text-center justify-center items-center">
+            <div  class="flex text-center justify-center items-center hover:scale-105 transition duration-300 ">
 
               <div class="xl:w-2/5 lg:w-2/3 w-1/3 text-center flex justify-center items-center py-5">{{ eventData.month }}</div>
 

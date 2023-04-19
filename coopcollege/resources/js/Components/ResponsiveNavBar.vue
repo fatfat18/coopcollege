@@ -21,7 +21,7 @@ const showingNavigationDropdown = ref(false);
 </style>
 
 <template>
-    <div class="bg-white w-screen overflow-x-hidden">
+    <div class="bg-zinc-200 w-screen overflow-x-hidden">
       <nav class="w-screen  border-gray-100">
                 <!-- Primary Navigation Menu -->
                 <div class="flex xl:justify-center justify-end pt-2 ">
