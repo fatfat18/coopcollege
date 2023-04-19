@@ -43,7 +43,7 @@ class post extends Controller
 
             $filename=base64_encode(now().$row->getClientOriginalName()).'.'.$row->getClientOriginalExtension(); 
 
-            $img = Image::make($row)->resize(594, 841, function ($constraint) {
+            $img = Image::make($row)->resize(1080, 720, function ($constraint) {
                 $constraint->aspectRatio();
                 $constraint->upsize();
             });

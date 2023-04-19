@@ -75,7 +75,7 @@ library.add(faPlus);
 
         <!-- DIRI MAG LOOP ANG GIKAN SA DATABASE PAGINATE LANG DAYUN BY 10s -->
 
-        <template v-for="(item, index) in reversedItems" :key="item.Postid" >
+        <template v-for="(item, index) in items" :key="item.Postid" >
          
          <PostsTile
   
@@ -159,11 +159,6 @@ mounted() {
       .catch(error => {
         console.log(error);
       });
-  },
-  computed: {
-    reversedItems() {
-      return this.items.slice().reverse();
-    },
   },
   methods: {
     sliceText(text, limit) {

@@ -18,13 +18,19 @@ export default {
 
 </script>
 
+<style>
+.img{
+    height:300px;
+    width: 500px;
+}
+</style>
 
 <template>
 
-    <div class=" xl:w-80 h-max xl:px-5 xl:my-10">
-        <img src="../../asset/newsheading.jpg" class="w-full object-cover object-center" alt="">
-        <p class=" text-xs xl:text-md text-justify mt-4 text-theme1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    <div class=" img xl:px-5 xl:my-10 flex justify-center items-center flex-col ">
+        <img :src="image" class="overflow-y-hidden img object-cover object-center " alt="">
+        <p class=" text-xs xl:text-md text-center mt-4 text-theme1">
+            {{ context  }}
         </p>
     </div>
   
