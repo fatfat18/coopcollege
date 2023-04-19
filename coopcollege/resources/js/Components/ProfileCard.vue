@@ -28,8 +28,8 @@ props:{
     </div>
 
     <div>
-        <p class="text-l text-theme1"> {{ fullname }} </p>
-        <p class="text-xl text-theme2"> {{ position }} </p>
+        <p class="text-xl mt-2 text-theme1"> {{ fullname }} </p>
+        <p class="text-xl text-theme2 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]"> {{ position }} </p>
     </div>
 
 </template>

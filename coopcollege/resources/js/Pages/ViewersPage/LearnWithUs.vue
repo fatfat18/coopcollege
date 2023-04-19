@@ -28,12 +28,12 @@ background: linear-gradient(143deg, rgba(0,0,51,1) 60%, rgba(255,204,0,1) 100%);
         </div>
 
      
-    <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" class="max-w-7xl w-screen bg-white text-theme1 mt-5 py-2 flex  items-center text-l xl:text-2xl"> <div class="w-1/3 text-center">Month</div> <div class="w-1/3 text-center">Course Title</div><div class="w-1/3 text-center">Venue</div></div>
+    <div data-aos="fade-up" data-aos-duration="1000" class="max-w-7xl w-screen  bg-zinc-300  text-theme1 mt-5 py-2 flex  items-center text-l xl:text-2xl"> <div class="w-1/3 text-center">Month</div> <div class="w-1/3 text-center">Course Title</div><div class="w-1/3 text-center">Venue</div></div>
     
 
 
-<div class="pb-5 h-max overflow-y-hidden max-w-7xl w-full bg-white flex justify-center items-center flex-col text-theme1 " data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
-    <div v-for="(eventData, index) in calendar" :key="index" class=" flex justify-center items-center h-max w-screen max-w-6xl bg-zinc-300 xl:mx-5 xl:mt-1 mt-1 py-2 rounded-2xl xl:rounded-xl" data-aos="zoom-in" data-aos-duration="1000" >
+<div class="pb-5 h-max overflow-y-hidden max-w-7xl w-full  bg-zinc-300  flex justify-center items-center flex-col text-theme1 " data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+    <div v-for="(eventData, index) in calendar" :key="index" class=" flex justify-center items-center h-max w-screen max-w-6xl bg-white border-2 border-theme1 xl:mx-5 xl:mt-1 mt-1 py-2 rounded-2xl xl:rounded-xl" data-aos="zoom-in" data-aos-duration="1000" >
 
   
             <div  class="flex text-center justify-center items-center">

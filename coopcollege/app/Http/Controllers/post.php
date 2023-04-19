@@ -80,7 +80,7 @@ class post extends Controller
 
   
     public function display(){
-        return \App\Models\post::with('image','category','avatar')->where('Status',1)->get();
+        return \App\Models\post::with('image','category','avatar')->where('Status',1)->orderBy('Postid', 'desc')->get();
     }
 
 
