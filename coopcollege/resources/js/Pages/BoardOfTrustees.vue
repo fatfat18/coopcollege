@@ -90,10 +90,10 @@ library.add(faPlus);
          >
 
          <div class=" flex justify-center text-center items-center col-span-1">
-                        <button button @click="navigateToUpdate(item.idBOD)"  class="py-2 px-6  rounded-full bg-blue-400 xl:rounded-lg text-white text-[10px] xl:text-xs transition duration-300 hover:text-blue-400 hover:bg-white border-2 border-blue-400">Edit</button>
+                        <button button @click="navigateToUpdate(item.idBOD)"  class="py-2 xl:px-8 px-4 rounded-full bg-blue-400 xl:rounded-lg text-white text-[10px] xl:text-xs transition duration-300 hover:text-blue-400 hover:bg-white border-2 border-blue-400">Edit</button>
             </div>
             <div class=" flex justify-center text-center items-center ">
-                        <button @click.prevent="confirmdel(item)" class="py-2 px-4  rounded-full bg-red-500 xl:rounded-lg text-white text-[11px] xl:text-xs transition duration-300 hover:text-red-500 hover:bg-white border-2 border-red-500">Delete</button>
+                        <button @click.prevent="confirmdel(item)" class="py-2 xl:px-8 px-2 rounded-full bg-red-500 xl:rounded-lg text-white text-[11px] xl:text-xs transition duration-300 hover:text-red-500 hover:bg-white border-2 border-red-500">Delete</button>
             </div>
 
             <DeleteModal :show="showModal" @close="showModal = false">
