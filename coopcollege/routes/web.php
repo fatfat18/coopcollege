@@ -225,4 +225,16 @@ Route::delete('/deleteBOD',[bod::class, 'delete'] );
 
 
 
+
+
+
+Route::get('/test', function () {
+    return Inertia::render('test');
+})->name('test');
+
+
+
+
+
+
 require __DIR__.'/auth.php';

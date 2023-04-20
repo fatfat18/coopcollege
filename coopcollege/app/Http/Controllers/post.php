@@ -115,7 +115,7 @@ class post extends Controller
 
 
     public function paginateDisplay(Request $request){
-        return \App\Models\post::with('image','category','avatar')->where('Status', 1)->paginate($request->per_page);
+        return \App\Models\post::with('image','category','avatar')->where('Status', 1)->orderBy('Postid', 'desc')->paginate($request->per_page);
     }
 
 

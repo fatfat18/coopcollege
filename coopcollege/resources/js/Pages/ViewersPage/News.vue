@@ -9,6 +9,16 @@ import NewsCol from '@/NewsComponent/NewsCol.vue'
 import Footer from '@/Components/Footer.vue';
 
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
+import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+
+
+library.add(faAngleLeft,faAngleRight)
+
+
 </script>
 
 <style>
@@ -52,19 +62,24 @@ import Footer from '@/Components/Footer.vue';
 
 <div class=" h-max bg-zinc-200 justify-center items-center w-screen flex xl:py-10 xl:px-40 flex-wrap">
 
-    <div v-for="(post, index) in postsnohead" :key="post.Postid" class="overflow-y-hidden  ">
+    <div v-for="(post, index) in paginatedPosts" :key="post.Postid" class="overflow-y-hidden  ">
      <NewsCol 
        :image="post.avatar.ImageUrl" 
        :context=sliceText(post.Context,200)
        data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
-       class="clickable-div text-md "   
+       class="clickable-div text-md overflow-y-hidden  "   
       @click="navigateToPost(post.Postid)"
       
       />
-     </div> 
+     
+    </div> 
    
 
 </div>
+      <div class="w-screen flex justify-center items-center xl:space-x-2 text-md bg-zinc-200">
+        <button class="py-3 border-2 border-theme1 px-4 my-2 mx-2 rounded-lg hover:bg-theme1 hover:text-white transition duration-300 text-theme1 hover:-translate-x-2" :disabled="currentPage === 1" @click="currentPage--"><font-awesome-icon icon="fa-solid fa-angle-left " class="text-md "/> Previous</button>
+        <button class="py-3 border-2 border-theme1 px-8 my-2 mx-2 rounded-lg hover:bg-theme1 hover:text-white transition duration-300 text-theme1 hover:translate-x-2" :disabled="currentPage === totalPages" @click="currentPage++">Next <font-awesome-icon icon="fa-solid fa-angle-right" class="text-md "/></button>
+      </div>
 
 
 
@@ -95,37 +110,30 @@ export default {
       pid:'',
       posts:[],
       postsnohead:[],
-  
+      pageposts:[],
+      currentPage: 1,
+      perPage: 6,
       
 
     };
   },
   
   created() {
-    axios.get(BASE_URL + '/displayPost')
-      .then(response => {
-        this.posts = response.data;
-        console.log(this.posts);
-
-        this.heading = this.posts[0];
-        this.postsnohead = this.posts.slice(1);
-        this.title = this.heading.newsTitle;
-        this.description = this.heading.Description;
-        this.context = this.heading.Context;
-        this.img = this.heading.avatar.ImageUrl;
-        this.pid = this.heading.Postid;
-
-        console.log(this.heading)
-        console.log(this.postsnohead)
-        
-      
-      })
-      .catch(error => {
-        console.log(error);
-      });
-   
-
+      this.fetchData();
   },
+  computed: {
+      totalPages() {
+        return Math.ceil(this.pageposts.length / this.perPage);
+      },
+      paginatedPosts() {
+        const startIndex = (this.currentPage - 1) * this.perPage;
+        const endIndex = startIndex + this.perPage;
+        return this.pageposts.slice(startIndex, endIndex);
+      },
+    },
+
+
+
   methods: {
     sliceText(text, limit) {
       if (text.length > limit) {
@@ -137,6 +145,28 @@ export default {
     navigateToPost(Postid) {
     window.location.href = this.route('ViewPost', {Postid: Postid});
   },
+  async fetchData() {
+        try {
+          const response = await axios.get(BASE_URL + '/paginateDisplayPost');
+          this.heading = response.data.data[0];
+          this.title = this.heading.newsTitle;
+          this.description = this.heading.Description;
+          this.context = this.heading.Context;
+          this.img = this.heading.avatar.ImageUrl;
+          this.pid = this.heading.Postid;
+          this.pageposts = response.data.data.slice(1);
+ 
+          
+        } catch (error) {
+          console.error(error);
+        }
+      },
+
+
+
+
+
+
   }
   
 };
