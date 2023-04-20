@@ -4,11 +4,15 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Header from '@/Components/Header.vue';
 import ResponsiveNavBar from '@/Components/ResponsiveNavBar.vue';
+import ShowImgModal from '@/Components/ShowImgModal.vue';
 
 </script>
 <style>
 .clickable-div {
   cursor: pointer;
+}
+.test{
+  height: 500px;
 }
 
 </style>
@@ -21,8 +25,11 @@ import ResponsiveNavBar from '@/Components/ResponsiveNavBar.vue';
 
     <div class="h-max max-w-7xl w-screen  flex xl:flex-row flex-col">
         
-            <div class="h-max xl:w-1/2  flex-col min-h-max" >
-                <img :src="this.img" alt="" id="dispimg"  class="transition duration-300 w-full xl:h-96 object-cover my-10" data-aos="fade-down"  data-aos-duration="1000" >
+            <div class="h-max xl:w-1/2  flex-col min-h-max flex justify-center items-center "  >
+                <img :src="this.img" alt="" id="dispimg" @click="showimgmod()"  class=" cursor-pointer transition duration-300 w-max xl:h-96 object-cover my-10  " data-aos="fade-down"  data-aos-duration="1000" >
+                <ShowImgModal :show="showimgmodal" @close="showimgmodal = false">
+                  <img :src="this.img" alt="" id="dispimg"  class="transition duration-300 w-max xl:w-full test scale-125 object-contain  my-10 " data-aos="fade-down"  data-aos-duration="1000" >                       
+                </ShowImgModal>
                 
                 <div class="flex flex-wrap justify-center items-center" data-aos="fade" data-aos-delay="500" data-aos-duration="1000">
                     <div v-for="imageUrl in imagePreviewUrlholder" :key="imageUrl" >
@@ -83,6 +90,7 @@ data() {
     description:'',
     context:'',
     img:'',
+    showimgmodal:false,
 
   }
 },
@@ -142,7 +150,12 @@ created() {
     changeImage(pushedimage) {
 
     this.img = pushedimage;
-}
+},
+showimgmod() {
+    this.showimgmodal= true;
+   
+    
+  },
   }
 
 
