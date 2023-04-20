@@ -32,8 +32,9 @@ import Footer from '@/Components/Footer.vue';
  <div class="h-max w-screen flex flex-col justify-center ">
 
     <div class="xl:h-screen py-80 xl:py-0 w-screen newsbg flex flex-col justify-center items-center " data-aos="fade" data-aos-duration="1000">
-         <p class="xl:text-6xl text-white" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">What's New?</p>
-         <p class="xl:text-xl xl:mt-5 text-white text-center" data-aos="fade-up" data-aos-delay="700" data-aos-duration="1000">Keep posted to see the latest posts of <br> <span class="text-theme2 text-4xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]"> Co-operative College of the Philippines</span></p>
+         <p class="xl:text-6xl text-3xl text-white" data-aos="fade-up" data-aos-delay="700" data-aos-duration="1200">What's New?</p>
+         <p class="xl:text-xl xl:mt-5 text-white text-center" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">Keep posted to see the latest posts of <br> </p>
+         <p class="text-theme2 xl:text-5xl text-3xl mx-2 text-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]" data-aos="fade-up" data-aos-delay="1100" data-aos-duration="1000"> Co-operative College of the Philippines</p>
     </div>
 
 
@@ -51,12 +52,12 @@ import Footer from '@/Components/Footer.vue';
 
 <div class=" h-max bg-zinc-200 justify-center items-center w-screen flex xl:py-10 xl:px-40 flex-wrap">
 
-    <div v-for="(post, index) in postsnohead" :key="post.Postid" class="overflow-y-hidden">
+    <div v-for="(post, index) in postsnohead" :key="post.Postid" class="overflow-y-hidden  ">
      <NewsCol 
        :image="post.avatar.ImageUrl" 
        :context=sliceText(post.Context,200)
        data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
-       class="clickable-div text-md"   
+       class="clickable-div text-md "   
       @click="navigateToPost(post.Postid)"
       
       />
