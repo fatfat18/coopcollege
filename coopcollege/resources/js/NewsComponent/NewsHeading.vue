@@ -48,7 +48,7 @@ export default {
 
 <template>
 
-<div class=" header w-full overflow-y-hidden h-full justify-center items-center xl:h-screen bg-zinc-100 flex text-theme1 flex-col-reverse xl:flex-row">
+<div class=" header w-full overflow-y-hidden h-full justify-center items-center xl:h-screen bg-zinc-200 flex text-theme1 flex-col-reverse xl:flex-row">
 
 
    <div class=" w-screen overflow-y-hidden xl:py-0  px-10 xl:px-0 h-full xl:h-full flex flex-col justify-center items-center ">
