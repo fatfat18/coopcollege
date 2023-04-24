@@ -58,6 +58,10 @@ class partner extends Controller
         return \App\Models\partner::where('Status', 1)->with('image')->get();
     }
 
+    public function displayAdmin(){
+        return \App\Models\partner::with('image')->get();
+    }
+
 
     public function delete(Request $request){
 

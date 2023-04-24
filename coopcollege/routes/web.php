@@ -206,6 +206,8 @@ Route::post('/partner',[partner::class, 'store'] );
 
 Route::get('/displayPartner',[partner::class, 'display'] );
 
+Route::get('/displayPartnerAdmin',[partner::class, 'displayAdmin'] );
+
 Route::put('/updatePartnerStatus',[partner::class, 'update'] );
 
 Route::delete('/deletePartner',[partner::class, 'delete'] );

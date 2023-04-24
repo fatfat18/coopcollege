@@ -32,7 +32,7 @@ import InputLabel from '@/Components/InputLabel.vue';
            
         </div>
 
-        <div class="postcontainer flex justify-center h-max w-screen xl:px-10 xl:pb-96 py-20 ">
+        <div class="postcontainer flex justify-center h-max  w-screen xl:px-10 xl:pb-96 pt-20 ">
 
 
             <div class=" xl:w-3/4 w-4/5 xl:mt-16 overflow-y-hidden">
@@ -143,7 +143,7 @@ export default {
 
   mounted(){
 
-    axios.get(BASE_URL + '/displayPartner')
+    axios.get(BASE_URL + '/displayPartnerAdmin')
       .then((response) => {
         const path = window.location.pathname;
         // Extract specific data from path

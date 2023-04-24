@@ -127,7 +127,7 @@ data() {
 
 mounted() {
 
-    axios.get(BASE_URL + '/displayPartner')
+    axios.get(BASE_URL + '/displayPartnerAdmin')
       .then(response => {
         this.items = response.data;
         console.log(this.items);
