@@ -21,7 +21,8 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
         	contactUs::class,
-            postCategory::class
+            postCategory::class,
+            AdminUser::class,
         	
     	]);
     }
