@@ -167,19 +167,13 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
 
   <div class="max-w-7xl mt-20">
       <h1 class=" text-xl xl:text-3xl text-white mb-4 ml-8">Our Partners</h1>
-      <div class="w-screen max-w-7xl h-max xl:rounded-3xl py-10 xl:px-20 bg-white  flex flex-wrap">
+      <div class="w-screen justify-center items-center max-w-7xl h-max xl:rounded-3xl py-10 xl:px-20 bg-white  flex flex-wrap">
 
 
 <!-- MAO NI ANG DISPLAY SA PARTNER IMAGES-->
 <template v-for="partner in partners" :key="partner.idPartner" >
         <PartnersPic :name="partner.partnerName" :image="partner.image.ImageUrl" class="mx-4 my-2" data-aos="zoom-out" data-aos-duration="1000"> </PartnersPic> 
 </template>      
-
-
-
-
-
-
 
 
 
