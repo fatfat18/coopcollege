@@ -13,6 +13,7 @@ import 'aos/dist/aos.css'
 .postcontainer{
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .9)),
     url('/coopcollege/coopcollege/resources/asset/editpostbackg.jpg');
+  height: 110vh;
 
 }
 #img {
@@ -31,7 +32,7 @@ import 'aos/dist/aos.css'
            
         </div>
 
-        <div class="postcontainer flex justify-center h-max w-screen xl:px-10 xl:pb-96 py-20 ">
+        <div class="postcontainer flex justify-center  w-screen xl:px-10 xl:pb-96 py-20 ">
 
 
             <div class=" xl:w-3/4 w-4/5 xl:mt-16 overflow-y-hidden">
