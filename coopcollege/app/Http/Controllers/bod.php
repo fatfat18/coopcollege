@@ -77,6 +77,11 @@ class bod extends Controller
         return \App\Models\BOD::where('Status', 1)->with('image')->get();
     }
 
+    public function displayAdmin(){
+        return \App\Models\BOD::with('image')->get();
+    }
+
+
 
     public function delete(Request $request){
 

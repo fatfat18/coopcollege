@@ -144,7 +144,7 @@ data() {
 
 mounted() {
 
-    axios.get(BASE_URL + '/displayBOD')
+    axios.get(BASE_URL + '/displayBODAdmin')
       .then(response => {
         this.items = response.data;
         console.log(this.items);

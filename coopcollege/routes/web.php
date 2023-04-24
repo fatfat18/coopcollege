@@ -221,6 +221,7 @@ Route::post('/storeBOD',[bod::class, 'store'] );
 Route::put('/updateBOD',[bod::class, 'update'] );
 
 Route::get('/displayBOD',[bod::class, 'display'] );
+Route::get('/displayBODAdmin',[bod::class, 'displayAdmin'] );
 
 Route::delete('/deleteBOD',[bod::class, 'delete'] );
 

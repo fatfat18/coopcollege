@@ -305,7 +305,7 @@ export default {
   },
   mounted(event) {
 
-    axios.get(BASE_URL +'/displayBOD')
+    axios.get(BASE_URL +'/displayBODAdmin')
       .then((response) => {
         const path = window.location.pathname;
         // Extract specific data from path
