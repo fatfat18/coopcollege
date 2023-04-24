@@ -72,8 +72,8 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
 <p class="text-white text-3xl xl:text-5xl xl:pt-20 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] mb-4">Governance</p>
 
 
-  <div class="w-screen h-max max-w-7xl bg-zinc-200  pt-10 flex justify-center gap-10 mb-5 mt-1 flex-wrap overflow-y-hidden" >
-      <div v-for="bod in bods" :key="bod.idBOD" class=" bg-zinc-200 h-max w-60 my-5 mx-5" data-aos="fade-right" data-aos-duration="1000">
+  <div class="w-screen h-max max-w-7xl bg-zinc-100 rounded-md  pt-10 flex justify-center gap-10 mb-5 mt-1 flex-wrap overflow-y-hidden" >
+      <div v-for="bod in bods" :key="bod.idBOD" class=" bg-zinc-100 h-max w-60 my-5 mx-5" data-aos="fade-right" data-aos-duration="1000">
         <ProfileCard 
           :fullname="(bod.Prefix === null ?  '' : bod.Prefix + ' ') + bod.Fname + ' ' + bod.Lname + (bod.Suffix === null ? ' ' : ' ' + bod.Suffix)"
           :position="bod.Position"

@@ -38,12 +38,13 @@ export default {
 }
 
 
+
 </style>
 
 <template>
 
-    <div class="mx-2 xl:mx-0 img xl:px-5 my-5 xl:my-10 flex justify-center items-center flex-col drop-shadow-2xl ">
-        <img :src="image" class="card hover:scale-125 transition duration-500 overflow-y-hidden img object-cover object-center " alt="">
+    <div class="mx-2 xl:mx-0 img   xl:px-5 my-5 xl:my-10 flex justify-center items-center flex-col drop-shadow-2xl ">
+        <img :src="image" class="card hover:scale-125 transition duration-500 overflow-y-hidden img object-cover object-center rounded-lg " alt="">
         <p class="text-xs xl:text-md mt-4 text-theme1">
             {{ context  }}
         </p>

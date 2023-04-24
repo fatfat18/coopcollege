@@ -14,6 +14,10 @@ import ShowImgModal from '@/Components/ShowImgModal.vue';
 .test{
   height: 500px;
 }
+.card{
+    
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
 
 </style>
 <template>
@@ -26,14 +30,14 @@ import ShowImgModal from '@/Components/ShowImgModal.vue';
     <div class="h-max max-w-7xl w-screen  flex xl:flex-row flex-col">
         
             <div class="h-max xl:w-1/2  flex-col min-h-max flex justify-center items-center "  >
-                <img :src="this.img" alt="" id="dispimg" @click="showimgmod()"  class=" cursor-pointer transition duration-300 w-max xl:h-96 object-cover my-10  " data-aos="fade-down"  data-aos-duration="1000" >
+                <img :src="this.img" alt="" id="dispimg" @click="showimgmod()"  class="card rounded-md cursor-pointer transition duration-300 w-max xl:h-96 object-cover my-10  " data-aos="fade-down"  data-aos-duration="1000" >
                 <ShowImgModal :show="showimgmodal" @close="showimgmodal = false">
-                  <img :src="this.img" alt="" id="dispimg"  class="transition duration-300 w-max xl:w-full test scale-125 object-contain  my-10 " data-aos="fade-down"  data-aos-duration="1000" >                       
+                  <img :src="this.img" alt="" id="dispimg"  class="transition duration-300 w-max xl:w-full test scale-125 object-contain  my-10  " data-aos="fade-down"  data-aos-duration="1000" >                       
                 </ShowImgModal>
                 
                 <div class="flex flex-wrap justify-center items-center" data-aos="fade" data-aos-delay="500" data-aos-duration="1000">
                     <div v-for="imageUrl in imagePreviewUrlholder" :key="imageUrl" >
-                                  <img @click="changeImage(imageUrl)" :src="imageUrl" class="transition duration-300 hover:scale-110 clickable-div h-32 w-40 object-cover my-5 mx-5">
+                                  <img @click="changeImage(imageUrl)" :src="imageUrl" class="card rounded-md transition duration-300 hover:scale-110 clickable-div h-32 w-40 object-cover my-5 mx-5">
                     </div>
               
                 </div>            

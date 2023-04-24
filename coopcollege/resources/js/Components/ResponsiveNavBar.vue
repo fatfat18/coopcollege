@@ -1,12 +1,11 @@
 <script setup>  
 import { ref } from 'vue';
-import Dropdown from '@/Components/Dropdown.vue';
-import DropdownLink from '@/Components/DropdownLink.vue';
 import NavLink from '@/Components/NavLink.vue';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 
 
 const showingNavigationDropdown = ref(false);
+
 
 </script>
 
@@ -15,21 +14,26 @@ const showingNavigationDropdown = ref(false);
 
 .trans {
   transition: 1s ease-in;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 1s ease-in-out;
 }
+
+
+
+
+
 
 </style>
 
 <template>
-    <div class="bg-zinc-200 w-screen overflow-x-hidden">
-      <nav class="w-screen  border-gray-100">
+    <div class="bg-white w-screen overflow-x-hidden">
+      <nav class="w-screen  border-gray-100 trans">
                 <!-- Primary Navigation Menu -->
                 <div class="flex xl:justify-center justify-end xl:pt-2 ">
                     <div class="flex w-max justify-center h-14 xl:h-16 ">
                         <div class="flex">
 
                             <!-- Navigation Links -->
-                            <div class="hidden text-theme1 space-x-1 text-md sm:flex">
+                            <div class="hidden text-theme1 space-x-1 text-md sm:flex trans">
                                 <NavLink :href="route('Home')" :active="route().current('Home')">
                                     Home
                                 </NavLink>
@@ -62,9 +66,9 @@ const showingNavigationDropdown = ref(false);
 
                         
                         <!-- Hamburger -->
-                        <div class=" flex items-center sm:hidden">
+                        <div class=" flex items-center sm:hidden trans">
                             <button @click="showingNavigationDropdown = !showingNavigationDropdown"
-                                class="inline-flex items-center justify-center p-2 rounded-md text-theme1 bg-zinc-200 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-300 focus:text-theme1 transition duration-150 ease-in-out">
+                                class="trans inline-flex items-center justify-center p-2 rounded-md text-theme1 bg-zinc-200 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-300 focus:text-theme1 transition duration-500 ease-in-out">
                                 <svg class="h-6 w-8" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                                     <path :class="{
                                         hidden: showingNavigationDropdown,
@@ -83,8 +87,10 @@ const showingNavigationDropdown = ref(false);
                 </div>
 
                 <!-- Responsive Navigation Menu -->
-                <div :class="{ block: showingNavigationDropdown, hidden: !showingNavigationDropdown }" class="sm:hidden">
-                    <div class="pt-2 pb-3 space-y-1">
+               
+                <div :class="{ block: showingNavigationDropdown, hidden: !showingNavigationDropdown }" class="sm:hidden ">
+                    <div class="pt-2 pb-3 space-y-1 transition duration-500" v-if="showingNavigationDropdown">
+                    
                        <ResponsiveNavLink :href="route('Home')" :active="route().current('Home')" >
                                     Home
                         </ResponsiveNavLink>
@@ -105,13 +111,13 @@ const showingNavigationDropdown = ref(false);
                         <ResponsiveNavLink :href="route('Projects')" :active="route().current('Projects')">
                                     Projects
                         </ResponsiveNavLink>
-                    </div>
                     
-
-            
-                    
+                    </div> 
                 </div>
+            
+
             </nav>
+     
     </div>
 
 

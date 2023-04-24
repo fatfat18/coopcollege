@@ -70,7 +70,7 @@ nafemarketing22@climbs.coop (NaFeCOOP)<br> </p>
     
     <div class="flex flex-col justify-center items-center h-max w-screen xl:w-1/2" data-aos="fade-left" data-aos-delay="800" data-aos-duration="1000" >
         
-        <p class="xl:text-6xl text-sm mt-4 xl:mb-8 text-white z-10"> Cebu Training Session</p>
+        <p class="xl:text-5xl text-sm mt-4 xl:mb-8 text-white z-10"> Cebu Training Session</p>
         <p class=" text-white text-xs xl:text-xl text-justify px-8 py-4 xl:mr-12 z-10 ">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspThe morning session on Deepening our Co-operative Identity was facilitated by the <strong>Co-op College PH</strong> team headed by CEO & Principal <strong>Donna Dizon</strong>. This interactive learning activity brought out the creativity of the participants in making their own “Halo-halo” which requires certain key ingredients on embodying our identity as co-op leaders.
 The afternoon session on Co-op Financial Literacy: The Usage of Statutory Funds was conducted by our Resource Speaker and Trainer <strong>Hon. Gervacio Piator, CPA, MBA, DM, PhD.</strong>
 A total of 35 participants coming from 15 co-operatives nationwide joined and actively participated on these sessions. To learn more and be involved with the Co-op College programs (both locally and abroad), join us and be a member of the <strong>National Federation of Cooperative Primaries in the Philippines - Nafecoop</strong> now! </p>
