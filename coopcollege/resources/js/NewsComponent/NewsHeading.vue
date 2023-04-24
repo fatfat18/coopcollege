@@ -52,8 +52,8 @@ export default {
 
 
    <div class=" w-screen overflow-y-hidden xl:py-0  px-10 xl:px-0 h-full xl:h-full flex flex-col justify-center items-center ">
-        <p class="xl:text-5xl text-3xl text-center" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="700"> {{ title }}</p>
-        <p class="xl:text-xl text-md xl:mb-10 mb-0 " data-aos="fade-down" data-aos-duration="1000" data-aos-delay="800"> {{ description }}</p>
+        <p class="xl:text-3xl text-l text-center" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="700"> {{ title }}</p>
+        <p class="xl:text-l text-base xl:mb-10 mb-0 text-theme2 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] " data-aos="fade-down" data-aos-duration="1000" data-aos-delay="800"> {{ description }}</p>
         <p class="xl:px-10 text-justify xl:text-md text-sm my-10" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1000">{{ context }}</p>
    </div>
 
