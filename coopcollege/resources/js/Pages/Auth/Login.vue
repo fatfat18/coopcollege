@@ -200,15 +200,8 @@ border: 1px solid rgba(255,255,255,0.25);
                 </label>
             </div>
 
-            <div class="flex items-center justify-end mt-4">
-                <Link
-                    v-if="canResetPassword"
-                    :href="route('password.request')"
-                    class="underline text-sm text-black hover:text-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
-                >
-                    Forgot your password?
-                </Link>
-                
+            <div class="flex items-center justify-center mt-4">
+             
 
                 <PrimaryButton class="login ml-4 text-l w-32 items-center justify-center h-14 bg-theme1 text-white text-sm " :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                     LOGIN
@@ -216,15 +209,7 @@ border: 1px solid rgba(255,255,255,0.25);
 
                 
             </div>
-            <div class="h-20 display flex justify-center items-center">
-                <Link
-                    
-                    :href="route('register')"
-                    class="underline text-sm  text-black hover:text-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
-                >
-                    Don't have an account? Register now!
-                </Link>
-            </div>
+         
         </form>
     </GuestLayout>
 </template>
