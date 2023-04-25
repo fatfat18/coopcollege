@@ -21,13 +21,14 @@ library.add(faFacebook,faPhone,faEnvelope,faTty);
     background:url("../../asset/footerimg.jpg") no-repeat;
     background-size: cover;
     background-position: center;
+    
 }
 
 </style>
 
 
 <template>
-<div id="footer" class="ftr w-screen h-80 bg-theme1 pt-8 flex flex-col items-center" >
+<div id="footer" class=" ftr w-screen h-80 bg-theme1 pt-8 flex flex-col items-center" >
 
 
 <p class="text-white text-xl" data-aos="fade-down" data-aos-duration="400" data-aos-delay="500"> Message us Now!</p>

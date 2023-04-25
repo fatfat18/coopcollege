@@ -28,6 +28,7 @@ library.add(faAngleLeft,faAngleRight)
   background-size: cover;
   background-position: bottom;
   background-blend-mode: color-burn;
+  z-index: 10;
  
 }
 .clickable-div {
@@ -40,8 +41,11 @@ library.add(faAngleLeft,faAngleRight)
 }
 </style>
 <template>
+   
   <Header />
  <ResponsiveNavBar />
+ 
+
 
 
  <div class="h-max w-screen flex flex-col justify-center ">
@@ -58,7 +62,7 @@ library.add(faAngleLeft,faAngleRight)
       :description="this.description" 
       :context="this.context"
       :image="this.img" 
-      class="clickable-div"   
+      class="clickable-div z-1"   
       @click="navigateToPost(this.pid)"
       >
       </NewsHeading>
