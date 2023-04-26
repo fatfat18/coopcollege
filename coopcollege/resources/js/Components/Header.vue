@@ -37,7 +37,7 @@ library.add(faPhoneFlip)
 
 
     <div class=" flex xl:justify-center xl:items-center md:items-start md:justify-center  ">
-        <a href="/"><img src="../../asset/logo.png" class="mx-2 xl:h-32 h-20 xl:mr-8 md:mr-4 min-w-fit" data-aos="fade-right" data-aos-delay="300"  data-aos-duration="800" /></a> <p class="pt-2 overflow-y-hidden xl:text-3xl tracking-wider pl-2 xl:pl-0" data-aos="fade-right" data-aos-delay="100" data-aos-duration="500">CO-OPERATIVE COLLEGE <br><span class="xl:text-xl text-xs absolute">OF THE</span><span class="mx-6 xl:mx-10"></span>PHILIPPINES</p>
+        <a href="/"><img src="../../asset/logo.png" class="mx-2 xl:h-32 h-20 xl:mr-8 md:mr-4 min-w-fit shadow-2xl" data-aos="fade-right" data-aos-delay="300"  data-aos-duration="800" /></a> <p class="pt-2 overflow-y-hidden xl:text-3xl tracking-wider pl-2 xl:pl-0 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]" data-aos="fade-right" data-aos-delay="100" data-aos-duration="500">CO-OPERATIVE COLLEGE <br><span class="xl:text-xl text-xs absolute">OF THE</span><span class="mx-6 xl:mx-10"></span>PHILIPPINES</p>
     </div>
 
     <div class="h-40 w-40  xl:ml-60 flex justify-center items-center"  data-aos="fade" data-aos-delay="300"  data-aos-duration="1000">
