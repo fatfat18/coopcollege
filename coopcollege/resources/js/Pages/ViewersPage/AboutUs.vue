@@ -57,7 +57,7 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
 
 <section class="flex flex-col justify-center items-center text-justify">
   
-  <p class="text-white xl:text-xl ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span ref="typewriter"  class="text-xl xl:text-2xl"></span><span id="cursor">|</span></p>
+  <p class="text-white xl:text-xl ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span ref="typewriter"  class="text-base xl:text-2xl"></span><span id="cursor">|</span></p>
 
 
 </section>
@@ -73,11 +73,13 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
 
 
   <div class="w-screen h-max max-w-7xl bg-zinc-100 rounded-md  pt-10 flex justify-center gap-10 mb-5 mt-1 flex-wrap overflow-y-hidden" >
-      <div v-for="bod in bods" :key="bod.idBOD" class=" bg-zinc-100 h-max w-60 my-5 mx-5" data-aos="fade-right" data-aos-duration="1000">
+      <div v-for="bod in bods" :key="bod.idBOD" class=" bg-zinc-100 h-max w-60 my-5 mx-5 overflow-y-hidden" data-aos="fade-right" data-aos-duration="1000">
         <ProfileCard 
           :fullname="(bod.Prefix === null ?  '' : bod.Prefix + ' ') + bod.Fname + ' ' + bod.Lname + (bod.Suffix === null ? ' ' : ' ' + bod.Suffix)"
           :position="bod.Position"
           :image="bod.image.ImageUrl" 
+          class="overflow-y-hidden"
+      
       
           >
           </ProfileCard>

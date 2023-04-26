@@ -23,8 +23,8 @@ props:{
 
 <template>
 
-    <div>
-        <img :src="image" alt="BOD" class="w-60 h-80 object-cover object-center">
+    <div class="overflow-y-hidden">
+        <img :src="image" alt="BOD" class="w-60 h-80 object-cover object-center hover:scale-110 overflow-y-hidden transition duration-500 rounded-md">
     </div>
 
     <div class="text-center">
