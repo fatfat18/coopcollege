@@ -58,14 +58,15 @@ border: 1px solid rgba(255,255,255,0);
 <div id="maincontent" class="flex justify-center items-center h-max w-screen bg-cover" data-aos="fade-in" data-aos-delay="500" data-aos-duration="1000" >
     <img src="../../../asset/landingpagenewest.jpg" class="bg-cover w-full"  /> 
 </div>
+<h1 class="text-center xl:text-2xl mt-5"> Succession Planning and Importance of Strengthening Middle Management</h1>
 
-<div class="xl:h-96 md:h-max xl:w-screen  flex justify-center items-center xl:text-2xl text-xs text-justify py-10 px-8" data-aos="fade-up" data-aos-duration="2000">
+<div class="xl:h-max md:h-max xl:w-screen  flex justify-center items-center xl:text-base text-xs text-justify xl:my-12 py-5 xl:px-0 px-4" data-aos="fade-up" data-aos-duration="2000">
 
     <p class="md:mx-8">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp One of our esteemed speakers for this afternoon for the topic on Succession Planning and Importance of Strengthening Middle Management in the Co-ops: Atty. Marc Castrodes of Areté Leadership.
 A leader’s lasting value is measured by succession indeed, most especially in the co-op movement.<br><br>
 To learn more, send us a message at:<br>
 institute@climbs.coop (Co-op College PH)<br>
-nafemarketing22@climbs.coop (NaFeCOOP)<br> </p>
+nafemarketing22@climbs.coop (NaFeCOOP)<br></p>
 </div>
 
 
@@ -79,7 +80,7 @@ nafemarketing22@climbs.coop (NaFeCOOP)<br> </p>
     <div class="flex flex-col justify-center items-center h-max w-screen xl:w-1/2" data-aos="fade-left" data-aos-delay="800" data-aos-duration="1000" >
         
         <p class="xl:text-5xl text-sm mt-4 xl:mb-8 text-white z-10"> Cebu Training Session</p>
-        <p class=" text-white text-xs xl:text-xl text-justify px-8 py-4 xl:mr-12 z-10 ">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspThe morning session on Deepening our Co-operative Identity was facilitated by the <strong>Co-op College PH</strong> team headed by CEO & Principal <strong>Donna Dizon</strong>. This interactive learning activity brought out the creativity of the participants in making their own “Halo-halo” which requires certain key ingredients on embodying our identity as co-op leaders.
+        <p class=" text-white text-xs xl:text-lg text-justify px-8 py-4 xl:mr-12 z-10 ">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspThe morning session on Deepening our Co-operative Identity was facilitated by the <strong>Co-op College PH</strong> team headed by CEO & Principal <strong>Donna Dizon</strong>. This interactive learning activity brought out the creativity of the participants in making their own “Halo-halo” which requires certain key ingredients on embodying our identity as co-op leaders.
 The afternoon session on Co-op Financial Literacy: The Usage of Statutory Funds was conducted by our Resource Speaker and Trainer <strong>Hon. Gervacio Piator, CPA, MBA, DM, PhD.</strong>
 A total of 35 participants coming from 15 co-operatives nationwide joined and actively participated on these sessions. To learn more and be involved with the Co-op College programs (both locally and abroad), join us and be a member of the <strong>National Federation of Cooperative Primaries in the Philippines - Nafecoop</strong> now! </p>
 
