@@ -18,6 +18,20 @@ module.exports = {
                 'theme1': '#000033',
                 'theme2': '#FFCC00',
               },
+             
+            height: {
+              '110': '28rem',
+              '128': '32rem',
+            },
+            width: {
+              '110': '28rem',
+              '128': '32rem',
+            },
+            scale: {
+              '175': '1.75',
+              '200': '2.00'
+            },
+              
               gridTemplateColumns: {
                 // Simple 15 column grid
                 '14': 'repeat(14, minmax(0, 1fr))',
