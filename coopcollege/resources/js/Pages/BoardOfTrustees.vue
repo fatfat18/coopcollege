@@ -166,7 +166,7 @@ mounted() {
   },
   confirmdel(item) {
     this.showModal= true;
-    this.confirmname = (item.Prefix !== 'null' ? item.Prefix + ' ' : '') + item.Fname + ' ' + item.Lname + (item.Suffix !== 'null' ? ' ' + item.Suffix : '');
+    this.confirmname = (item.Prefix === 'null' ? item.Prefix + ' ' : '') + item.Fname + ' ' + item.Lname + (item.Suffix === 'null' ? ' ' + item.Suffix : '');
     this.itemid = item.idBOD;
    
     
