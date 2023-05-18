@@ -45,27 +45,28 @@ AOS.init();
 .form-control {
   position: relative;
 
-  width: 300px;
+  width: 320px;
 }
 
 .form-control input {
   background-color: transparent;
   border: 0;
-  border-bottom: 2px #000033 solid;
+  border: 2px #000033 solid;
   display: block;
   width: 100%;
   padding-top: 35px;
   padding-left: 45px;
-  padding-bottom: 0px;
+  padding-bottom: 5px;
   font-size: 15px;
   color: black;
   overflow-y: hidden;
+  border-radius: 5px;
 }
 
 .form-control input:focus,
 .form-control input:valid {
   outline: 0;
-  border-bottom-color: #000033;
+  border: 2px solid #000033;
 }
 
 .form-control label {
@@ -103,7 +104,7 @@ AOS.init();
   cursor: pointer;
   transition: ease-out .7s;
   border: 2px solid #FFCC00;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: inset 0 0 0 0 #FFCC00;
 }
 
@@ -193,17 +194,10 @@ border: 1px solid rgba(255,255,255,0.25);
                <InputError class="mt-2 text-center" :message="form.errors.password" />
             </div>
 
-            <div class="block mt-4">
-                <label class="flex items-center">
-                    <Checkbox name="remember" v-model:checked="form.remember" />
-                    <span class="ml-2 text-sm text-black">Remember me</span>
-                </label>
-            </div>
-
-            <div class="flex items-center justify-center mt-4">
+            <div class="flex items-center justify-center ">
              
 
-                <PrimaryButton class="login ml-4 text-l w-32 items-center justify-center h-14 bg-theme1 text-white text-sm " :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                <PrimaryButton class="login ml-4 text-l w-80 items-center justify-center h-16 bg-theme1 text-white text-sm " :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                     LOGIN
                 </PrimaryButton>
 

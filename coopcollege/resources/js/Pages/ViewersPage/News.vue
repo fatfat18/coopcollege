@@ -86,8 +86,8 @@ library.add(faAngleLeft,faAngleRight)
 
 </div>
       <div class="w-screen flex justify-center items-center xl:space-x-2 text-md bg-white">
-        <button class="py-3 border-2 border-theme1 px-4 my-2 mx-2 rounded-lg hover:bg-theme1 hover:text-white transition duration-300 text-theme1 hover:-translate-x-2" :disabled="currentPage === 1" @click="currentPage--"><font-awesome-icon icon="fa-solid fa-angle-left " class="text-md "/> Previous</button>
-        <button class="py-3 border-2 border-theme1 px-8 my-2 mx-2 rounded-lg hover:bg-theme1 hover:text-white transition duration-300 text-theme1 hover:translate-x-2" :disabled="currentPage === totalPages" @click="currentPage++">Next <font-awesome-icon icon="fa-solid fa-angle-right" class="text-md "/></button>
+        <button class="py-3 border-2 border-theme1 px-4 my-2 mx-2 rounded-lg hover:bg-theme1 hover:text-white transition duration-300 text-theme1 active:-translate-x-2" :disabled="currentPage === 1" @click="currentPage--"><font-awesome-icon icon="fa-solid fa-angle-left " class="text-md "/> Previous</button>
+        <button class="py-3 border-2 border-theme1 px-8 my-2 mx-2 rounded-lg hover:bg-theme1 hover:text-white transition duration-300 text-theme1 active:translate-x-2" :disabled="currentPage === totalPages" @click="currentPage++">Next <font-awesome-icon icon="fa-solid fa-angle-right" class="text-md "/></button>
       </div>
 
 
