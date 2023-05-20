@@ -73,18 +73,19 @@ institute@climbs.coop (Co-op College PH)<br>
 nafemarketing22@climbs.coop (NaFeCOOP)<br></p>
 </div>
 
-<div class="flex xl:flex-row flex-col w-screen justify-center items-center    ">
+<div class="flex xl:flex-row flex-col w-screen justify-center items-center   ">
+
         <div class="max-w-7xl  h-max w-screen flex flex-col xl:flex-row justify-center items-center ">
         
-            <div class=" h-max w-screen xl:w-1/2 z-50 xl:mx-5 xl:my-5 " data-aos="fade-right" data-aos-delay="1000" data-aos-duration="1000" >
-                <img src="../../../asset/lpg1.jpg" class=" rounded-3xl shadow-2xl  h-max w-max scale-75 items-stretch z-50" />
+            <div class=" h-max w-screen xl:w-1/2 z-50 xl:mx-0 xl:my-5 xl:scale-50" data-aos="fade-left" data-aos-delay="1000" data-aos-duration="1000" >
+                <img src="../../../asset/lpg1.jpg" class=" xl:rounded-l-xl shadow-2xl h-max w-max items-stretch z-50" />
             </div>
           
 
-            <div class="flex flex-col justify-center items-center h-max w-screen xl:w-1/2" data-aos="fade-left" data-aos-delay="1100" data-aos-duration="1000" >
+            <div class="flex flex-col bg-white xl:py-36 xl:rounded-r-xl justify-center items-center  h-max  w-screen xl:w-1/2" data-aos="fade-right" data-aos-delay="1100" data-aos-duration="1000" >
 
-                <p class="xl:text-5xl text-center text-sm mt-4 xl:mb-8 text-theme1 z-10 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]">Cebu Training Session</p>
-                <p class=" text-white-800 text-xs xl:text-lg text-justify px-8 py-4  z-10 ">The morning session on Deepening our Co-operative Identity was facilitated by the <strong>Co-op College PH</strong> team headed by CEO & Principal <strong>Donna Dizon</strong>. This interactive learning activity brought out the creativity of the participants in making their own “Halo-halo” which requires certain key ingredients on embodying our identity as co-op leaders.
+                <p class="xl:text-4xl text-center text-sm mt-4 xl:mb-8 text-theme1 z-10 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]">Cebu Training Session</p>
+                <p class=" text-white-800 text-xs xl:text-base text-justify px-8 py-4 z-10 ">The morning session on Deepening our Co-operative Identity was facilitated by the <strong>Co-op College PH</strong> team headed by CEO & Principal <strong>Donna Dizon</strong>. This interactive learning activity brought out the creativity of the participants in making their own “Halo-halo” which requires certain key ingredients on embodying our identity as co-op leaders.
                 The afternoon session on Co-op Financial Literacy: The Usage of Statutory Funds was conducted by our Resource Speaker and Trainer <strong>Hon. Gervacio Piator, CPA, MBA, DM, PhD.</strong>
                 A total of 35 participants coming from 15 co-operatives nationwide joined and actively participated on these sessions. To learn more and be involved with the Co-op College programs (both locally and abroad), join us and be a member of the <strong>National Federation of Cooperative Primaries in the Philippines - Nafecoop</strong> now! </p>
                 
