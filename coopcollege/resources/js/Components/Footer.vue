@@ -47,21 +47,22 @@ library.add(faFacebook,faPhone,faEnvelope,faTty);
   </div>
 
  <div class="space-y-2">
-  <div class="bg-white py-2 px-4 rounded-sm flex"  data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">
-    <font-awesome-icon icon="fa-solid fa-phone" class=" h-5 text-theme1 overflow-y-hidden" /> <p class="ml-2 text-sm"> {{ phonenum }} </p>
+
+    <div class="bg-white py-2 px-4 rounded-sm flex"  data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">
+      <font-awesome-icon icon="fa-solid fa-phone" class=" h-5 text-theme1 overflow-y-hidden" /> <p class="ml-2 text-sm"> {{ phonenum }} </p>
+      </div>
+      <div class="bg-white py-2 px-4 rounded-sm flex" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">
+        <font-awesome-icon icon="fa-solid fa-tty" class=" h-5 text-theme1  overflow-y-hidden"   /> <p class="ml-2 text-sm"> {{ tel }} </p>
+      </div>  
+    </div> 
+
+    <div class="w-screen py-2 relative">
+      <p class="text-sm text-white text-center pt-16">© Co-operative College of the Philippines</p>
+
     </div>
-    <div class="bg-white py-2 px-4 rounded-sm flex" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">
-      <font-awesome-icon icon="fa-solid fa-tty" class=" h-5 text-theme1  overflow-y-hidden"   /> <p class="ml-2 text-sm"> {{ tel }} </p>
-    </div>   
-</div> 
-
-   
 </div>
 
-<div class="w-screen py-2 bg-stone-900">
-  <p class="text-sm text-white text-center">© Co-operative College of the Philippines</p>
 
-</div>
 
 </template>
 
