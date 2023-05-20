@@ -24,7 +24,7 @@ background: linear-gradient(90deg, rgba(0,0,51,0.7959558823529411) 48%, rgba(255
    
     <div class="min-h-screen flex xl:flex-row flex-col sm:justify-center items-center xl:pt-6 sm:pt-0 bg-gray-100 justify-center postcontainer" >
    
-        <div class="bgtest w-screen xl:py-14 py-10 xl:w-96 rounded-l-md " data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000">
+        <div class="bgtest sm:max-w-md w-screen xl:py-14 py-10 xl:w-96 rounded-l-md " data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000">
 
             <div class="flex justify-center items-center max-w-screen " >
             <a href="/"><img src="../../asset/logo.png" class="pt-5 h-60"></a>
