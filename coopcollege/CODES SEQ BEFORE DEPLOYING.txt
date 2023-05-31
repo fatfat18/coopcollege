@@ -1,0 +1,13 @@
+npm install
+npm install timezone
+npm run dev
+php artisan migrate
+php artisan migrate:fresh
+php artisan db:seed
+php artisan storage:link
+php artisan serve
+
+BEFORE DEPLOYING
+- PUT MIDDLEWARES ON THE APIs
+- REMOVE ALL CONSOLE.LOGS on the frontend
+- ENABLE XAMPP GD LIBRARY SA CONFIG (php.ini)
