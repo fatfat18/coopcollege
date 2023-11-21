@@ -17,4 +17,11 @@ export default defineConfig({
             },
         }),
     ],
+    //  Other configuration options...
+    // build: {
+    //     target: 'es2015',
+    //     outDir: 'public/build',
+    //     assetsDir: 'assets',
+    //     minify: 'terser',
+    // },
 });
