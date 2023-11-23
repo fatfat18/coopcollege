@@ -34,7 +34,7 @@ import Modal from "@/Components/Modal.vue";
             class="postcontainer flex justify-center h-max w-screen xl:px-10 xl:pb-96 py-20 overflow-y-hidden"
         >
             <div class="xl:w-3/4 w-4/5 h-max xl:mt-4">
-                <form @submit.prevent="updatePosts(this.intNum)">
+                <form @submit.prevent="updatePosts(intNum)">
                     <button
                         class="mt-16 border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg mb-10 hover:bg-green-600 transition ease-in duration-100"
                     >
