@@ -1,0 +1,1 @@
+import{A as t}from"./app-5e558d24.js";import"./Home-8e23abdd.js";import"./index-9c0cfeef.js";import"./index-6975d92b.js";import"./Header-ab17f0b3.js";import"./logo-6ff3b84f.js";import"./Footer-69203d4a.js";import"./baseurl-66277324.js";t.init({startEvent:"load",once:"true,"});t.refresh();const u={__name:"Welcome",setup(r){return(o,e)=>" NOTHING HERE "}};export{u as default};
