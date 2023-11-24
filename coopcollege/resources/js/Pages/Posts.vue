@@ -16,7 +16,7 @@ library.add(faPlus);
 <style>
 .postcontainer {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
-        url("/coopcollege/coopcollege/resources/asset/editpostbackg.jpg");
+        url("../../asset/editpostbackg.jpg");
     background-size: cover;
 }
 </style>
