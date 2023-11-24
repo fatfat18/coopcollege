@@ -126,6 +126,9 @@ AOS.init();
 
         <form @submit.prevent="submit">
             <div class="">
+                <div class="text-sm w-full text-center mb-1 text-zinc-500">
+                    Login to continue
+                </div>
                 <div class="flex justify-center items-center">
                     <div class="form-control">
                         <input
