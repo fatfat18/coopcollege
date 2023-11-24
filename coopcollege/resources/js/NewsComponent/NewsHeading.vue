@@ -68,7 +68,7 @@ export default {
                 {{ description }}
             </p>
             <p
-                class="xl:px-10 text-center xl:text-md text-sm my-10"
+                class="xl:px-10 text-start xl:text-md text-sm my-10"
                 data-aos="fade-right"
                 data-aos-duration="1000"
                 data-aos-delay="1000"
