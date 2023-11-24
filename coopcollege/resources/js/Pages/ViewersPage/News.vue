@@ -76,8 +76,8 @@ library.add(faAngleLeft, faAngleRight);
 
         <NewsHeading
             :title="title"
-            :description="description"
-            :context="context"
+            :description="sliceText(description, 10)"
+            :context="sliceText(context, 200)"
             :image="img"
             class="clickable-div z-1"
             @click="navigateToPost(pid)"

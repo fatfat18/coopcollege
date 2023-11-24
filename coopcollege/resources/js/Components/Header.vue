@@ -20,9 +20,9 @@ library.add(faPhoneFlip);
         rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 .welcome {
-    background: url("../../asset/header.jpg") no-repeat;
+    background: url("../../asset/bgimg.webp") no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: 70% 71%;
 }
 </style>
 

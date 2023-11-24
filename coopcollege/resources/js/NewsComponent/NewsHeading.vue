@@ -86,7 +86,7 @@ export default {
             <img
                 :src="image"
                 alt="image"
-                class="xl:w-4/5 rounded-lg hover:scale-110 transition duration-500"
+                class="xl:w-3/4 xl:h-96 object-cover rounded-lg hover:scale-110 transition duration-500"
             />
         </div>
     </div>
