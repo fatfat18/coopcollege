@@ -90,7 +90,7 @@ library.add(
     </div>
 
     <h1
-        class="text-center xl:text-7xl mt-5 text-theme1"
+        class="text-center xl:text-7xl text-2xl px-4 mt-5 text-theme1"
         data-aos="zoom-in"
         data-aos-delay="1000"
         data-aos-duration="500"
@@ -129,7 +129,7 @@ library.add(
             >
                 <img
                     src="../../../asset/lpg1.jpg"
-                    class="xl:rounded-xl rounded-3xl shadow-2xl h-max xl:w-max w-1/2 items-stretch z-50"
+                    class="xl:rounded-xl rounded-3xl shadow-2xl h-full xl:w-max w-1/2 items-stretch z-50"
                 />
             </div>
 
