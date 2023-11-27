@@ -85,7 +85,7 @@ library.add(
     >
         <img
             src="../../../asset/landingpagenewest.jpg"
-            class="bg-cover xl:w-3/4 w-full rounded-3xl xl:mt-8"
+            class="bg-cover xl:w-3/4 w-full xl:rounded-3xl rounded-none xl:mt-8"
         />
     </div>
 
