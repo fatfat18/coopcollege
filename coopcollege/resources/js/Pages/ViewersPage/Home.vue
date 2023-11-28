@@ -94,7 +94,7 @@ img {
 }
 
 .slide {
-    transition: transform 2s ease; /* Adjust the duration and timing function as needed */
+    transition: transform 1.5s ease; /* Adjust the duration and timing function as needed */
 }
 </style>
 
@@ -124,7 +124,7 @@ img {
         <div
             class="slide flex flex-col w-screen"
             :style="{
-                transform: `translateX(${-this.currentIndex * 100}%)`,
+                transform: `translateX(${-currentIndex * 100}%)`,
             }"
             v-for="image in cover"
         >
@@ -133,7 +133,7 @@ img {
             >
                 <img
                     :src="image"
-                    class="carimg flex items-center justify-center h-full slide xl:w-5/6 xl:h-96 object-cover w-full xl:rounded-3xl rounded-none xl:mt-10"
+                    class="carimg flex items-center justify-center h-full slide xl:w-5/6 xl:h-128 object-cover w-full xl:rounded-3xl rounded-none xl:mt-10"
                     alt="Carousel Image 1"
                 />
             </div>
@@ -141,7 +141,7 @@ img {
     </div>
 
     <h1
-        class="text-center xl:text-7xl text-2xl px-4 mt-5 text-theme1"
+        class="text-center xl:text-6xl text-2xl px-4 mt-5 text-theme1"
         data-aos="zoom-in"
         data-aos-delay="1000"
         data-aos-duration="500"
