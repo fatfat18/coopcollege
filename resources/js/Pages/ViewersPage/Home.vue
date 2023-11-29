@@ -131,15 +131,19 @@ img {
             :style="{
                 transform: `translateX(${-currentIndex * 100}%)`,
             }"
-            v-for="image in cover"
+            v-for="(image,index) in cover"
         >
             <div
                 class="w-screen flex h-full flex-col items-center justify-center lpg"
             >
                 <img
                     :src="image"
-                    class="carimg flex items-center justify-center h-full slide xl:w-5/6 xl:h-96 object-cover w-full xl:rounded-3xl rounded-none xl:mt-10"
+                    class="carimg flex items-center justify-center h-full slide xl:w-5/6 xl:h-96 object-cover w-full xl:rounded-3xl rounded-none xl:mt-10 transition duration-1000"
                     alt="Carousel Image 1"
+                    :class="{
+                        'scale-100': currentIndex === index,
+                        'scale-[.25]': currentIndex !== index,
+                    }"
                 />
             </div>
         </div>
