@@ -49,9 +49,15 @@ library.add(faPhoneFlip);
                 data-aos-duration="500"
             >
                 CO-OPERATIVE COLLEGE <br /><span
+<<<<<<< HEAD
                     class="xl:text-xl text-xxs absolute"
                     >OF THE</span
                 ><span class="mx-8 xl:mx-10"></span>PHILIPPINES
+=======
+                    class="xl:text-xl text-[10px] absolute"
+                    >OF THE</span
+                ><span class="mr-10 xl:mx-10"></span>PHILIPPINES
+>>>>>>> aabb7ed39a62dc001c94e8603f0c9f7176b5fa1b
             </p>
         </div>
 

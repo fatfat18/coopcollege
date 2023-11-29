@@ -67,11 +67,44 @@ library.add(
 .lpg {
     border-radius: 25% 25% 46% 50% / 0% 0% 20% 20%;
 }
+<<<<<<< HEAD
+=======
+.image-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+img {
+    transition: opacity 0.5s ease;
+}
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.4;
+    }
+}
+
+.slide {
+    transition: transform 2s ease; /* Adjust the duration and timing function as needed */
+}
+>>>>>>> aabb7ed39a62dc001c94e8603f0c9f7176b5fa1b
 </style>
 
 <template>
     <Header />
     <ResponsiveNavBar />
+<<<<<<< HEAD
     <div
         class="fixed xl:-mt-80 -mt-56 w-screen h-screen bg-sky-50 cardcontainer -z-10"
     ></div>
@@ -91,6 +124,54 @@ library.add(
 
     <h1
         class="text-center xl:text-7xl mt-5 text-theme1"
+=======
+
+    <div
+        class="fixed xl:-mt-80 -mt-56 w-screen h-screen bg-zinc-50 cardcontainer -z-10"
+    ></div>
+
+    <!-- <div
+        id="maincontent"
+        class="lpg flex flex-row justify-center items-center h-max w-screen bg-cover"
+        data-aos="fade-in"
+        data-aos-delay="500"
+        data-aos-duration="1000"
+        v-for="(image, index) in cover"
+    >
+        <img
+            :src="image"
+            class="bg-cover xl:w-3/4 xl:h-96 object-cover w-full xl:rounded-3xl rounded-none xl:mt-8 transition duration-500"
+        />
+    </div> -->
+
+    <div
+        class="w-max flex"
+        data-aos="zoom-out"
+        data-aos-duration="1500"
+        data-aos-easing="ease-in-out-back"
+    >
+        <div
+            class="slide flex flex-col w-screen"
+            :style="{
+                transform: `translateX(${-currentIndex * 100}%)`,
+            }"
+            v-for="image in cover"
+        >
+            <div
+                class="w-screen flex h-full flex-col items-center justify-center lpg"
+            >
+                <img
+                    :src="image"
+                    class="carimg flex items-center justify-center h-full slide xl:w-5/6 xl:h-96 object-cover w-full xl:rounded-3xl rounded-none xl:mt-10"
+                    alt="Carousel Image 1"
+                />
+            </div>
+        </div>
+    </div>
+
+    <h1
+        class="text-center xl:text-7xl text-2xl px-4 mt-5 text-theme1"
+>>>>>>> aabb7ed39a62dc001c94e8603f0c9f7176b5fa1b
         data-aos="zoom-in"
         data-aos-delay="1000"
         data-aos-duration="500"
@@ -129,14 +210,22 @@ library.add(
             >
                 <img
                     src="../../../asset/lpg1.jpg"
+<<<<<<< HEAD
                     class="xl:rounded-xl rounded-3xl shadow-2xl h-max xl:w-max w-1/2 items-stretch z-50"
+=======
+                    class="xl:rounded-xl rounded-3xl shadow-2xl h-full xl:w-max w-1/2 items-stretch z-50"
+>>>>>>> aabb7ed39a62dc001c94e8603f0c9f7176b5fa1b
                 />
             </div>
 
             <div
                 class="flex flex-col xl:py-10 xl:rounded-xl justify-start xl:mt-4 items-start h-max w-screen xl:w-1/2"
                 data-aos="fade-right"
+<<<<<<< HEAD
                 data-aos-delay="1100"
+=======
+                data-aos-delay="500"
+>>>>>>> aabb7ed39a62dc001c94e8603f0c9f7176b5fa1b
                 data-aos-duration="1000"
             >
                 <p
@@ -316,7 +405,61 @@ library.add(
 
     <Footer />
 </template>
+<<<<<<< HEAD
 <script>
+=======
+
+<script>
+import { Swiper, SwiperSlide } from "swiper/vue";
+
+// Import Swiper styles
+import "swiper/css";
+
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+// import required modules
+import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+
+import img1 from "../../../asset/landingpage.jpg";
+import img2 from "../../../asset/landingpagenew.jpg";
+import img3 from "../../../asset/landingpagenewest.jpg";
+
+export default {
+    data() {
+        return {
+            cover: [img1, img2, img3],
+            currentIndex: 0,
+        };
+    },
+
+    mounted() {
+        setInterval(() => {
+            this.nextSlide();
+        }, 5000);
+    },
+    methods: {
+        prevSlide() {
+            this.currentIndex =
+                (this.currentIndex - 1 + this.cover.length) % this.cover.length;
+        },
+        nextSlide() {
+            this.currentIndex = (this.currentIndex + 1) % this.cover.length;
+        },
+    },
+    components: {
+        Swiper,
+        SwiperSlide,
+    },
+
+    setup() {
+        return {
+            modules: [Navigation, Pagination, Mousewheel, Keyboard],
+        };
+    },
+};
+
+>>>>>>> aabb7ed39a62dc001c94e8603f0c9f7176b5fa1b
 AOS.init({ startEvent: "load", once: "true," });
 AOS.refresh();
 </script>

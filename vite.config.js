@@ -18,6 +18,11 @@ export default defineConfig({
         }),
     ],
     server: {
+<<<<<<< HEAD
         host: true,
+=======
+        host: "localhost", // or '0.0.0.0'
+        port: 5173,
+>>>>>>> aabb7ed39a62dc001c94e8603f0c9f7176b5fa1b
     },
 });

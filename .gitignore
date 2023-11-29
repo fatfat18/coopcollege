@@ -1,6 +1,10 @@
 /.phpunit.cache
 /bootstrap/ssr
 /node_modules
+<<<<<<< HEAD
+=======
+/public/build
+>>>>>>> aabb7ed39a62dc001c94e8603f0c9f7176b5fa1b
 /public/hot
 /public/storage
 /storage/*.key
@@ -16,3 +20,7 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+<<<<<<< HEAD
+=======
+/storage/app/public
+>>>>>>> aabb7ed39a62dc001c94e8603f0c9f7176b5fa1b
