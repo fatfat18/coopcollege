@@ -120,11 +120,16 @@ img {
         />
     </div> -->
 
-    <div class="w-max flex">
+    <div
+        class="w-max flex"
+        data-aos="zoom-out"
+        data-aos-duration="1500"
+        data-aos-easing="ease-in-out-back"
+    >
         <div
             class="slide flex flex-col w-screen"
             :style="{
-                transform: `translateX(${-this.currentIndex * 100}%)`,
+                transform: `translateX(${-currentIndex * 100}%)`,
             }"
             v-for="image in cover"
         >
@@ -187,7 +192,7 @@ img {
             <div
                 class="flex flex-col xl:py-10 xl:rounded-xl justify-start xl:mt-4 items-start h-max w-screen xl:w-1/2"
                 data-aos="fade-right"
-                data-aos-delay="1100"
+                data-aos-delay="500"
                 data-aos-duration="1000"
             >
                 <p
