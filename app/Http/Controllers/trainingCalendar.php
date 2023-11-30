@@ -24,6 +24,7 @@ class trainingCalendar extends Controller
 
         $data = \App\Models\courseVenue::create([
             'courseTitle' => $request->courseTitle,
+            'Objectives' => $request->objectives,
             'venue' => $request->venue
         ]);
 

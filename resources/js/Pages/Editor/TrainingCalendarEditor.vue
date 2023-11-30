@@ -84,6 +84,20 @@ import Modal from "@/Components/Modal.vue";
                         </TextInput>
 
                         <TextInput
+                            name="objectives"
+                            type="text"
+                            class="mt-4 py-2 px-2 w-80 focus:ring-yellow-500 active:ring-yellow-500"
+                            required
+                            autocomplete=""
+                            v-model="objectives"
+                            placeholder="Objectives"
+                            data-aos="fade-up"
+                            data-aos-duration="1300"
+                            @click.stop
+                        >
+                        </TextInput>
+
+                        <TextInput
                             id="name"
                             name="venue"
                             type="text"
@@ -139,6 +153,7 @@ export default {
             month: "",
             course_title: "",
             year: "",
+            objectives: "",
             venue: "",
             showModal: false,
             items: [],
@@ -156,6 +171,7 @@ export default {
             formData.append("courseTitle", this.course_title);
             formData.append("year", this.year);
             formData.append("venue", this.venue);
+            formData.append("objectives", this.objectives);
 
             axios
                 .post(BASE_URL + "/storeCalendarTraining", formData, {})

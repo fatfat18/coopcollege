@@ -69,6 +69,20 @@ import Modal from "@/Components/Modal.vue";
                         </TextInput>
 
                         <TextInput
+                            name="objectives"
+                            type="text"
+                            class="mt-4 py-2 px-2 w-80 focus:ring-yellow-500 active:ring-yellow-500"
+                            required
+                            autocomplete=""
+                            v-model="objectives"
+                            placeholder="Objectives"
+                            data-aos="fade-up"
+                            data-aos-duration="1300"
+                            @click.stop
+                        >
+                        </TextInput>
+
+                        <TextInput
                             id="name"
                             name="venue"
                             type="text"
@@ -125,6 +139,7 @@ export default {
             course_title: "",
             year: "",
             venue: "",
+            objectives: "",
             items: [],
             selectedItem: this.itemId,
         };
@@ -170,6 +185,7 @@ export default {
                 this.year = this.items.year;
                 this.course_title = this.items.events[0].courseTitle;
                 this.venue = this.items.events[0].Venue;
+                this.objectives = this.items.events[0].Objectives;
             })
             .catch((error) => {
                 // Handle error
