@@ -62,10 +62,10 @@ import Footer from "@/Components/Footer.vue";
                 data-aos-duration="1000"
             >
                 <div
-                    class="flex text-center justify-center items-center hover:scale-105 transition duration-300"
+                    class="flex text-center w-full justify-center items-center hover:scale-105 transition duration-300"
                 >
                     <div
-                        class="xl:w-1/4 lg:w-2/3 w-1/3 text-center flex justify-center items-center py-5"
+                        class="xl:w-1/4 lg:w-2/3 w-1/3 text-center font-black xl:text-xl flex justify-center items-start py-5"
                     >
                         {{ eventData.month }}
                     </div>
@@ -74,20 +74,20 @@ import Footer from "@/Components/Footer.vue";
                         <div
                             v-for="(event, index) in calendar[index].events"
                             :key="index"
-                            class="flex space-x-5"
+                            class="flex space-x-5 xl:justify-center xl:pl-40"
                         >
                             <div
-                                class="w-3/4 text-center flex justify-center items-center py-2"
+                                class="w-full text-center flex justify-start items-center py-2"
                             >
                                 &#x2022; {{ event.courseTitle }}
                             </div>
                             <div
-                                class="w-3/4 text-center flex justify-center items-center py-2"
+                                class="w-full text-start flex justify-start items-center py-2 xl:pl-14"
                             >
                                 &#x2022; {{ event.Objectives }}
                             </div>
                             <div
-                                class="w-1/2 text-center flex justify-center items-center py-2"
+                                class="w-full text-start flex justify-start items-center py-2 xl:pl-32"
                             >
                                 &#x2022; {{ event.Venue }}
                             </div>
