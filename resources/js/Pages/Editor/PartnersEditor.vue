@@ -29,7 +29,7 @@ import "aos/dist/aos.css";
         <div class=""></div>
 
         <div
-            class="postcontainer flex justify-center w-screen xl:px-10 xl:pb-40 py-20"
+            class="postcontainer flex justify-center w-screen xl:px-10 xl:pb-40"
         >
             <div class="xl:w-3/4 w-4/5 xl:mt-16 overflow-y-hidden">
                 <form @submit.prevent="submitData">

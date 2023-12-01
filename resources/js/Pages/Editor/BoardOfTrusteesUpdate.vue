@@ -30,7 +30,7 @@ import Modal from "@/Components/Modal.vue";
         <div class=""></div>
 
         <div
-            class="postcontainer flex justify-center h-max w-screen xl:px-10 xl:pb-96 py-20"
+            class="postcontainer flex justify-center h-max w-screen xl:px-10 xl:pb-96"
         >
             <div class="xl:w-3/4 w-4/5 xl:mt-16 overflow-y-hidden">
                 <form @submit.prevent="updateBOD(this.intNum)">
