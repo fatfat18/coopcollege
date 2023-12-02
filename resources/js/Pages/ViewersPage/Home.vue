@@ -180,7 +180,7 @@ img {
             >
                 <img
                     :src="image"
-                    class="carimg flex items-center justify-center h-full slide xl:w-5/6 xl:h-96 object-cover w-full xl:rounded-3xl rounded-none xl:mt-10 transition duration-1000"
+                    class="carimg flex items-center justify-center h-full slide xl:w-5/6 xl:h-128 object-cover w-full xl:rounded-3xl rounded-none xl:mt-10 transition duration-1000"
                     alt="Carousel Image 1"
                     :class="{
                         'scale-100': currentIndex === index,
