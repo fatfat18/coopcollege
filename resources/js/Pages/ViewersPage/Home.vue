@@ -96,15 +96,22 @@ img {
 .slide {
     transition: transform 2s ease; /* Adjust the duration and timing function as needed */
 }
+.gradient-div {
+    background: linear-gradient(
+        to bottom,
+        #333,
+        #fff
+    ); /* Set the colors you want */
+}
+.homebg {
+    background: url("../../../asset/ldpg.webp") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 </style>
 
 <template>
-    <Header />
     <ResponsiveNavBar />
-
-    <div
-        class="fixed xl:-mt-80 -mt-56 w-screen h-screen bg-zinc-50 cardcontainer -z-10"
-    ></div>
 
     <!-- <div
         id="maincontent"
@@ -121,6 +128,41 @@ img {
     </div> -->
 
     <div
+        class="h-screen homebg xl:bg-cover w-screen flex items-center justify-center"
+    >
+        <div
+            class="xl:text-7xl text-3xl py-2 text-zinc-50 text-center tracking-widest font-bold flex flex-col items-center justify-center"
+        >
+            <img
+                src="../../../asset/logo.png"
+                class="xl:w-52 w-20"
+                data-aos="zoom-in"
+                data-aos-duration="700"
+                data-aos-easing="ease-in-out-back"
+            />
+            <span
+                data-aos="fade-down"
+                data-aos-duration="500"
+                data-aos-delay="800"
+                >Cooperative College</span
+            >
+            <span
+                class="xl:text-3xl text-xl"
+                data-aos="fade-down"
+                data-aos-duration="500"
+                data-aos-delay="850"
+                >of the</span
+            >
+            <span
+                data-aos="fade-down"
+                data-aos-duration="500"
+                data-aos-delay="900"
+                >Philippines</span
+            >
+        </div>
+    </div>
+
+    <div
         class="w-max flex"
         data-aos="zoom-out"
         data-aos-duration="1500"
@@ -131,7 +173,7 @@ img {
             :style="{
                 transform: `translateX(${-currentIndex * 100}%)`,
             }"
-            v-for="(image,index) in cover"
+            v-for="(image, index) in cover"
         >
             <div
                 class="w-screen flex h-full flex-col items-center justify-center lpg"
@@ -404,7 +446,7 @@ export default {
     mounted() {
         setInterval(() => {
             this.nextSlide();
-        }, 5000);
+        }, 3000);
     },
     methods: {
         prevSlide() {

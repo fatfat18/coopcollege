@@ -20,14 +20,13 @@ import Footer from "@/Components/Footer.vue";
 </style>
 
 <template>
-    <Header />
     <ResponsiveNavBar />
 
     <div
         class="h-max w-screen flex flex-col justify-center items-center bg-theme1 overflow-y-hidden bg"
     >
         <div
-            class="h-24 w-screen max-w-7xl flex bg-theme2 justify-center items-center mt-10 xl:rounded-lg"
+            class="h-24 w-screen max-w-7xl flex bg-theme2 justify-center items-center xl:mt-28 xl:rounded-lg"
             data-aos="fade-up"
             data-aos-duration="1000"
         >

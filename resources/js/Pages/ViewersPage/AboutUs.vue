@@ -46,7 +46,7 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
 
 </style>
 <template>
-  <Header />
+
  <ResponsiveNavBar />
 
 <div class="w-screen flex flex-col justify-center items-center bg ">

@@ -39,15 +39,13 @@ library.add(faAngleLeft, faAngleRight);
 }
 </style>
 <template>
-    <Header />
-    <ResponsiveNavBar />
-
     <div class="h-max w-screen flex flex-col justify-center">
         <div
             class="xl:h-screen py-80 xl:py-0 w-screen newsbg bg-theme1 flex flex-col justify-center items-center"
             data-aos="fade"
             data-aos-duration="1000"
         >
+            <ResponsiveNavBar />
             <p
                 class="xl:text-6xl text-3xl text-white"
                 data-aos="fade-up"

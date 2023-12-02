@@ -14,15 +14,19 @@ const showingNavigationDropdown = ref(false);
 </style>
 
 <template>
-    <div class="bg-white w-screen overflow-x-hidden">
+    <div
+        class="bg-opacity-50 absolute w-screen overflow-x-hidden top-0"
+        data-aos="fade-down"
+        data-aos-duration="1000"
+    >
         <nav class="w-screen border-gray-100 trans">
             <!-- Primary Navigation Menu -->
             <div class="flex xl:justify-center justify-end xl:pt-2">
-                <div class="flex w-max justify-center h-14 xl:h-16">
+                <div class="flex w-max justify-center h-14 xl:h-20">
                     <div class="flex">
                         <!-- Navigation Links -->
                         <div
-                            class="hidden text-theme1 space-x-1 text-md sm:flex trans font-bold"
+                            class="hidden text-zinc-50 space-x-1 text-md sm:flex trans font-bold"
                         >
                             <NavLink
                                 :href="route('Home')"
