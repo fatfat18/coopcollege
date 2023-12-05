@@ -131,7 +131,7 @@ img {
         class="h-screen homebg xl:bg-cover w-screen flex items-center justify-center"
     >
         <div
-            class="xl:text-7xl text-3xl py-2 text-zinc-50 text-center tracking-widest font-bold flex flex-col items-center justify-center"
+            class="xl:text-7xl text-3xl py-2 text-zinc-50 h-max text-center tracking-widest font-bold flex flex-col items-center justify-center overflow-hidden"
         >
             <img
                 src="../../../asset/logo.png"
@@ -141,33 +141,36 @@ img {
                 data-aos-easing="ease-in-out-back"
             />
             <span
-                data-aos="fade-down"
-                data-aos-duration="500"
-                data-aos-delay="800"
+                data-aos="zoom-in-down"
+                data-aos-duration="1000"
+                data-aos-delay="600"
+                data-aos-easing="ease-in-out-back"
                 >Cooperative College</span
             >
             <span
                 class="xl:text-3xl text-xl"
-                data-aos="fade-down"
-                data-aos-duration="500"
-                data-aos-delay="850"
+                data-aos="zoom-in-down"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out-back"
+                data-aos-delay="650"
                 >of the</span
             >
             <span
-                data-aos="fade-down"
-                data-aos-duration="500"
-                data-aos-delay="900"
+                data-aos="zoom-in-down"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out-back"
+                data-aos-delay="700"
                 >Philippines</span
             >
             <span
-                class="text-base tracking-tight w-3/4 mt-4"
-                data-aos="fade-up"
+                class="xl:text-base text-xs tracking-tight w-3/4 mt-4"
+                data-aos="zoom-in-down"
                 data-aos-duration="1000"
-                data-aos-delay="500"
+                data-aos-delay="800"
                 data-aos-easing="ease-in-out-back"
                 >Empowering Futures, Building Together: Your Gateway to
                 Cooperative Excellence at <br /><span
-                    class="text-theme2 text-lg"
+                    class="text-theme2 xl:text-lg text-sm"
                     >Cooperative College of the Philippines</span
                 >.</span
             >
