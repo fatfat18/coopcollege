@@ -27,22 +27,22 @@ import Modal from "@/Components/Modal.vue";
         <div class=""></div>
 
         <div
-            class="postcontainer flex justify-center h-screen w-screen xl:px-10 pt-10"
+            class="postcontainer flex justify-center h-screen w-screen xl:px-10"
         >
-            <div class="xl:w-3/4 w-4/5 xl:mt-16 overflow-y-hidden">
+            <div class="xl:w-3/4 w-4/5 overflow-y-hidden">
                 <form @submit.prevent="updateTrainingcalendar(intNum)">
                     <button
                         type="submit"
-                        class="mt-16 border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg mb-10 hover:bg-green-600 transition ease-in duration-100"
+                        class="mt-6 border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg hover:bg-green-600 transition ease-in duration-100"
                     >
                         Save
                     </button>
-                    <div class="overflow-y-hidden space-x-4">
+                    <div class="overflow-y-hidden">
                         <TextInput
                             id="name"
                             name="month"
                             type="text"
-                            class="mt-4 py-2 px-2 w-40 focus:ring-yellow-500 active:ring-yellow-500"
+                            class="mt-4 py-2 px-2 w-full focus:ring-yellow-500 active:ring-yellow-500"
                             required
                             autocomplete=""
                             v-model="month"
@@ -57,7 +57,7 @@ import Modal from "@/Components/Modal.vue";
                             id="name"
                             name="coursetitle"
                             type="text"
-                            class="mt-4 py-2 px-2 w-80 focus:ring-yellow-500 active:ring-yellow-500"
+                            class="mt-4 py-2 px-2 w-full focus:ring-yellow-500 active:ring-yellow-500"
                             required
                             autocomplete=""
                             v-model="course_title"
@@ -71,7 +71,7 @@ import Modal from "@/Components/Modal.vue";
                         <TextInput
                             name="objectives"
                             type="text"
-                            class="mt-4 py-2 px-2 w-80 focus:ring-yellow-500 active:ring-yellow-500"
+                            class="mt-4 py-2 px-2 w-full focus:ring-yellow-500 active:ring-yellow-500"
                             required
                             autocomplete=""
                             v-model="objectives"
@@ -86,7 +86,7 @@ import Modal from "@/Components/Modal.vue";
                             id="name"
                             name="venue"
                             type="text"
-                            class="mt-4 py-2 px-2 w-72 focus:ring-yellow-500 active:ring-yellow-500"
+                            class="mt-4 py-2 px-2 w-full focus:ring-yellow-500 active:ring-yellow-500"
                             required
                             autocomplete=""
                             placeholder="Venue"
@@ -101,7 +101,7 @@ import Modal from "@/Components/Modal.vue";
                             id="name"
                             name="year"
                             type="number"
-                            class="mt-4 py-2 px-2 w-32 focus:ring-yellow-500 active:ring-yellow-500"
+                            class="mt-4 py-2 px-2 w-full focus:ring-yellow-500 active:ring-yellow-500"
                             required
                             autocomplete=""
                             placeholder="Year"

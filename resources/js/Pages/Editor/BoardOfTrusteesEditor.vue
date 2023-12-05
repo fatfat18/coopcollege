@@ -32,15 +32,15 @@ import Modal from "@/Components/Modal.vue";
         <div
             class="postcontainer flex justify-center h-max w-screen xl:px-10 xl:pb-96"
         >
-            <div class="xl:w-3/4 w-4/5 xl:mt-16 overflow-y-hidden">
+            <div class="xl:w-3/4 w-4/5 overflow-y-hidden">
                 <form @submit.prevent="submitData">
                     <button
-                        class="mt-16 border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg mb-10 hover:bg-green-600 transition ease-in duration-100"
+                        class="mt-8 border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg mb-10 hover:bg-green-600 transition ease-in duration-100"
                     >
                         Save
                     </button>
 
-                    <div class="overflow-y-hidden space-x-2">
+                    <div class="overflow-y-hidden">
                         <div
                             class="text-white xl:h-20 w-max flex justify-center items-center"
                             data-aos="fade-up"
@@ -78,7 +78,7 @@ import Modal from "@/Components/Modal.vue";
                             id="prefix"
                             name="prefix"
                             type="text"
-                            class="mt-4 py-2 px-2 max-w-4xl w-66 focus:ring-yellow-500 active:ring-yellow-500"
+                            class="mt-4 py-2 px-2 max-w-4xl w-full focus:ring-yellow-500 active:ring-yellow-500"
                             autocomplete=""
                             placeholder="Prefix"
                             v-model="prefix"
@@ -92,7 +92,7 @@ import Modal from "@/Components/Modal.vue";
                             id="firstname"
                             name="firstname"
                             type="text"
-                            class="mt-4 py-2 px-2 max-w-4xl w-66 focus:ring-yellow-500 active:ring-yellow-500"
+                            class="mt-4 py-2 px-2 max-w-4xl w-full focus:ring-yellow-500 active:ring-yellow-500"
                             required
                             autocomplete="current-title"
                             placeholder="Firstname"
@@ -107,7 +107,7 @@ import Modal from "@/Components/Modal.vue";
                             id="lastname"
                             name="lastname"
                             type="text"
-                            class="mt-4 py-2 px-2 max-w-4xl w-66 focus:ring-yellow-500 active:ring-yellow-500"
+                            class="mt-4 py-2 px-2 max-w-4xl w-full focus:ring-yellow-500 active:ring-yellow-500"
                             required
                             autocomplete="Lname"
                             placeholder="Lastname"
@@ -122,7 +122,7 @@ import Modal from "@/Components/Modal.vue";
                             id="suffix"
                             name="suffix"
                             type="text"
-                            class="mt-4 py-2 px-2 max-w-4xl w-66 focus:ring-yellow-500 active:ring-yellow-500"
+                            class="mt-4 py-2 px-2 max-w-4xl w-full focus:ring-yellow-500 active:ring-yellow-500"
                             autocomplete="Suffix"
                             placeholder="Suffix"
                             v-model="suffix"
@@ -135,7 +135,7 @@ import Modal from "@/Components/Modal.vue";
                             id="position"
                             name="position"
                             type="text"
-                            class="mt-4 py-2 px-2 max-w-4xl w-66 focus:ring-yellow-500 active:ring-yellow-500"
+                            class="mt-4 py-2 px-2 max-w-4xl w-full focus:ring-yellow-500 active:ring-yellow-500"
                             required
                             autocomplete=""
                             placeholder="Position"
@@ -164,7 +164,7 @@ import Modal from "@/Components/Modal.vue";
                             id="address"
                             name="address"
                             type="text"
-                            class="mt-4 py-2 px-2 max-w-4xl w-66 focus:ring-yellow-500 active:ring-yellow-500"
+                            class="mt-4 py-2 px-2 max-w-4xl w-full focus:ring-yellow-500 active:ring-yellow-500"
                             required
                             autocomplete=""
                             placeholder="Address"
@@ -197,7 +197,7 @@ import Modal from "@/Components/Modal.vue";
                             id="start_date"
                             name="start_date"
                             type="date"
-                            class="mt-4 py-2 px-2 max-w-4xl w-66 focus:ring-yellow-500 active:ring-yellow-500"
+                            class="mt-4 py-2 px-2 max-w-4xl w-full focus:ring-yellow-500 active:ring-yellow-500"
                             required
                             autocomplete=""
                             placeholder="Start Date"
@@ -214,7 +214,7 @@ import Modal from "@/Components/Modal.vue";
                             id="end_date"
                             name="end_date"
                             type="date"
-                            class="mt-4 py-2 px-2 max-w-4xl w-66 focus:ring-yellow-500 active:ring-yellow-500"
+                            class="mt-4 py-2 px-2 max-w-4xl w-full focus:ring-yellow-500 active:ring-yellow-500"
                             required
                             autocomplete=""
                             placeholder="End Date"
