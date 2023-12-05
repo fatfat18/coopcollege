@@ -159,6 +159,18 @@ img {
                 data-aos-delay="900"
                 >Philippines</span
             >
+            <span
+                class="text-base tracking-tight w-3/4 mt-4"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="500"
+                data-aos-easing="ease-in-out-back"
+                >Empowering Futures, Building Together: Your Gateway to
+                Cooperative Excellence at <br /><span
+                    class="text-theme2 text-lg"
+                    >Cooperative College of the Philippines</span
+                >.</span
+            >
         </div>
     </div>
 
