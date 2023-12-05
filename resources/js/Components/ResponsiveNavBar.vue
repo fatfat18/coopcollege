@@ -11,6 +11,9 @@ const showingNavigationDropdown = ref(false);
     transition: 1s ease-in;
     transition: transform 1s ease-in-out;
 }
+.nav {
+    z-index: 999;
+}
 </style>
 
 <template>
@@ -121,7 +124,9 @@ const showingNavigationDropdown = ref(false);
                 }"
                 class="sm:hidden"
             >
-                <div class="pt-2 pb-3 space-y-1 transition duration-500">
+                <div
+                    class="pt-2 pb-3 space-y-1 z-10 bg-white transition duration-500"
+                >
                     <ResponsiveNavLink
                         :href="route('Home')"
                         :active="route().current('Home')"

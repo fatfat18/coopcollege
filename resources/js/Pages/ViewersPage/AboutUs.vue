@@ -20,6 +20,12 @@ background: rgb(0,0,51);
 background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
 }
 
+.bodbg{
+  background: url('../../../asset/logo.png') repeat ;
+  background-size: 25% 50%;
+
+}
+
 
 #typewriter {
     color: white;
@@ -52,8 +58,8 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
 <div class="w-screen flex flex-col justify-center items-center bg ">
 
 
-<div class="overflow-y-hidden pt-20  w-3/4 xl:pl-20">
-  <p class="text-white text-4xl xl:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]">Who are we?</p><br><br>
+<div class="overflow-y-hidden pt-20  w-3/4 xl:pl-20 mt-6">
+  <span class="text-white text-4xl xl:text-5xl ">Who are we?</span><br><br>
 
 <section class="flex flex-col justify-center items-center text-justify">
   
@@ -69,11 +75,11 @@ background: linear-gradient(233deg, rgba(0,0,51,1) 32%, rgba(255,204,0,1) 100%);
 
 
 
-<p class="text-white text-3xl xl:text-5xl xl:pt-20 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] mb-4">Governance</p>
+<span class="text-white text-3xl xl:text-5xl xl:pt-20  mb-4 ">Governance</span>
 
 
-  <div class="w-screen h-max max-w-7xl bg-zinc-100 rounded-md  pt-10 flex justify-center gap-10 mb-5 mt-1 flex-wrap overflow-y-hidden" >
-      <div v-for="bod in bods" :key="bod.idBOD" class=" bg-zinc-100 h-max w-60 my-5 mx-5 overflow-y-hidden " data-aos="fade-right" data-aos-duration="1000">
+  <div class="w-screen h-max max-w-7xl  rounded-md  pt-10 flex justify-center gap-10 mb-5 mt-1 flex-wrap overflow-y-hidden" >
+      <div v-for="bod in bods" :key="bod.idBOD" class=" h-max w-60 my-5 mx-5 overflow-y-hidden " data-aos="fade-right" data-aos-duration="1000">
         <ProfileCard 
           :fullname="(bod.Prefix === null ?  '' : bod.Prefix + ' ') + bod.Fname + ' ' + bod.Lname + (bod.Suffix === null ? ' ' : ' ' + bod.Suffix)"
           :position="bod.Position"

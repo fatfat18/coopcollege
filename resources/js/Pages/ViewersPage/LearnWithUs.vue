@@ -20,7 +20,7 @@ import Footer from "@/Components/Footer.vue";
 </style>
 
 <template>
-    <ResponsiveNavBar />
+    <ResponsiveNavBar class="z-20" />
 
     <div
         class="h-max w-screen flex flex-col justify-center items-center bg-theme1 overflow-y-hidden bg"
@@ -30,9 +30,7 @@ import Footer from "@/Components/Footer.vue";
             data-aos="fade-up"
             data-aos-duration="1000"
         >
-            <p
-                class="xl:text-5xl text-2xl font-thin text-theme1 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]"
-            >
+            <p class="xl:text-5xl text-2xl font-thin text-theme1">
                 Training Calendar {{ currentYear }}
             </p>
         </div>
@@ -49,14 +47,14 @@ import Footer from "@/Components/Footer.vue";
         </div>
 
         <div
-            class="rounded-t pb-5 h-max overflow-y-hidden max-w-7xl w-full bg-zinc-300 flex justify-center items-center flex-col text-theme1"
+            class="rounded-t pb-5 h-max overflow-y-hidden max-w-7xl w-full bg-zinc-300 flex justify-center items-center flex-col text-theme1 z-0"
             data-aos="fade-up"
             data-aos-duration="1000"
         >
             <div
                 v-for="(eventData, index) in calendar"
                 :key="index"
-                class="flex justify-center items-center h-max w-screen max-w-6xl bg-white border-2 border-theme1 xl:mx-5 xl:px-10 xl:mt-1 mt-1 py-2 rounded-2xl xl:rounded-xl"
+                class="flex justify-center items-center h-max w-screen max-w-6xl bg-white border-2 border-theme1 xl:mx-5 xl:px-10 xl:mt-1 mt-1 py-2 z-10 rounded-2xl xl:rounded-xl"
                 data-aos="zoom-in"
                 data-aos-duration="1000"
             >

@@ -41,7 +41,7 @@ library.add(faAngleLeft, faAngleRight);
 <template>
     <div class="h-max w-screen flex flex-col justify-center">
         <div
-            class="xl:h-screen py-80 xl:py-0 w-screen newsbg bg-theme1 flex flex-col justify-center items-center"
+            class="xl:h-screen h-screen py-80 xl:py-0 w-screen newsbg bg-theme1 flex flex-col justify-center items-center"
             data-aos="fade"
             data-aos-duration="1000"
         >
