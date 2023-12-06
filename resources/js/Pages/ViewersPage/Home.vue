@@ -295,7 +295,7 @@ img {
                     sessions. To learn more and be involved with the Co-op
                     College programs (both locally and abroad), join us and be a
                     member of the
-                    <strong class="text-theme2 text-xl"
+                    <strong class="text-theme1 xl:text-xl text-md"
                         >National Federation of Cooperative Primaries in the
                         Philippines - Nafecoop</strong
                     >
