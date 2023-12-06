@@ -108,6 +108,23 @@ img {
     background-size: cover;
     background-position: center;
 }
+.bottomgradient {
+    background: rgb(255, 0, 0);
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
+}
+.topgradient {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 1) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+}
 </style>
 
 <template>
@@ -135,7 +152,7 @@ img {
         >
             <img
                 src="../../../asset/logo.png"
-                class="xl:w-52 w-20"
+                class="xl:w-52 w-32"
                 data-aos="zoom-in"
                 data-aos-duration="700"
                 data-aos-easing="ease-in-out-back"
@@ -174,15 +191,11 @@ img {
                     >Cooperative College of the Philippines</span
                 >.</span
             >
+            <div class="w-screen bottomgradient h-1/4 absolute bottom-0"></div>
         </div>
     </div>
 
-    <div
-        class="w-max flex"
-        data-aos="zoom-out"
-        data-aos-duration="1500"
-        data-aos-easing="ease-in-out-back"
-    >
+    <div class="w-max flex">
         <div
             class="slide flex flex-col w-screen"
             :style="{
@@ -193,9 +206,10 @@ img {
             <div
                 class="w-screen flex h-full flex-col items-center justify-center lpg"
             >
+                <div class="topgradient w-full h-full absolute top-0"></div>
                 <img
                     :src="image"
-                    class="carimg flex items-center justify-center h-full slide xl:w-5/6 xl:h-128 object-cover w-full xl:rounded-3xl rounded-none xl:mt-10 transition duration-1000"
+                    class="carimg flex items-center justify-center lpg h-full slide xl:h-128 object-cover w-full rounded-none transition duration-1000"
                     alt="Carousel Image 1"
                     :class="{
                         'scale-100': currentIndex === index,
@@ -239,14 +253,14 @@ img {
             class="max-w-7xl h-max w-screen flex flex-col xl:flex-row justify-center items-center"
         >
             <div
-                class="h-max w-screen xl:w-1/3 xl:mr-10 z-50 xl:mx-0 xl:my-5 flex items-center justify-center"
+                class="h-max w-screen xl:w-full z-50 xl:mx-0 xl:my-5 flex px-6 xl:px-0 items-center justify-center"
                 data-aos="fade-left"
                 data-aos-delay="1000"
                 data-aos-duration="1000"
             >
                 <img
                     src="../../../asset/lpg1.jpg"
-                    class="xl:rounded-xl rounded-3xl shadow-2xl h-full xl:w-max w-1/2 items-stretch z-50"
+                    class="xl:rounded-xl rounded-3xl shadow-2xl h-full xl:w-max w-full z-50"
                 />
             </div>
 
@@ -257,15 +271,16 @@ img {
                 data-aos-duration="1000"
             >
                 <p
-                    class="xl:text-7xl text-start text-lg px-8 mt-4 xl:mb-8 text-theme1 z-10 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]"
+                    class="xl:text-7xl text-start xl:text-center text-lg px-8 mt-4 xl:mb-8 text-theme1 z-10 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]"
                 >
                     Cebu Training Session
                 </p>
                 <p
-                    class="text-white-800 text-xs xl:text-base tracking-wider text-justify px-8 py-4 z-10"
+                    class="text-white-800 text-xs xl:text-base tracking-tight text-justify px-8 py-4 z-10"
                 >
-                    The morning session on Deepening our Co-operative Identity
-                    was facilitated by the
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp The morning session
+                    on Deepening our Co-operative Identity was facilitated by
+                    the
                     <strong>Co-op College PH</strong> team headed by CEO &
                     Principal <strong>Donna Dizon</strong>. This interactive
                     learning activity brought out the creativity of the
@@ -280,7 +295,7 @@ img {
                     sessions. To learn more and be involved with the Co-op
                     College programs (both locally and abroad), join us and be a
                     member of the
-                    <strong
+                    <strong class="text-theme2 text-xl"
                         >National Federation of Cooperative Primaries in the
                         Philippines - Nafecoop</strong
                     >
