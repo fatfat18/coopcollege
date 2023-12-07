@@ -152,7 +152,7 @@ img {
         >
             <img
                 src="../../../asset/logo.png"
-                class="xl:w-52 w-32"
+                class="xl:w-44 w-32"
                 data-aos="zoom-in"
                 data-aos-duration="700"
                 data-aos-easing="ease-in-out-back"
