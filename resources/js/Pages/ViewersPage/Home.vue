@@ -125,24 +125,27 @@ img {
         rgba(255, 255, 255, 0) 100%
     );
 }
+
+.leftgradient {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+        270deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 1) 80%
+    );
+}
+.rightgradient {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 1) 80%
+    );
+}
 </style>
 
 <template>
     <ResponsiveNavBar />
-
-    <!-- <div
-        id="maincontent"
-        class="lpg flex flex-row justify-center items-center h-max w-screen bg-cover"
-        data-aos="fade-in"
-        data-aos-delay="500"
-        data-aos-duration="1000"
-        v-for="(image, index) in cover"
-    >
-        <img
-            :src="image"
-            class="bg-cover xl:w-3/4 xl:h-96 object-cover w-full xl:rounded-3xl rounded-none xl:mt-8 transition duration-500"
-        />
-    </div> -->
 
     <div
         class="h-screen homebg xl:bg-cover w-screen flex items-center justify-center"
@@ -193,57 +196,6 @@ img {
             >
             <div class="w-screen bottomgradient h-1/4 absolute bottom-0"></div>
         </div>
-    </div>
-
-    <div class="w-max flex">
-        <div
-            class="slide flex flex-col w-screen"
-            :style="{
-                transform: `translateX(${-currentIndex * 100}%)`,
-            }"
-            v-for="(image, index) in cover"
-        >
-            <div
-                class="w-screen flex h-full flex-col items-center justify-center lpg"
-            >
-                <div class="topgradient w-full h-full absolute top-0"></div>
-                <img
-                    :src="image"
-                    class="carimg flex items-center justify-center lpg h-full slide xl:h-128 object-cover w-full rounded-none transition duration-1000"
-                    alt="Carousel Image 1"
-                    :class="{
-                        'scale-100': currentIndex === index,
-                        'scale-[.25]': currentIndex !== index,
-                    }"
-                />
-            </div>
-        </div>
-    </div>
-
-    <h1
-        class="text-center xl:text-7xl text-2xl px-4 mt-5 text-theme1"
-        data-aos="zoom-in"
-        data-aos-delay="1000"
-        data-aos-duration="500"
-    >
-        Succession Planning and Importance of Strengthening Middle Management
-    </h1>
-
-    <div
-        class="xl:h-max md:h-max xl:w-screen flex justify-center items-center xl:text-base text-xs text-justify xl:my-12 py-5 xl:px-0 px-4"
-        data-aos="fade-up"
-        data-aos-duration="2000"
-    >
-        <p class="md:mx-8 max-w-7xl">
-            One of our esteemed speakers for this afternoon for the topic on
-            Succession Planning and Importance of Strengthening Middle
-            Management in the Co-ops: Atty. Marc Castrodes of Areté Leadership.
-            A leader’s lasting value is measured by succession indeed, most
-            especially in the co-op movement.<br /><br />
-            To learn more, send us a message at:<br />
-            institute@climbs.coop (Co-op College PH)<br />
-            nafemarketing22@climbs.coop (NaFeCOOP)<br />
-        </p>
     </div>
 
     <div
