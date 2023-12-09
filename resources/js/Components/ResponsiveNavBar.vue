@@ -125,7 +125,7 @@ const showingNavigationDropdown = ref(false);
                 class="sm:hidden"
             >
                 <div
-                    class="pt-2 pb-3 space-y-1 z-10 bg-white transition duration-500"
+                    class="pt-2 pb-3 space-y-1 bg-white transition duration-500"
                 >
                     <ResponsiveNavLink
                         :href="route('Home')"
