@@ -176,6 +176,12 @@ img {
 .zindex {
     z-index: 10;
 }
+@media only screen and (max-width: 600px) {
+    .homebg2 {
+        background-size: contain;
+        background-position: center;
+    }
+}
 </style>
 
 <template>
@@ -229,22 +235,24 @@ img {
                 >.</span
             >
             <div
-                class="w-screen ygradient h-1/2 absolute bottom-[-15rem]"
+                class="w-screen ygradient h-1/2 absolute xl:bottom-[-15rem] bottom-[-10rem]"
             ></div>
         </div>
     </div>
 
-    <div class="w-screen h-screen homebg2">
-        <div class="leftanglegradient relative h-screen w-screen z-20">
+    <div class="w-screen xl:h-screen homebg2 bg-left">
+        <div
+            class="leftanglegradient relative items-end justify-end pb-4 xl:justify-start xl:items-start flex flex-col h-screen w-screen z-20"
+        >
             <span
                 data-aos="fade-right"
                 data-aos-duration="500"
-                class="text-6xl w-1/2 pl-10 text-white h-max absolute top-1/2 transform -translate-y-1/2"
-                ><span class="text-theme2 text-7xl">CLIMBS</span> visit to the
-                Wharton School, University of Pennsylvania</span
+                class="xl:text-6xl text-lg xl:w-1/2 w-full xl:pl-10 px-4 xl:px-0 text-white h-max xl:absolute top-1/2 transform -translate-y-1/2"
+                ><span class="text-theme2 xl:text-7xl text-xl">CLIMBS</span>
+                visit to the Wharton School, University of Pennsylvania</span
             >
             <span
-                class="text-sm w-2/3 pl-10 xl:pt-10 text-white h-max absolute top-3/4 transform -translate-y-1/2"
+                class="xl:text-sm text-[10px] xl:w-2/3 w-full xl:pl-10 px-4 xl:px-0 xl:pt-10 text-white h-max flex justify-center items-center flex-col text-start xl:absolute top-3/4 transform -translate-y-1/2"
                 data-aos="fade-right"
                 data-aos-duration="500"
             >
@@ -273,12 +281,13 @@ img {
     </div>
 
     <div
-        class="bg-gradient-to-b from-[#ffcc00] to-white w-screen h-screen flex items-center justify-center"
+        class="bg-gradient-to-b from-[#ffcc00] to-white w-screen xl:h-screen h-full flex items-center justify-center"
     >
-        <span></span>
-        <div class="w-full px-10 h-max flex justify-center items-center">
+        <div
+            class="w-full xl:px-10 px-4 h-max flex xl:flex-row flex-col justify-center items-center"
+        >
             <div
-                class="w-1/3 mx-2 h-max px-10 py-10 rounded-3xl pt-4"
+                class="xl:w-1/3 w-full mx-2 h-max xl:px-10 px-1 py-10 rounded-3xl pt-4"
                 data-aos="fade-up"
                 data-aos-duration="500"
                 data-aos-delay="300"
@@ -297,7 +306,7 @@ img {
                 </div>
             </div>
             <div
-                class="w-1/3 mx-2 h-max px-10 py-10 rounded-3xl pt-4"
+                class="xl:w-1/3 w-full mx-2 h-max xl:px-10 px-1 py-10 rounded-3xl pt-4"
                 data-aos="fade-up"
                 data-aos-duration="500"
             >
@@ -305,7 +314,7 @@ img {
                     src="../../../asset/front/7.webp"
                     class="rounded-3xl hover:scale-110 transition duration-500 overflow-hidden"
                 />
-                <div class="mt-5 text-xl text-center text-theme1">
+                <div class="mt-5 text-2xl text-center text-theme1">
                     Ceremonial Signing of Memorandum of Agreement between the
                     University of Chicago Booth School of Business and Wharton
                     School of the University of Pennsylvania
@@ -321,7 +330,7 @@ img {
                 </div>
             </div>
             <div
-                class="w-1/3 mx-2 h-max px-10 py-10 rounded-3xl pt-4"
+                class="xl:w-1/3 w-full mx-2 h-max xl:px-10 px-1 py-10 rounded-3xl pt-4"
                 data-aos="fade-up"
                 data-aos-duration="500"
                 data-aos-delay="400"
@@ -461,35 +470,37 @@ img {
     </div>
 
     <div
-        class="w-screen h-screen flex bg-gradient-to-b from-white to-[#FFCC00]"
+        class="w-screen h-screen flex xl:flex-row flex-col bg-gradient-to-b from-white to-[#FFCC00]"
     >
         <div
-            class="w-3/5 h-full flex justify-center items-center relative"
+            class="xl:w-3/5 w-full h-full flex justify-center items-center xl:relative"
             data-aos="zoom-out"
             data-aos-duration="1000"
             data-aos-delay="500"
         >
             <img
                 src="../../../asset/front/1.webp"
-                class="h-128 w-1/2 rounded-3xl absolute top-1/2 left-1/3 transform -translate-y-1/4 -translate-x-1/2 rotate-6"
+                class="xl:h-128 h-60 w-1/2 rounded-3xl absolute top-1/2 left-1/3 transform -translate-y-1/4 -translate-x-1/2 rotate-6"
             />
             <img
                 src="../../../asset/front/4.webp"
-                class="h-128 w-1/2 rounded-3xl absolute top-1/3 left-2/3 transform -translate-y-1/2 -translate-x-1/2 -rotate-3"
+                class="xl:h-128 h-60 w-1/2 rounded-3xl absolute top-1/3 left-2/3 transform -translate-y-1/2 -translate-x-1/2 -rotate-3"
             />
         </div>
-        <div class="w-2/5 h-full flex flex-col items-center justify-center">
+        <div
+            class="xl:w-2/5 w-full h-full flex flex-col items-center justify-center"
+        >
             <div
-                class="h-1/3 w-full flex items-center justify-center flex-col px-10"
+                class="xl:h-1/3 h-max w-full flex items-center justify-center flex-col px-10"
                 data-aos="zoom-out"
                 data-aos-duration="1000"
             >
-                <span class="text-4xl text-theme1"
+                <span class="xl:text-4xl text-lg text-theme1"
                     >Ceremonial Turn-over of the Purchased 2 ha. lot by CLIMBS
                     Life and General Insurance Cooperative to Co-operative
                     College of the Philippines</span
                 >
-                <span class="text-md mt-4"
+                <span class="xl:text-md text-[13px] mt-4"
                     >On March 14, 2023, the Ceremonial Turn-over of the
                     Purchased 2 ha. lot by CLIMBS Life and General Insurance
                     Cooperative to Co-operative College of the Philippines was
@@ -498,19 +509,22 @@ img {
                 >
             </div>
             <div
-                class="w-full flex h-max overflow-hidden justify-center items-center"
+                class="w-full xl:flex hidden h-max overflow-hidden justify-center items-center"
             >
-                <img src="../../../asset/logo.png" class="w-40 h-40" />
+                <img
+                    src="../../../asset/logo.png"
+                    class="xl:w-40 h-20 xl:h-40 w-20"
+                />
             </div>
             <div
-                class="h-1/3 w-full flex items-center justify-center flex-col px-10"
+                class="xl:h-1/3 h-max w-full xl:pt-0 pt-4 flex items-center justify-center flex-col px-10"
                 data-aos="zoom-out"
                 data-aos-duration="1000"
             >
-                <span class="text-4xl w-full text-start text-theme1"
+                <span class="xl:text-4xl text-lg w-full text-start text-theme1"
                     >Cooperative Executive Masterclass in Manchester, UK</span
                 >
-                <span class="text-md mt-4"
+                <span class="xl:text-md text-[13px] mt-4"
                     >48 official delegates coming from 17 Philippine
                     co-operative organizations finally arrived at the very
                     birthplace of the modern co-operative movement: the Rochdale
@@ -523,10 +537,10 @@ img {
     </div>
 
     <div
-        class="w-screen h-screen flex flex-col items-center justify-center bg-gradient-to-t from-white to-[#FFCC00] text-center"
+        class="w-screen xl:h-screen h-max flex flex-col items-center justify-center bg-gradient-to-t from-white to-[#FFCC00] text-center"
     >
         <span
-            class="text-5xl w-2/3 mb-10 text-theme1"
+            class="xl:text-5xl text-2xl xl:w-2/3 w-full xl:px-0 px-4 xl:mb-10 mb-2 text-theme1"
             data-aos="fade-down"
             data-aos-duration="1000"
             >Deepening Our Cooperative Identity Through Education & The Usage of
@@ -534,7 +548,7 @@ img {
         >
 
         <span
-            class="text-md w-3/4 mb-10"
+            class="xl:text-md text-xs xl:w-3/4 w-full xl:px-0 px-4 mb-10"
             data-aos="fade-down"
             data-aos-duration="1000"
             data-aos-delay="300"
@@ -555,14 +569,17 @@ img {
             data-aos-duration="1000"
             data-aos-easing="ease-out-back"
         >
-            <img src="../../../asset/front/5.webp" class="w-4/5 rounded-3xl" />
+            <img
+                src="../../../asset/front/5.webp"
+                class="xl:w-4/5 w-full xl:h-max h-48 xl:px-0 px-4 rounded-3xl"
+            />
         </div>
     </div>
 
     <div class="w-screen h-max radialgradient">
-        <div class="flex">
+        <div class="flex xl:flex-row flex-col xl:pt-0 pt-10">
             <div
-                class="w-1/2 flex items-center justify-center"
+                class="xl:w-1/2 w-full flex items-center justify-center"
                 data-aos="fade-right"
                 data-aos-duration="1000"
             >
@@ -571,15 +588,20 @@ img {
                     class="h-full w-2/3 rounded-3xl"
                 />
             </div>
-            <div class="w-1/2 flex items-center justify-center flex-col px-10">
+            <div
+                class="xl:w-1/2 w-full flex items-center justify-center flex-col px-10"
+            >
                 <span
-                    class="text-5xl text-theme1"
+                    class="xl:text-5xl text-xl xl:text-start text-center text-theme1"
                     data-aos="fade-down"
                     data-aos-duration="1000"
                     >CLIMBS visit to the University of Chicago Booth School of
                     Business</span
                 >
-                <span class="pt-10" data-aos="zoom-out" data-aos-duration="1000"
+                <span
+                    class="xl:pt-10 pt-2 xl:text-base text-xs xl:text-start text-center xl:pb-0 pb-10"
+                    data-aos="zoom-out"
+                    data-aos-duration="1000"
                     >CLIMBS Life and General Insurance Cooperative
                     representatives led by President and CEO Noel Raboy, MBA Ex
                     were welcomed at the University of Chicago Booth School of
@@ -601,15 +623,20 @@ img {
                 >
             </div>
         </div>
-        <div class="flex">
-            <div class="w-1/2 flex items-center justify-center flex-col px-10">
+        <div class="flex xl:flex-row flex-col-reverse">
+            <div
+                class="xl:w-1/2 w-full flex items-center justify-center flex-col px-10"
+            >
                 <span
-                    class="text-5xl text-theme1 w-full text-start"
+                    class="xl:text-5xl text-xl text-theme1 w-full text-start"
                     data-aos="fade-down"
                     data-aos-duration="1000"
                     >Brand Activation for Co-operatives</span
                 >
-                <span class="pt-10" data-aos="zoom-out" data-aos-duration="1000"
+                <span
+                    class="xl:pt-10 pt-2 xl:text-base text-xs"
+                    data-aos="zoom-out"
+                    data-aos-duration="1000"
                     >With a total of 137 participants coming from 100
                     co-operatives nationwide, the webinar session on Brand
                     Activation for Cooperatives was concluded today. This
@@ -623,7 +650,7 @@ img {
                 >
             </div>
             <div
-                class="w-1/2 flex items-center justify-center"
+                class="xl:w-1/2 w-full flex items-center justify-center"
                 data-aos="fade-left"
                 data-aos-duration="1000"
             >
