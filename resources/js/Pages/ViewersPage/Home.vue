@@ -285,7 +285,7 @@ img {
             >
                 <img
                     src="../../../asset/front/6.webp"
-                    class="rounded-3xl hover:scale-110 transition duration-500 overflow-hidden"
+                    class="rounded-3xl hover:scale-110 hover:-rotate-3 transition duration-500 overflow-hidden"
                 />
                 <div class="mt-5 text-2xl text-center text-theme1">
                     Educational Forum: “Sustainability for Planet and People”
@@ -328,7 +328,7 @@ img {
             >
                 <img
                     src="../../../asset/front/8.webp"
-                    class="rounded-3xl hover:scale-110 transition duration-500 overflow-hidden"
+                    class="rounded-3xl hover:scale-110 transition duration-500 overflow-hidden hover:rotate-3"
                 />
                 <div class="mt-5 text-2xl text-center text-theme1">
                     Launching of the "Youth for Coops"
@@ -561,18 +561,25 @@ img {
 
     <div class="w-screen h-max radialgradient">
         <div class="flex">
-            <div class="w-1/2 flex items-center justify-center">
+            <div
+                class="w-1/2 flex items-center justify-center"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+            >
                 <img
                     src="../../../asset/front/9.webp"
                     class="h-full w-2/3 rounded-3xl"
                 />
             </div>
             <div class="w-1/2 flex items-center justify-center flex-col px-10">
-                <span class="text-5xl text-theme1"
+                <span
+                    class="text-5xl text-theme1"
+                    data-aos="fade-down"
+                    data-aos-duration="1000"
                     >CLIMBS visit to the University of Chicago Booth School of
                     Business</span
                 >
-                <span class="pt-10"
+                <span class="pt-10" data-aos="zoom-out" data-aos-duration="1000"
                     >CLIMBS Life and General Insurance Cooperative
                     representatives led by President and CEO Noel Raboy, MBA Ex
                     were welcomed at the University of Chicago Booth School of
@@ -596,10 +603,13 @@ img {
         </div>
         <div class="flex">
             <div class="w-1/2 flex items-center justify-center flex-col px-10">
-                <span class="text-5xl text-theme1 w-full text-start"
+                <span
+                    class="text-5xl text-theme1 w-full text-start"
+                    data-aos="fade-down"
+                    data-aos-duration="1000"
                     >Brand Activation for Co-operatives</span
                 >
-                <span class="pt-10"
+                <span class="pt-10" data-aos="zoom-out" data-aos-duration="1000"
                     >With a total of 137 participants coming from 100
                     co-operatives nationwide, the webinar session on Brand
                     Activation for Cooperatives was concluded today. This
@@ -612,7 +622,11 @@ img {
                     context.</span
                 >
             </div>
-            <div class="w-1/2 flex items-center justify-center">
+            <div
+                class="w-1/2 flex items-center justify-center"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+            >
                 <img
                     src="../../../asset/front/12.webp"
                     class="h-full w-max rounded-3xl"
