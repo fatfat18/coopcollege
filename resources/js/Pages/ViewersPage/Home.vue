@@ -464,23 +464,23 @@ img {
         class="w-screen h-screen flex bg-gradient-to-b from-white to-[#FFCC00]"
     >
         <div
-            class="w-1/2 h-full flex justify-center items-center relative"
+            class="w-3/5 h-full flex justify-center items-center relative"
             data-aos="zoom-out"
             data-aos-duration="1000"
             data-aos-delay="500"
         >
             <img
                 src="../../../asset/front/1.webp"
-                class="h-128 w-128 rounded-3xl absolute top-1/2 left-1/3 transform -translate-y-1/4 -translate-x-1/2 rotate-6"
+                class="h-128 w-1/2 rounded-3xl absolute top-1/2 left-1/3 transform -translate-y-1/4 -translate-x-1/2 rotate-6"
             />
             <img
                 src="../../../asset/front/4.webp"
-                class="h-128 w-128 rounded-3xl absolute top-1/3 left-2/3 transform -translate-y-1/2 -translate-x-1/2 -rotate-3"
+                class="h-128 w-1/2 rounded-3xl absolute top-1/3 left-2/3 transform -translate-y-1/2 -translate-x-1/2 -rotate-3"
             />
         </div>
-        <div class="w-1/2 h-full flex flex-col items-center justify-center">
+        <div class="w-2/5 h-full flex flex-col items-center justify-center">
             <div
-                class="h-1/3 w-full flex items-center justify-center flex-col"
+                class="h-1/3 w-full flex items-center justify-center flex-col px-10"
                 data-aos="zoom-out"
                 data-aos-duration="1000"
             >
@@ -503,7 +503,7 @@ img {
                 <img src="../../../asset/logo.png" class="w-40 h-40" />
             </div>
             <div
-                class="h-1/3 w-full flex items-center justify-center flex-col"
+                class="h-1/3 w-full flex items-center justify-center flex-col px-10"
                 data-aos="zoom-out"
                 data-aos-duration="1000"
             >
