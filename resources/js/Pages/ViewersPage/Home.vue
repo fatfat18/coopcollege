@@ -161,8 +161,8 @@ img {
     background: rgb(255, 255, 255);
     background: linear-gradient(
         220deg,
-        rgba(255, 255, 255, 0) 20%,
-        rgba(0, 0, 0, 1) 70%
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 1) 85%
     );
 }
 .radialgradient {
@@ -179,7 +179,15 @@ img {
 @media only screen and (max-width: 600px) {
     .homebg2 {
         background-size: contain;
-        background-position: center;
+        background-position: top;
+    }
+    .leftanglegradient {
+        background: rgb(255, 255, 255);
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(0, 0, 0, 1) 50%
+        );
     }
 }
 </style>
@@ -240,42 +248,45 @@ img {
         </div>
     </div>
 
-    <div class="w-screen xl:h-screen homebg2 bg-left">
+    <div class="w-screen h-[110vh] homebg2 bg-left">
         <div
-            class="leftanglegradient relative items-end justify-end pb-4 xl:justify-start xl:items-start flex flex-col h-screen w-screen z-20"
+            class="leftanglegradient relative items-end justify-end pb-4 xl:justify-start xl:items-start flex flex-col h-[110vh] w-screen z-20"
         >
             <span
                 data-aos="fade-right"
                 data-aos-duration="500"
-                class="xl:text-6xl text-lg xl:w-1/2 w-full xl:pl-10 px-4 xl:px-0 text-white h-max xl:absolute top-1/2 transform -translate-y-1/2"
+                class="xl:text-6xl text-lg xl:w-1/2 w-full xl:pl-10 px-4 xl:px-0 text-white h-max xl:absolute bottom-5"
                 ><span class="text-theme2 xl:text-7xl text-xl">CLIMBS</span>
-                visit to the Wharton School, University of Pennsylvania</span
-            >
-            <span
-                class="xl:text-sm text-[10px] xl:w-2/3 w-full xl:pl-10 px-4 xl:px-0 xl:pt-10 text-white h-max flex justify-center items-center flex-col text-start xl:absolute top-3/4 transform -translate-y-1/2"
-                data-aos="fade-right"
-                data-aos-duration="500"
-            >
-                Meeting experts in the fields of climate policy , resilience and
-                environmental economics supports the ongoing efforts of CLIMBS
-                in its climate action activities like the Weather Protect
-                Insurance (WPI) and CLIMBS Community Action Response and1x
-                Emergency Services'(CARES) community programs and services.
-                Susanna Berkouwer, Assistant Professor of Business Economics &
-                Public Policy, Wharton School, University of Pennsylvania
-                introduced Donna Dizon of CLIMBS and Wendy Smith of Global
-                Parametrics to Michael Weisberg, senior faculty fellow and
-                director of post-graduate programs and advisor to the United
-                Nations Framework Convention on Climate Change, and contributing
-                author to the "Intergovernmental Panel on Climate Change's Sixth
-                Assessment Report”; and Garrett M. Albistegui Adler (not in
-                photo), an interdisciplinary environmental social scientist
-                focused on political and social impacts of climate change and
-                variability. Strengthening our partnerships and understanding
-                more of the cooperatives and how the holistic risk solutions
-                work in the Philippines is essential as we scale our innovative
-                products and services like the Weather Protect Insurance
-                (WPI).</span
+                visit to the Wharton School, University of Pennsylvania
+                <span
+                    class="xl:text-base text-[12px] w-full -tracking-tighter xl:w-[60vw] xl:px-0 xl:pt-4 text-white h-max flex justify-center items-center flex-col"
+                    data-aos="fade-right"
+                    data-aos-duration="500"
+                >
+                    Meeting experts in the fields of climate policy , resilience
+                    and environmental economics supports the ongoing efforts of
+                    CLIMBS in its climate action activities like the Weather
+                    Protect Insurance (WPI) and CLIMBS Community Action Response
+                    and1x Emergency Services'(CARES) community programs and
+                    services. Susanna Berkouwer, Assistant Professor of Business
+                    Economics & Public Policy, Wharton School, University of
+                    Pennsylvania introduced Donna Dizon of CLIMBS and Wendy
+                    Smith of Global Parametrics to Michael Weisberg, senior
+                    faculty fellow and director of post-graduate programs and
+                    advisor to the United Nations Framework Convention on
+                    Climate Change, and contributing author to the
+                    "Intergovernmental Panel on Climate Change's Sixth
+                    Assessment Report”; and Garrett M. Albistegui Adler (not in
+                    photo), an interdisciplinary environmental social scientist
+                    focused on political and social impacts of climate change
+                    and variability.<span class="hidden xl:block">
+                        Strengthening our partnerships and understanding more of
+                        the cooperatives and how the holistic risk solutions
+                        work in the Philippines is essential as we scale our
+                        innovative products and services like the Weather
+                        Protect Insurance (WPI).</span
+                    ></span
+                ></span
             >
         </div>
     </div>
@@ -473,25 +484,25 @@ img {
         class="w-screen h-screen flex xl:flex-row flex-col bg-gradient-to-b from-white to-[#FFCC00]"
     >
         <div
-            class="xl:w-3/5 w-full h-full flex justify-center items-center xl:relative"
+            class="xl:w-3/5 w-full xl:h-screen h-[30%] flex justify-center items-center xl:relative"
             data-aos="zoom-out"
             data-aos-duration="1000"
             data-aos-delay="500"
         >
             <img
                 src="../../../asset/front/1.webp"
-                class="xl:h-128 h-60 w-1/2 rounded-3xl absolute top-1/2 left-1/3 transform -translate-y-1/4 -translate-x-1/2 rotate-6"
+                class="xl:h-110 h-40 w-1/2 rounded-3xl absolute top-1/2 left-1/3 transform -translate-y-1/4 -translate-x-1/2 rotate-6"
             />
             <img
                 src="../../../asset/front/4.webp"
-                class="xl:h-128 h-60 w-1/2 rounded-3xl absolute top-1/3 left-2/3 transform -translate-y-1/2 -translate-x-1/2 -rotate-3"
+                class="xl:h-110 h-40 w-1/2 rounded-3xl absolute top-1/3 left-2/3 transform -translate-y-1/2 -translate-x-1/2 -rotate-3"
             />
         </div>
         <div
-            class="xl:w-2/5 w-full h-full flex flex-col items-center justify-center"
+            class="xl:w-2/5 w-full xl:h-screen h-max flex flex-col items-center justify-center"
         >
             <div
-                class="xl:h-1/3 h-max w-full flex items-center justify-center flex-col px-10"
+                class="xl:h-1/3 h-80 w-full flex items-center justify-center flex-col px-10"
                 data-aos="zoom-out"
                 data-aos-duration="1000"
             >
@@ -513,7 +524,7 @@ img {
             >
                 <img
                     src="../../../asset/logo.png"
-                    class="xl:w-40 h-20 xl:h-40 w-20"
+                    class="xl:w-24 h-20 xl:h-24 w-20"
                 />
             </div>
             <div
@@ -589,7 +600,7 @@ img {
                 />
             </div>
             <div
-                class="xl:w-1/2 w-full flex items-center justify-center flex-col px-10"
+                class="xl:w-1/2 w-full flex items-center justify-center flex-col px-4 xl:pr-6"
             >
                 <span
                     class="xl:text-5xl text-xl xl:text-start text-center text-theme1"
@@ -625,16 +636,16 @@ img {
         </div>
         <div class="flex xl:flex-row flex-col-reverse">
             <div
-                class="xl:w-1/2 w-full flex items-center justify-center flex-col px-10"
+                class="xl:w-1/2 w-full flex items-center justify-center flex-col px-4 xl:pl-6"
             >
                 <span
-                    class="xl:text-5xl text-xl text-theme1 w-full text-start"
+                    class="xl:text-5xl text-xl text-theme1 w-full xl:text-start text-center"
                     data-aos="fade-down"
                     data-aos-duration="1000"
                     >Brand Activation for Co-operatives</span
                 >
                 <span
-                    class="xl:pt-10 pt-2 xl:text-base text-xs"
+                    class="xl:pt-10 pt-2 xl:text-base text-xs xl:text-start text-center"
                     data-aos="zoom-out"
                     data-aos-duration="1000"
                     >With a total of 137 participants coming from 100
@@ -656,7 +667,7 @@ img {
             >
                 <img
                     src="../../../asset/front/12.webp"
-                    class="h-full w-max rounded-3xl"
+                    class="h-full w-5/6 rounded-3xl"
                 />
             </div>
         </div>
