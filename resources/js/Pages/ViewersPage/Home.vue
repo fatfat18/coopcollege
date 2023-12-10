@@ -292,7 +292,7 @@ img {
     </div>
 
     <div
-        class="bg-gradient-to-b from-[#ffcc00] to-white w-screen xl:h-screen h-full flex items-center justify-center"
+        class="bg-gradient-to-b from-[#ffcc00] to-white w-screen xl:h-screen h-full flex items-center justify-center pt-4"
     >
         <div
             class="w-full xl:px-10 px-4 h-max flex xl:flex-row flex-col justify-center items-center"
@@ -484,18 +484,18 @@ img {
         class="w-screen h-screen flex xl:flex-row flex-col bg-gradient-to-b from-white to-[#FFCC00]"
     >
         <div
-            class="xl:w-3/5 w-full xl:h-screen h-[30%] flex justify-center items-center xl:relative"
+            class="xl:w-3/5 w-full xl:h-screen h-[40%] flex justify-center items-center xl:relative"
             data-aos="zoom-out"
             data-aos-duration="1000"
             data-aos-delay="500"
         >
             <img
                 src="../../../asset/front/1.webp"
-                class="xl:h-110 h-40 w-1/2 rounded-3xl absolute top-1/2 left-1/3 transform -translate-y-1/4 -translate-x-1/2 rotate-6"
+                class="xl:h-max h-40 w-1/2 rounded-3xl absolute top-1/2 left-1/3 transform -translate-y-1/4 -translate-x-1/2 rotate-6"
             />
             <img
                 src="../../../asset/front/4.webp"
-                class="xl:h-110 h-40 w-1/2 rounded-3xl absolute top-1/3 left-2/3 transform -translate-y-1/2 -translate-x-1/2 -rotate-3"
+                class="xl:h-max h-40 w-1/2 rounded-3xl absolute top-1/3 left-2/3 transform -translate-y-1/2 -translate-x-1/2 -rotate-3"
             />
         </div>
         <div
