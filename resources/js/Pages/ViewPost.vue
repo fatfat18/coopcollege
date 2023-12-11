@@ -26,7 +26,7 @@ import ShowImgModal from "@/Components/ShowImgModal.vue";
     <ResponsiveNavBar />
 
     <div
-        class="w-screen h-screen bg-gradient-to-b from-theme2 to-white flex justify-center items-center pt-20"
+        class="w-screen h-max bg-gradient-to-b from-theme2 to-white flex justify-center items-center pt-40"
     >
         <div class="h-max max-w-7xl w-screen flex xl:flex-row flex-col">
             <div
@@ -76,7 +76,9 @@ import ShowImgModal from "@/Components/ShowImgModal.vue";
                 </div>
             </div>
 
-            <div class="h-max xl:w-1/2 flex flex-col text-center pt-10 px-10">
+            <div
+                class="h-max xl:w-1/2 flex flex-col text-center pt-10 xl:px-10 px-4"
+            >
                 <h1
                     class="xl:text-5xl text-2xl text-theme1"
                     data-aos="zoom-out"
@@ -95,7 +97,7 @@ import ShowImgModal from "@/Components/ShowImgModal.vue";
                 <br />
 
                 <p
-                    class="text-black text-xs xl:text-base flex items-center justify-center text-center xl:text-start"
+                    class="text-black text-sm xl:text-base flex items-center justify-center text-center xl:text-start"
                     data-aos="zoom-out"
                     data-aos-duration="1000"
                 >
