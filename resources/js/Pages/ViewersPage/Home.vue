@@ -481,7 +481,7 @@ img {
     </div>
 
     <div
-        class="w-screen h-[130vh] flex xl:flex-row flex-col bg-gradient-to-b from-white to-[#FFCC00]"
+        class="w-screen h-[130vh] xl:h-screen flex xl:flex-row flex-col bg-gradient-to-b from-white to-[#FFCC00]"
     >
         <div
             class="xl:w-3/5 w-full xl:h-screen h-[50%] flex justify-center items-center xl:relative"
