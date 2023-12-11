@@ -549,6 +549,121 @@ img {
     </div>
 
     <div
+        class="h-max pt-4 w-screen bg-theme2 text-theme1 overflow-y-hidden xl:px-8"
+    >
+        <p
+            class="text-theme1 text-4xl px-4"
+            data-aos="fade-left"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+        >
+            Our Focus Areas:
+        </p>
+        <p
+            class="text-xl px-4"
+            data-aos="fade-left"
+            data-aos-delay="400"
+            data-aos-duration="1000"
+        >
+            (1) Risk Management
+        </p>
+        <p
+            class="text-xl px-4"
+            data-aos="fade-left"
+            data-aos-delay="600"
+            data-aos-duration="1000"
+        >
+            (2) Financial Literacy
+        </p>
+        <p
+            class="text-xl px-4"
+            data-aos="fade-left"
+            data-aos-delay="800"
+            data-aos-duration="1000"
+        >
+            (3) Executive Management
+        </p>
+        <p
+            class="mb-10 text-xl px-4"
+            data-aos="fade-left"
+            data-aos-delay="1000"
+            data-aos-duration="1000"
+        >
+            (4) Leadership Management and Development
+        </p>
+        <p
+            class="text-theme1 xl:text-4xl text-2xl"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+        >
+            What We Offer :
+        </p>
+
+        <div
+            class="bg-white h-max rounded-3xl w-1/1 px-8 xl:px-0 my-4 flex justify-center xl:flex-row flex-col items-center xl:gap-10 xl:text-xl text-sm"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+            data-aos-delay="500"
+        >
+            <div class="xl:w-1/2 xl:px-8 py-8 h-max pb-4 xl:pb-8">
+                <div class="">
+                    <h1 class="xl:text-3xl text-xl italic underline">
+                        Executive Courses (E)
+                    </h1>
+
+                    &#x2022; Post - Graduate Certificate in Cooperative
+                    Management (PGC CM)<br />
+                    &#x2022; Global Co-operative Executives Masterclass<br />
+                    &#x2022; Strategic Planning and Thinking Management<br />
+                    &#x2022; Human Capital Management<br />
+                    &#x2022; Cooperative Digital Transformation<br />
+                </div>
+                <br />
+                <div>
+                    <h1 class="xl:text-3xl text-xl italic underline">
+                        Leadership Courses (L)
+                    </h1>
+
+                    &#x2022; Cooperative Leadership Program<br />
+                    &#x2022; Cooperative Management Training<br />
+                    &#x2022; Raising Cooperative Leaders<br />
+                    &#x2022; Advcanced Cooperative Business Management<br />
+                </div>
+            </div>
+            <div class="xl:w-1/2 xl:px-8 py-8 pt-0 h-max xl:pt-8">
+                <div>
+                    <h1 class="xl:text-3xl text-xl italic underline">
+                        Risk Manangement Courses (R)
+                    </h1>
+
+                    &#x2022; Business Continuity Planning<br />
+                    &#x2022; Financial Literacy and Management<br />
+                    &#x2022; Environmental, Social and Corporate Governance
+                    (ESG)<br />
+                    &#x2022; Corporate Governance and Enterprise Risk Management
+                    (ERM)<br />
+                </div>
+                <br />
+                <div>
+                    <h1 class="xl:text-3xl text-xl italic underline">
+                        Others (O)
+                    </h1>
+
+                    &#x2022; Coommunity Engagement through our Community
+                    Development Fund (CDF): A Collective Action Initiative<br />
+                    &#x2022; Digital Marketing Strategy for Managers and
+                    Entrepreneurs<br />
+                    &#x2022; Diversity and Inclusivity / Social Concerns<br />
+                    &#x2022; The Cooperative Culture and Sustainable Development
+                    Goals<br />
+                    &#x2022; Customized E-Learning<br />
+                    &#x2022; Customized Face-to-Face Programs<br />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div
         class="w-screen xl:h-screen h-max flex flex-col items-center justify-center bg-gradient-to-t from-white to-[#FFCC00] text-center"
     >
         <span
