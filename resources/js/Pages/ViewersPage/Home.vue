@@ -481,10 +481,10 @@ img {
     </div>
 
     <div
-        class="w-screen h-screen flex xl:flex-row flex-col bg-gradient-to-b from-white to-[#FFCC00]"
+        class="w-screen h-[130vh] flex xl:flex-row flex-col bg-gradient-to-b from-white to-[#FFCC00]"
     >
         <div
-            class="xl:w-3/5 w-full xl:h-screen h-[40%] flex justify-center items-center xl:relative"
+            class="xl:w-3/5 w-full xl:h-screen h-[50%] flex justify-center items-center xl:relative"
             data-aos="zoom-out"
             data-aos-duration="1000"
             data-aos-delay="500"
@@ -499,10 +499,10 @@ img {
             />
         </div>
         <div
-            class="xl:w-2/5 w-full xl:h-screen h-max flex flex-col items-center justify-center"
+            class="xl:w-2/5 w-full xl:h-max h-max flex flex-col items-center justify-center"
         >
             <div
-                class="xl:h-1/3 h-80 w-full flex items-center justify-center flex-col px-10"
+                class="xl:h-1/3 h-96 w-full flex items-center justify-center flex-col px-10"
                 data-aos="zoom-out"
                 data-aos-duration="1000"
             >
@@ -528,7 +528,7 @@ img {
                 />
             </div>
             <div
-                class="xl:h-1/3 h-max w-full xl:pt-0 pt-4 flex items-center justify-center flex-col px-10"
+                class="xl:h-max xl:mt-10 h-96 w-full xl:pt-0 pt-4 flex items-center justify-center flex-col px-10"
                 data-aos="zoom-out"
                 data-aos-duration="1000"
             >
@@ -551,7 +551,7 @@ img {
         class="w-screen xl:h-screen h-max flex flex-col items-center justify-center bg-gradient-to-t from-white to-[#FFCC00] text-center"
     >
         <span
-            class="xl:text-5xl text-2xl xl:w-2/3 w-full xl:px-0 px-4 xl:mb-10 mb-2 text-theme1"
+            class="xl:text-5xl text-2xl xl:w-2/3 w-full xl:px-0 px-4 xl:mb-10 mb-2 xl:mt-0 mt-10 text-theme1"
             data-aos="fade-down"
             data-aos-duration="1000"
             >Deepening Our Cooperative Identity Through Education & The Usage of
@@ -559,7 +559,7 @@ img {
         >
 
         <span
-            class="xl:text-md text-xs xl:w-3/4 w-full xl:px-0 px-4 mb-10"
+            class="xl:text-base text-xs xl:w-3/4 w-full xl:px-0 px-4 mb-10"
             data-aos="fade-down"
             data-aos-duration="1000"
             data-aos-delay="300"
