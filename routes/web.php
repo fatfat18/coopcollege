@@ -7,6 +7,7 @@ use App\Http\Controllers\contactUs;
 use App\Http\Controllers\post;
 use App\Http\Controllers\partner;
 use App\Http\Controllers\bod;
+use App\Http\Controllers\Emailer;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -226,8 +227,8 @@ Route::get('/displayBODAdmin',[bod::class, 'displayAdmin'] );
 Route::delete('/deleteBOD',[bod::class, 'delete'] );
 
 
-
-
+// mailer
+Route::post('/email',[Emailer::class, 'sendWelcomeEmail'] );
 
 
 
