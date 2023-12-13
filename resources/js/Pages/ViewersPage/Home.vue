@@ -237,7 +237,7 @@ img {
                 data-aos-delay="800"
                 data-aos-easing="ease-in-out-back"
                 >Empowering Futures, Building Together: Your Gateway to
-                Cooperative Excellence at <br /><span
+                Cooperative Excellence <br /><span
                     class="text-theme2 xl:text-lg text-sm"
                     >Cooperative College of the Philippines</span
                 >.</span
@@ -248,7 +248,7 @@ img {
         </div>
     </div>
 
-    <div class="w-screen h-[110vh] homebg2 bg-left">
+    <!-- <div class="w-screen h-[110vh] homebg2 bg-left">
         <div
             class="leftanglegradient relative items-end justify-end pb-4 xl:justify-start xl:items-start flex flex-col h-[110vh] w-screen z-20"
         >
@@ -289,7 +289,7 @@ img {
                 ></span
             >
         </div>
-    </div>
+    </div> -->
 
     <!-- <div
         class="bg-gradient-to-b from-[#ffcc00] to-white w-screen xl:h-screen h-full flex items-center justify-center pt-4"
@@ -600,14 +600,14 @@ img {
         </p>
 
         <div
-            class="bg-white h-max rounded-3xl w-1/1 px-8 xl:px-0 my-4 flex justify-center xl:flex-row flex-col items-center xl:gap-10 xl:text-xl text-sm"
+            class="bg-white h-max rounded-3xl w-1/1 px-8 xl:px-0 my-4 flex justify-start xl:flex-row flex-col items-start xl:gap-10 xl:text-xl text-sm"
             data-aos="fade-right"
             data-aos-duration="1500"
             data-aos-delay="500"
         >
             <div class="xl:w-1/2 xl:px-8 py-8 h-max pb-4 xl:pb-8">
                 <div class="">
-                    <h1 class="xl:text-3xl text-xl italic underline">
+                    <h1 class="xl:text-3xl text-xl underline">
                         Executive Courses (E)
                     </h1>
 
@@ -620,7 +620,7 @@ img {
                 </div>
                 <br />
                 <div>
-                    <h1 class="xl:text-3xl text-xl italic underline">
+                    <h1 class="xl:text-3xl text-xl underline">
                         Leadership Courses (L)
                     </h1>
 
@@ -632,7 +632,7 @@ img {
             </div>
             <div class="xl:w-1/2 xl:px-8 py-8 pt-0 h-max xl:pt-8">
                 <div>
-                    <h1 class="xl:text-3xl text-xl italic underline">
+                    <h1 class="xl:text-3xl text-xl underline">
                         Risk Manangement Courses (R)
                     </h1>
 
@@ -645,11 +645,9 @@ img {
                 </div>
                 <br />
                 <div>
-                    <h1 class="xl:text-3xl text-xl italic underline">
-                        Others (O)
-                    </h1>
+                    <h1 class="xl:text-3xl text-xl underline">Others (O)</h1>
 
-                    &#x2022; Coommunity Engagement through our Community
+                    &#x2022; Community Engagement through our Community
                     Development Fund (CDF): A Collective Action Initiative<br />
                     &#x2022; Digital Marketing Strategy for Managers and
                     Entrepreneurs<br />
@@ -663,7 +661,7 @@ img {
         </div>
     </div>
 
-    <div
+    <!-- <div
         class="w-screen xl:h-screen h-max flex flex-col items-center justify-center bg-gradient-to-t from-white to-[#FFCC00] text-center"
     >
         <span
@@ -701,9 +699,9 @@ img {
                 class="xl:w-4/5 w-full xl:h-max h-48 xl:px-0 px-4 rounded-3xl"
             />
         </div>
-    </div>
+    </div> -->
 
-    <div class="w-screen h-max radialgradient">
+    <!-- <div class="w-screen h-max radialgradient">
         <div class="flex xl:flex-row flex-col xl:pt-0 pt-10">
             <div
                 class="xl:w-1/2 w-full flex items-center justify-center"
@@ -787,7 +785,7 @@ img {
                 />
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div
         class="h-max py-8 w-screen flex flex-wrap justify-center items-center px-4 text-sm"
