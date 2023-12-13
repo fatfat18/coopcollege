@@ -7,6 +7,7 @@ use Exception;
 
 use App\Mail\WelcomeMail;
 use Illuminate\Support\Facades\Mail;
+use App\Mail\CustomMail;
 
 
 class Emailer extends Controller
@@ -21,7 +22,7 @@ class Emailer extends Controller
         
     
             //$userEmail = 'syncocovers@gmail.com'; // Replace with the actual email
-            Mail::to($request->email)->send(new WelcomeMail());
+            Mail::to($request->email)->send(new CustomMail());
             // Additional logic and response handling
         
             // Alternatively, any other code that might throw an exception
