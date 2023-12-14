@@ -131,15 +131,6 @@ img {
         rgba(255, 255, 255, 0) 100%
     );
 }
-.ygradient {
-    background: rgb(255, 255, 255);
-    background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(0, 0, 0, 1) 50%,
-        rgba(255, 255, 255, 0) 100%
-    );
-}
 
 .leftgradient {
     background: rgb(255, 255, 255);
@@ -242,188 +233,63 @@ img {
                     >Cooperative College of the Philippines</span
                 >.</span
             >
-            <div
-                class="w-screen ygradient h-1/2 absolute xl:bottom-[-15rem] bottom-[-10rem]"
-            ></div>
         </div>
     </div>
 
-    <!-- <div class="w-screen h-[110vh] homebg2 bg-left">
-        <div
-            class="leftanglegradient relative items-end justify-end pb-4 xl:justify-start xl:items-start flex flex-col h-[110vh] w-screen z-20"
-        >
-            <span
-                data-aos="fade-right"
-                data-aos-duration="500"
-                class="xl:text-6xl text-lg xl:w-1/2 w-full xl:pl-10 px-4 xl:px-0 text-white h-max xl:absolute bottom-5"
-                ><span class="text-theme2 xl:text-7xl text-xl">CLIMBS</span>
-                visit to the Wharton School, University of Pennsylvania
-                <span
-                    class="xl:text-base text-[12px] w-full -tracking-tighter xl:w-[60vw] xl:px-0 xl:pt-4 text-white h-max flex justify-center items-center flex-col"
-                    data-aos="fade-right"
-                    data-aos-duration="500"
-                >
-                    Meeting experts in the fields of climate policy , resilience
-                    and environmental economics supports the ongoing efforts of
-                    CLIMBS in its climate action activities like the Weather
-                    Protect Insurance (WPI) and CLIMBS Community Action Response
-                    and1x Emergency Services'(CARES) community programs and
-                    services. Susanna Berkouwer, Assistant Professor of Business
-                    Economics & Public Policy, Wharton School, University of
-                    Pennsylvania introduced Donna Dizon of CLIMBS and Wendy
-                    Smith of Global Parametrics to Michael Weisberg, senior
-                    faculty fellow and director of post-graduate programs and
-                    advisor to the United Nations Framework Convention on
-                    Climate Change, and contributing author to the
-                    "Intergovernmental Panel on Climate Change's Sixth
-                    Assessment Report”; and Garrett M. Albistegui Adler (not in
-                    photo), an interdisciplinary environmental social scientist
-                    focused on political and social impacts of climate change
-                    and variability.<span class="hidden xl:block">
-                        Strengthening our partnerships and understanding more of
-                        the cooperatives and how the holistic risk solutions
-                        work in the Philippines is essential as we scale our
-                        innovative products and services like the Weather
-                        Protect Insurance (WPI).</span
-                    ></span
-                ></span
-            >
-        </div>
-    </div> -->
-
-    <!-- <div
-        class="bg-gradient-to-b from-[#ffcc00] to-white w-screen xl:h-screen h-full flex items-center justify-center pt-4"
-    >
-        <div
-            class="w-full xl:px-10 px-4 h-max flex xl:flex-row flex-col justify-center items-center"
-        >
-            <div
-                class="xl:w-1/3 w-full mx-2 h-max xl:px-10 px-1 py-10 rounded-3xl pt-4"
-                data-aos="fade-up"
-                data-aos-duration="500"
-                data-aos-delay="300"
-            >
-                <img
-                    src="../../../asset/front/6.webp"
-                    class="rounded-3xl hover:scale-110 hover:-rotate-3 transition duration-500 overflow-hidden"
-                />
-                <div class="mt-5 text-2xl text-center text-theme1">
-                    Educational Forum: “Sustainability for Planet and People”
-                </div>
-                <div class="text-sm text-center text-tight">
-                    51st General Assembly of CLIMBS Life and General Insurance
-                    Cooperative with the theme "Sustainability for Planet and
-                    People" on April 26, 2023, at the Atrium, Limketkai Center.
-                </div>
-            </div>
-            <div
-                class="xl:w-1/3 w-full mx-2 h-max xl:px-10 px-1 py-10 rounded-3xl pt-4"
-                data-aos="fade-up"
-                data-aos-duration="500"
-            >
-                <img
-                    src="../../../asset/front/7.webp"
-                    class="rounded-3xl hover:scale-110 transition duration-500 overflow-hidden"
-                />
-                <div class="mt-5 text-2xl text-center text-theme1">
-                    Ceremonial Signing of Memorandum of Agreement between the
-                    University of Chicago Booth School of Business and Wharton
-                    School of the University of Pennsylvania
-                </div>
-                <div class="text-sm text-center text-tight">
-                    Business represented by Prof. Joshua T. Dean—Assistant
-                    Professor of Behavioral Science and Economics, The Wharton
-                    School of the University of Pennsylvania represented by
-                    Prof. Susanna B. Berkouwer—Assistant Professor of Business
-                    Economics and Public Policy, and CLIMBS Life and General
-                    Insurance Cooperative through the Co-operative College of
-                    the Philippines.
-                </div>
-            </div>
-            <div
-                class="xl:w-1/3 w-full mx-2 h-max xl:px-10 px-1 py-10 rounded-3xl pt-4"
-                data-aos="fade-up"
-                data-aos-duration="500"
-                data-aos-delay="400"
-            >
-                <img
-                    src="../../../asset/front/8.webp"
-                    class="rounded-3xl hover:scale-110 transition duration-500 overflow-hidden hover:rotate-3"
-                />
-                <div class="mt-5 text-2xl text-center text-theme1">
-                    Launching of the "Youth for Coops"
-                </div>
-                <div class="text-sm text-center text-tight">
-                    Education is one of CLIMBS’ advocacy as a cooperative. The
-                    cooperative movement itself has a long-standing and
-                    distinguished commitment to education which is one of its
-                    founding principles—specifically, the Principle No. 5
-                    wherein great part of it is to inform and involve the young
-                    people, that represents not only the future of our country.
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- 
     <div
-        class="flex xl:flex-row h-max flex-col w-screen justify-center items-center"
+        class="w-screeen h-max bg-red-500 flex flex-col justify-center items-center"
     >
-        <div
-            class="max-w-7xl h-max w-screen flex flex-col xl:flex-row justify-center items-center"
-        >
+        <div class="flex w-1/2 items-center justify-center">
             <div
-                class="h-max w-screen xl:w-full z-50 xl:mx-0 xl:my-5 flex px-6 xl:px-0 items-center justify-center"
-                data-aos="fade-left"
-                data-aos-delay="1000"
-                data-aos-duration="1000"
+                class="w-1/2 h-96 bg-white rounded-3xl mx-5 px-8 py-4 text-start"
             >
-                <img
-                    src="../../../asset/lpg1.jpg"
-                    class="xl:rounded-xl rounded-3xl shadow-2xl h-full xl:w-max w-full z-50"
-                />
+                <div class="text-5xl text-theme1 text-center py-4">
+                    Our Mission
+                </div>
+                <br /><br /><span
+                    >I. Provide crystalized best practices for cooperators;
+                    <br />II. Safekeeping knowledge that will engender
+                    innovations and enlightenment; and <br />III. Generate the
+                    cycle of empowerment amongst its participating cooperators
+                    towards social transformation.</span
+                >
             </div>
-
             <div
-                class="flex flex-col xl:py-10 xl:rounded-xl justify-start xl:mt-4 items-start h-max w-screen xl:w-1/2"
-                data-aos="fade-right"
-                data-aos-delay="500"
-                data-aos-duration="1000"
+                class="w-1/2 h-96 bg-white rounded-3xl mx-5 px-8 py-4 text-center"
             >
-                <p
-                    class="xl:text-7xl text-start xl:text-center text-lg px-8 mt-4 xl:mb-8 text-theme1 z-10 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]"
+                <span class="text-5xl text-theme1">Our Vision</span>
+                <br /><br />
+                <span
+                    >“A learning center for enlightened and empowered
+                    cooperators in the Philippines.”</span
                 >
-                    Cebu Training Session
-                </p>
-                <p
-                    class="text-white-800 text-xs xl:text-base tracking-tight text-justify px-8 py-4 z-10"
-                >
-                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp The morning session
-                    on Deepening our Co-operative Identity was facilitated by
-                    the
-                    <strong>Co-op College PH</strong> team headed by CEO &
-                    Principal <strong>Donna Dizon</strong>. This interactive
-                    learning activity brought out the creativity of the
-                    participants in making their own “Halo-halo” which requires
-                    certain key ingredients on embodying our identity as co-op
-                    leaders. The afternoon session on Co-op Financial Literacy:
-                    The Usage of Statutory Funds was conducted by our Resource
-                    Speaker and Trainer
-                    <strong>Hon. Gervacio Piator, CPA, MBA, DM, PhD.</strong> A
-                    total of 35 participants coming from 15 co-operatives
-                    nationwide joined and actively participated on these
-                    sessions. To learn more and be involved with the Co-op
-                    College programs (both locally and abroad), join us and be a
-                    member of the
-                    <strong class="text-theme1 xl:text-xl text-md"
-                        >National Federation of Cooperative Primaries in the
-                        Philippines - Nafecoop</strong
-                    >
-                    now!
-                </p>
             </div>
         </div>
-    </div> -->
+        <div
+            class="w-[58rem] mt-10 px-10 rounded-3xl py-4 pb-6 h-max bg-white text-start"
+        >
+            <div class="text-5xl text-theme1 text-center h-max py-2">
+                Purpose
+            </div>
+            <br />
+
+            <span
+                >The Co-operative College of the Philippines Articles of
+                Incorporation states, that the purpose for which such
+                corporation is incorporated are: <br />1. To offer tertiary
+                education; <br />2. Strengthening the Collective Movement
+                through Education; <br />3. To value the Collaborative identity
+                through education; <br />4. To provide continuous learning,
+                professional management, and higher level of knowledge focusing
+                on skills development; <br />5. Offer exceptional and
+                tailored-fit courses relevant to professional leadership current
+                issues and challenges; <br />6. Help build resiliency and
+                sustainability among the associations, people’s organization and
+                communities.</span
+            >
+        </div>
+    </div>
+
     <div class="bg-gradient-to-b from-[#ffcc00] to-white">
         <div
             class="w-max flex"
@@ -660,132 +526,6 @@ img {
             </div>
         </div>
     </div>
-
-    <!-- <div
-        class="w-screen xl:h-screen h-max flex flex-col items-center justify-center bg-gradient-to-t from-white to-[#FFCC00] text-center"
-    >
-        <span
-            class="xl:text-5xl text-2xl xl:w-2/3 w-full xl:px-0 px-4 xl:mb-10 mb-2 text-theme1"
-            data-aos="fade-down"
-            data-aos-duration="1000"
-            >Deepening Our Cooperative Identity Through Education & The Usage of
-            Cooperative Statutory Funds</span
-        >
-
-        <span
-            class="xl:text-md text-xs xl:w-3/4 w-full xl:px-0 px-4 mb-10"
-            data-aos="fade-down"
-            data-aos-duration="1000"
-            data-aos-delay="300"
-            >The morning session on Deepening our Co-operative Identity was
-            facilitated by the Co-op College Ph team headed by CEO & Principal
-            Donna Dizon. This interactive learning activity brought out the
-            creativity of the participants in making their own “Halo-halo” which
-            requires certain key ingredients on embodying our identity as co-op
-            leaders. The afternoon session on Co-op Financial Literacy: The
-            Usage of Statutory Funds was conducted by our Resource Speaker and
-            Trainer Hon. Gervacio Piator, CPA, MBA, DM, PhD. A total of 35
-            participants coming from 15 co-operatives nationwide joined and
-            actively participated on these sessions.</span
-        >
-        <div
-            class="flex items-center justify-center"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-easing="ease-out-back"
-        >
-            <img
-                src="../../../asset/front/5.webp"
-                class="xl:w-4/5 w-full xl:h-max h-48 xl:px-0 px-4 rounded-3xl"
-            />
-        </div>
-    </div> -->
-
-    <!-- <div class="w-screen h-max radialgradient">
-        <div class="flex xl:flex-row flex-col xl:pt-0 pt-10">
-            <div
-                class="xl:w-1/2 w-full flex items-center justify-center"
-                data-aos="fade-right"
-                data-aos-duration="1000"
-            >
-                <img
-                    src="../../../asset/front/9.webp"
-                    class="h-full w-2/3 rounded-3xl"
-                />
-            </div>
-            <div
-                class="xl:w-1/2 w-full flex items-center justify-center flex-col px-4 xl:pr-6"
-            >
-                <span
-                    class="xl:text-5xl text-xl xl:text-start text-center text-theme1"
-                    data-aos="fade-down"
-                    data-aos-duration="1000"
-                    >CLIMBS visit to the University of Chicago Booth School of
-                    Business</span
-                >
-                <span
-                    class="xl:pt-10 pt-2 xl:text-base text-xs xl:text-start text-center xl:pb-0 pb-10"
-                    data-aos="zoom-out"
-                    data-aos-duration="1000"
-                    >CLIMBS Life and General Insurance Cooperative
-                    representatives led by President and CEO Noel Raboy, MBA Ex
-                    were welcomed at the University of Chicago Booth School of
-                    Business by Economics’ Assistant Professor , Joshua T. Dean.
-                    They visited the Mindworks, a working laboratory of the
-                    school and met with world-renowned economist, Rachel
-                    Glennerster, Associate Professor of Economics in the
-                    Division of Social Science. The Co-operative College of the
-                    Philippines’ ongoing research collaboration with University
-                    of Chicago Booth School of Business includes a work on the
-                    innovative and holistic risk solutions of the enhanced
-                    Weather Protect Insurance and its cooperative members and
-                    farmers that are part of the climate action initiatives of
-                    CLIMBS. CLIMBS Director Hermes Vergara representing the Oro
-                    Integrated Cooperative, Director Noel Quidilla of Tagum
-                    Cooperative and CLIMBS VP for Admin and Corp. Planning/ CEO
-                    & Principal of the Co-op College Ph, Donna Dizon, CHRP were
-                    also in the meeting.</span
-                >
-            </div>
-        </div>
-        <div class="flex xl:flex-row flex-col-reverse">
-            <div
-                class="xl:w-1/2 w-full flex items-center justify-center flex-col px-4 xl:pl-6"
-            >
-                <span
-                    class="xl:text-5xl text-xl text-theme1 w-full xl:text-start text-center"
-                    data-aos="fade-down"
-                    data-aos-duration="1000"
-                    >Brand Activation for Co-operatives</span
-                >
-                <span
-                    class="xl:pt-10 pt-2 xl:text-base text-xs xl:text-start text-center"
-                    data-aos="zoom-out"
-                    data-aos-duration="1000"
-                    >With a total of 137 participants coming from 100
-                    co-operatives nationwide, the webinar session on Brand
-                    Activation for Cooperatives was concluded today. This
-                    webinar is in collaboration with the National Federation of
-                    Cooperative Primaries in the Philippines - Nafecoop, PPSA,
-                    Smart Communications, Inc., and PLDT. The said session
-                    widened our perspective on the possibilities of creating a
-                    stronger, more meaningful connection between our respective
-                    brand and our target audience in a co-operative
-                    context.</span
-                >
-            </div>
-            <div
-                class="xl:w-1/2 w-full flex items-center justify-center"
-                data-aos="fade-left"
-                data-aos-duration="1000"
-            >
-                <img
-                    src="../../../asset/front/12.webp"
-                    class="h-full w-5/6 rounded-3xl"
-                />
-            </div>
-        </div>
-    </div> -->
 
     <div
         class="h-max py-8 w-screen flex flex-wrap justify-center items-center px-4 text-sm"
