@@ -33,7 +33,7 @@ import InputLabel from "@/Components/InputLabel.vue";
             class="postcontainer flex justify-center w-screen xl:px-10 xl:pb-40"
         >
             <div class="xl:w-3/4 w-4/5 overflow-y-hidden">
-                <form @submit.prevent="updatePartners(this.intNum)">
+                <form @submit.prevent="updatePartners(intNum)">
                     <button
                         class="mt-6 border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg mb-10 hover:bg-green-600 transition ease-in duration-100"
                     >

@@ -27,13 +27,11 @@ import Modal from "@/Components/Modal.vue";
             </h2>
         </template>
 
-        <div class=""></div>
-
         <div
             class="postcontainer flex justify-center h-max w-screen xl:px-10 xl:pb-96"
         >
             <div class="xl:w-3/4 w-4/5 overflow-y-hidden">
-                <form @submit.prevent="updateBOD(this.intNum)">
+                <form @submit.prevent="updateBOD(intNum)">
                     <button
                         class="mt-6 border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg mb-10 hover:bg-green-600 transition ease-in duration-100"
                     >
