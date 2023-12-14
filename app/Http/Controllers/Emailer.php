@@ -20,9 +20,16 @@ class Emailer extends Controller
         try {
             // Your code that may throw an exception goes here
         
+
+            $userData = [
+                'email' => $request->input('email'),
+                'message' => $request->input('message'), // Replace with the actual data you want to pass
+                'fullname' => $request->input('fullname'),
+                // Add more data as needed
+            ];
     
             //$userEmail = 'syncocovers@gmail.com'; // Replace with the actual email
-            Mail::to($request->email)->send(new CustomMail());
+            Mail::to($request->email)->send(new CustomMail($userData));
             // Additional logic and response handling
         
             // Alternatively, any other code that might throw an exception
@@ -33,7 +40,7 @@ class Emailer extends Controller
             // If an exception is thrown, the code below the exception won't be executed
         } catch (Exception $e) {
             // Handle the exception
-        
+        return $e;
             // Log the exception
             \Log::error('Exception caught: ' . $e->getMessage());
         

@@ -6,6 +6,8 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Mail\Mailables\Envelope;
+use Illuminate\Mail\Mailables\Content;
 
 class CustomMail extends Mailable
 {
@@ -15,12 +17,13 @@ class CustomMail extends Mailable
 
     public function build()
     {
-        return $this->markdown('emails.custom_mail');
+        return $this->markdown('emails.custom_mail')->with(['userData' => $this->userData]);;
     }
     
-    public function __construct()
+    public function __construct($userData)
     {
         //
+        $this->userData = $userData;
     }
 
     /**

@@ -349,8 +349,8 @@ class ComposerStaticInit314247e7b9b94b12ea1901c57a6d0b16
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -538,6 +538,7 @@ class ComposerStaticInit314247e7b9b94b12ea1901c57a6d0b16
         'App\\Http\\Controllers\\Auth\\RegisteredUserController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisteredUserController.php',
         'App\\Http\\Controllers\\Auth\\VerifyEmailController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerifyEmailController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\Emailer' => __DIR__ . '/../..' . '/app/Http/Controllers/Emailer.php',
         'App\\Http\\Controllers\\ProfileController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProfileController.php',
         'App\\Http\\Controllers\\bod' => __DIR__ . '/../..' . '/app/Http/Controllers/bod.php',
         'App\\Http\\Controllers\\contactUs' => __DIR__ . '/../..' . '/app/Http/Controllers/contactUs.php',
@@ -557,6 +558,8 @@ class ComposerStaticInit314247e7b9b94b12ea1901c57a6d0b16
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Http\\Requests\\Auth\\LoginRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Auth/LoginRequest.php',
         'App\\Http\\Requests\\ProfileUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ProfileUpdateRequest.php',
+        'App\\Mail\\CustomMail' => __DIR__ . '/../..' . '/app/Mail/CustomMail.php',
+        'App\\Mail\\WelcomeMail' => __DIR__ . '/../..' . '/app/Mail/WelcomeMail.php',
         'App\\Models\\BOD' => __DIR__ . '/../..' . '/app/Models/BOD.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Models\\contactUs' => __DIR__ . '/../..' . '/app/Models/contactUs.php',

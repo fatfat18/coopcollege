@@ -58,21 +58,33 @@ Co-operative College of the Philippines
         }
 
         .footer {
+            margin:0;
             margin-top: 20px;
-            text-align: center;
-            color: #888888;
+            background-color:red;
+            text-align: left;
+            color: #000033;
+        }
+
+        .customfooter{
+            
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Your Custom Subject</h1>
-        {{-- <p>Dear {{ $user->name }},</p> --}}
-        <p>Your custom content goes here.</p>
-        
-        {{-- <a href="{{ route('home') }}" class="button">Get Started</a>
+<div class="container">
+    
+    <h1>Dear {{ $userData['fullname'] }},</h1> 
+    <h3>Thank you for subscribing to our Newsletter. We love to share the news and be part of our masterclass!</h3>
+<!-- 
+    <p>With your email {{ $userData['email'] }} your interest are</p> -->
+    <p>{{ $userData['message'] }}</p>
+    
+    <a href="https://co-opcollege.ph/" class="button">Visit Website</a>
 
-        <p class="footer">Best regards,<br> The {{ config('app.name') }} Team</p> --}}
-    </div>
+    <br/><br/>
+    <h2 style="color:#000033">Best regards, <br/>
+    The Co-operative College of the Philippines Team</h2>
+   
+</div>
 </body>
 </html>
