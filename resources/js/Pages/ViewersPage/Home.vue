@@ -240,7 +240,7 @@ img {
         class="w-screeen h-max bg-gradient-to-t from-theme2 to-white flex flex-col space-y-3 justify-center items-center"
     >
         <div
-            class="xl:w-3/4 w-[90%] h-max bg-white rounded-3xl mx-5 px-8 py-4 text-start"
+            class="xl:w-3/4 w-[90%] h-max bg-white rounded-b-3xl mx-5 px-8 py-4 text-start"
         >
             <div class="text-5xl text-theme1 text-center py-4">Our Mission</div>
             <span
@@ -263,7 +263,7 @@ img {
         </div>
 
         <div
-            class="xl:w-3/4 w-[90%] px-10 rounded-3xl py-4 pb-6 h-max bg-white text-start"
+            class="xl:w-3/4 w-[90%] px-10 rounded-3xl py-4 pb-6 h-max bg-gradient-to-t from-theme2 to-white text-start"
         >
             <div class="text-5xl text-theme1 text-center h-max py-2">
                 Purpose
@@ -539,7 +539,193 @@ img {
         </div>
     </div>
 
-    <div class="w-screen h-screen"></div>
+    <div
+        class="w-screen h-max py-10 mt-16 flex flex-wrap items-center justify-center xl:space-x-6"
+    >
+        <div class="w-screen text-theme1 text-center text-7xl tracking-widest">
+            MAJOR PARTNERS
+        </div>
+        <div
+            class="my-4 h-128 pt-10 pb-1 w-96 bg-gradient-to-b from-theme2 via-white to-zinc-100 flex flex-col items-center justify-center rounded-3xl px-6"
+        >
+            <div class="h-1/4 w-full flex items-center justify-center">
+                <img
+                    src="../../../asset/majorpartners/aim.png"
+                    class="rounded-full object-cover h-full"
+                />
+            </div>
+            <div
+                class="h-1/4 text-start w-full text-2xl mt-2 flex items-center justify-center"
+            >
+                Asia Institute of Management
+            </div>
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <p class="text-sm text-zinc-500">
+                    AIM doesn’t just sit at the heart of fluid change, but
+                    leads, inspires, and transforms the forces that exist around
+                    it — ultimately changing the perception of what an
+                    educational institution can be.
+                </p>
+            </div>
+
+            <div class="h-1/4 w-full flex items-center justify-center">
+                <a
+                    class="bg-blue-500 py-6 px-12 w-full my-4 text-white rounded-3xl flex text-center items-center justify-center"
+                    href="https://aim.edu/"
+                    target="_blank"
+                >
+                    Visit<i class="text-white text-xs ml-2"
+                        ><font-awesome-icon
+                            icon="fa-solid fa-arrow-right-long"
+                            bounce
+                    /></i>
+                </a>
+            </div>
+        </div>
+        <div
+            class="my-4 h-128 pt-10 pb-1 w-96 bg-gradient-to-b from-theme2 via-white to-zinc-100 flex flex-col items-center justify-center rounded-3xl px-6"
+        >
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <img
+                    src="../../../asset/majorpartners/icmif.png"
+                    class="rounded-full object-contain h-full"
+                />
+            </div>
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <div class="text-start w-full text-2xl mt-2">
+                    International Cooperative and Mutual Insurance Federation
+                </div>
+            </div>
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <p class="text-sm text-zinc-500">
+                    Unlike other industry associations or networking platforms
+                    you might know, because it is the only place where
+                    purpose-led insurers from across the globe come together to
+                    strengthen their organisations within a non-competitive
+                    environment.
+                </p>
+            </div>
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <a
+                    class="bg-blue-500 py-6 px-12 w-full my-4 text-white rounded-3xl flex text-center items-center justify-center"
+                    href="https://www.icmif.org/"
+                    target="_blank"
+                >
+                    Visit<i class="text-white text-xs ml-2"
+                        ><font-awesome-icon
+                            icon="fa-solid fa-arrow-right-long"
+                            bounce
+                    /></i>
+                </a>
+            </div>
+        </div>
+        <div
+            class="my-4 h-128 pt-10 pb-1 w-96 bg-gradient-to-b from-theme2 via-white to-zinc-100 flex flex-col items-center justify-center rounded-3xl px-6"
+        >
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <img
+                    src="../../../asset/majorpartners/cc.png"
+                    class="rounded-full object-contain"
+                />
+            </div>
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <div class="text-start w-full text-2xl mt-2">
+                    Cooperative College (UK)
+                </div>
+            </div>
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <p class="text-sm text-zinc-500">
+                    Here at the Co-operative College, we’ve always done things
+                    differently. Born over 100 years ago out of a need for
+                    radical education that fights for social justice, our
+                    mission hasn’t changed.We are fearless thinkers, innovators
+                    and passionate about change.
+                </p>
+            </div>
+
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <a
+                    class="bg-blue-500 py-6 px-12 w-full my-4 text-white rounded-3xl flex text-center items-center justify-center"
+                    href="https://www.co-op.ac.uk/"
+                    target="_blank"
+                >
+                    Visit<i class="text-white text-xs ml-2"
+                        ><font-awesome-icon
+                            icon="fa-solid fa-arrow-right-long"
+                            bounce
+                    /></i>
+                </a>
+            </div>
+        </div>
+
+        <div
+            class="my-4 h-128 pt-10 pb-1 w-96 bg-gradient-to-b from-theme2 via-white to-zinc-100 flex flex-col items-center justify-center rounded-3xl px-6"
+        >
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <img
+                    src="../../../asset/majorpartners/arete.png"
+                    class="rounded-full object-contain h-full"
+                />
+            </div>
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <div class="text-start w-full text-2xl mt-2">Areté</div>
+            </div>
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <p class="text-sm text-zinc-500">
+                    Areté has been in the industry of training and corporate
+                    consulting since 2008. Its services cover a broad range of
+                    learning and development interventions.
+                </p>
+            </div>
+
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <a
+                    class="bg-blue-500 py-6 px-12 w-full my-4 text-white rounded-3xl flex text-center items-center justify-center"
+                    href="https://www.teamarete.org/"
+                    target="_blank"
+                >
+                    Visit<i class="text-white text-xs ml-2"
+                        ><font-awesome-icon
+                            icon="fa-solid fa-arrow-right-long"
+                            bounce
+                    /></i>
+                </a>
+            </div>
+        </div>
+        <div
+            class="my-4 h-128 pt-10 pb-1 w-96 bg-gradient-to-b from-theme2 via-white to-zinc-100 flex flex-col items-center justify-center rounded-3xl px-6"
+        >
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <img
+                    src="../../../asset/majorpartners/nafecoop.jpeg"
+                    class="rounded-full object-contain h-full"
+                />
+            </div>
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <div class="text-start w-full text-2xl mt-2">NaFeCoop</div>
+            </div>
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <p class="text-sm text-zinc-500">
+                    Provides continuous learning , professional cooperative
+                    management, and higher level of knowledge foc.
+                </p>
+            </div>
+
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <a
+                    class="bg-blue-500 py-6 px-12 w-full my-4 text-white rounded-3xl flex text-center items-center justify-center"
+                    href="https://www.facebook.com/NaFeCoopOfficial"
+                    target="_blank"
+                >
+                    Visit<i class="text-white text-xs ml-2"
+                        ><font-awesome-icon
+                            icon="fa-solid fa-arrow-right-long"
+                            bounce
+                    /></i>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <Footer />
 </template>
@@ -547,6 +733,12 @@ img {
 <script>
 import img1 from "../../../asset/front/3.webp";
 import img2 from "../../../asset/front/2.webp";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+
+import { library } from "@fortawesome/fontawesome-svg-core";
+
+library.add(faArrowRightLong);
 
 export default {
     data() {
