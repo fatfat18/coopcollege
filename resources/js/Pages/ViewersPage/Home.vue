@@ -237,36 +237,33 @@ img {
     </div>
 
     <div
-        class="w-screeen h-max bg-red-500 flex flex-col justify-center items-center"
+        class="w-screeen h-max bg-gradient-to-t from-theme2 to-white flex flex-col space-y-3 justify-center items-center"
     >
-        <div class="flex w-1/2 items-center justify-center">
-            <div
-                class="w-1/2 h-96 bg-white rounded-3xl mx-5 px-8 py-4 text-start"
+        <div
+            class="xl:w-3/4 w-[90%] h-max bg-white rounded-3xl mx-5 px-8 py-4 text-start"
+        >
+            <div class="text-5xl text-theme1 text-center py-4">Our Mission</div>
+            <span
+                >I. Provide crystalized best practices for cooperators;
+                <br />II. Safekeeping knowledge that will engender innovations
+                and enlightenment; and <br />III. Generate the cycle of
+                empowerment amongst its participating cooperators towards social
+                transformation.</span
             >
-                <div class="text-5xl text-theme1 text-center py-4">
-                    Our Mission
-                </div>
-                <br /><br /><span
-                    >I. Provide crystalized best practices for cooperators;
-                    <br />II. Safekeeping knowledge that will engender
-                    innovations and enlightenment; and <br />III. Generate the
-                    cycle of empowerment amongst its participating cooperators
-                    towards social transformation.</span
-                >
-            </div>
-            <div
-                class="w-1/2 h-96 bg-white rounded-3xl mx-5 px-8 py-4 text-center"
-            >
-                <span class="text-5xl text-theme1">Our Vision</span>
-                <br /><br />
-                <span
-                    >“A learning center for enlightened and empowered
-                    cooperators in the Philippines.”</span
-                >
-            </div>
         </div>
         <div
-            class="w-[58rem] mt-10 px-10 rounded-3xl py-4 pb-6 h-max bg-white text-start"
+            class="xl:w-3/4 w-[90%] h-max bg-white rounded-3xl mx-5 px-8 py-4 text-center"
+        >
+            <span class="text-5xl text-theme1">Our Vision</span>
+            <br /><br />
+            <span
+                >“A learning center for enlightened and empowered cooperators in
+                the Philippines.”</span
+            >
+        </div>
+
+        <div
+            class="xl:w-3/4 w-[90%] px-10 rounded-3xl py-4 pb-6 h-max bg-white text-start"
         >
             <div class="text-5xl text-theme1 text-center h-max py-2">
                 Purpose
@@ -346,6 +343,28 @@ img {
             nafemarketing22@climbs.coop (NaFeCOOP)<br />
         </p>
     </div>
+    <div class="w-screen flex items-center justify-center">
+        <div class="pt-20 w-4/5 mt-6">
+            <div
+                class="text-theme2 w-max text-4xl xl:text-7xl text-center bg-gradient-to-r from-theme1 to-theme2 text-transparent bg-clip-text"
+            >
+                Who are we?
+            </div>
+            <br /><br />
+
+            <section
+                class="flex flex-col justify-center items-center text-justify"
+            >
+                <p class="text-theme1 xl:text-2xl">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        ref="typewriter"
+                        class="text-base xl:text-2xl"
+                    ></span
+                    ><span id="cursor">|</span>
+                </p>
+            </section>
+        </div>
+    </div>
 
     <div
         class="w-screen h-screen flex xl:flex-row flex-col bg-gradient-to-b from-white to-[#FFCC00]"
@@ -369,7 +388,7 @@ img {
             class="xl:w-2/5 w-full xl:h-screen h-max flex flex-col items-center justify-center"
         >
             <div
-                class="xl:h-1/3 h-80 w-full flex items-center justify-center flex-col px-10"
+                class="xl:h-2/3 h-80 w-full flex items-center justify-center flex-col px-10"
                 data-aos="zoom-out"
                 data-aos-duration="1000"
             >
@@ -386,14 +405,7 @@ img {
                     in El Salvador City, Misamis Oriental, Philippines.</span
                 >
             </div>
-            <div
-                class="w-full xl:flex hidden h-max overflow-hidden justify-center items-center"
-            >
-                <img
-                    src="../../../asset/logo.png"
-                    class="xl:w-24 h-20 xl:h-24 w-20"
-                />
-            </div>
+
             <div
                 class="xl:h-1/3 h-max w-full xl:pt-0 pt-4 flex items-center justify-center flex-col px-10"
                 data-aos="zoom-out"
@@ -415,7 +427,7 @@ img {
     </div>
 
     <div
-        class="h-max pt-4 w-screen bg-theme2 text-theme1 overflow-y-hidden xl:px-8"
+        class="h-max pt-4 w-screen bg-gradient-to-b from-theme2 to-white text-theme1 overflow-y-hidden xl:px-8"
     >
         <p
             class="text-theme1 text-4xl px-4"
@@ -527,146 +539,7 @@ img {
         </div>
     </div>
 
-    <div
-        class="h-max py-8 w-screen flex flex-wrap justify-center items-center px-4 text-sm"
-    >
-        <div class="flex flex-col xl:flex-row justify-center items-center">
-            <div
-                class="card relative text-xl px-4 text-center flex flex-col justify-center items-center my-4 mx-4 mb-10 h-96 xl:w-96 w-80 bg-theme2 rounded-xl"
-                data-aos="zoom-out"
-                data-aos-duration="1000"
-                data-aos-delay="300"
-            >
-                <font-awesome-icon
-                    icon="fa-solid fa-note-sticky "
-                    class="text-theme1 xl:h-16 h-12 mb-4 absolute z-40 hover:opacity-0"
-                />
-                <p
-                    class="cardtext px-12 xl:px-8 z-50 flex items-center justify-center h-96 w-80 xl:w-96 opacity-0 hover:opacity-100 transition duration-700 text-theme1 rounded-2xl cursor-pointer"
-                >
-                    National Federation of Cooperative Primaries in the
-                    Philippines -(NaFeCOOP)National Federation of Cooperative
-                    Primaries in the Philippines - (NaFeCOOP).
-                </p>
-            </div>
-            <div
-                class="card px-4 text-center flex flex-col justify-center items-center my-4 mb-10 h-96 xl:w-96 w-80 bg-theme2 mx-4 rounded-xl"
-                data-aos="zoom-out"
-                data-aos-duration="1000"
-                data-aos-delay="500"
-            >
-                <font-awesome-icon
-                    icon="fa-solid fa-coins"
-                    class="text-theme1 h-10 xl:h-16 absolute z-40 hover:opacity-0 mb-4"
-                />
-                <p
-                    class="cardtext px-12 xl:px-8 bg-theme2 z-50 flex flex-col items-center justify-center h-96 w-80 xl:w-96 opacity-0 hover:opacity-100 transition duration-700"
-                >
-                    <span class="text-xl"
-                        >The NaFeCOOP and its relation to the Co-op College
-                        PH:</span
-                    ><br />
-                    70% Consumable - for education, training and other related
-                    expenditures.<br />
-                    20% Redeemable - If not used in 5 years subject to terms and
-                    conditions
-                    <br />
-                    10% Advocacy Fund - For Federation, Education and Training
-                    Advocacy.<br />
-                </p>
-            </div>
-            <div
-                class="card px-4 flex flex-col justify-center xl:text-sm text-xs items-center my-4 mb-10 h-96 xl:w-96 w-80 bg-theme2 mx-4 rounded-xl text-center"
-                data-aos="zoom-out"
-                data-aos-duration="1000"
-                data-aos-delay="700"
-            >
-                <font-awesome-icon
-                    icon="fa-solid fa-lightbulb"
-                    class="text-theme1 xl:h-16 h-12 mb-4 absolute z-40 hover:opacity-0"
-                />
-                <p
-                    class="cardtext px-12 xl:px-8 bg-theme2 z-50 flex flex-col items-center justify-center h-96 w-80 xl:w-96 opacity-0 hover:opacity-100 transition duration-700"
-                >
-                    <span class="text-xl">The KoopSkwela </span>
-                    A mobile learning hub and educational initiative by CLIMBS
-                    Life and General Insurance Cooperative, the Co-operative
-                    College of the Philippines (Co-op College PH), Coop Life
-                    General Insurance & Financial Services Agency (CLIFSA),
-                    MASS-SPECC Cooperative Development Center, the National
-                    Confederation of Cooperatives (NATCCO Network), First
-                    Community Cooperative (FICCO), the National Federation of
-                    Cooperative Primaries in the Philippines (NaFeCOOP), and
-                    with the coordination of the Regional Cooperative
-                    Development Council (RCDC) - Region X.
-                </p>
-            </div>
-        </div>
-
-        <div class="flex flex-col xl:flex-row justify-center items-center">
-            <div
-                class="card px-4 text-center flex flex-col justify-center items-center my-4 mb-10 h-96 xl:w-96 w-80 bg-theme2 mx-4 rounded-xl"
-                data-aos="zoom-out"
-                data-aos-duration="1000"
-                data-aos-delay="900"
-            >
-                <font-awesome-icon
-                    icon="fa-solid fa-briefcase-medical"
-                    class="text-theme1 xl:h-16 h-12 mb-4 absolute z-40 hover:opacity-0"
-                />
-                <p
-                    class="cardtext px-12 xl:px-8 bg-theme2 z-50 flex flex-col items-center justify-center h-96 w-80 xl:w-96 opacity-0 hover:opacity-100 transition duration-700"
-                >
-                    From the CIFL to the Co-op College PH The CLIMBS Institute
-                    of Financial Literacy (CIFL) strategically pivoted to the
-                    CLIMBS Institute of Management (CIM), and finally to the
-                    Co-operative College of the Philippines (Co-op College PH)
-                    which aims to further co-operative education by embodying
-                    the Co-operative Values & Principles, providing higher level
-                    of trainings, upgrade educational & learning platforms, and
-                    widen its reach through local & international partnerships.
-                </p>
-            </div>
-            <div
-                class="card px-4 text-center flex flex-col justify-center items-center my-4 mb-10 h-96 xl:w-96 w-80 bg-theme2 mx-4 rounded-xl"
-                data-aos="zoom-out"
-                data-aos-duration="1000"
-                data-aos-delay="1100"
-            >
-                <font-awesome-icon
-                    icon="fa-solid fa-chart-simple"
-                    class="text-theme1 xl:h-16 h-12 mb-4 absolute z-40 hover:opacity-0"
-                />
-                <p
-                    class="cardtext px-12 xl:px-8 bg-theme2 z-50 flex flex-col items-center justify-center h-96 w-80 xl:w-96 opacity-0 hover:opacity-100 transition duration-700"
-                >
-                    <span class="text-xl">Cooperative Management</span><br />
-                    in partnership with the Asian Institute of Management (AIM).
-                </p>
-            </div>
-            <div
-                class="card px-4 text-center flex flex-col justify-center items-center my-4 mb-10 h-96 xl:w-96 w-80 bg-theme2 mx-4 rounded-xl"
-                data-aos="zoom-out"
-                data-aos-duration="1000"
-                data-aos-delay="1300"
-            >
-                <font-awesome-icon
-                    icon="fa-solid fa-earth-asia"
-                    class="text-theme1 xl:h-16 h-12 mb-4 absolute z-40 hover:opacity-0"
-                />
-                <p
-                    class="cardtext px-12 xl:px-8 bg-theme2 z-50 flex flex-col items-center justify-center h-96 w-80 xl:w-96 opacity-0 hover:opacity-100 transition duration-700"
-                >
-                    <span class="text-xl">
-                        The Global Co-operative Executive Masterclass</span
-                    ><br />
-                    Was held in Manchester, United Kingdom, in the heart of the
-                    birthplace of the modern Co-operative Movement, following in
-                    the footsteps of the Rochdale Pioneers.
-                </p>
-            </div>
-        </div>
-    </div>
+    <div class="w-screen h-screen"></div>
 
     <Footer />
 </template>
@@ -680,6 +553,11 @@ export default {
         return {
             cover: [img1, img2],
             currentIndex: 0,
+            phrases: [
+                "We are the sole-training needs provider of the National Federation of Cooperative Primaries of the Philippines (NaFeCOOP). We Strategically pivoted from CLIMBS Institute for Financial Literacy (CIFL) to CLIMBS Institute of Management (CIM), and now, the Co-operative College of the Philippines (Co-op College PH) to further cooperative education both locally and globally, embodies the cooperative values and principles, and upgrades its educational platforms.",
+            ],
+            sleepTime: 20,
+            curPhraseIndex: 0,
         };
     },
 
@@ -687,6 +565,10 @@ export default {
         setInterval(() => {
             this.nextSlide();
         }, 5000);
+
+        setTimeout(() => {
+            this.writeLoop();
+        }, 3000);
     },
     methods: {
         prevSlide() {
@@ -695,6 +577,24 @@ export default {
         },
         nextSlide() {
             this.currentIndex = (this.currentIndex + 1) % this.cover.length;
+        },
+        sleep(ms) {
+            return new Promise((resolve) => setTimeout(resolve, ms));
+        },
+        async writeLoop() {
+            while (true) {
+                let curWord = this.phrases[this.curPhraseIndex];
+
+                for (let i = 0; i < curWord.length; i++) {
+                    this.$refs.typewriter.textContent = curWord.substring(
+                        0,
+                        i + 1
+                    );
+                    await this.sleep(this.sleepTime);
+                }
+
+                await this.sleep(this.sleepTime * 9999);
+            }
         },
     },
 };

@@ -13,6 +13,10 @@ export default {
             type: String,
             required: true,
         },
+        cost: {
+            type: String,
+            required: true,
+        },
         objectives: {
             type: String,
             required: true,
@@ -53,7 +57,7 @@ export default {
 
 <template>
     <div
-        class="h-24 xl:h-32 max-w-7xl bg-white xl:px-8 xl:py-4 rounded-lg grid grid-cols-7 xl:gap-2 max-h-30 xl:max-h-40 text-[10px] xl:text-[12px] xl:text-md pr-4"
+        class="h-24 xl:h-32 max-w-7xl bg-white xl:px-8 xl:py-4 rounded-lg grid grid-cols-8 xl:gap-2 max-h-30 xl:max-h-40 text-[10px] xl:text-[12px] xl:text-md pr-4"
     >
         <div class="flex justify-center text-center items-center">
             {{ month }}
@@ -66,6 +70,9 @@ export default {
         </div>
         <div class="flex justify-center text-center items-center">
             {{ venue }}
+        </div>
+        <div class="flex justify-center text-center items-center">
+            {{ cost }}
         </div>
         <div class="flex justify-center text-center items-center">
             {{ year }}

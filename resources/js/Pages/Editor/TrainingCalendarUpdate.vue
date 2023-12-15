@@ -96,6 +96,20 @@ import Modal from "@/Components/Modal.vue";
                             @click.stop
                         >
                         </TextInput>
+                        <TextInput
+                            id="name"
+                            name="cost"
+                            type="text"
+                            class="mt-4 py-2 px-2 w-full focus:ring-yellow-500 active:ring-yellow-500"
+                            required
+                            autocomplete=""
+                            placeholder="Cost"
+                            v-model="cost"
+                            data-aos="fade-up"
+                            data-aos-duration="1300"
+                            @click.stop
+                        >
+                        </TextInput>
 
                         <TextInput
                             id="name"
@@ -140,6 +154,7 @@ export default {
             year: "",
             venue: "",
             objectives: "",
+            cost: "",
             items: [],
             selectedItem: this.itemId,
         };
@@ -202,6 +217,8 @@ export default {
             params.append("venue", this.venue);
             params.append("month", this.month);
             params.append("year", this.year);
+            params.append("objectives", this.objectives);
+            params.append("cost", this.cost);
             params.append("idTC", num);
 
             axios

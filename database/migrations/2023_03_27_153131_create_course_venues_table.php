@@ -16,6 +16,8 @@ return new class extends Migration
             $table->text('courseTitle');
             $table->text('Objectives');
             $table->text('Venue');
+            $table->text('Cost');
+        
         });
     }
 

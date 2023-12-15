@@ -48,24 +48,7 @@ import PartnersPic from "@/Components/PartnersPic.vue";
     <ResponsiveNavBar />
 
     <div class="w-screen flex flex-col justify-center items-center bg">
-        <div class="overflow-y-hidden pt-20 w-3/4 xl:pl-20 mt-6">
-            <span class="text-white text-4xl xl:text-5xl">Who are we?</span
-            ><br /><br />
-
-            <section
-                class="flex flex-col justify-center items-center text-justify"
-            >
-                <p class="text-white xl:text-xl">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                        ref="typewriter"
-                        class="text-base xl:text-2xl"
-                    ></span
-                    ><span id="cursor">|</span>
-                </p>
-            </section>
-        </div>
-
-        <span class="text-white text-3xl xl:text-5xl xl:pt-20 mb-4"
+        <span class="text-white text-3xl xl:text-5xl xl:pt-20 mb-4 mt-5"
             >Governance</span
         >
 
@@ -116,7 +99,32 @@ import PartnersPic from "@/Components/PartnersPic.vue";
             </div>
         </div>
 
-        <div class="h-max w-screen">
+        <div
+            class="w-screen h-max py-10 mt-20 flex items-center justify-center"
+        >
+            <div
+                class="h-max pt-10 pb-1 w-128 bg-gradient-to-b from-theme2 via-white to-white flex flex-col items-end justify-center rounded-3xl px-10"
+            >
+                <p class="">
+                    CLIMBS Life and General Insurance Cooperative, established
+                    at Cagayan De Oro in 1971, is a leading LIFE & NON-LIFE
+                    micro-insurance provider in the Philippines licensed by the
+                    Cooperative Development Authority (CDA) & the Insurance
+                    Commission (IC).
+                </p>
+
+                <button
+                    class="bg-blue-500 py-8 px-12 w-full my-4 text-white rounded-3xl flex text-center items-center justify-center"
+                    @click="showHistory = !showHistory"
+                >
+                    <p v-if="!showHistory" class="mr-1">Show</p>
+                    <p v-else="showHistory" class="mr-1">Hide</p>
+                    History
+                </button>
+            </div>
+        </div>
+
+        <div class="h-max w-screen" v-if="showHistory">
             <header class="xl:mt-40 mt-20 flex flex-col">
                 <h1 class="text-white mb-20 text-2xl xl:text-5xl">
                     OUR HISTORY
@@ -617,6 +625,7 @@ export default {
             curPhraseIndex: 0,
             partners: [],
             bods: [],
+            showHistory: false,
         };
     },
     mounted() {
@@ -639,28 +648,11 @@ export default {
             .catch((error) => {
                 console.log(error);
             });
-
-        this.writeLoop();
     },
 
     methods: {
         sleep(ms) {
             return new Promise((resolve) => setTimeout(resolve, ms));
-        },
-        async writeLoop() {
-            while (true) {
-                let curWord = this.phrases[this.curPhraseIndex];
-
-                for (let i = 0; i < curWord.length; i++) {
-                    this.$refs.typewriter.textContent = curWord.substring(
-                        0,
-                        i + 1
-                    );
-                    await this.sleep(this.sleepTime);
-                }
-
-                await this.sleep(this.sleepTime * 9999);
-            }
         },
     },
 };

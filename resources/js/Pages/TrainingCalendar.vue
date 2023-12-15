@@ -48,7 +48,7 @@ library.add(faPlus);
                 data-aos-duration="1000"
             >
                 <div
-                    class="max-w-7xl bg-white xl:px-8 xl:py-4 py-4 rounded-sm grid grid-cols-7 gap-4 text-xs xl:text-md"
+                    class="max-w-7xl bg-white xl:px-8 xl:py-4 py-4 rounded-sm grid grid-cols-8 gap-4 text-xs xl:text-md"
                 >
                     <div class="flex justify-center text-center items-center">
                         MONTH
@@ -61,6 +61,9 @@ library.add(faPlus);
                     </div>
                     <div class="flex justify-center text-center items-center">
                         VENUE
+                    </div>
+                    <div class="flex justify-center text-center items-center">
+                        COST
                     </div>
                     <div class="flex justify-center text-center items-center">
                         YEAR
@@ -85,6 +88,7 @@ library.add(faPlus);
                         :coursetitle="item.event.courseTitle"
                         :venue="item.event.Venue"
                         :objectives="item.event.Objectives"
+                        :cost="item.event.Cost"
                         :year="item.year"
                         :buttonid="item.idTC"
                         data-aos="fade-up"

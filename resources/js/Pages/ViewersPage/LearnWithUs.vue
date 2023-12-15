@@ -44,6 +44,7 @@ import Footer from "@/Components/Footer.vue";
             <div class="xl:w-3/5 w-1/4 text-center">Course Title</div>
             <div class="xl:w-3/5 w-1/4 text-center">Objectives</div>
             <div class="xl:w-3/5 w-1/4 text-center">Venue</div>
+            <div class="xl:w-3/5 w-1/4 text-center">Cost</div>
         </div>
 
         <div
@@ -62,7 +63,7 @@ import Footer from "@/Components/Footer.vue";
                     class="flex text-center w-full justify-center items-center hover:scale-105 transition duration-300"
                 >
                     <div
-                        class="xl:w-1/4 lg:w-2/3 w-1/3 text-center font-black xl:text-xl flex justify-center items-start py-5"
+                        class="xl:w-[10%] lg:w-2/3 w-1/3 text-center font-black xl:text-lg flex justify-center items-start py-5"
                     >
                         {{ eventData.month }}
                     </div>
@@ -79,7 +80,7 @@ import Footer from "@/Components/Footer.vue";
                                 &#x2022; {{ event.courseTitle }}
                             </div>
                             <div
-                                class="w-full text-start flex justify-start items-center py-2 xl:pl-14"
+                                class="w-full text-start text-xs flex justify-start items-center py-2 xl:pl-14"
                             >
                                 &#x2022; {{ event.Objectives }}
                             </div>
@@ -87,6 +88,11 @@ import Footer from "@/Components/Footer.vue";
                                 class="w-full text-start flex justify-start items-center py-2 xl:pl-32"
                             >
                                 &#x2022; {{ event.Venue }}
+                            </div>
+                            <div
+                                class="w-full text-start flex justify-start items-center py-2 xl:pl-32"
+                            >
+                                {{ event.Cost }}
                             </div>
 
                             <br />
