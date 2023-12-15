@@ -208,6 +208,7 @@ export default {
     },
     methods: {
         updateTrainingcalendar() {
+            this.showModal = true;
             let params = new URLSearchParams();
             //let item = this.items.find(item => item.idTC === this.selectedItem);
 
@@ -230,7 +231,7 @@ export default {
                 )
                 .then((response) => {
                     console.log(response.data);
-                    this.showModal = true;
+                    this.showModal = false;
 
                     async function redirectWithDelay() {
                         await new Promise((resolve) =>

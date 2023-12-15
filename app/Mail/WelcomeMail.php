@@ -18,12 +18,13 @@ class WelcomeMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.welcome');
+        return $this->markdown('emails.welcome')->with(['userData' => $this->userData]);
     }
 
-    public function __construct()
+    public function __construct($userData)
     {
         //
+        $this->userData = $userData;
     }
 
     /**

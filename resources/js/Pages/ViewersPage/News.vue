@@ -184,17 +184,17 @@ export default {
                     BASE_URL + "/paginateDisplayPost"
                 );
 
-                console.log(response);
+                //console.log(response);
                 this.heading = response.data.data[0];
-                console.log(this.heading);
+                //console.log(this.heading);
                 this.title = this.heading.newsTitle;
                 this.description = this.heading.Description;
                 this.context = this.heading.Context;
                 this.img = this.heading.avatar.ImageUrl;
-                console.log(this.img);
+                //console.log(this.img);
                 this.pid = this.heading.Postid;
                 this.pageposts = response.data.data.slice(1);
-                console.log(this.pageposts);
+                //console.log(this.pageposts);
             } catch (error) {
                 console.error(error);
             }

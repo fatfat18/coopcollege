@@ -271,6 +271,7 @@ export default {
             reader.readAsDataURL(file);
         },
         submitData() {
+            this.showModal = true;
             const formData = new FormData();
             formData.append("file", this.imagePreviewUrl);
             formData.append("Fname", this.firstname);
@@ -292,7 +293,7 @@ export default {
                 })
                 .then((response) => {
                     console.log(response);
-                    this.showModal = true;
+                    this.showModal = false;
                     async function redirectWithDelay() {
                         await new Promise((resolve) =>
                             setTimeout(resolve, 1000)

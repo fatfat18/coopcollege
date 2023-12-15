@@ -195,6 +195,7 @@ export default {
             console.log(this.imagePreviewUrl);
         },
         submitData() {
+            this.showModal = true;
             const formData = new FormData();
 
             for (let i = 0; i < this.imagePreviewUrl.length; i++) {
@@ -219,7 +220,7 @@ export default {
                 })
                 .then((response) => {
                     console.log(response);
-                    this.showModal = true;
+                    this.showModal = false;
                     async function redirectWithDelay() {
                         await new Promise((resolve) =>
                             setTimeout(resolve, 1000)

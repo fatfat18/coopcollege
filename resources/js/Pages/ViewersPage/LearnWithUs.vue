@@ -124,7 +124,7 @@ export default {
             .get(BASE_URL + "/displayCalendarTraining")
             .then((response) => {
                 this.calendar = response.data;
-                console.log(this.calendar);
+                //console.log(this.calendar);
             })
             .catch((error) => {
                 console.log(error);

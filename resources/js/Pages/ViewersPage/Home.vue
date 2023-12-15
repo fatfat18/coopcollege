@@ -547,6 +547,10 @@ img {
         </div>
         <div
             class="my-4 h-128 pt-10 pb-1 w-96 bg-gradient-to-b from-theme2 via-white to-zinc-100 flex flex-col items-center justify-center rounded-3xl px-6"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out-back"
+            data-aos-delay="500"
         >
             <div class="h-1/4 w-full flex items-center justify-center">
                 <img
@@ -582,6 +586,10 @@ img {
         </div>
         <div
             class="my-4 h-128 pt-10 pb-1 w-96 bg-gradient-to-b from-theme2 via-white to-zinc-100 flex flex-col items-center justify-center rounded-3xl px-6"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out-back"
+            data-aos-delay="600"
         >
             <div class="w-full h-1/4 flex items-center justify-center">
                 <img
@@ -617,6 +625,10 @@ img {
         </div>
         <div
             class="my-4 h-128 pt-10 pb-1 w-96 bg-gradient-to-b from-theme2 via-white to-zinc-100 flex flex-col items-center justify-center rounded-3xl px-6"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out-back"
+            data-aos-delay="700"
         >
             <div class="w-full h-1/4 flex items-center justify-center">
                 <img
@@ -654,6 +666,10 @@ img {
 
         <div
             class="my-4 h-128 pt-10 pb-1 w-96 bg-gradient-to-b from-theme2 via-white to-zinc-100 flex flex-col items-center justify-center rounded-3xl px-6"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out-back"
+            data-aos-delay="800"
         >
             <div class="w-full h-1/4 flex items-center justify-center">
                 <img
@@ -686,6 +702,10 @@ img {
         </div>
         <div
             class="my-4 h-128 pt-10 pb-1 w-96 bg-gradient-to-b from-theme2 via-white to-zinc-100 flex flex-col items-center justify-center rounded-3xl px-6"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out-back"
+            data-aos-delay="900"
         >
             <div class="w-full h-1/4 flex items-center justify-center">
                 <img

@@ -8,6 +8,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import InputLabel from "@/Components/InputLabel.vue";
 import { faTty } from "@fortawesome/free-solid-svg-icons";
+import Modal from "@/Components/Modal.vue";
 
 library.add(faFacebook, faPhone, faEnvelope, faTty);
 </script>
@@ -22,8 +23,16 @@ library.add(faFacebook, faPhone, faEnvelope, faTty);
 
 <template>
     <div
-        class="ftr w-screen h-max flex items-center justify-center xl:pt-10 pt-4"
+        class="ftr w-screen h-max flex items-center justify-center xl:pt-10 pt-4 relative"
     >
+        <Modal
+            class="absolute transform top-1/4 left-1/3 translate-x-1/3 translate-y-1/6 w-96 h-40 bg-theme2 rounded-3xl text-center py-10 text-3xl"
+            :show="showLoading"
+            @close="showLoading = false"
+        >
+            <span class="text-3xl">Submitting form to our team!</span
+            ><br /><br />
+        </Modal>
         <div class="xl:w-3/4 w-screen h-max xl:px-10 px-2">
             <p class="xl:text-7xl text-4xl text-white text-center">
                 Stay Connected
@@ -61,6 +70,7 @@ library.add(faFacebook, faPhone, faEnvelope, faTty);
                     ></textarea>
                     <button
                         class="w-full rounded-xl text-zinc-950 text-3xl bg-theme2 py-4"
+                        @click="submitData()"
                     >
                         Join us now!
                     </button>
@@ -115,7 +125,7 @@ library.add(faFacebook, faPhone, faEnvelope, faTty);
             >
                 All Rights Reserved Co-operative College of the Philippines
 
-                <img src="../../asset//logo.png" class="w-10 h-10 my-2" />
+                <img src="../../asset//logo.png" class="w-10 h-12 my-2" />
             </div>
         </div>
     </div>
@@ -221,6 +231,7 @@ export default {
             newslettername: "",
             newsletteremail: "",
             newslettermessage: "",
+            showLoading: false,
         };
     },
 
@@ -229,7 +240,7 @@ export default {
             .get(BASE_URL + "/displayContactUs?idcontactUs=1")
             .then((response) => {
                 this.contacts = response.data;
-                console.log(this.contacts);
+                //console.log(this.contacts);
                 this.fb = this.contacts[0].facebookLink;
                 this.phonenum = this.contacts[0].phoneNum;
                 this.email =
@@ -240,6 +251,35 @@ export default {
             .catch((error) => {
                 console.log(error);
             });
+    },
+    methods: {
+        submitData() {
+            this.showLoading = !this.showLoading;
+            const formData = new FormData();
+            formData.append("email", this.newsletteremail);
+            formData.append("message", this.newslettermessage);
+            formData.append("fullname", this.newslettername);
+
+            // Append additional form data to the same FormData object
+
+            axios
+                .post(BASE_URL + "/email", formData, {
+                    headers: {
+                        "Content-Type": "multipart/form-data",
+                    },
+                })
+                .then((response) => {
+                    //console.log(response);
+                    this.showLoading = !this.showLoading;
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+
+            this.newsletteremail = "";
+            this.newslettermessage = "";
+            this.newslettername = "";
+        },
     },
 };
 

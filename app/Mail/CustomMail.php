@@ -17,7 +17,7 @@ class CustomMail extends Mailable
 
     public function build()
     {
-        return $this->markdown('emails.custom_mail')->with(['userData' => $this->userData]);;
+        return $this->markdown('emails.custom_mail')->with(['userData' => $this->userData]);
     }
     
     public function __construct($userData)

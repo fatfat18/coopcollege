@@ -28,13 +28,11 @@ class Emailer extends Controller
                 // Add more data as needed
             ];
     
-            //$userEmail = 'syncocovers@gmail.com'; // Replace with the actual email
-            Mail::to($request->email)->send(new CustomMail($userData));
+            $userEmail = 'info@co-opcollege.ph'; // Replace with the actual email
+            Mail::to($request->email)->send(new CustomMail($userData)); //KANI EMAIL SA USER
             // Additional logic and response handling
-        
-            // Alternatively, any other code that might throw an exception
-            // ...
-
+            Mail::to($userEmail)->send(new WelcomeMail($userData)); //KANI EMAIL SA COOPCOLLEGE ADMIN
+       
             return response()->json(['message' => 'Email Sent Succesfully.'], 200);
         
             // If an exception is thrown, the code below the exception won't be executed

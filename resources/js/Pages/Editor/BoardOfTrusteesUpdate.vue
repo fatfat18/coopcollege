@@ -342,6 +342,7 @@ export default {
         },
 
         updateBOD() {
+            this.showModal = true;
             let params = new URLSearchParams();
             //let item = this.items.find(item => item.idTC === this.selectedItem);
 
@@ -362,7 +363,7 @@ export default {
                 .put(BASE_URL + "/updateBOD" + "?" + params.toString())
                 .then((response) => {
                     console.log(response.data);
-                    this.showModal = true;
+                    this.showModal = false;
                     console.log(params.toString());
 
                     async function redirectWithDelay() {

@@ -633,7 +633,7 @@ export default {
             .get(BASE_URL + "/displayPartner")
             .then((response) => {
                 this.partners = response.data;
-                console.log(this.partners);
+                //console.log(this.partners);
             })
             .catch((error) => {
                 console.log(error);
@@ -643,7 +643,7 @@ export default {
             .get(BASE_URL + "/displayBOD")
             .then((response) => {
                 this.bods = response.data;
-                console.log(this.bods);
+                //console.log(this.bods);
             })
             .catch((error) => {
                 console.log(error);
