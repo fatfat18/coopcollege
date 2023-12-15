@@ -21,7 +21,100 @@ library.add(faFacebook, faPhone, faEnvelope, faTty);
 </style>
 
 <template>
-    <div
+    <div class="ftr w-screen h-max flex items-center justify-center xl:pt-10">
+        <div class="w-3/4 h-max px-10">
+            <p class="text-7xl text-white text-center">Stay Connected</p>
+            <p class="text-4xl my-2 text-white text-center">
+                Join our Newsletter!
+            </p>
+            <p class="text-md text-white text-center">
+                CIFL/CIM now pivots to the Co-operative College of the
+                Philippines (Co-op College PH).The training and education arm
+                for a higher level of training and education opportunities in
+                the Philippine Cooperative Movement.
+            </p>
+            <br />
+            <div class="flex items-center justify-center flex-col">
+                <div class="w-3/4 flex">
+                    <input
+                        type="text"
+                        class="rounded-lg w-full mx-1"
+                        placeholder="Name"
+                        v-model="newslettername"
+                    />
+                    <input
+                        type="text"
+                        class="rounded-lg w-full mx-1"
+                        placeholder="Email"
+                        v-model="newsletteremail"
+                    />
+                </div>
+                <div class="w-3/4 px-1">
+                    <textarea
+                        class="rounded-lg w-full h-40 mt-1"
+                        placeholder="Message"
+                        v-model="newslettermessage"
+                    ></textarea>
+                    <button
+                        class="w-full rounded-xl text-zinc-950 text-3xl bg-theme2 py-4"
+                    >
+                        Join us now!
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex text-white ml-20 justify-center items-start">
+                <span class="flex items-center justify-center"
+                    ><font-awesome-icon
+                        icon="fa-solid fa-mobile"
+                        class="text-4xl mx-4 my-5"
+                    />0917-700-9159</span
+                >
+
+                <span class="flex items-center justify-center"
+                    ><font-awesome-icon
+                        icon="fa-solid fa-envelope"
+                        class="text-4xl mx-4 my-5"
+                    />info@co-opcollege.ph</span
+                >
+
+                <span class="flex items-center justify-center"
+                    ><font-awesome-icon
+                        icon="fa-solid fa-globe"
+                        class="text-4xl mx-4 my-5"
+                    />www.co-opcollege.ph</span
+                >
+            </div>
+            <div
+                class="w-full py-4 flex text-white items-center justify-center"
+            >
+                <a href="https://www.facebook.com/CoopCollegePH" target="_blank"
+                    ><span
+                        ><font-awesome-icon
+                            icon="fa-brands fa-facebook"
+                            class="text-6xl mx-4 hover:scale-110 transition duration-500" /></span
+                ></a>
+                <a
+                    href="https://www.linkedin.com/company/co-operative-college-of-the-philippines-ccp"
+                    target="_blank"
+                >
+                    <span
+                        ><font-awesome-icon
+                            icon="fa-brands fa-linkedin"
+                            class="text-6xl mx-4 hover:scale-110 transition duration-500" /></span
+                ></a>
+            </div>
+            <div
+                class="w-full pt-10 text-theme2 flex flex-col items-center justify-center"
+            >
+                All Rights Reserved Co-operative College of the Philippines
+
+                <img src="../../asset//logo.png" class="w-10 h-10 my-2" />
+            </div>
+        </div>
+    </div>
+
+    <!-- <div
         id="footer"
         class="ftr w-screen h-80 bg-theme1 pt-8 flex flex-col items-center"
     >
@@ -93,11 +186,21 @@ library.add(faFacebook, faPhone, faEnvelope, faTty);
                 © Co-operative College of the Philippines
             </p>
         </div>
-    </div>
+    </div> -->
 </template>
 
 <script>
 import { BASE_URL } from "../baseurl";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { faMobile } from "@fortawesome/free-solid-svg-icons";
+
+import { library } from "@fortawesome/fontawesome-svg-core";
+
+library.add(faFacebook, faLinkedin, faEnvelope, faGlobe, faMobile);
 
 export default {
     data() {
@@ -109,6 +212,9 @@ export default {
             tel: "",
             email: "",
             showModal: false,
+            newslettername: "",
+            newsletteremail: "",
+            newslettermessage: "",
         };
     },
 

@@ -344,16 +344,16 @@ img {
         </p>
     </div>
     <div class="w-screen flex items-center justify-center">
-        <div class="pt-20 w-4/5 mt-6">
+        <div class="pt-20 overflow-hidden w-4/5 mt-6">
             <div
-                class="text-theme2 w-max text-4xl xl:text-7xl text-center bg-gradient-to-r from-theme1 to-theme2 text-transparent bg-clip-text"
+                class="text-theme2 py-2 w-max text-4xl xl:text-7xl text-center bg-gradient-to-r from-theme1 to-theme2 text-transparent bg-clip-text"
             >
                 Who are we?
             </div>
             <br /><br />
 
             <section
-                class="flex flex-col justify-center items-center text-justify"
+                class="flex flex-col justify-center items-center text-justify h-max"
             >
                 <p class="text-theme1 xl:text-2xl">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
@@ -570,14 +570,12 @@ img {
 
             <div class="h-1/4 w-full flex items-center justify-center">
                 <a
-                    class="bg-blue-500 py-6 px-12 w-full my-4 text-white rounded-3xl flex text-center items-center justify-center"
+                    class="bg-blue-500 py-6 px-12 w-full my-4 text-white rounded-3xl flex text-center items-center justify-center hover:bg-theme1 transition duration-500"
                     href="https://aim.edu/"
                     target="_blank"
                 >
-                    Visit<i class="text-white text-xs ml-2"
-                        ><font-awesome-icon
-                            icon="fa-solid fa-arrow-right-long"
-                            bounce
+                    Visit<i class="text-xs ml-2"
+                        ><font-awesome-icon icon="fa-solid fa-arrow-right-long"
                     /></i>
                 </a>
             </div>
@@ -607,14 +605,12 @@ img {
             </div>
             <div class="w-full h-1/4 flex items-center justify-center">
                 <a
-                    class="bg-blue-500 py-6 px-12 w-full my-4 text-white rounded-3xl flex text-center items-center justify-center"
+                    class="bg-blue-500 py-6 px-12 w-full my-4 text-white rounded-3xl flex text-center items-center justify-center hover:bg-theme1 transition duration-500"
                     href="https://www.icmif.org/"
                     target="_blank"
                 >
                     Visit<i class="text-white text-xs ml-2"
-                        ><font-awesome-icon
-                            icon="fa-solid fa-arrow-right-long"
-                            bounce
+                        ><font-awesome-icon icon="fa-solid fa-arrow-right-long"
                     /></i>
                 </a>
             </div>
@@ -625,7 +621,7 @@ img {
             <div class="w-full h-1/4 flex items-center justify-center">
                 <img
                     src="../../../asset/majorpartners/cc.png"
-                    class="rounded-full object-contain"
+                    class="rounded-full object-contain h-full"
                 />
             </div>
             <div class="w-full h-1/4 flex items-center justify-center">
@@ -645,14 +641,12 @@ img {
 
             <div class="w-full h-1/4 flex items-center justify-center">
                 <a
-                    class="bg-blue-500 py-6 px-12 w-full my-4 text-white rounded-3xl flex text-center items-center justify-center"
+                    class="bg-blue-500 py-6 px-12 w-full my-4 text-white rounded-3xl flex text-center items-center justify-center hover:bg-theme1 transition duration-500"
                     href="https://www.co-op.ac.uk/"
                     target="_blank"
                 >
                     Visit<i class="text-white text-xs ml-2"
-                        ><font-awesome-icon
-                            icon="fa-solid fa-arrow-right-long"
-                            bounce
+                        ><font-awesome-icon icon="fa-solid fa-arrow-right-long"
                     /></i>
                 </a>
             </div>
@@ -680,14 +674,12 @@ img {
 
             <div class="w-full h-1/4 flex items-center justify-center">
                 <a
-                    class="bg-blue-500 py-6 px-12 w-full my-4 text-white rounded-3xl flex text-center items-center justify-center"
+                    class="bg-blue-500 py-6 px-12 w-full my-4 text-white rounded-3xl flex text-center items-center justify-center hover:bg-theme1 transition duration-500"
                     href="https://www.teamarete.org/"
                     target="_blank"
                 >
                     Visit<i class="text-white text-xs ml-2"
-                        ><font-awesome-icon
-                            icon="fa-solid fa-arrow-right-long"
-                            bounce
+                        ><font-awesome-icon icon="fa-solid fa-arrow-right-long"
                     /></i>
                 </a>
             </div>
@@ -713,14 +705,12 @@ img {
 
             <div class="w-full h-1/4 flex items-center justify-center">
                 <a
-                    class="bg-blue-500 py-6 px-12 w-full my-4 text-white rounded-3xl flex text-center items-center justify-center"
+                    class="bg-blue-500 py-6 px-12 w-full my-4 text-white rounded-3xl flex text-center items-center justify-center hover:bg-theme1 transition duration-500"
                     href="https://www.facebook.com/NaFeCoopOfficial"
                     target="_blank"
                 >
                     Visit<i class="text-white text-xs ml-2"
-                        ><font-awesome-icon
-                            icon="fa-solid fa-arrow-right-long"
-                            bounce
+                        ><font-awesome-icon icon="fa-solid fa-arrow-right-long"
                     /></i>
                 </a>
             </div>
