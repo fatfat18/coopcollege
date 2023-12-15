@@ -63,7 +63,7 @@ import Footer from "@/Components/Footer.vue";
                     class="flex text-center w-full justify-center items-center hover:scale-105 transition duration-300"
                 >
                     <div
-                        class="xl:w-[10%] lg:w-2/3 w-1/3 text-center font-black xl:text-lg flex justify-center items-start py-5"
+                        class="xl:w-[10%] lg:w-2/3 w-1/3 text-center font-black xl:text-sm flex justify-center items-start py-5"
                     >
                         {{ eventData.month }}
                     </div>
@@ -90,7 +90,7 @@ import Footer from "@/Components/Footer.vue";
                                 &#x2022; {{ event.Venue }}
                             </div>
                             <div
-                                class="w-full text-start flex justify-start items-center py-2 xl:pl-32"
+                                class="w-full text-start flex justify-start items-center py-2 xl:pl-40"
                             >
                                 {{ event.Cost }}
                             </div>
