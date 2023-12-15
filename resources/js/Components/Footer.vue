@@ -21,10 +21,14 @@ library.add(faFacebook, faPhone, faEnvelope, faTty);
 </style>
 
 <template>
-    <div class="ftr w-screen h-max flex items-center justify-center xl:pt-10">
-        <div class="w-3/4 h-max px-10">
-            <p class="text-7xl text-white text-center">Stay Connected</p>
-            <p class="text-4xl my-2 text-white text-center">
+    <div
+        class="ftr w-screen h-max flex items-center justify-center xl:pt-10 pt-4"
+    >
+        <div class="xl:w-3/4 w-screen h-max xl:px-10 px-2">
+            <p class="xl:text-7xl text-4xl text-white text-center">
+                Stay Connected
+            </p>
+            <p class="xl:text-4xl text-xl my-2 text-white text-center">
                 Join our Newsletter!
             </p>
             <p class="text-md text-white text-center">
@@ -35,7 +39,7 @@ library.add(faFacebook, faPhone, faEnvelope, faTty);
             </p>
             <br />
             <div class="flex items-center justify-center flex-col">
-                <div class="w-3/4 flex">
+                <div class="xl:w-3/4 w-screen flex">
                     <input
                         type="text"
                         class="rounded-lg w-full mx-1"
@@ -49,7 +53,7 @@ library.add(faFacebook, faPhone, faEnvelope, faTty);
                         v-model="newsletteremail"
                     />
                 </div>
-                <div class="w-3/4 px-1">
+                <div class="xl:w-3/4 w-screen px-1">
                     <textarea
                         class="rounded-lg w-full h-40 mt-1"
                         placeholder="Message"
@@ -63,25 +67,27 @@ library.add(faFacebook, faPhone, faEnvelope, faTty);
                 </div>
             </div>
 
-            <div class="flex text-white ml-20 justify-center items-start">
+            <div
+                class="flex xl:flex-row flex-col text-white ml-20 justify-center items-start"
+            >
                 <span class="flex items-center justify-center"
                     ><font-awesome-icon
                         icon="fa-solid fa-mobile"
-                        class="text-4xl mx-4 my-5"
+                        class="xl:text-4xl text-xl mx-4 my-5"
                     />0917-700-9159</span
                 >
 
                 <span class="flex items-center justify-center"
                     ><font-awesome-icon
                         icon="fa-solid fa-envelope"
-                        class="text-4xl mx-4 my-5"
+                        class="xl:text-4xl text-xl mx-4 my-5"
                     />info@co-opcollege.ph</span
                 >
 
                 <span class="flex items-center justify-center"
                     ><font-awesome-icon
                         icon="fa-solid fa-globe"
-                        class="text-4xl mx-4 my-5"
+                        class="xl:text-4xl text-xl mx-4 my-5"
                     />www.co-opcollege.ph</span
                 >
             </div>
@@ -92,7 +98,7 @@ library.add(faFacebook, faPhone, faEnvelope, faTty);
                     ><span
                         ><font-awesome-icon
                             icon="fa-brands fa-facebook"
-                            class="text-6xl mx-4 hover:scale-110 transition duration-500" /></span
+                            class="xl:text-6xl text-3xl mx-4 hover:scale-110 transition duration-500" /></span
                 ></a>
                 <a
                     href="https://www.linkedin.com/company/co-operative-college-of-the-philippines-ccp"
@@ -101,11 +107,11 @@ library.add(faFacebook, faPhone, faEnvelope, faTty);
                     <span
                         ><font-awesome-icon
                             icon="fa-brands fa-linkedin"
-                            class="text-6xl mx-4 hover:scale-110 transition duration-500" /></span
+                            class="xl:text-6xl text-3xl mx-4 hover:scale-110 transition duration-500" /></span
                 ></a>
             </div>
             <div
-                class="w-full pt-10 text-theme2 flex flex-col items-center justify-center"
+                class="w-full pt-10 text-theme2 flex flex-col items-center justify-center text-center"
             >
                 All Rights Reserved Co-operative College of the Philippines
 
