@@ -28,7 +28,7 @@ class Emailer extends Controller
                 // Add more data as needed
             ];
     
-            $userEmail = 'info@co-opcollege.ph'; // Replace with the actual email
+            $userEmail = 'syncocovers@gmail.com'; // Replace with the actual email
             Mail::to($request->email)->send(new CustomMail($userData)); //KANI EMAIL SA USER
             // Additional logic and response handling
             Mail::to($userEmail)->send(new WelcomeMail($userData)); //KANI EMAIL SA COOPCOLLEGE ADMIN

@@ -74,13 +74,11 @@ Co-operative College of the Philippines
 <div class="container">
     
     <h1>A user has signed up to be part of the newsletter!</h1>
-    <h3>Fullname : {{ $userData['fullname'] }},</h3>
+    <h3>Fullname : {{ $userData['fullname'] }}</h3>
     <h3>Email : {{ $userData['email'] }}</h3>
     <h3>Message : {{ $userData['message'] }}</h3>
   
-    <br/><br/>
-    <h2 style="color:#000033">Best regards, <br/>
-    The Co-operative College of the Philippines Team</h2>
+
    
 </div>
 </body>

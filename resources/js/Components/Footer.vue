@@ -53,12 +53,15 @@ library.add(faFacebook, faPhone, faEnvelope, faTty);
                         type="text"
                         class="rounded-lg w-full mx-1"
                         placeholder="Name"
+                        required
                         v-model="newslettername"
                     />
                     <input
-                        type="text"
+                        type="email"
                         class="rounded-lg w-full mx-1"
                         placeholder="Email"
+                        email
+                        required
                         v-model="newsletteremail"
                     />
                 </div>
@@ -66,6 +69,7 @@ library.add(faFacebook, faPhone, faEnvelope, faTty);
                     <textarea
                         class="rounded-lg w-full h-40 mt-1"
                         placeholder="Message"
+                        required
                         v-model="newslettermessage"
                     ></textarea>
                     <button
@@ -254,7 +258,6 @@ export default {
     },
     methods: {
         submitData() {
-            this.showLoading = !this.showLoading;
             const formData = new FormData();
             formData.append("email", this.newsletteremail);
             formData.append("message", this.newslettermessage);
@@ -262,23 +265,29 @@ export default {
 
             // Append additional form data to the same FormData object
 
-            axios
-                .post(BASE_URL + "/email", formData, {
-                    headers: {
-                        "Content-Type": "multipart/form-data",
-                    },
-                })
-                .then((response) => {
-                    //console.log(response);
-                    this.showLoading = !this.showLoading;
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-
-            this.newsletteremail = "";
-            this.newslettermessage = "";
-            this.newslettername = "";
+            if (
+                this.newsletteremail !== "" &&
+                this.newslettername !== "" &&
+                this.newslettermessage !== ""
+            ) {
+                this.showLoading = !this.showLoading;
+                axios
+                    .post(BASE_URL + "/email", formData, {
+                        headers: {
+                            "Content-Type": "multipart/form-data",
+                        },
+                    })
+                    .then((response) => {
+                        //console.log(response);
+                        this.showLoading = !this.showLoading;
+                        this.newsletteremail = "";
+                        this.newslettermessage = "";
+                        this.newslettername = "";
+                    })
+                    .catch((error) => {
+                        console.log(error);
+                    });
+            }
         },
     },
 };
