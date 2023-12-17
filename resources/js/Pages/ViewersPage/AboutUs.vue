@@ -48,7 +48,7 @@ import PartnersPic from "@/Components/PartnersPic.vue";
     <ResponsiveNavBar />
 
     <div class="w-screen flex flex-col justify-center items-center bg">
-        <span class="text-white text-3xl xl:text-5xl xl:pt-20 mb-4 mt-5"
+        <span class="text-white text-3xl xl:text-5xl xl:pt-20 mt-10"
             >Governance</span
         >
 
@@ -72,7 +72,33 @@ import PartnersPic from "@/Components/PartnersPic.vue";
                     "
                     :position="bod.Position"
                     :image="bod.image.ImageUrl"
-                    class="overflow-y-hidden shadow-2xl"
+                >
+                </ProfileCard>
+            </div>
+        </div>
+        <span class="text-white text-3xl xl:text-5xl xl:pt-20 mt-10"
+            >Operations</span
+        >
+        <div
+            class="w-screen h-max max-w-7xl rounded-md pt-10 flex justify-center gap-10 mb-5 mt-1 flex-wrap overflow-y-hidden"
+        >
+            <div
+                v-for="op in ops"
+                :key="op.idBOD"
+                class="h-max w-60 my-5 mx-5 overflow-y-hidden"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+            >
+                <ProfileCard
+                    :fullname="
+                        (op.Prefix === null ? '' : op.Prefix + ' ') +
+                        op.Fname +
+                        ' ' +
+                        op.Lname +
+                        (op.Suffix === null ? ' ' : ' ' + op.Suffix)
+                    "
+                    :position="op.Position"
+                    :image="op.image.ImageUrl"
                 >
                 </ProfileCard>
             </div>
@@ -625,6 +651,7 @@ export default {
             curPhraseIndex: 0,
             partners: [],
             bods: [],
+            ops: [],
             showHistory: false,
         };
     },
@@ -642,8 +669,16 @@ export default {
         axios
             .get(BASE_URL + "/displayBOD")
             .then((response) => {
-                this.bods = response.data;
+                //this.bods = response.data;
                 //console.log(this.bods);
+                console.log(response.data);
+                for (let i = 0; i < response.data.length; i++) {
+                    if (response.data[i].Position === "Operations") {
+                        this.ops.push(response.data[i]);
+                    } else {
+                        this.bods.push(response.data[i]);
+                    }
+                }
             })
             .catch((error) => {
                 console.log(error);
