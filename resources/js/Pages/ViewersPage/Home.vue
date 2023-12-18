@@ -552,6 +552,41 @@ img {
             data-aos="zoom-in"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out-back"
+            data-aos-delay="900"
+        >
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <img
+                    src="../../../asset/majorpartners/nafecoop.jpeg"
+                    class="rounded-full object-contain h-full"
+                />
+            </div>
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <div class="text-start w-full text-2xl mt-2">NaFeCoop</div>
+            </div>
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <p class="text-sm text-zinc-500">
+                    Provides continuous learning , professional cooperative
+                    management, and higher level of knowledge foc.
+                </p>
+            </div>
+
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <a
+                    class="bg-blue-500 py-6 px-12 w-full my-4 text-white rounded-3xl flex text-center items-center justify-center hover:bg-theme1 transition duration-500"
+                    href="https://www.facebook.com/NaFeCoopOfficial"
+                    target="_blank"
+                >
+                    Visit<i class="text-white text-xs ml-2"
+                        ><font-awesome-icon icon="fa-solid fa-arrow-right-long"
+                    /></i>
+                </a>
+            </div>
+        </div>
+        <div
+            class="my-4 h-128 pt-10 pb-1 w-96 bg-gradient-to-b from-theme2 via-white to-zinc-100 flex flex-col items-center justify-center rounded-3xl px-6"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out-back"
             data-aos-delay="500"
         >
             <div class="h-1/4 w-full flex items-center justify-center">
@@ -694,41 +729,6 @@ img {
                 <a
                     class="bg-blue-500 py-6 px-12 w-full my-4 text-white rounded-3xl flex text-center items-center justify-center hover:bg-theme1 transition duration-500"
                     href="https://www.teamarete.org/"
-                    target="_blank"
-                >
-                    Visit<i class="text-white text-xs ml-2"
-                        ><font-awesome-icon icon="fa-solid fa-arrow-right-long"
-                    /></i>
-                </a>
-            </div>
-        </div>
-        <div
-            class="my-4 h-128 pt-10 pb-1 w-96 bg-gradient-to-b from-theme2 via-white to-zinc-100 flex flex-col items-center justify-center rounded-3xl px-6"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out-back"
-            data-aos-delay="900"
-        >
-            <div class="w-full h-1/4 flex items-center justify-center">
-                <img
-                    src="../../../asset/majorpartners/nafecoop.jpeg"
-                    class="rounded-full object-contain h-full"
-                />
-            </div>
-            <div class="w-full h-1/4 flex items-center justify-center">
-                <div class="text-start w-full text-2xl mt-2">NaFeCoop</div>
-            </div>
-            <div class="w-full h-1/4 flex items-center justify-center">
-                <p class="text-sm text-zinc-500">
-                    Provides continuous learning , professional cooperative
-                    management, and higher level of knowledge foc.
-                </p>
-            </div>
-
-            <div class="w-full h-1/4 flex items-center justify-center">
-                <a
-                    class="bg-blue-500 py-6 px-12 w-full my-4 text-white rounded-3xl flex text-center items-center justify-center hover:bg-theme1 transition duration-500"
-                    href="https://www.facebook.com/NaFeCoopOfficial"
                     target="_blank"
                 >
                     Visit<i class="text-white text-xs ml-2"
