@@ -108,7 +108,7 @@ library.add(faFacebook, faPhone, faEnvelope, faTty);
                     ><span
                         ><font-awesome-icon
                             icon="fa-brands fa-facebook"
-                            class="xl:text-6xl text-3xl mx-4 hover:scale-110 transition duration-500" /></span
+                            class="xl:text-6xl text-4xl mx-4 hover:scale-110 transition duration-500" /></span
                 ></a>
                 <a
                     href="https://www.linkedin.com/company/co-operative-college-of-the-philippines-ccp"
@@ -117,15 +117,15 @@ library.add(faFacebook, faPhone, faEnvelope, faTty);
                     <span
                         ><font-awesome-icon
                             icon="fa-brands fa-linkedin"
-                            class="xl:text-6xl text-3xl mx-4 hover:scale-110 transition duration-500" /></span
+                            class="xl:text-6xl text-4xl mx-4 hover:scale-110 transition duration-500" /></span
                 ></a>
             </div>
             <div
-                class="w-full pt-10 text-theme2 flex flex-col items-center justify-center text-center"
+                class="w-full pt-10 text-theme2 flex flex-col items-center justify-center text-center xl:text-sm text-xs"
             >
                 All Rights Reserved Co-operative College of the Philippines
 
-                <img src="../../asset//logo.png" class="w-10 h-12 my-2" />
+                <img src="../../asset//logo.png" class="w-10 h-11 my-2" />
             </div>
         </div>
     </div>

@@ -228,10 +228,7 @@ img {
                 data-aos-delay="800"
                 data-aos-easing="ease-in-out-back"
                 >Empowering Futures, Building Together: Your Gateway to
-                Cooperative Excellence <br /><span
-                    class="text-theme2 xl:text-lg text-sm"
-                    >Cooperative College of the Philippines</span
-                >.</span
+                <span class="text-theme2">Cooperative Excellence</span>.</span
             >
         </div>
     </div>
@@ -388,7 +385,7 @@ img {
             class="xl:w-2/5 w-full xl:h-screen h-max flex flex-col items-center justify-center"
         >
             <div
-                class="xl:h-2/3 h-80 w-full flex items-center justify-center flex-col px-10"
+                class="xl:h-2/3 h-80 xl:h-128 w-full flex items-center justify-center flex-col px-10"
                 data-aos="zoom-out"
                 data-aos-duration="1000"
             >
@@ -470,7 +467,7 @@ img {
             (4) Leadership Management and Development
         </p>
         <p
-            class="text-theme1 xl:text-4xl text-2xl"
+            class="text-theme1 xl:text-4xl text-2xl ml-4"
             data-aos="fade-right"
             data-aos-duration="1000"
         >
@@ -540,7 +537,7 @@ img {
     </div>
 
     <div
-        class="w-screen h-max py-10 mt-16 px-2 xl:px-0 flex flex-wrap items-center justify-center xl:space-x-6"
+        class="w-screen h-max py-10 mt-16 px-6 xl:px-0 flex flex-wrap items-center justify-center xl:space-x-6"
     >
         <div
             class="w-screen text-theme1 text-center xl:text-7xl text-3xl tracking-widest"
@@ -548,7 +545,7 @@ img {
             MAJOR PARTNERS
         </div>
         <div
-            class="my-4 h-128 pt-10 pb-1 w-96 bg-gradient-to-b from-theme2 via-white to-zinc-100 flex flex-col items-center justify-center rounded-3xl px-6"
+            class="my-4 h-80 xl:h-128 pt-10 pb-1 w-96 bg-gradient-to-b from-theme2 via-white to-zinc-100 flex flex-col items-center justify-center rounded-3xl px-6"
             data-aos="zoom-in"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out-back"
@@ -564,7 +561,7 @@ img {
                 <div class="text-start w-full text-2xl mt-2">NaFeCoop</div>
             </div>
             <div class="w-full h-1/4 flex items-center justify-center">
-                <p class="text-sm text-zinc-500">
+                <p class="text-xs xl:text-sm text-zinc-500">
                     Provides continuous learning , professional cooperative
                     management, and higher level of knowledge foc.
                 </p>
@@ -572,7 +569,7 @@ img {
 
             <div class="w-full h-1/4 flex items-center justify-center">
                 <a
-                    class="bg-blue-500 py-6 px-12 w-full my-4 text-white rounded-3xl flex text-center items-center justify-center hover:bg-theme1 transition duration-500"
+                    class="bg-blue-500 xl:py-5 py-3 px-12 w-full my-2 text-white xl:rounded-3xl rounded-xl flex text-center items-center justify-center hover:bg-theme1 transition duration-500"
                     href="https://www.facebook.com/NaFeCoopOfficial"
                     target="_blank"
                 >
@@ -583,7 +580,7 @@ img {
             </div>
         </div>
         <div
-            class="my-4 h-128 pt-10 pb-1 w-96 bg-gradient-to-b from-theme2 via-white to-zinc-100 flex flex-col items-center justify-center rounded-3xl px-6"
+            class="my-4 h-80 xl:h-128 pt-10 pb-1 w-96 bg-gradient-to-b from-theme2 via-white to-zinc-100 flex flex-col items-center justify-center rounded-3xl px-6"
             data-aos="zoom-in"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out-back"
@@ -601,7 +598,7 @@ img {
                 Asia Institute of Management
             </div>
             <div class="w-full h-1/4 flex items-center justify-center">
-                <p class="text-sm text-zinc-500">
+                <p class="text-xs xl:text-sm text-zinc-500">
                     AIM doesn’t just sit at the heart of fluid change, but
                     leads, inspires, and transforms the forces that exist around
                     it — ultimately changing the perception of what an
@@ -611,7 +608,7 @@ img {
 
             <div class="h-1/4 w-full flex items-center justify-center">
                 <a
-                    class="bg-blue-500 py-6 px-12 w-full my-4 text-white rounded-3xl flex text-center items-center justify-center hover:bg-theme1 transition duration-500"
+                    class="bg-blue-500 xl:py-5 py-3 px-12 w-full my-2 text-white xl:rounded-3xl rounded-xl flex text-center items-center justify-center hover:bg-theme1 transition duration-500"
                     href="https://aim.edu/"
                     target="_blank"
                 >
@@ -622,7 +619,7 @@ img {
             </div>
         </div>
         <div
-            class="my-4 h-128 pt-10 pb-1 w-96 bg-gradient-to-b from-theme2 via-white to-zinc-100 flex flex-col items-center justify-center rounded-3xl px-6"
+            class="my-4 h-80 xl:h-128 pt-10 pb-1 w-96 bg-gradient-to-b from-theme2 via-white to-zinc-100 flex flex-col items-center justify-center rounded-3xl px-6"
             data-aos="zoom-in"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out-back"
@@ -635,12 +632,12 @@ img {
                 />
             </div>
             <div class="w-full h-1/4 flex items-center justify-center">
-                <div class="text-start w-full text-2xl mt-2">
+                <div class="text-start w-full xl:text-2xl text-lg mt-2">
                     International Cooperative and Mutual Insurance Federation
                 </div>
             </div>
             <div class="w-full h-1/4 flex items-center justify-center">
-                <p class="text-sm text-zinc-500">
+                <p class="text-[10px] xl:text-sm text-zinc-500">
                     Unlike other industry associations or networking platforms
                     you might know, because it is the only place where
                     purpose-led insurers from across the globe come together to
@@ -650,7 +647,7 @@ img {
             </div>
             <div class="w-full h-1/4 flex items-center justify-center">
                 <a
-                    class="bg-blue-500 py-6 px-12 w-full my-4 text-white rounded-3xl flex text-center items-center justify-center hover:bg-theme1 transition duration-500"
+                    class="bg-blue-500 xl:py-5 py-3 px-12 w-full my-2 text-white xl:rounded-3xl rounded-xl flex text-center items-center justify-center hover:bg-theme1 transition duration-500"
                     href="https://www.icmif.org/"
                     target="_blank"
                 >
@@ -661,7 +658,7 @@ img {
             </div>
         </div>
         <div
-            class="my-4 h-128 pt-10 pb-1 w-96 bg-gradient-to-b from-theme2 via-white to-zinc-100 flex flex-col items-center justify-center rounded-3xl px-6"
+            class="my-4 h-80 xl:h-128 pt-10 pb-1 w-96 bg-gradient-to-b from-theme2 via-white to-zinc-100 flex flex-col items-center justify-center rounded-3xl px-6"
             data-aos="zoom-in"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out-back"
@@ -679,18 +676,17 @@ img {
                 </div>
             </div>
             <div class="w-full h-1/4 flex items-center justify-center">
-                <p class="text-sm text-zinc-500">
+                <p class="text-xs xl:text-sm text-zinc-500">
                     Here at the Co-operative College, we’ve always done things
                     differently. Born over 100 years ago out of a need for
                     radical education that fights for social justice, our
-                    mission hasn’t changed.We are fearless thinkers, innovators
-                    and passionate about change.
+                    mission hasn’t changed.
                 </p>
             </div>
 
             <div class="w-full h-1/4 flex items-center justify-center">
                 <a
-                    class="bg-blue-500 py-6 px-12 w-full my-4 text-white rounded-3xl flex text-center items-center justify-center hover:bg-theme1 transition duration-500"
+                    class="bg-blue-500 xl:py-5 py-3 px-12 w-full my-2 text-white xl:rounded-3xl rounded-xl flex text-center items-center justify-center hover:bg-theme1 transition duration-500"
                     href="https://www.co-op.ac.uk/"
                     target="_blank"
                 >
@@ -702,7 +698,7 @@ img {
         </div>
 
         <div
-            class="my-4 h-128 pt-10 pb-1 w-96 bg-gradient-to-b from-theme2 via-white to-zinc-100 flex flex-col items-center justify-center rounded-3xl px-6"
+            class="my-4 h-80 xl:h-128 pt-10 pb-1 w-96 bg-gradient-to-b from-theme2 via-white to-zinc-100 flex flex-col items-center justify-center rounded-3xl px-6"
             data-aos="zoom-in"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out-back"
@@ -718,7 +714,7 @@ img {
                 <div class="text-start w-full text-2xl mt-2">Areté</div>
             </div>
             <div class="w-full h-1/4 flex items-center justify-center">
-                <p class="text-sm text-zinc-500">
+                <p class="text-xs xl:text-sm text-zinc-500">
                     Areté has been in the industry of training and corporate
                     consulting since 2008. Its services cover a broad range of
                     learning and development interventions.
@@ -727,7 +723,7 @@ img {
 
             <div class="w-full h-1/4 flex items-center justify-center">
                 <a
-                    class="bg-blue-500 py-6 px-12 w-full my-4 text-white rounded-3xl flex text-center items-center justify-center hover:bg-theme1 transition duration-500"
+                    class="bg-blue-500 xl:py-5 py-3 px-12 w-full my-2 text-white xl:rounded-3xl rounded-xl flex text-center items-center justify-center hover:bg-theme1 transition duration-500"
                     href="https://www.teamarete.org/"
                     target="_blank"
                 >
