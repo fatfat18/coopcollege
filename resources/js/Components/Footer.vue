@@ -25,11 +25,7 @@ library.add(faFacebook, faPhone, faEnvelope, faTty);
     <div
         class="ftr w-screen h-max flex items-center justify-center xl:pt-10 pt-4 relative"
     >
-        <Modal
-            class="absolute transform top-1/4 left-1/3 translate-x-1/3 translate-y-1/6 w-96 h-40 bg-theme2 rounded-3xl text-center py-10 text-3xl"
-            :show="showLoading"
-            @close="showLoading = false"
-        >
+        <Modal :show="showLoading" @close="showLoading = false">
             <span class="text-3xl">Submitting form to our team!</span
             ><br /><br />
         </Modal>
@@ -40,7 +36,7 @@ library.add(faFacebook, faPhone, faEnvelope, faTty);
             <p class="xl:text-4xl text-xl my-2 text-white text-center">
                 Join our Newsletter!
             </p>
-            <p class="text-md text-white text-center">
+            <p class="xl:text-md text-sm text-white text-center">
                 CIFL/CIM now pivots to the Co-operative College of the
                 Philippines (Co-op College PH).The training and education arm
                 for a higher level of training and education opportunities in
@@ -48,7 +44,7 @@ library.add(faFacebook, faPhone, faEnvelope, faTty);
             </p>
             <br />
             <div class="flex items-center justify-center flex-col">
-                <div class="xl:w-3/4 w-screen flex">
+                <div class="xl:w-3/4 w-[95%] flex">
                     <input
                         type="text"
                         class="rounded-lg w-full mx-1"
@@ -65,7 +61,7 @@ library.add(faFacebook, faPhone, faEnvelope, faTty);
                         v-model="newsletteremail"
                     />
                 </div>
-                <div class="xl:w-3/4 w-screen px-1">
+                <div class="xl:w-3/4 w-[95%] px-1">
                     <textarea
                         class="rounded-lg w-full h-40 mt-1"
                         placeholder="Message"
@@ -73,7 +69,7 @@ library.add(faFacebook, faPhone, faEnvelope, faTty);
                         v-model="newslettermessage"
                     ></textarea>
                     <button
-                        class="w-full rounded-xl text-zinc-950 text-3xl bg-theme2 py-4"
+                        class="w-full rounded-xl text-zinc-950 xl:text-3xl text-xl bg-theme2 py-4"
                         @click="submitData()"
                     >
                         Join us now!
@@ -82,7 +78,7 @@ library.add(faFacebook, faPhone, faEnvelope, faTty);
             </div>
 
             <div
-                class="flex xl:flex-row flex-col text-white ml-20 justify-center items-start"
+                class="flex xl:flex-row flex-col text-white xl:ml-20 mt-4 justify-center items-start"
             >
                 <span class="flex items-center justify-center"
                     ><font-awesome-icon
@@ -106,7 +102,7 @@ library.add(faFacebook, faPhone, faEnvelope, faTty);
                 >
             </div>
             <div
-                class="w-full py-4 flex text-white items-center justify-center"
+                class="w-full py-4 flex text-white items-center justify-start xl:justify-center"
             >
                 <a href="https://www.facebook.com/CoopCollegePH" target="_blank"
                     ><span

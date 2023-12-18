@@ -540,9 +540,11 @@ img {
     </div>
 
     <div
-        class="w-screen h-max py-10 mt-16 flex flex-wrap items-center justify-center xl:space-x-6"
+        class="w-screen h-max py-10 mt-16 px-2 xl:px-0 flex flex-wrap items-center justify-center xl:space-x-6"
     >
-        <div class="w-screen text-theme1 text-center text-7xl tracking-widest">
+        <div
+            class="w-screen text-theme1 text-center xl:text-7xl text-3xl tracking-widest"
+        >
             MAJOR PARTNERS
         </div>
         <div

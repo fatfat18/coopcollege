@@ -72,19 +72,23 @@ Co-operative College of the Philippines
 </head>
 <body>
 <div class="container">
+
+
     
     <h1>Dear {{ $userData['fullname'] }},</h1> 
     <h3>Thank you for subscribing to our Newsletter. We love to share the news and be part of our masterclass!</h3>
 <!-- 
     <p>With your email {{ $userData['email'] }} your interest are</p> -->
-    <p>{{ $userData['message'] }}</p>
+    <!-- <p>{{ $userData['message'] }}</p> -->
     
     <a href="https://co-opcollege.ph/" class="button">Visit Website</a>
 
     <br/><br/>
     <h2 style="color:#000033">Best regards, <br/>
     The Co-operative College of the Philippines Team</h2>
-   
+    
+    <img src="https://co-opcollege.ph/build/assets/logo-399edbf0.png" style="height:70px;width:68px;" />
+
 </div>
 </body>
 </html>
