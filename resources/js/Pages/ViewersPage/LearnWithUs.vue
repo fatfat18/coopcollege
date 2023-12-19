@@ -38,7 +38,7 @@ import Footer from "@/Components/Footer.vue";
         <div
             data-aos="fade-up"
             data-aos-duration="1000"
-            class="rounded-t max-w-7xl px-5 w-screen bg-zinc-300 text-theme1 mt-5 py-2 flex items-center text-l xl:text-2xl"
+            class="rounded-t max-w-7xl px-3 xl:pl-8 w-screen bg-zinc-300 text-theme1 mt-5 py-2 flex items-center text-l xl:text-2xl"
         >
             <div class="w-1/5 text-center">Month</div>
             <div class="w-1/5 text-center">Course Title</div>
@@ -55,7 +55,7 @@ import Footer from "@/Components/Footer.vue";
             <div
                 v-for="(eventData, index) in calendar"
                 :key="index"
-                class="flex justify-center items-center h-max xl:w-full w-screen bg-white border-2 border-theme1 xl:mx-5 xl:mt-1 mt-1 py-2 z-10 rounded-2xl xl:rounded-xl"
+                class="flex justify-center items-center h-max xl:w-full w-screen bg-white border-2 border-theme1 xl:mx-4 xl:mt-1 mt-1 py-2 z-10 rounded-2xl xl:rounded-xl"
                 data-aos="zoom-in"
                 data-aos-duration="1000"
             >
@@ -78,7 +78,7 @@ import Footer from "@/Components/Footer.vue";
                             {{ event.courseTitle }}
                         </div>
                         <div
-                            class="w-3/5 text-center xl:text-center xl:text-xs px-1 text-[10px] flex justify-center items-center py-2"
+                            class="w-3/5 text-center xl:text-center xl:text-xs xl:px-4 text-[10px] flex justify-center items-center py-2"
                         >
                             {{ event.Objectives }}
                         </div>
