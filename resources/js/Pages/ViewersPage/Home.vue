@@ -385,7 +385,7 @@ img {
             class="xl:w-2/5 w-full xl:h-screen h-max flex flex-col items-center justify-center"
         >
             <div
-                class="xl:h-2/3 h-80 xl:h-128 w-full flex items-center justify-center flex-col px-10"
+                class="xl:h-2/3 h-80 w-full flex items-center justify-center flex-col px-10"
                 data-aos="zoom-out"
                 data-aos-duration="1000"
             >

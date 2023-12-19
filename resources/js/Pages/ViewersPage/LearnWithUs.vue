@@ -38,24 +38,24 @@ import Footer from "@/Components/Footer.vue";
         <div
             data-aos="fade-up"
             data-aos-duration="1000"
-            class="rounded-t max-w-6xl w-screen bg-zinc-300 text-theme1 mt-5 py-2 flex items-center text-l xl:text-2xl"
+            class="rounded-t max-w-7xl px-5 w-screen bg-zinc-300 text-theme1 mt-5 py-2 flex items-center text-l xl:text-2xl"
         >
-            <div class="xl:w-3/5 w-1/4 text-center">Month</div>
-            <div class="xl:w-3/5 w-1/4 text-center">Course Title</div>
-            <div class="xl:w-3/5 w-1/4 text-center">Objectives</div>
-            <div class="xl:w-3/5 w-1/4 text-center">Venue</div>
-            <div class="xl:w-3/5 w-1/4 text-center">Cost</div>
+            <div class="w-1/5 text-center">Month</div>
+            <div class="w-1/5 text-center">Course Title</div>
+            <div class="w-3/5 text-center">Objectives</div>
+            <div class="w-1/5 text-center">Venue</div>
+            <div class="w-1/5 text-center">Cost</div>
         </div>
 
         <div
-            class="rounded-t pb-5 h-max overflow-y-hidden max-w-7xl w-full bg-zinc-300 flex justify-center items-center flex-col text-theme1 z-0"
+            class="rounded-t pb-5 h-max overflow-auto xl:overflow-hidden xl:max-w-7xl xl:w-full w-max px-2 bg-zinc-300 flex justify-center items-center flex-col text-theme1 z-0"
             data-aos="fade-up"
             data-aos-duration="1000"
         >
             <div
                 v-for="(eventData, index) in calendar"
                 :key="index"
-                class="flex justify-center items-center h-max w-screen max-w-6xl bg-white border-2 border-theme1 xl:mx-5 xl:px-10 xl:mt-1 mt-1 py-2 z-10 rounded-2xl xl:rounded-xl"
+                class="flex justify-center items-center h-max xl:w-full w-screen bg-white border-2 border-theme1 xl:mx-5 xl:mt-1 mt-1 py-2 z-10 rounded-2xl xl:rounded-xl"
                 data-aos="zoom-in"
                 data-aos-duration="1000"
             >
@@ -63,40 +63,37 @@ import Footer from "@/Components/Footer.vue";
                     class="flex text-center w-full justify-center items-center hover:scale-105 transition duration-300"
                 >
                     <div
-                        class="xl:w-[10%] lg:w-2/3 w-1/3 text-center font-black xl:text-sm flex justify-center items-start py-5"
+                        v-for="(event, index) in calendar[index].events"
+                        :key="index"
+                        class="flex xl:justify-center w-full"
                     >
-                        {{ eventData.month }}
-                    </div>
-
-                    <div class="w-screen">
                         <div
-                            v-for="(event, index) in calendar[index].events"
-                            :key="index"
-                            class="flex space-x-5 xl:justify-center xl:pl-40"
+                            class="w-1/5 text-center xl:text-base text-[10px] flex justify-center items-center py-2"
                         >
-                            <div
-                                class="w-full text-center flex justify-start items-center py-2"
-                            >
-                                &#x2022; {{ event.courseTitle }}
-                            </div>
-                            <div
-                                class="w-full text-start text-xs flex justify-start items-center py-2 xl:pl-14"
-                            >
-                                &#x2022; {{ event.Objectives }}
-                            </div>
-                            <div
-                                class="w-full text-start flex justify-start items-center py-2 xl:pl-32"
-                            >
-                                &#x2022; {{ event.Venue }}
-                            </div>
-                            <div
-                                class="w-full text-start flex justify-start items-center py-2 xl:pl-40"
-                            >
-                                {{ event.Cost }}
-                            </div>
-
-                            <br />
+                            {{ eventData.month }}
                         </div>
+                        <div
+                            class="w-1/5 text-center xl:text-base text-[10px] flex justify-center items-center py-2"
+                        >
+                            {{ event.courseTitle }}
+                        </div>
+                        <div
+                            class="w-3/5 text-center xl:text-start xl:text-base text-[10px] flex xl:justify-start justify-center items-center py-2"
+                        >
+                            {{ event.Objectives }}
+                        </div>
+                        <div
+                            class="w-1/5 text-start xl:text-base text-[10px] flex justify-center items-center py-2"
+                        >
+                            {{ event.Venue }}
+                        </div>
+                        <div
+                            class="w-1/5 text-start xl:text-base text-[10px] flex justify-center items-center py-2"
+                        >
+                            {{ event.Cost }}
+                        </div>
+
+                        <br />
                     </div>
                 </div>
             </div>
