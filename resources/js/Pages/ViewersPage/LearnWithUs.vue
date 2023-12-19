@@ -73,12 +73,12 @@ import Footer from "@/Components/Footer.vue";
                         class="flex xl:justify-center w-full"
                     >
                         <div
-                            class="w-1/5 text-center xl:text-base text-[10px] flex justify-center items-center py-2"
+                            class="w-1/5 text-center xl:text-sm text-[10px] flex justify-center items-center py-2"
                         >
                             {{ event.courseTitle }}
                         </div>
                         <div
-                            class="w-3/5 text-center xl:text-start xl:text-xs text-[10px] flex xl:justify-start justify-center items-center py-2"
+                            class="w-3/5 text-center xl:text-start xl:text-xs px-1 text-[10px] flex justify-center items-center py-2"
                         >
                             {{ event.Objectives }}
                         </div>
