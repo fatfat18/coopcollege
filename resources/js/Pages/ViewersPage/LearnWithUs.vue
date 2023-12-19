@@ -60,18 +60,18 @@ import Footer from "@/Components/Footer.vue";
                 data-aos-duration="1000"
             >
                 <div
-                    class="flex text-center w-full justify-center items-center hover:scale-105 transition duration-300"
+                    class="w-1/5 text-center xl:text-base text-[10px] flex justify-center items-center py-2"
+                >
+                    {{ eventData.month }}
+                </div>
+                <div
+                    class="flex text-center w-full flex-col justify-center items-center hover:scale-105 transition duration-300"
                 >
                     <div
                         v-for="(event, index) in calendar[index].events"
                         :key="index"
                         class="flex xl:justify-center w-full"
                     >
-                        <div
-                            class="w-1/5 text-center xl:text-base text-[10px] flex justify-center items-center py-2"
-                        >
-                            {{ eventData.month }}
-                        </div>
                         <div
                             class="w-1/5 text-center xl:text-base text-[10px] flex justify-center items-center py-2"
                         >
@@ -92,8 +92,6 @@ import Footer from "@/Components/Footer.vue";
                         >
                             {{ event.Cost }}
                         </div>
-
-                        <br />
                     </div>
                 </div>
             </div>
