@@ -38,7 +38,7 @@ import Footer from "@/Components/Footer.vue";
         <div
             data-aos="fade-up"
             data-aos-duration="1000"
-            class="rounded-t max-w-7xl px-3 xl:pl-8 w-screen bg-zinc-300 text-theme1 mt-5 py-2 flex items-center text-l xl:text-2xl"
+            class="rounded-t max-w-7xl px-3 xl:pl-8 w-screen bg-zinc-300 text-theme1 mt-5 py-2 xl:flex hidden items-center text-l xl:text-2xl"
         >
             <div class="w-1/5 text-center">Month</div>
             <div class="w-1/5 text-center">Course Title</div>
@@ -55,41 +55,53 @@ import Footer from "@/Components/Footer.vue";
             <div
                 v-for="(eventData, index) in calendar"
                 :key="index"
-                class="flex justify-center items-center h-max xl:w-full w-screen bg-white border-2 border-theme1 xl:mx-4 xl:mt-1 mt-1 py-2 z-10 rounded-2xl xl:rounded-xl"
+                class="flex xl:flex-row flex-col justify-center items-center h-max xl:w-full w-screen bg-white border-2 border-theme1 xl:mx-4 xl:mt-1 mt-1 py-2 z-10 rounded-2xl xl:rounded-xl"
                 data-aos="zoom-in"
                 data-aos-duration="1000"
             >
                 <div
-                    class="w-1/5 text-center xl:text-base text-[10px] flex justify-center items-center py-2"
+                    class="xl:w-1/5 w-screen text-center xl:text-base text-xl flex justify-center items-center py-2"
                 >
                     {{ eventData.month }}
                 </div>
                 <div
-                    class="flex text-center w-full flex-col justify-center items-center hover:scale-105 transition duration-300"
+                    class="flex text-center w-full px-2 py-4 flex-col justify-center items-center hover:scale-105 transition duration-300"
                 >
                     <div
                         v-for="(event, index) in calendar[index].events"
                         :key="index"
-                        class="flex xl:justify-center w-full"
+                        class="flex xl:justify-center xl:flex-row flex-col w-full mb-4"
                     >
                         <div
-                            class="w-1/5 text-center xl:text-sm text-[10px] flex justify-center items-center py-2"
+                            class="xl:hidden w-screen border-2 mb-4 border-theme2"
+                            v-if="calendar[index].events.length > 1"
+                        ></div>
+                        <div
+                            class="xl:w-1/5 w-full xl:text-center text-start xl:text-sm text-sm flex xl:justify-center justify-start xl:items-center items-start py-2"
                         >
+                            <span class="xl:hidden w-1/4">
+                                Course Title :
+                            </span>
                             {{ event.courseTitle }}
                         </div>
                         <div
-                            class="w-3/5 text-center xl:text-center xl:text-xs xl:px-4 text-[10px] flex justify-center items-center py-2"
+                            class="xl:w-3/5 w-full xl:text-center text-start xl:text-xs xl:px-4 text-sm flex xl:justify-center justify-start xl:items-center items-start py-2"
                         >
-                            {{ event.Objectives }}
+                            <span class="xl:hidden w-1/4"> Objectives : </span>
+                            <span class="xl:full w-3/4">{{
+                                event.Objectives
+                            }}</span>
                         </div>
                         <div
-                            class="w-1/5 text-start xl:text-base text-[10px] flex justify-center items-center py-2"
+                            class="xl:w-1/5 w-full xl:text-center text-start xl:text-base text-sm flex xl:justify-center justify-start xl:items-center items-start py-2"
                         >
+                            <span class="xl:hidden w-1/4"> Venue : </span>
                             {{ event.Venue }}
                         </div>
                         <div
-                            class="w-1/5 text-start xl:text-base text-[10px] flex justify-center items-center py-2"
+                            class="xl:w-1/5 w-full xl:text-center text-start xl:text-base text-sm flex xl:justify-center justify-start xl:items-center items-start py-2"
                         >
+                            <span class="xl:hidden w-1/4"> Cost : </span>
                             {{ event.Cost }}
                         </div>
                     </div>
