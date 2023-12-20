@@ -200,6 +200,7 @@ export default {
                 this.year = this.items.year;
                 this.course_title = this.items.events[0].courseTitle;
                 this.venue = this.items.events[0].Venue;
+                this.cost = this.items.events[0].Cost;
                 this.objectives = this.items.events[0].Objectives;
             })
             .catch((error) => {
