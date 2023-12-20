@@ -170,7 +170,7 @@ export default {
     methods: {},
     mounted() {
         axios
-            .get(BASE_URL + "/displayCalendarTraining")
+            .get(BASE_URL + "/displayCalendarTrainingAdmin")
             .then((response) => {
                 const path = window.location.pathname;
                 // Extract specific data from path
@@ -187,21 +187,30 @@ export default {
                 console.log(this.items);
 
                 for (let x = 0; x < this.items.length; x++) {
-                    const y = this.items[x];
-                    if (y.idTC == this.itemId) {
-                        console.log(y);
-                        this.items = y;
-                        console.log(this.items);
+                    if (this.items[x].idTC === intNum) {
+                        this.items = this.items[x];
                     }
                 }
+
+                //console.log("mao ni items");
+                //console.log(this.items);
+
+                // for (let x = 0; x < this.items.length; x++) {
+                //     const y = this.items[x];
+                //     if (y.idTC == this.itemId) {
+                //         console.log(y);
+                //         this.items = y;
+                //         console.log(this.items);
+                //     }
+                // }
 
                 //assign the selected object to all mounted
                 this.month = this.items.month;
                 this.year = this.items.year;
-                this.course_title = this.items.events[0].courseTitle;
-                this.venue = this.items.events[0].Venue;
-                this.cost = this.items.events[0].Cost;
-                this.objectives = this.items.events[0].Objectives;
+                this.course_title = this.items.event.courseTitle;
+                this.venue = this.items.event.Venue;
+                this.cost = this.items.event.Cost;
+                this.objectives = this.items.event.Objectives;
             })
             .catch((error) => {
                 // Handle error
