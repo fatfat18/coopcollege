@@ -167,6 +167,22 @@ img {
 .zindex {
     z-index: 10;
 }
+.infograph {
+    animation: infg 1.5s infinite linear;
+}
+
+@keyframes infg {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .homebg2 {
         background-size: contain;
@@ -181,10 +197,127 @@ img {
         );
     }
 }
+#typewriter {
+    font-weight: bold;
+}
+
+#cursor {
+    animation: blink 1s linear infinite;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+}
+
+@keyframes blink {
+    0% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 0%;
+    }
+}
+
+.buttonClose {
+    position: relative;
+    border: 1px solid rgb(255, 61, 61);
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.buttonClose:hover {
+    background: rgb(255, 61, 61);
+    box-shadow: 0 0 30px 5px rgba(236, 0, 0, 0.815);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.buttonClose:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+}
+
+.buttonClose::before {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+    from {
+        opacity: 0;
+        left: 0%;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        left: 100%;
+    }
+}
+
+.buttonClose:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+}
 </style>
 
 <template>
     <ResponsiveNavBar />
+    <div
+        class="xl:w-screen xl:h-screen bg-transparent fixed z-50"
+        v-if="showLoadingImage"
+        data-aos="zoom-in"
+        data-aos-duration="700"
+    >
+        <div class="flex items-center justify-center flex-col xl:h-full">
+            <div
+                class="xl:h-3/4 xl:w-full flex items-center justify-center overflow-hidden"
+            >
+                <div
+                    class="infograph flex items-center justify-center xl:w-max w-screen xl:h-[88%] h-[95vh] -pt-10 xl:pt-0 overflow-hidden"
+                >
+                    <img
+                        src="../../../asset/LoadingImage.webp"
+                        class="xl:object-contain object-cover xl:h-full h-[40%] border-double border-8 rounded-3xl border-white"
+                    />
+                </div>
+            </div>
+            <div
+                class="xl:h-[12%] -mt-20 xl:mt-0 w-full flex items-center justify-center overflow-auto"
+            >
+                <button
+                    class="buttonClose py-4 px-12 rounded-xl"
+                    @click="showLoadingImage = false"
+                >
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
 
     <div
         class="h-screen homebg xl:bg-cover w-screen flex items-center justify-center"
@@ -746,6 +879,8 @@ import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 
+import "vue-observe-visibility";
+
 library.add(faArrowRightLong);
 
 export default {
@@ -756,8 +891,9 @@ export default {
             phrases: [
                 "We are the sole-training needs provider of the National Federation of Cooperative Primaries of the Philippines (NaFeCOOP). We Strategically pivoted from CLIMBS Institute for Financial Literacy (CIFL) to CLIMBS Institute of Management (CIM), and now, the Co-operative College of the Philippines (Co-op College PH) to further cooperative education both locally and globally, embodies the cooperative values and principles, and upgrades its educational platforms.",
             ],
-            sleepTime: 20,
+            sleepTime: 30,
             curPhraseIndex: 0,
+            showLoadingImage: false,
         };
     },
 
@@ -768,7 +904,10 @@ export default {
 
         setTimeout(() => {
             this.writeLoop();
-        }, 3000);
+        }, 5000);
+        setTimeout(() => {
+            this.showLoadingImage = true;
+        }, 2000);
     },
     methods: {
         prevSlide() {
