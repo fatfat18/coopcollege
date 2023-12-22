@@ -56,12 +56,12 @@ import Footer from "@/Components/Footer.vue";
             <div
                 v-for="(eventData, index) in calendar"
                 :key="index"
-                class="flex xl:flex-row h-full flex-col justify-center xl:items-start items-center xl:w-full w-screen border-2 border-zinc-300 bg-white xl:mx-4 xl:mt-1 mt-1 py-2 z-10 rounded-2xl xl:rounded-xl"
+                class="flex xl:flex-row h-full flex-col justify-center xl:items-center items-center xl:w-full w-screen border-2 border-zinc-300 bg-white xl:mx-4 xl:mt-1 mt-1 py-2 z-10 rounded-2xl xl:rounded-xl"
                 data-aos="zoom-in"
                 data-aos-duration="1000"
             >
                 <div
-                    class="xl:w-1/5 w-screen h-full text-center xl:text-base text-xl flex justify-center items-start py-2"
+                    class="xl:w-1/5 w-screen h-full text-center xl:text-2xl text-xl flex justify-center items-start py-2"
                 >
                     {{ eventData.month }}
                 </div>
