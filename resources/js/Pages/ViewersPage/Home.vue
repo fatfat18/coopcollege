@@ -168,7 +168,7 @@ img {
     z-index: 10;
 }
 .infograph {
-    animation: infg 1.5s infinite linear;
+    animation: infg 2s infinite ease-in-out;
 }
 
 @keyframes infg {

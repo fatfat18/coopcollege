@@ -26,19 +26,20 @@ import Footer from "@/Components/Footer.vue";
         class="h-max w-screen flex flex-col justify-center items-center bg-theme1 overflow-y-hidden bg"
     >
         <div
-            class="h-24 w-screen max-w-7xl flex bg-theme2 justify-center items-center xl:mt-28 xl:rounded-lg"
+            class="h-max xl:py-6 py-4 w-screen max-w-7xl flex bg-gradient-to-b from-theme2 to-zinc-100 justify-center items-center xl:mt-28 xl:rounded-t-xl"
             data-aos="fade-up"
             data-aos-duration="1000"
         >
-            <p class="xl:text-5xl text-2xl font-thin text-theme1">
-                Training Calendar {{ currentYear }}
+            <p class="xl:text-4xl text-2xl font-thin text-center text-theme1">
+                Training Calendar <br />
+                <span class="xl:text-7xl text-2xl">{{ currentYear }}</span>
             </p>
         </div>
 
         <div
             data-aos="fade-up"
             data-aos-duration="1000"
-            class="rounded-t max-w-7xl px-3 xl:pl-8 w-screen bg-zinc-300 text-theme1 mt-5 py-2 xl:flex hidden items-center text-l xl:text-2xl"
+            class="rounded-t max-w-7xl px-3 xl:pl-8 w-screen bg-zinc-100 text-theme1 mt-1 py-2 xl:flex hidden items-center text-l xl:text-2xl"
         >
             <div class="w-1/5 text-center">Month</div>
             <div class="w-1/5 text-center">Course Title</div>
@@ -48,36 +49,36 @@ import Footer from "@/Components/Footer.vue";
         </div>
 
         <div
-            class="rounded-t pb-5 h-max overflow-auto xl:overflow-hidden xl:max-w-7xl xl:w-full w-max px-2 bg-zinc-300 flex justify-center items-center flex-col text-theme1 z-0"
+            class="rounded-t pb-5 h-max overflow-auto xl:overflow-hidden xl:max-w-7xl xl:w-full w-max px-2 bg-zinc-100 flex justify-center items-center flex-col text-theme1 z-0"
             data-aos="fade-up"
             data-aos-duration="1000"
         >
             <div
                 v-for="(eventData, index) in calendar"
                 :key="index"
-                class="flex xl:flex-row flex-col justify-center items-center h-max xl:w-full w-screen bg-white border-2 border-theme1 xl:mx-4 xl:mt-1 mt-1 py-2 z-10 rounded-2xl xl:rounded-xl"
+                class="flex xl:flex-row h-full flex-col justify-center xl:items-start items-center xl:w-full w-screen border-2 border-zinc-300 bg-white xl:mx-4 xl:mt-1 mt-1 py-2 z-10 rounded-2xl xl:rounded-xl"
                 data-aos="zoom-in"
                 data-aos-duration="1000"
             >
                 <div
-                    class="xl:w-1/5 w-screen text-center xl:text-base text-xl flex justify-center items-center py-2"
+                    class="xl:w-1/5 w-screen h-full text-center xl:text-base text-xl flex justify-center items-start py-2"
                 >
                     {{ eventData.month }}
                 </div>
                 <div
-                    class="flex text-center w-full px-2 py-4 flex-col justify-center items-center hover:scale-105 transition duration-300"
+                    class="flex h-full text-center w-full px-2 flex-col justify-center items-center"
                 >
                     <div
                         v-for="(event, index) in calendar[index].events"
                         :key="index"
-                        class="flex xl:justify-center xl:flex-row flex-col w-full mb-4"
+                        class="flex xl:justify-center xl:flex-row flex-col w-full"
                     >
                         <div
                             class="xl:hidden w-screen border-[1px] my-4 border-theme2"
                             v-if="index >= 1"
                         ></div>
                         <div
-                            class="xl:w-1/5 w-full xl:text-center text-start xl:text-sm text-sm flex xl:justify-center justify-start xl:items-center items-start py-2"
+                            class="xl:w-1/5 w-full xl:text-center text-start xl:text-sm text-sm flex justify-start items-center py-2"
                         >
                             <span class="xl:hidden w-1/4">
                                 Course Title :
@@ -87,7 +88,7 @@ import Footer from "@/Components/Footer.vue";
                             >
                         </div>
                         <div
-                            class="xl:w-3/5 w-full xl:text-center text-start xl:text-xs xl:px-4 text-sm flex xl:justify-center justify-start xl:items-center items-start py-2"
+                            class="xl:w-3/5 w-full xl:text-center text-start xl:text-xs xl:px-4 text-sm flex justify-center items-center py-2"
                         >
                             <span class="xl:hidden w-1/4"> Objectives : </span>
                             <span class="xl:full w-3/4">{{
@@ -95,7 +96,7 @@ import Footer from "@/Components/Footer.vue";
                             }}</span>
                         </div>
                         <div
-                            class="xl:w-1/5 w-full xl:text-center text-start xl:text-base text-sm flex xl:justify-center justify-start xl:items-center items-start py-2"
+                            class="xl:w-1/5 w-full xl:text-center text-start xl:text-base text-sm flex justify-center items-center py-2"
                         >
                             <span class="xl:hidden w-1/4"> Venue : </span>
                             <span class="xl:full w-3/4">
@@ -103,7 +104,7 @@ import Footer from "@/Components/Footer.vue";
                             >
                         </div>
                         <div
-                            class="xl:w-1/5 w-full xl:text-center text-start xl:text-base text-sm flex xl:justify-center justify-start xl:items-center items-start py-2"
+                            class="xl:w-1/5 w-full xl:text-center text-start xl:text-base text-sm flex xl:justify-center items-center py-2"
                         >
                             <span class="xl:hidden w-1/4"> Cost : </span>
                             <span class="xl:full w-3/4"> {{ event.Cost }}</span>
