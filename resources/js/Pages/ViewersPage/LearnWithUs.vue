@@ -78,7 +78,7 @@ import Footer from "@/Components/Footer.vue";
                             v-if="index >= 1"
                         ></div>
                         <div
-                            class="xl:w-1/5 w-full xl:text-center text-start xl:text-sm text-sm flex justify-start items-center py-2"
+                            class="xl:w-1/5 w-full xl:text-center text-start xl:text-sm text-sm flex justify-start items-start py-2"
                         >
                             <span class="xl:hidden w-1/4">
                                 Course Title :
@@ -88,7 +88,7 @@ import Footer from "@/Components/Footer.vue";
                             >
                         </div>
                         <div
-                            class="xl:w-3/5 w-full xl:text-center text-start xl:text-xs xl:px-4 text-sm flex justify-center items-center py-2"
+                            class="xl:w-3/5 w-full xl:text-center text-start xl:text-xs xl:px-4 text-sm flex justify-center items-start py-2"
                         >
                             <span class="xl:hidden w-1/4"> Objectives : </span>
                             <span class="xl:full w-3/4">{{
@@ -96,7 +96,7 @@ import Footer from "@/Components/Footer.vue";
                             }}</span>
                         </div>
                         <div
-                            class="xl:w-1/5 w-full xl:text-center text-start xl:text-base text-sm flex justify-center items-center py-2"
+                            class="xl:w-1/5 w-full xl:text-center text-start xl:text-base text-sm flex justify-center items-start py-2"
                         >
                             <span class="xl:hidden w-1/4"> Venue : </span>
                             <span class="xl:full w-3/4">
@@ -104,7 +104,7 @@ import Footer from "@/Components/Footer.vue";
                             >
                         </div>
                         <div
-                            class="xl:w-1/5 w-full xl:text-center text-start xl:text-base text-sm flex xl:justify-center items-center py-2"
+                            class="xl:w-1/5 w-full xl:text-center text-start xl:text-base text-sm flex xl:justify-center items-start py-2"
                         >
                             <span class="xl:hidden w-1/4"> Cost : </span>
                             <span class="xl:full w-3/4"> {{ event.Cost }}</span>
