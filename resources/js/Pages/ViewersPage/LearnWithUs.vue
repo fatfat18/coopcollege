@@ -26,7 +26,7 @@ import Footer from "@/Components/Footer.vue";
         class="h-max w-screen flex flex-col justify-center items-center bg-theme1 overflow-y-hidden bg"
     >
         <div
-            class="h-max xl:py-6 py-4 w-screen max-w-7xl flex bg-gradient-to-b from-theme2 to-zinc-100 justify-center items-center xl:mt-28 xl:rounded-t-xl"
+            class="h-max xl:py-6 py-4 w-screen max-w-7xl flex flex-col bg-gradient-to-b from-theme2 to-zinc-100 justify-center items-center xl:mt-28 xl:rounded-t-xl"
             data-aos="fade-up"
             data-aos-duration="1000"
         >
@@ -34,6 +34,17 @@ import Footer from "@/Components/Footer.vue";
                 Training Calendar <br />
                 <span class="xl:text-7xl text-2xl">{{ currentYear }}</span>
             </p>
+            <br />
+            <div class="xl:w-5/6 w-screen px-4 text-center">
+                <p class="text-xl text-theme1">Notice :</p>
+
+                <p class="text-sm text-zinc-700">
+                    We are pleased to announce our upcoming training program.
+                    Please be advised that these programs are subject to change
+                    with prior notice. We will Strive to provide atleast two(2)
+                    weeks notice of any changes.
+                </p>
+            </div>
         </div>
 
         <div
