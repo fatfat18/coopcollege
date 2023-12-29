@@ -27,7 +27,7 @@ import Modal from "@/Components/Modal.vue";
         <div class=""></div>
 
         <div
-            class="postcontainer flex justify-center h-screen w-screen xl:px-10"
+            class="postcontainer flex justify-center xl:h-max w-screen h-screen pb-0 xl:px-10 xl:pb-40"
         >
             <div class="xl:w-3/4 w-4/5 overflow-y-hidden">
                 <form @submit.prevent="submitData">
@@ -83,10 +83,10 @@ import Modal from "@/Components/Modal.vue";
                         >
                         </TextInput>
 
-                        <TextInput
+                        <textarea
                             name="objectives"
                             type="text"
-                            class="mt-4 py-2 px-2 w-full focus:ring-yellow-500 active:ring-yellow-500"
+                            class="mt-4 h-72 py-2 px-2 w-full focus:ring-yellow-500 active:ring-yellow-500"
                             required
                             autocomplete=""
                             v-model="objectives"
@@ -95,7 +95,7 @@ import Modal from "@/Components/Modal.vue";
                             data-aos-duration="1300"
                             @click.stop
                         >
-                        </TextInput>
+                        </textarea>
 
                         <TextInput
                             id="name"
@@ -222,6 +222,6 @@ export default {
     },
 };
 
-AOS.init();
+AOS.init({ once: "true," });
 AOS.refresh();
 </script>
