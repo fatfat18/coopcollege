@@ -9,11 +9,12 @@ import Footer from "@/Components/Footer.vue";
 </script>
 
 <template>
-    <ResponsiveNavBar />
+    <ResponsiveNavBar class="z-20" />
 
     <div class="h-screen w-screen flex justify-center items-center">
         <NoContents />
     </div>
+
     <Footer />
 </template>
 

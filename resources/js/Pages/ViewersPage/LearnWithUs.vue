@@ -6,6 +6,7 @@ import ResponsiveNavBar from "@/Components/ResponsiveNavBar.vue";
 import Header from "@/Components/Header.vue";
 import CalendarMonth from "@/Components/CalendarMonth.vue";
 import Footer from "@/Components/Footer.vue";
+import NoContents from "@/Components/NoContents.vue";
 </script>
 
 <style>
@@ -22,6 +23,14 @@ import Footer from "@/Components/Footer.vue";
 <template>
     <ResponsiveNavBar class="z-20" />
 
+    <div class="h-screen w-screen flex justify-center items-center">
+        <NoContents />
+    </div>
+
+    <Footer />
+
+    <!-- TRAINING CALENDAR NI SYA PERO GI DOWN 1/3/2023 -->
+    <!-- 
     <div
         class="h-max w-screen flex flex-col justify-center items-center bg-theme1 overflow-y-hidden bg"
     >
@@ -127,8 +136,8 @@ import Footer from "@/Components/Footer.vue";
 
         <div class="py-5"></div>
 
-        <Footer />
-    </div>
+
+    </div> -->
 </template>
 
 <script>
