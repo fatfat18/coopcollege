@@ -12,6 +12,8 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\NavBarController;
+use App\Http\Controllers\webVisits;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -231,7 +233,9 @@ Route::delete('/deleteBOD',[bod::class, 'delete'] );
 Route::post('/email',[Emailer::class, 'sendWelcomeEmail'] );
 
 
-
+// web visits counter
+Route::post('/webvisits',[webVisits::class, 'store'] );
+Route::get('/displaywebvisits',[webVisits::class, 'display'] );
 
 
 

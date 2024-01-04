@@ -287,7 +287,7 @@ img {
 
 <template>
     <ResponsiveNavBar />
-    <div
+    <!-- <div
         class="xl:w-screen xl:h-screen bg-transparent fixed z-50"
         v-if="showLoadingImage"
         data-aos="zoom-in"
@@ -317,7 +317,7 @@ img {
                 </button>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div
         class="h-screen homebg xl:bg-cover w-screen flex items-center justify-center"
@@ -396,24 +396,29 @@ img {
             class="xl:w-3/4 w-[90%] px-10 rounded-3xl py-4 pb-6 h-max bg-gradient-to-t from-theme2 to-white text-start"
         >
             <div class="text-5xl text-theme1 text-center h-max py-2">
-                Purpose
+                Website Visits
             </div>
             <br />
-
-            <span
-                >The Co-operative College of the Philippines Articles of
-                Incorporation states, that the purpose for which such
-                corporation is incorporated are: <br />1. To offer tertiary
-                education; <br />2. Strengthening the Collective Movement
-                through Education; <br />3. To value the Collaborative identity
-                through education; <br />4. To provide continuous learning,
-                professional management, and higher level of knowledge focusing
-                on skills development; <br />5. Offer exceptional and
-                tailored-fit courses relevant to professional leadership current
-                issues and challenges; <br />6. Help build resiliency and
-                sustainability among the associations, people’s organization and
-                communities.</span
+            <div
+                class="flex xl:flex-row flex-col gap-2"
+                v-if="webVisits && webVisits.length > 0"
             >
+                <div
+                    class="xl:w-1/4 w-full xl:h-60 h-32 flex flex-col bg-white rounded-3xl items-center justify-center"
+                    v-for="(visit, index) in webVisits.slice(0, 3)"
+                    :key="index"
+                >
+                    <div class="xl:text-7xl text-5xl">{{ visit.count }}</div>
+                    <div class="text-xl">{{ visit.Country }}</div>
+                </div>
+
+                <div
+                    class="xl:w-1/4 w-full xl:h-60 h-32 flex flex-col bg-white rounded-3xl items-center justify-center"
+                >
+                    <div class="xl:text-7xl text-5xl">{{ this.sum }}</div>
+                    <div class="text-xl">Others</div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -894,10 +899,39 @@ export default {
             sleepTime: 30,
             curPhraseIndex: 0,
             showLoadingImage: false,
+            webVisits: null,
+            sum: null,
         };
     },
 
     mounted() {
+        axios
+            .get("http://ip-api.com/json/")
+            .then((getResponse) => {
+                // console.log("GET Response:", getResponse.data);
+                // console.log(getResponse.data.query);
+                // console.log(getResponse.data.country);
+                // console.log(getResponse.data.city);
+
+                // Assuming you want to send some data in the POST request
+                const postData = {
+                    Country: getResponse.data.country,
+                    City: getResponse.data.city,
+                    IpAdd: getResponse.data.query,
+                };
+
+                // Make a POST request
+                return axios.post("/webvisits", postData);
+            })
+            .then((postResponse) => {
+                // console.log("POST Response:", postResponse.data);
+                // Handle the POST response here
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+                // Handle errors for both GET and POST requests here
+            });
+
         setInterval(() => {
             this.nextSlide();
         }, 5000);
@@ -905,9 +939,29 @@ export default {
         setTimeout(() => {
             this.writeLoop();
         }, 5000);
-        setTimeout(() => {
-            this.showLoadingImage = true;
-        }, 2000);
+        // setTimeout(() => {
+        //     this.showLoadingImage = true;
+        // }, 2000);
+
+        axios
+            .get("/displaywebvisits") // Replace '/api/display' with your actual API endpoint
+            .then((response) => {
+                this.webVisits = response.data.results;
+                console.log(this.webVisits);
+
+                let sum = 0;
+
+                // Loop through the array starting from index 2
+                for (let i = 2; i < this.webVisits.length; i++) {
+                    sum += this.webVisits[i].count;
+                }
+
+                this.sum = sum;
+                console.log(this.sum);
+            })
+            .catch((error) => {
+                console.error("Error fetching data:", error);
+            });
     },
     methods: {
         prevSlide() {
