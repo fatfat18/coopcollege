@@ -421,7 +421,7 @@ img {
                     data-aos-duration="1000"
                     :data-aos-delay="(3 + 1) * 200"
                 >
-                    <div class="xl:text-[6rem] text-5xl">{{ otherSum }}</div>
+                    <div class="xl:text-[6rem] text-5xl">{{ othersSum }}</div>
                     <div class="text-xl">Others</div>
                 </div>
             </div>
@@ -962,8 +962,8 @@ export default {
                     sum += this.webVisits[i].count;
                 }
 
-                otherSum = sum;
-                console.log(otherSum);
+                othersSum = sum;
+                console.log(othersSum);
             })
             .catch((error) => {
                 console.error("Error fetching data:", error);
