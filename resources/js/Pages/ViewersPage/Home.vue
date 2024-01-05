@@ -906,7 +906,7 @@ export default {
             curPhraseIndex: 0,
             showLoadingImage: false,
             webVisits: null,
-            othersSum: null,
+            othersSum: 0,
         };
     },
 
@@ -962,8 +962,8 @@ export default {
                     sum += this.webVisits[i].count;
                 }
 
-                othersSum = sum;
-                console.log(othersSum);
+                this.othersSum = sum;
+                console.log(this.othersSum);
             })
             .catch((error) => {
                 console.error("Error fetching data:", error);
