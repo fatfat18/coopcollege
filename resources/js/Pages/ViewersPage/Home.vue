@@ -891,7 +891,7 @@ import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 
 import "vue-observe-visibility";
-
+import { BASE_URL } from "../../baseurl";
 library.add(faArrowRightLong);
 
 export default {
@@ -906,13 +906,13 @@ export default {
             curPhraseIndex: 0,
             showLoadingImage: false,
             webVisits: null,
-            sum: null,
+            othersSum: null,
         };
     },
 
     mounted() {
         axios
-            .get("http://ip-api.com/json/")
+            .get(BASE_URL + "/api/ip")
             .then((getResponse) => {
                 // console.log("GET Response:", getResponse.data);
                 // console.log(getResponse.data.query);
@@ -927,7 +927,7 @@ export default {
                 };
 
                 // Make a POST request
-                return axios.post("/webvisits", postData);
+                return axios.post(BASE_URL + "/webvisits", postData);
             })
             .then((postResponse) => {
                 // console.log("POST Response:", postResponse.data);
@@ -950,7 +950,7 @@ export default {
         // }, 2000);
 
         axios
-            .get("/displaywebvisits") // Replace '/api/display' with your actual API endpoint
+            .get(BASE_URL + "/displaywebvisits") // Replace '/api/display' with your actual API endpoint
             .then((response) => {
                 this.webVisits = response.data.results;
                 console.log(this.webVisits);
@@ -962,8 +962,8 @@ export default {
                     sum += this.webVisits[i].count;
                 }
 
-                this.sum = sum;
-                console.log(this.sum);
+                otherSum = sum;
+                console.log(otherSum);
             })
             .catch((error) => {
                 console.error("Error fetching data:", error);

@@ -238,5 +238,15 @@ Route::post('/webvisits',[webVisits::class, 'store'] );
 Route::get('/displaywebvisits',[webVisits::class, 'display'] );
 
 
+Route::get('/api/ip', function () {
+    try {
+        $response = Http::get('http://ip-api.com/json/');
+        return $response->json();
+    } catch (\Exception $e) {
+        // Handle errors
+        return response()->json(['error' => 'Internal Server Error'], 500);
+    }
+});
+
 
 require __DIR__.'/auth.php';
