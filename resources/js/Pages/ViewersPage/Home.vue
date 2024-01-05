@@ -404,18 +404,24 @@ img {
                 v-if="webVisits && webVisits.length > 0"
             >
                 <div
-                    class="xl:w-1/4 w-full xl:h-60 h-32 flex flex-col bg-white rounded-3xl items-center justify-center"
+                    class="xl:w-1/4 w-full xl:h-60 h-32 flex flex-col bg-white rounded-3xl items-center justify-center border-t-[10px] border-theme1"
                     v-for="(visit, index) in webVisits.slice(0, 3)"
                     :key="index"
+                    data-aos="fade-down"
+                    data-aos-duration="1000"
+                    :data-aos-delay="(index + 1) * 200"
                 >
-                    <div class="xl:text-7xl text-5xl">{{ visit.count }}</div>
+                    <div class="xl:text-[6rem] text-5xl">{{ visit.count }}</div>
                     <div class="text-xl">{{ visit.Country }}</div>
                 </div>
 
                 <div
-                    class="xl:w-1/4 w-full xl:h-60 h-32 flex flex-col bg-white rounded-3xl items-center justify-center"
+                    class="xl:w-1/4 w-full xl:h-60 h-32 flex flex-col bg-white rounded-3xl items-center justify-center border-t-[10px] border-theme1"
+                    data-aos="fade-down"
+                    data-aos-duration="1000"
+                    :data-aos-delay="(3 + 1) * 200"
                 >
-                    <div class="xl:text-7xl text-5xl">{{ this.sum }}</div>
+                    <div class="xl:text-[6rem] text-5xl">{{ this.sum }}</div>
                     <div class="text-xl">Others</div>
                 </div>
             </div>
@@ -520,14 +526,14 @@ img {
             />
         </div>
         <div
-            class="xl:w-2/5 w-full xl:h-screen h-max flex flex-col items-center justify-center"
+            class="xl:w-2/5 w-full xl:h-full h-max flex flex-col items-center justify-end"
         >
             <div
-                class="xl:h-2/3 h-80 w-full flex items-center justify-center flex-col px-10"
+                class="xl:h-full h-80 w-full flex items-center justify-center flex-col px-10"
                 data-aos="zoom-out"
                 data-aos-duration="1000"
             >
-                <span class="xl:text-4xl text-lg text-theme1"
+                <span class="xl:text-3xl text-lg text-theme1"
                     >Ceremonial Turn-over of the Purchased 2 ha. lot by CLIMBS
                     Life and General Insurance Cooperative to Co-operative
                     College of the Philippines</span
@@ -542,7 +548,7 @@ img {
             </div>
 
             <div
-                class="xl:h-1/3 h-max w-full xl:pt-0 pt-4 flex items-center justify-center flex-col px-10"
+                class="xl:h-full h-max w-full xl:pt-0 pt-4 flex items-center justify-center flex-col px-10"
                 data-aos="zoom-out"
                 data-aos-duration="1000"
             >
@@ -952,7 +958,7 @@ export default {
                 let sum = 0;
 
                 // Loop through the array starting from index 2
-                for (let i = 2; i < this.webVisits.length; i++) {
+                for (let i = 3; i < this.webVisits.length; i++) {
                     sum += this.webVisits[i].count;
                 }
 

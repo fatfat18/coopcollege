@@ -342,6 +342,16 @@ import PartnersPic from "@/Components/PartnersPic.vue";
                             data-aos="fade-left"
                             data-aos-duration="1000"
                         >
+                            <img
+                                src=".././../../asset/timeline/2017-2.png"
+                                alt=""
+                            />
+                        </div>
+                        <div
+                            class="desc"
+                            data-aos="fade-left"
+                            data-aos-duration="1000"
+                        >
                             CIFL was presented in the session “Cooperatives and
                             the Future” in the International Cooperative
                             Alliance (ICA) Global Conference and General
@@ -424,6 +434,16 @@ import PartnersPic from "@/Components/PartnersPic.vue";
                         >
                             Total Partner Co-ops: 134 <br />Total ITF: PhP 40.46
                             M
+                        </div>
+                        <div
+                            class="desc flex justify-center items-center"
+                            data-aos="fade-left"
+                            data-aos-duration="1000"
+                        >
+                            <img
+                                src="../../../asset/timeline/2019-2.png"
+                                alt=""
+                            />
                         </div>
                         <div
                             class="desc"
@@ -585,6 +605,16 @@ import PartnersPic from "@/Components/PartnersPic.vue";
                                 >&#x2022; June 16, 2022</span
                             >
                         </div>
+                        <div
+                            class="desc flex justify-center items-center"
+                            data-aos="fade-right"
+                            data-aos-duration="1000"
+                        >
+                            <img
+                                src="../../../asset/timeline/2022.png"
+                                alt=""
+                            />
+                        </div>
 
                         <div
                             class="desc"
@@ -624,6 +654,46 @@ import PartnersPic from "@/Components/PartnersPic.vue";
                             <span class="text-xs italic"
                                 >&#x2022; July 7, 2022</span
                             >
+                        </div>
+                    </div>
+                </li>
+                <!-- Item 13 -->
+                <li>
+                    <div class="direction-r">
+                        <div class="flag-wrapper overflow-y-hidden">
+                            <span class="hexa"></span>
+                            <span class="flag"></span>
+                            <span
+                                class="time-wrapper"
+                                data-aos="fade-right"
+                                data-aos-duration="1500"
+                                ><span class="time">2023</span></span
+                            >
+                        </div>
+
+                        <div
+                            class="desc flex justify-center items-center"
+                            data-aos="fade-left"
+                            data-aos-duration="1000"
+                        >
+                            <img
+                                src="../../../asset/timeline/2023.png"
+                                alt=""
+                            />
+                        </div>
+                        <div
+                            class="desc"
+                            data-aos="fade-left"
+                            data-aos-duration="1000"
+                        >
+                            <h1 class="text-xl">
+                                &#x2022; The Global Co-operative Executive
+                                Masterclass.
+                            </h1>
+                            <br />
+                            <span class="text-xs italic"
+                                >&#x2022; Manchester, United Kingdom</span
+                            ><br /><br />
                         </div>
                     </div>
                 </li>
