@@ -421,7 +421,7 @@ img {
                     data-aos-duration="1000"
                     :data-aos-delay="(3 + 1) * 200"
                 >
-                    <div class="xl:text-[6rem] text-5xl">{{ this.sum }}</div>
+                    <div class="xl:text-[6rem] text-5xl">{{ otherSum }}</div>
                     <div class="text-xl">Others</div>
                 </div>
             </div>
