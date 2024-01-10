@@ -890,7 +890,6 @@ import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 
-import "vue-observe-visibility";
 import { BASE_URL } from "../../baseurl";
 library.add(faArrowRightLong);
 
