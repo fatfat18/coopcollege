@@ -48,7 +48,7 @@ class trainingCalendar extends Controller
             'idTC' => 'required|numeric',
             'month' => 'required|',
             'year' => 'required|numeric',
-            'cost' => 'required|numeric'
+            'cost' => 'required'
         ]);
  
         if ($validator->fails()) {
