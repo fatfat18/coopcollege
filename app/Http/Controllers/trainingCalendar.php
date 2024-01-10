@@ -62,6 +62,7 @@ class trainingCalendar extends Controller
 
         \App\Models\courseVenue::where('idCV', $data->idCV)->update([
             'courseTitle' => $request->courseTitle,
+            'Objectives' => $request->objectives,
             'venue' => $request->venue,
             'cost' => $request->cost
         ]);
