@@ -411,7 +411,7 @@ img {
                     data-aos-duration="1000"
                     :data-aos-delay="(index + 1) * 200"
                 >
-                    <div class="xl:text-[6rem] text-5xl">{{ visit.count }}</div>
+                    <div class="xl:text-[6rem] text-5xl overflow-hidden">{{ visit.count }}</div>
                     <div class="text-xl">{{ visit.Country }}</div>
                 </div>
 
