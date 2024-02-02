@@ -23,13 +23,11 @@ import NoContents from "@/Components/NoContents.vue";
 <template>
     <ResponsiveNavBar class="z-20" />
 
-    <!-- <div class="h-screen w-screen flex justify-center items-center">
+    <div class="h-screen w-screen flex justify-center items-center">
         <NoContents />
-    </div> -->
+    </div>
 
-    <!-- TRAINING CALENDAR NI SYA PERO GI DOWN 1/3/2023 -->
-
-    <div
+    <!-- <div
         class="h-max w-screen flex flex-col justify-center items-center bg-theme1 overflow-y-hidden bg"
     >
         <div
@@ -63,7 +61,6 @@ import NoContents from "@/Components/NoContents.vue";
             <div class="w-1/5 text-center">Course Title</div>
             <div class="w-2/5 text-center">Objectives</div>
             <div class="w-1/4 text-center">Venue</div>
-            <!-- <div class="w-1/5 text-center">Cost</div> -->
         </div>
 
         <div
@@ -121,20 +118,13 @@ import NoContents from "@/Components/NoContents.vue";
                                 {{ event.Venue }}</span
                             >
                         </div>
-                        <!-- <div
-                            class="xl:w-1/5 w-full xl:text-center text-start xl:text-base text-sm flex xl:justify-center items-start py-2"
-                        >
-                            <span class="xl:hidden w-1/4"> Cost : </span>
-                            <span class="xl:full w-3/4"> {{ event.Cost }}</span>
-                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="py-5"></div>
-    </div>
-    <Footer />
+    </div> -->
 </template>
 
 <script>
