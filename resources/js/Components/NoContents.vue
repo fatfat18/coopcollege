@@ -7,7 +7,7 @@
         data-aos-duration="1000"
         data-aos-delay="500"
     >
-        <h1 class="text-5xl my-20 text-zinc-50">More Contents Soon!</h1>
+        <h1 class="text-5xl my-20 text-zinc-50">More Content Soon!</h1>
         <img src="../../asset/logo.png" alt="" class="w-96" />
     </div>
 </template>
