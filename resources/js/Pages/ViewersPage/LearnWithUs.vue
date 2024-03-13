@@ -22,12 +22,12 @@ import NoContents from "@/Components/NoContents.vue";
 
 <template>
     <ResponsiveNavBar class="z-20" />
-
+<!-- 
     <div class="h-screen w-screen flex justify-center items-center">
         <NoContents />
-    </div>
+    </div> -->
 
-    <!-- <div
+    <div
         class="h-max w-screen flex flex-col justify-center items-center bg-theme1 overflow-y-hidden bg"
     >
         <div
@@ -124,7 +124,7 @@ import NoContents from "@/Components/NoContents.vue";
         </div>
 
         <div class="py-5"></div>
-    </div> -->
+    </div>
 </template>
 
 <script>
