@@ -104,7 +104,7 @@ import Modal from "@/Components/Modal.vue";
                             class="mt-4 py-2 px-2 w-full focus:ring-yellow-500 active:ring-yellow-500"
                             required
                             autocomplete=""
-                            placeholder="Target Execution"
+                            placeholder="Mode of Delivery"
                             v-model="cost"
                             data-aos="fade-up"
                             data-aos-duration="1300"
