@@ -104,7 +104,7 @@ import Modal from "@/Components/Modal.vue";
                             class="mt-4 py-2 px-2 w-full focus:ring-yellow-500 active:ring-yellow-500"
                             required
                             autocomplete=""
-                            placeholder="Venue"
+                            placeholder="Mode Of Delivery"
                             v-model="venue"
                             data-aos="fade-up"
                             data-aos-duration="1300"
@@ -118,7 +118,7 @@ import Modal from "@/Components/Modal.vue";
                             class="mt-4 py-2 px-2 w-full focus:ring-yellow-500 active:ring-yellow-500"
                             required
                             autocomplete=""
-                            placeholder="Cost"
+                            placeholder="Target Execution"
                             v-model="cost"
                             data-aos="fade-up"
                             data-aos-duration="1300"
