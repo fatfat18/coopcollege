@@ -12,7 +12,6 @@ class trainingCalendar extends Controller
 
         $validator = Validator::make($request->all(), [
             'courseTitle' => 'required',
-            'venue'=>'required',
             'cost'=>'required',
             'objectives'=>'required',
             'month_num'=>'required|numeric',
@@ -27,7 +26,7 @@ class trainingCalendar extends Controller
         $data = \App\Models\courseVenue::create([
             'courseTitle' => $request->courseTitle,
             'Objectives' => $request->objectives,
-            'Venue' => $request->venue,
+  
             'Cost' => $request->cost
         ]);
 
@@ -63,7 +62,7 @@ class trainingCalendar extends Controller
         \App\Models\courseVenue::where('idCV', $data->idCV)->update([
             'courseTitle' => $request->courseTitle,
             'Objectives' => $request->objectives,
-            'venue' => $request->venue,
+  
             'cost' => $request->cost
         ]);
 

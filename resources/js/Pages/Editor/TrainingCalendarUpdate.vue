@@ -46,7 +46,7 @@ import Modal from "@/Components/Modal.vue";
                             required
                             autocomplete=""
                             v-model="month"
-                            placeholder="Month"
+                            placeholder="Target Execution"
                             data-aos="fade-up"
                             data-aos-duration="1300"
                             @click.stop
@@ -84,26 +84,12 @@ import Modal from "@/Components/Modal.vue";
 
                         <TextInput
                             id="name"
-                            name="venue"
-                            type="text"
-                            class="mt-4 py-2 px-2 w-full focus:ring-yellow-500 active:ring-yellow-500"
-                            required
-                            autocomplete=""
-                            placeholder="Venue"
-                            v-model="venue"
-                            data-aos="fade-up"
-                            data-aos-duration="1300"
-                            @click.stop
-                        >
-                        </TextInput>
-                        <TextInput
-                            id="name"
                             name="cost"
                             type="text"
                             class="mt-4 py-2 px-2 w-full focus:ring-yellow-500 active:ring-yellow-500"
                             required
                             autocomplete=""
-                            placeholder="Cost"
+                            placeholder="Mode Of Delivery"
                             v-model="cost"
                             data-aos="fade-up"
                             data-aos-duration="1300"
@@ -208,7 +194,7 @@ export default {
                 this.month = this.items.month;
                 this.year = this.items.year;
                 this.course_title = this.items.event.courseTitle;
-                this.venue = this.items.event.Venue;
+
                 this.cost = this.items.event.Cost;
                 this.objectives = this.items.event.Objectives;
             })
@@ -225,7 +211,7 @@ export default {
             let num = parseInt(this.itemId);
 
             params.append("courseTitle", this.course_title);
-            params.append("venue", this.venue);
+
             params.append("month", this.month);
             params.append("year", this.year);
             params.append("objectives", this.objectives);

@@ -61,7 +61,7 @@ import Modal from "@/Components/Modal.vue";
                             required
                             autocomplete=""
                             v-model="month"
-                            placeholder="Month"
+                            placeholder="Target Execution"
                             data-aos="fade-up"
                             data-aos-duration="1300"
                             @click.stop
@@ -97,20 +97,6 @@ import Modal from "@/Components/Modal.vue";
                         >
                         </textarea>
 
-                        <TextInput
-                            id="name"
-                            name="venue"
-                            type="text"
-                            class="mt-4 py-2 px-2 w-full focus:ring-yellow-500 active:ring-yellow-500"
-                            required
-                            autocomplete=""
-                            placeholder="Mode Of Delivery"
-                            v-model="venue"
-                            data-aos="fade-up"
-                            data-aos-duration="1300"
-                            @click.stop
-                        >
-                        </TextInput>
                         <TextInput
                             id="name"
                             name="cost"
@@ -168,7 +154,6 @@ export default {
             course_title: "",
             year: "",
             objectives: "",
-            venue: "",
             cost: "",
             showModal: false,
             items: [],
@@ -185,7 +170,6 @@ export default {
             formData.append("month", this.month);
             formData.append("courseTitle", this.course_title);
             formData.append("year", this.year);
-            formData.append("venue", this.venue);
             formData.append("objectives", this.objectives);
             formData.append("cost", this.cost);
 
@@ -209,7 +193,6 @@ export default {
             this.month = "";
             this.course_title = "";
             this.year = "";
-            this.venue = "";
             this.cost = "";
             this.objectives = "";
         },
