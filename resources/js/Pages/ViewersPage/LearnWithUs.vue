@@ -22,7 +22,7 @@ import NoContents from "@/Components/NoContents.vue";
 
 <template>
     <ResponsiveNavBar class="z-20" />
-<!-- 
+    <!-- 
     <div class="h-screen w-screen flex justify-center items-center">
         <NoContents />
     </div> -->
@@ -57,10 +57,10 @@ import NoContents from "@/Components/NoContents.vue";
             data-aos-duration="1000"
             class="rounded-t max-w-7xl px-3 xl:pl-8 w-screen bg-zinc-100 text-theme1 mt-1 py-2 xl:flex hidden items-center text-l xl:text-2xl"
         >
-            <div class="w-1/5 text-center">Month</div>
+            <div class="w-1/5 text-center">Target Execution</div>
             <div class="w-1/5 text-center">Course Title</div>
             <div class="w-2/5 text-center">Objectives</div>
-            <div class="w-1/4 text-center">Venue</div>
+            <div class="w-1/4 text-center">Mode of Delivery</div>
         </div>
 
         <div
@@ -114,9 +114,7 @@ import NoContents from "@/Components/NoContents.vue";
                             class="xl:w-1/5 w-full xl:text-center text-start xl:text-base text-sm flex justify-center items-start py-2"
                         >
                             <span class="xl:hidden w-1/4"> Venue : </span>
-                            <span class="xl:full w-3/4">
-                                {{ event.Venue }}</span
-                            >
+                            <span class="xl:full w-3/4"> {{ event.Cost }}</span>
                         </div>
                     </div>
                 </div>
