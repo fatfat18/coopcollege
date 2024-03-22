@@ -14,7 +14,10 @@ return new class extends Migration
         Schema::create('course_venues', function (Blueprint $table) {
             $table->id('idCV');
             $table->text('courseTitle');
+            $table->text('Objectives');
             $table->text('Venue');
+            $table->text('Cost');
+        
         });
     }
 

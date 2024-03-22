@@ -177,10 +177,10 @@ export default {
             .get(BASE_URL + "/displayBODAdmin")
             .then((response) => {
                 this.items = response.data;
-                console.log(this.items);
+                //console.log(this.items);
             })
             .catch((error) => {
-                console.log(error);
+                //console.log(error);
             });
     },
     computed: {
@@ -207,7 +207,7 @@ export default {
         navigatetoDelete() {
             this.showModal = false;
             this.confirmdelmodal = true;
-            console.log(this.itemid);
+            //console.log(this.itemid);
 
             let params = new URLSearchParams();
             let num = parseInt(this.itemid);
@@ -217,7 +217,7 @@ export default {
             axios
                 .delete(BASE_URL + "/deleteBOD" + "?" + params.toString())
                 .then((response) => {
-                    console.log(response.data);
+                    //console.log(response.data);
 
                     async function redirectWithDelay() {
                         await new Promise((resolve) =>
@@ -228,7 +228,7 @@ export default {
                     redirectWithDelay();
                 })
                 .catch((error) => {
-                    console.log(error);
+                    //console.log(error);
                 });
         },
     },

@@ -23,10 +23,11 @@ import ShowImgModal from "@/Components/ShowImgModal.vue";
 }
 </style>
 <template>
-    <Header />
     <ResponsiveNavBar />
 
-    <div class="w-screen h-max bg-zinc-200 flex justify-center items-center">
+    <div
+        class="w-screen h-max bg-gradient-to-b from-theme2 to-white flex justify-center items-center pt-40"
+    >
         <div class="h-max max-w-7xl w-screen flex xl:flex-row flex-col">
             <div
                 class="h-max xl:w-1/2 flex-col min-h-max flex justify-center items-center"
@@ -75,9 +76,11 @@ import ShowImgModal from "@/Components/ShowImgModal.vue";
                 </div>
             </div>
 
-            <div class="h-max xl:w-1/2 flex flex-col text-center pt-10 px-10">
+            <div
+                class="h-max xl:w-1/2 flex flex-col text-center pt-10 xl:px-10 px-4"
+            >
                 <h1
-                    class="text-3xl text-theme1 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]"
+                    class="xl:text-5xl text-2xl text-theme1"
                     data-aos="zoom-out"
                     data-aos-duration="1000"
                 >
@@ -85,7 +88,7 @@ import ShowImgModal from "@/Components/ShowImgModal.vue";
                 </h1>
                 <br />
                 <h1
-                    class="text-xl text-theme2 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]"
+                    class="xl:text-2xl text-xl text-white"
                     data-aos="zoom-out"
                     data-aos-duration="1000"
                 >
@@ -94,7 +97,7 @@ import ShowImgModal from "@/Components/ShowImgModal.vue";
                 <br />
 
                 <p
-                    class="text-slate-900 text-xs xl:text-lg flex items-center justify-center text-justify"
+                    class="text-black text-sm xl:text-base flex items-center justify-center text-center xl:text-start"
                     data-aos="zoom-out"
                     data-aos-duration="1000"
                 >

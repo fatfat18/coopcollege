@@ -39,15 +39,13 @@ library.add(faAngleLeft, faAngleRight);
 }
 </style>
 <template>
-    <Header />
-    <ResponsiveNavBar />
-
     <div class="h-max w-screen flex flex-col justify-center">
         <div
-            class="xl:h-screen py-80 xl:py-0 w-screen newsbg bg-theme1 flex flex-col justify-center items-center"
+            class="xl:h-screen h-screen py-80 xl:py-0 w-screen newsbg bg-theme1 flex flex-col justify-center items-center"
             data-aos="fade"
             data-aos-duration="1000"
         >
+            <ResponsiveNavBar />
             <p
                 class="xl:text-6xl text-3xl text-white"
                 data-aos="fade-up"
@@ -186,17 +184,17 @@ export default {
                     BASE_URL + "/paginateDisplayPost"
                 );
 
-                console.log(response);
+                //console.log(response);
                 this.heading = response.data.data[0];
-                console.log(this.heading);
+                //console.log(this.heading);
                 this.title = this.heading.newsTitle;
                 this.description = this.heading.Description;
                 this.context = this.heading.Context;
                 this.img = this.heading.avatar.ImageUrl;
-                console.log(this.img);
+                //console.log(this.img);
                 this.pid = this.heading.Postid;
                 this.pageposts = response.data.data.slice(1);
-                console.log(this.pageposts);
+                //console.log(this.pageposts);
             } catch (error) {
                 console.error(error);
             }

@@ -27,26 +27,26 @@ import Modal from "@/Components/Modal.vue";
         <div class=""></div>
 
         <div
-            class="postcontainer flex justify-center h-screen w-screen xl:px-10 pt-10"
+            class="postcontainer flex justify-center xl:h-max w-screen h-screen pb-0 xl:px-10 xl:pb-40"
         >
-            <div class="xl:w-3/4 w-4/5 xl:mt-16 overflow-y-hidden">
+            <div class="xl:w-3/4 w-4/5 overflow-y-hidden">
                 <form @submit.prevent="updateTrainingcalendar(intNum)">
                     <button
                         type="submit"
-                        class="mt-16 border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg mb-10 hover:bg-green-600 transition ease-in duration-100"
+                        class="mt-6 border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg hover:bg-green-600 transition ease-in duration-100"
                     >
                         Save
                     </button>
-                    <div class="overflow-y-hidden space-x-4">
+                    <div class="overflow-y-hidden">
                         <TextInput
                             id="name"
                             name="month"
                             type="text"
-                            class="mt-4 py-2 px-2 w-40 focus:ring-yellow-500 active:ring-yellow-500"
+                            class="mt-4 py-2 px-2 w-full focus:ring-yellow-500 active:ring-yellow-500"
                             required
                             autocomplete=""
                             v-model="month"
-                            placeholder="Month"
+                            placeholder="Target Execution"
                             data-aos="fade-up"
                             data-aos-duration="1300"
                             @click.stop
@@ -57,7 +57,7 @@ import Modal from "@/Components/Modal.vue";
                             id="name"
                             name="coursetitle"
                             type="text"
-                            class="mt-4 py-2 px-2 w-80 focus:ring-yellow-500 active:ring-yellow-500"
+                            class="mt-4 py-2 px-2 w-full focus:ring-yellow-500 active:ring-yellow-500"
                             required
                             autocomplete=""
                             v-model="course_title"
@@ -68,15 +68,29 @@ import Modal from "@/Components/Modal.vue";
                         >
                         </TextInput>
 
-                        <TextInput
-                            id="name"
-                            name="venue"
+                        <textarea
+                            name="objectives"
                             type="text"
-                            class="mt-4 py-2 px-2 w-72 focus:ring-yellow-500 active:ring-yellow-500"
+                            class="mt-4 h-72 py-2 px-2 w-full focus:ring-yellow-500 active:ring-yellow-500"
                             required
                             autocomplete=""
-                            placeholder="Venue"
-                            v-model="venue"
+                            v-model="objectives"
+                            placeholder="Objectives"
+                            data-aos="fade-up"
+                            data-aos-duration="1300"
+                            @click.stop
+                        >
+                        </textarea>
+
+                        <TextInput
+                            id="name"
+                            name="cost"
+                            type="text"
+                            class="mt-4 py-2 px-2 w-full focus:ring-yellow-500 active:ring-yellow-500"
+                            required
+                            autocomplete=""
+                            placeholder="Mode Of Delivery"
+                            v-model="cost"
                             data-aos="fade-up"
                             data-aos-duration="1300"
                             @click.stop
@@ -87,7 +101,7 @@ import Modal from "@/Components/Modal.vue";
                             id="name"
                             name="year"
                             type="number"
-                            class="mt-4 py-2 px-2 w-32 focus:ring-yellow-500 active:ring-yellow-500"
+                            class="mt-4 py-2 px-2 w-full focus:ring-yellow-500 active:ring-yellow-500"
                             required
                             autocomplete=""
                             placeholder="Year"
@@ -125,6 +139,8 @@ export default {
             course_title: "",
             year: "",
             venue: "",
+            objectives: "",
+            cost: "",
             items: [],
             selectedItem: this.itemId,
         };
@@ -140,7 +156,7 @@ export default {
     methods: {},
     mounted() {
         axios
-            .get(BASE_URL + "/displayCalendarTraining")
+            .get(BASE_URL + "/displayCalendarTrainingAdmin")
             .then((response) => {
                 const path = window.location.pathname;
                 // Extract specific data from path
@@ -157,19 +173,30 @@ export default {
                 console.log(this.items);
 
                 for (let x = 0; x < this.items.length; x++) {
-                    const y = this.items[x];
-                    if (y.idTC == this.itemId) {
-                        console.log(y);
-                        this.items = y;
-                        console.log(this.items);
+                    if (this.items[x].idTC === intNum) {
+                        this.items = this.items[x];
                     }
                 }
+
+                //console.log("mao ni items");
+                //console.log(this.items);
+
+                // for (let x = 0; x < this.items.length; x++) {
+                //     const y = this.items[x];
+                //     if (y.idTC == this.itemId) {
+                //         console.log(y);
+                //         this.items = y;
+                //         console.log(this.items);
+                //     }
+                // }
 
                 //assign the selected object to all mounted
                 this.month = this.items.month;
                 this.year = this.items.year;
-                this.course_title = this.items.events[0].courseTitle;
-                this.venue = this.items.events[0].Venue;
+                this.course_title = this.items.event.courseTitle;
+
+                this.cost = this.items.event.Cost;
+                this.objectives = this.items.event.Objectives;
             })
             .catch((error) => {
                 // Handle error
@@ -177,15 +204,18 @@ export default {
     },
     methods: {
         updateTrainingcalendar() {
+            this.showModal = true;
             let params = new URLSearchParams();
             //let item = this.items.find(item => item.idTC === this.selectedItem);
 
             let num = parseInt(this.itemId);
 
             params.append("courseTitle", this.course_title);
-            params.append("venue", this.venue);
+
             params.append("month", this.month);
             params.append("year", this.year);
+            params.append("objectives", this.objectives);
+            params.append("cost", this.cost);
             params.append("idTC", num);
 
             axios
@@ -197,7 +227,7 @@ export default {
                 )
                 .then((response) => {
                     console.log(response.data);
-                    this.showModal = true;
+                    this.showModal = false;
 
                     async function redirectWithDelay() {
                         await new Promise((resolve) =>
@@ -217,6 +247,6 @@ export default {
     },
 };
 
-AOS.init();
+AOS.init({ once: "true," });
 AOS.refresh();
 </script>

@@ -12,7 +12,8 @@ class trainingCalendar extends Controller
 
         $validator = Validator::make($request->all(), [
             'courseTitle' => 'required',
-            'venue'=>'required',
+            'cost'=>'required',
+            'objectives'=>'required',
             'month_num'=>'required|numeric',
             'month'=>'required',
             'year'=>'required|numeric'
@@ -24,7 +25,9 @@ class trainingCalendar extends Controller
 
         $data = \App\Models\courseVenue::create([
             'courseTitle' => $request->courseTitle,
-            'venue' => $request->venue
+            'Objectives' => $request->objectives,
+  
+            'Cost' => $request->cost
         ]);
 
         \App\Models\trainingCalendar::create([
@@ -43,7 +46,8 @@ class trainingCalendar extends Controller
         $validator = Validator::make($request->all(), [
             'idTC' => 'required|numeric',
             'month' => 'required|',
-            'year' => 'required|numeric'
+            'year' => 'required|numeric',
+            'cost' => 'required'
         ]);
  
         if ($validator->fails()) {
@@ -57,7 +61,9 @@ class trainingCalendar extends Controller
 
         \App\Models\courseVenue::where('idCV', $data->idCV)->update([
             'courseTitle' => $request->courseTitle,
-            'venue' => $request->venue
+            'Objectives' => $request->objectives,
+  
+            'cost' => $request->cost
         ]);
 
         return ['msg'=>'calendar event successfuly updated.'];

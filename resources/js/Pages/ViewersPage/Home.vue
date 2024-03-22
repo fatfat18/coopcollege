@@ -96,55 +96,369 @@ img {
 .slide {
     transition: transform 2s ease; /* Adjust the duration and timing function as needed */
 }
+.gradient-div {
+    background: linear-gradient(
+        to bottom,
+        #333,
+        #fff
+    ); /* Set the colors you want */
+}
+.homebg {
+    background: url("../../../asset/ldpg.webp") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.homebg2 {
+    background: url("../../../asset/front/10.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px -220px;
+}
+.bottomgradient {
+    background: rgb(255, 0, 0);
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
+}
+.topgradient {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 1) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.leftgradient {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+        270deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 1) 80%
+    );
+}
+.rightgradient {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 1) 80%
+    );
+}
+.leftanglegradient {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+        220deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 1) 85%
+    );
+}
+.radialgradient {
+    background: rgb(255, 204, 0);
+    background: radial-gradient(
+        circle,
+        rgba(255, 204, 0, 1) 0%,
+        rgba(255, 255, 255, 1) 50%
+    );
+}
+.zindex {
+    z-index: 10;
+}
+.infograph {
+    animation: infg 2s infinite ease-in-out;
+}
+
+@keyframes infg {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .homebg2 {
+        background-size: contain;
+        background-position: top;
+    }
+    .leftanglegradient {
+        background: rgb(255, 255, 255);
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(0, 0, 0, 1) 50%
+        );
+    }
+}
+#typewriter {
+    font-weight: bold;
+}
+
+#cursor {
+    animation: blink 1s linear infinite;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+}
+
+@keyframes blink {
+    0% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 0%;
+    }
+}
+
+.buttonClose {
+    position: relative;
+    border: 1px solid rgb(255, 61, 61);
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.buttonClose:hover {
+    background: rgb(255, 61, 61);
+    box-shadow: 0 0 30px 5px rgba(236, 0, 0, 0.815);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.buttonClose:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+}
+
+.buttonClose::before {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+    from {
+        opacity: 0;
+        left: 0%;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        left: 100%;
+    }
+}
+
+.buttonClose:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+}
 </style>
 
 <template>
-    <Header />
     <ResponsiveNavBar />
-
-    <div
-        class="fixed xl:-mt-80 -mt-56 w-screen h-screen bg-zinc-50 cardcontainer -z-10"
-    ></div>
-
     <!-- <div
-        id="maincontent"
-        class="lpg flex flex-row justify-center items-center h-max w-screen bg-cover"
-        data-aos="fade-in"
-        data-aos-delay="500"
-        data-aos-duration="1000"
-        v-for="(image, index) in cover"
+        class="xl:w-screen xl:h-screen bg-transparent fixed z-50"
+        v-if="showLoadingImage"
+        data-aos="zoom-in"
+        data-aos-duration="700"
     >
-        <img
-            :src="image"
-            class="bg-cover xl:w-3/4 xl:h-96 object-cover w-full xl:rounded-3xl rounded-none xl:mt-8 transition duration-500"
-        />
+        <div class="flex items-center justify-center flex-col xl:h-full">
+            <div
+                class="xl:h-3/4 xl:w-full flex items-center justify-center overflow-hidden"
+            >
+                <div
+                    class="infograph flex items-center justify-center xl:w-max w-screen xl:h-[88%] h-[95vh] -pt-10 xl:pt-0 overflow-hidden"
+                >
+                    <img
+                        src="../../../asset/LoadingImage.webp"
+                        class="xl:object-contain object-cover xl:h-full h-[40%] border-double border-8 rounded-3xl border-white"
+                    />
+                </div>
+            </div>
+            <div
+                class="xl:h-[12%] -mt-20 xl:mt-0 w-full flex items-center justify-center overflow-auto"
+            >
+                <button
+                    class="buttonClose py-4 px-12 rounded-xl"
+                    @click="showLoadingImage = false"
+                >
+                    Close
+                </button>
+            </div>
+        </div>
     </div> -->
 
     <div
-        class="w-max flex"
-        data-aos="zoom-out"
-        data-aos-duration="1500"
-        data-aos-easing="ease-in-out-back"
+        class="h-screen homebg xl:bg-cover w-screen flex items-center justify-center"
     >
         <div
-            class="slide flex flex-col w-screen"
-            :style="{
-                transform: `translateX(${-currentIndex * 100}%)`,
-            }"
-            v-for="(image,index) in cover"
+            class="xl:text-7xl text-3xl py-2 text-zinc-50 h-max text-center tracking-widest font-bold flex flex-col items-center justify-center overflow-hidden"
+        >
+            <img
+                src="../../../asset/logo.png"
+                class="xl:w-44 w-32"
+                data-aos="fade-down"
+                data-aos-duration="700"
+                data-aos-easing="ease-in-out-back"
+            />
+            <span
+                data-aos="zoom-in-down"
+                data-aos-duration="1000"
+                data-aos-delay="600"
+                data-aos-easing="ease-in-out-back"
+                >Cooperative College</span
+            >
+            <span
+                class="xl:text-3xl text-xl"
+                data-aos="zoom-in-down"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out-back"
+                data-aos-delay="650"
+                >of the</span
+            >
+            <span
+                data-aos="zoom-in-down"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out-back"
+                data-aos-delay="700"
+                >Philippines</span
+            >
+            <span
+                class="xl:text-base text-xs tracking-tight w-3/4 mt-4"
+                data-aos="zoom-in-down"
+                data-aos-duration="1000"
+                data-aos-delay="800"
+                data-aos-easing="ease-in-out-back"
+                >Empowering Futures, Building Together: Your Gateway to
+                <span class="text-theme2">Cooperative Excellence</span>.</span
+            >
+        </div>
+    </div>
+
+    <div
+        class="w-screeen h-max bg-gradient-to-t from-theme2 to-white flex flex-col space-y-3 justify-center items-center"
+    >
+        <div
+            class="xl:w-3/4 w-[90%] h-max bg-white rounded-b-3xl mx-5 px-8 py-4 text-start"
+        >
+            <div class="text-5xl text-theme1 text-center py-4">Our Mission</div>
+            <span
+                >I. Provide crystalized best practices for cooperators;
+                <br />II. Safekeeping knowledge that will engender innovations
+                and enlightenment; and <br />III. Generate the cycle of
+                empowerment amongst its participating cooperators towards social
+                transformation.</span
+            >
+        </div>
+        <div
+            class="xl:w-3/4 w-[90%] h-max bg-white rounded-3xl mx-5 px-8 py-4 text-center"
+        >
+            <span class="text-5xl text-theme1">Our Vision</span>
+            <br /><br />
+            <span
+                >“A learning center for enlightened and empowered cooperators in
+                the Philippines.”</span
+            >
+        </div>
+
+        <div
+            class="xl:w-3/4 w-[90%] px-10 rounded-3xl py-4 pb-6 h-max bg-gradient-to-t from-theme2 to-white text-start"
+        >
+            <div class="text-5xl text-theme1 text-center h-max py-2">
+                Website Visits
+            </div>
+            <br />
+            <div
+                class="flex xl:flex-row flex-col gap-2"
+                v-if="webVisits && webVisits.length > 0"
+            >
+                <div
+                    class="xl:w-1/4 w-full xl:h-60 h-32 flex flex-col bg-white rounded-3xl items-center justify-center border-t-[10px] border-theme1"
+                    v-for="(visit, index) in webVisits.slice(0, 3)"
+                    :key="index"
+                    data-aos="fade-down"
+                    data-aos-duration="1000"
+                    :data-aos-delay="(index + 1) * 200"
+                >
+                    <div class="xl:text-[6rem] text-5xl overflow-hidden">
+                        {{ visit.count }}
+                    </div>
+                    <div class="text-xl">{{ visit.Country }}</div>
+                </div>
+
+                <div
+                    class="xl:w-1/4 w-full xl:h-60 h-32 flex flex-col bg-white rounded-3xl items-center justify-center border-t-[10px] border-theme1"
+                    data-aos="fade-down"
+                    data-aos-duration="1000"
+                    :data-aos-delay="(3 + 1) * 200"
+                >
+                    <div class="xl:text-[6rem] text-5xl overflow-hidden">
+                        {{ othersSum }}
+                    </div>
+                    <div class="text-xl">Others</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-gradient-to-b from-[#ffcc00] to-white">
+        <div
+            class="w-max flex"
+            data-aos="zoom-out"
+            data-aos-duration="1500"
+            data-aos-easing="ease-in-out-back"
         >
             <div
-                class="w-screen flex h-full flex-col items-center justify-center lpg"
+                class="slide flex flex-col w-screen"
+                :style="{
+                    transform: `translateX(${-currentIndex * 100}%)`,
+                }"
+                v-for="(image, index) in cover"
             >
-                <img
-                    :src="image"
-                    class="carimg flex items-center justify-center h-full slide xl:w-5/6 xl:h-96 object-cover w-full xl:rounded-3xl rounded-none xl:mt-10 transition duration-1000"
-                    alt="Carousel Image 1"
-                    :class="{
-                        'scale-100': currentIndex === index,
-                        'scale-[.25]': currentIndex !== index,
-                    }"
-                />
+                <div
+                    class="w-screen flex h-full flex-col items-center justify-center lpg"
+                >
+                    <img
+                        :src="image"
+                        class="carimg flex items-center justify-center h-full slide xl:w-5/6 xl:h-96 object-cover w-full xl:rounded-3xl rounded-none xl:mt-10 transition duration-1000"
+                        alt="Carousel Image 1"
+                        :class="{
+                            'scale-100': currentIndex === index,
+                            'scale-[.25]': currentIndex !== index,
+                        }"
+                    />
+                </div>
             </div>
         </div>
     </div>
@@ -174,202 +488,397 @@ img {
             nafemarketing22@climbs.coop (NaFeCOOP)<br />
         </p>
     </div>
+    <div class="w-screen flex items-center justify-center">
+        <div class="pt-20 overflow-hidden w-4/5 mt-6">
+            <div
+                class="text-theme2 py-2 w-max text-4xl xl:text-7xl text-center bg-gradient-to-r from-theme1 to-theme2 text-transparent bg-clip-text"
+            >
+                Who are we?
+            </div>
+            <br /><br />
+
+            <section
+                class="flex flex-col justify-center items-center text-justify h-max"
+            >
+                <p class="text-theme1 xl:text-2xl">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        ref="typewriter"
+                        class="text-base xl:text-2xl"
+                    ></span
+                    ><span id="cursor">|</span>
+                </p>
+            </section>
+        </div>
+    </div>
 
     <div
-        class="flex xl:flex-row h-max flex-col w-screen justify-center items-center"
+        class="w-screen h-screen flex xl:flex-row flex-col bg-gradient-to-b from-white to-[#FFCC00]"
     >
         <div
-            class="max-w-7xl h-max w-screen flex flex-col xl:flex-row justify-center items-center"
+            class="xl:w-3/5 w-full xl:h-screen h-[40%] flex justify-center items-center xl:relative"
+            data-aos="zoom-out"
+            data-aos-duration="1000"
+            data-aos-delay="500"
+        >
+            <img
+                src="../../../asset/front/1.webp"
+                class="xl:h-max h-40 w-1/2 rounded-3xl absolute top-1/2 left-1/3 transform -translate-y-1/4 -translate-x-1/2 rotate-6"
+            />
+            <img
+                src="../../../asset/front/4.webp"
+                class="xl:h-max h-40 w-1/2 rounded-3xl absolute top-1/3 left-2/3 transform -translate-y-1/2 -translate-x-1/2 -rotate-3"
+            />
+        </div>
+        <div
+            class="xl:w-2/5 w-full xl:h-full h-max flex flex-col items-center justify-end"
         >
             <div
-                class="h-max w-screen xl:w-1/3 xl:mr-10 z-50 xl:mx-0 xl:my-5 flex items-center justify-center"
-                data-aos="fade-left"
-                data-aos-delay="1000"
+                class="xl:h-full h-80 w-full flex items-center justify-center flex-col px-10"
+                data-aos="zoom-out"
                 data-aos-duration="1000"
             >
-                <img
-                    src="../../../asset/lpg1.jpg"
-                    class="xl:rounded-xl rounded-3xl shadow-2xl h-full xl:w-max w-1/2 items-stretch z-50"
-                />
+                <span class="xl:text-3xl text-lg text-theme1"
+                    >Ceremonial Turn-over of the Purchased 2 ha. lot by CLIMBS
+                    Life and General Insurance Cooperative to Co-operative
+                    College of the Philippines</span
+                >
+                <span class="xl:text-md text-[13px] mt-4"
+                    >On March 14, 2023, the Ceremonial Turn-over of the
+                    Purchased 2 ha. lot by CLIMBS Life and General Insurance
+                    Cooperative to Co-operative College of the Philippines was
+                    carried-out wherein soon to rise will be the latter's campus
+                    in El Salvador City, Misamis Oriental, Philippines.</span
+                >
             </div>
 
             <div
-                class="flex flex-col xl:py-10 xl:rounded-xl justify-start xl:mt-4 items-start h-max w-screen xl:w-1/2"
-                data-aos="fade-right"
-                data-aos-delay="500"
+                class="xl:h-full h-max w-full xl:pt-0 pt-4 flex items-center justify-center flex-col px-10"
+                data-aos="zoom-out"
                 data-aos-duration="1000"
             >
-                <p
-                    class="xl:text-7xl text-start text-lg px-8 mt-4 xl:mb-8 text-theme1 z-10 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]"
+                <span class="xl:text-4xl text-lg w-full text-start text-theme1"
+                    >Cooperative Executive Masterclass in Manchester, UK</span
                 >
-                    Cebu Training Session
-                </p>
-                <p
-                    class="text-white-800 text-xs xl:text-base tracking-wider text-justify px-8 py-4 z-10"
+                <span class="xl:text-md text-[13px] mt-4"
+                    >48 official delegates coming from 17 Philippine
+                    co-operative organizations finally arrived at the very
+                    birthplace of the modern co-operative movement: the Rochdale
+                    Pioneers Museum. It is located in Rochdale, Greater
+                    Manchester. This is where the Rochdale Equitable Pioneers
+                    Society started trading on 21 December 1844.</span
                 >
-                    The morning session on Deepening our Co-operative Identity
-                    was facilitated by the
-                    <strong>Co-op College PH</strong> team headed by CEO &
-                    Principal <strong>Donna Dizon</strong>. This interactive
-                    learning activity brought out the creativity of the
-                    participants in making their own “Halo-halo” which requires
-                    certain key ingredients on embodying our identity as co-op
-                    leaders. The afternoon session on Co-op Financial Literacy:
-                    The Usage of Statutory Funds was conducted by our Resource
-                    Speaker and Trainer
-                    <strong>Hon. Gervacio Piator, CPA, MBA, DM, PhD.</strong> A
-                    total of 35 participants coming from 15 co-operatives
-                    nationwide joined and actively participated on these
-                    sessions. To learn more and be involved with the Co-op
-                    College programs (both locally and abroad), join us and be a
-                    member of the
-                    <strong
-                        >National Federation of Cooperative Primaries in the
-                        Philippines - Nafecoop</strong
-                    >
-                    now!
-                </p>
             </div>
         </div>
     </div>
 
     <div
-        class="h-max py-8 w-screen flex flex-wrap justify-center items-center px-4 text-sm"
+        class="h-max pt-4 w-screen bg-gradient-to-b from-theme2 to-white text-theme1 overflow-y-hidden xl:px-8"
     >
-        <div class="flex flex-col xl:flex-row justify-center items-center">
-            <div
-                class="card relative text-xl px-4 text-center flex flex-col justify-center items-center my-4 mx-4 mb-10 h-96 xl:w-96 w-80 bg-theme2 rounded-xl"
-                data-aos="zoom-out"
-                data-aos-duration="1000"
-                data-aos-delay="300"
-            >
-                <font-awesome-icon
-                    icon="fa-solid fa-note-sticky "
-                    class="text-theme1 xl:h-16 h-12 mb-4 absolute z-40 hover:opacity-0"
+        <p
+            class="text-theme1 text-4xl px-4"
+            data-aos="fade-left"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+        >
+            Our Focus Areas:
+        </p>
+        <p
+            class="text-xl px-4"
+            data-aos="fade-left"
+            data-aos-delay="400"
+            data-aos-duration="1000"
+        >
+            (1) Risk Management
+        </p>
+        <p
+            class="text-xl px-4"
+            data-aos="fade-left"
+            data-aos-delay="600"
+            data-aos-duration="1000"
+        >
+            (2) Financial Literacy
+        </p>
+        <p
+            class="text-xl px-4"
+            data-aos="fade-left"
+            data-aos-delay="800"
+            data-aos-duration="1000"
+        >
+            (3) Executive Management
+        </p>
+        <p
+            class="mb-10 text-xl px-4"
+            data-aos="fade-left"
+            data-aos-delay="1000"
+            data-aos-duration="1000"
+        >
+            (4) Leadership Management and Development
+        </p>
+        <p
+            class="text-theme1 xl:text-4xl text-2xl ml-4"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+        >
+            What We Offer :
+        </p>
+
+        <div
+            class="bg-white h-max rounded-3xl w-1/1 px-8 xl:px-0 my-4 flex justify-start xl:flex-row flex-col items-start xl:gap-10 xl:text-xl text-sm"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+            data-aos-delay="500"
+        >
+            <div class="xl:w-1/2 xl:px-8 py-8 h-max pb-4 xl:pb-8">
+                <div class="">
+                    <h1 class="xl:text-3xl text-xl underline">
+                        Executive Courses (E)
+                    </h1>
+
+                    &#x2022; Post - Graduate Certificate in Cooperative
+                    Management (PGC CM)<br />
+                    &#x2022; Global Co-operative Executives Masterclass<br />
+                    &#x2022; Strategic Planning and Thinking Management<br />
+                    &#x2022; Human Capital Management<br />
+                    &#x2022; Cooperative Digital Transformation<br />
+                </div>
+                <br />
+                <div>
+                    <h1 class="xl:text-3xl text-xl underline">
+                        Leadership Courses (L)
+                    </h1>
+
+                    &#x2022; Cooperative Leadership Program<br />
+                    &#x2022; Cooperative Management Training<br />
+                    &#x2022; Raising Cooperative Leaders<br />
+                    &#x2022; Advcanced Cooperative Business Management<br />
+                </div>
+            </div>
+            <div class="xl:w-1/2 xl:px-8 py-8 pt-0 h-max xl:pt-8">
+                <div>
+                    <h1 class="xl:text-3xl text-xl underline">
+                        Risk Manangement Courses (R)
+                    </h1>
+
+                    &#x2022; Business Continuity Planning<br />
+                    &#x2022; Financial Literacy and Management<br />
+                    &#x2022; Environmental, Social and Corporate Governance
+                    (ESG)<br />
+                    &#x2022; Corporate Governance and Enterprise Risk Management
+                    (ERM)<br />
+                </div>
+                <br />
+                <div>
+                    <h1 class="xl:text-3xl text-xl underline">Others (O)</h1>
+
+                    &#x2022; Community Engagement through our Community
+                    Development Fund (CDF): A Collective Action Initiative<br />
+                    &#x2022; Digital Marketing Strategy for Managers and
+                    Entrepreneurs<br />
+                    &#x2022; Diversity and Inclusivity / Social Concerns<br />
+                    &#x2022; The Cooperative Culture and Sustainable Development
+                    Goals<br />
+                    &#x2022; Customized E-Learning<br />
+                    &#x2022; Customized Face-to-Face Programs<br />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div
+        class="w-screen h-max py-10 mt-16 px-6 xl:px-0 flex flex-wrap items-center justify-center xl:space-x-6"
+    >
+        <div
+            class="w-screen text-theme1 text-center xl:text-7xl text-3xl tracking-widest"
+        >
+            MAJOR PARTNERS
+        </div>
+        <div
+            class="my-4 h-80 xl:h-128 pt-10 pb-1 w-96 bg-gradient-to-b from-theme2 via-white to-zinc-100 flex flex-col items-center justify-center rounded-3xl px-6"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out-back"
+            data-aos-delay="900"
+        >
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <img
+                    src="../../../asset/majorpartners/nafecoop.jpeg"
+                    class="rounded-full object-contain h-full"
                 />
-                <p
-                    class="cardtext px-12 xl:px-8 z-50 flex items-center justify-center h-96 w-80 xl:w-96 opacity-0 hover:opacity-100 transition duration-700 text-theme1 rounded-2xl cursor-pointer"
-                >
-                    National Federation of Cooperative Primaries in the
-                    Philippines -(NaFeCOOP)National Federation of Cooperative
-                    Primaries in the Philippines - (NaFeCOOP).
+            </div>
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <div class="text-start w-full text-2xl mt-2">NaFeCoop</div>
+            </div>
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <p class="text-xs xl:text-sm text-zinc-500">
+                    Provides continuous learning , professional cooperative
+                    management, and higher level of knowledge foc.
                 </p>
             </div>
-            <div
-                class="card px-4 text-center flex flex-col justify-center items-center my-4 mb-10 h-96 xl:w-96 w-80 bg-theme2 mx-4 rounded-xl"
-                data-aos="zoom-out"
-                data-aos-duration="1000"
-                data-aos-delay="500"
-            >
-                <font-awesome-icon
-                    icon="fa-solid fa-coins"
-                    class="text-theme1 h-10 xl:h-16 absolute z-40 hover:opacity-0 mb-4"
-                />
-                <p
-                    class="cardtext px-12 xl:px-8 bg-theme2 z-50 flex flex-col items-center justify-center h-96 w-80 xl:w-96 opacity-0 hover:opacity-100 transition duration-700"
+
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <a
+                    class="bg-blue-500 xl:py-5 py-3 px-12 w-full my-2 text-white xl:rounded-3xl rounded-xl flex text-center items-center justify-center hover:bg-theme1 transition duration-500"
+                    href="https://www.facebook.com/NaFeCoopOfficial"
+                    target="_blank"
                 >
-                    <span class="text-xl"
-                        >The NaFeCOOP and its relation to the Co-op College
-                        PH:</span
-                    ><br />
-                    70% Consumable - for education, training and other related
-                    expenditures.<br />
-                    20% Redeemable - If not used in 5 years subject to terms and
-                    conditions
-                    <br />
-                    10% Advocacy Fund - For Federation, Education and Training
-                    Advocacy.<br />
-                </p>
+                    Visit<i class="text-white text-xs ml-2"
+                        ><font-awesome-icon icon="fa-solid fa-arrow-right-long"
+                    /></i>
+                </a>
+            </div>
+        </div>
+        <div
+            class="my-4 h-80 xl:h-128 pt-10 pb-1 w-96 bg-gradient-to-b from-theme2 via-white to-zinc-100 flex flex-col items-center justify-center rounded-3xl px-6"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out-back"
+            data-aos-delay="500"
+        >
+            <div class="h-1/4 w-full flex items-center justify-center">
+                <img
+                    src="../../../asset/majorpartners/aim.png"
+                    class="rounded-full object-cover h-full"
+                />
             </div>
             <div
-                class="card px-4 flex flex-col justify-center xl:text-sm text-xs items-center my-4 mb-10 h-96 xl:w-96 w-80 bg-theme2 mx-4 rounded-xl text-center"
-                data-aos="zoom-out"
-                data-aos-duration="1000"
-                data-aos-delay="700"
+                class="h-1/4 text-start w-full text-2xl mt-2 flex items-center justify-center"
             >
-                <font-awesome-icon
-                    icon="fa-solid fa-lightbulb"
-                    class="text-theme1 xl:h-16 h-12 mb-4 absolute z-40 hover:opacity-0"
-                />
-                <p
-                    class="cardtext px-12 xl:px-8 bg-theme2 z-50 flex flex-col items-center justify-center h-96 w-80 xl:w-96 opacity-0 hover:opacity-100 transition duration-700"
-                >
-                    <span class="text-xl">The KoopSkwela </span>
-                    A mobile learning hub and educational initiative by CLIMBS
-                    Life and General Insurance Cooperative, the Co-operative
-                    College of the Philippines (Co-op College PH), Coop Life
-                    General Insurance & Financial Services Agency (CLIFSA),
-                    MASS-SPECC Cooperative Development Center, the National
-                    Confederation of Cooperatives (NATCCO Network), First
-                    Community Cooperative (FICCO), the National Federation of
-                    Cooperative Primaries in the Philippines (NaFeCOOP), and
-                    with the coordination of the Regional Cooperative
-                    Development Council (RCDC) - Region X.
+                Asia Institute of Management
+            </div>
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <p class="text-xs xl:text-sm text-zinc-500">
+                    AIM doesn’t just sit at the heart of fluid change, but
+                    leads, inspires, and transforms the forces that exist around
+                    it — ultimately changing the perception of what an
+                    educational institution can be.
                 </p>
+            </div>
+
+            <div class="h-1/4 w-full flex items-center justify-center">
+                <a
+                    class="bg-blue-500 xl:py-5 py-3 px-12 w-full my-2 text-white xl:rounded-3xl rounded-xl flex text-center items-center justify-center hover:bg-theme1 transition duration-500"
+                    href="https://aim.edu/"
+                    target="_blank"
+                >
+                    Visit<i class="text-xs ml-2"
+                        ><font-awesome-icon icon="fa-solid fa-arrow-right-long"
+                    /></i>
+                </a>
+            </div>
+        </div>
+        <div
+            class="my-4 h-80 xl:h-128 pt-10 pb-1 w-96 bg-gradient-to-b from-theme2 via-white to-zinc-100 flex flex-col items-center justify-center rounded-3xl px-6"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out-back"
+            data-aos-delay="600"
+        >
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <img
+                    src="../../../asset/majorpartners/icmif.png"
+                    class="rounded-full object-contain h-full"
+                />
+            </div>
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <div class="text-start w-full xl:text-2xl text-lg mt-2">
+                    International Cooperative and Mutual Insurance Federation
+                </div>
+            </div>
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <p class="text-[10px] xl:text-sm text-zinc-500">
+                    Unlike other industry associations or networking platforms
+                    you might know, because it is the only place where
+                    purpose-led insurers from across the globe come together to
+                    strengthen their organisations within a non-competitive
+                    environment.
+                </p>
+            </div>
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <a
+                    class="bg-blue-500 xl:py-5 py-3 px-12 w-full my-2 text-white xl:rounded-3xl rounded-xl flex text-center items-center justify-center hover:bg-theme1 transition duration-500"
+                    href="https://www.icmif.org/"
+                    target="_blank"
+                >
+                    Visit<i class="text-white text-xs ml-2"
+                        ><font-awesome-icon icon="fa-solid fa-arrow-right-long"
+                    /></i>
+                </a>
+            </div>
+        </div>
+        <div
+            class="my-4 h-80 xl:h-128 pt-10 pb-1 w-96 bg-gradient-to-b from-theme2 via-white to-zinc-100 flex flex-col items-center justify-center rounded-3xl px-6"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out-back"
+            data-aos-delay="700"
+        >
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <img
+                    src="../../../asset/majorpartners/cc.png"
+                    class="rounded-full object-contain h-full"
+                />
+            </div>
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <div class="text-start w-full text-2xl mt-2">
+                    Cooperative College (UK)
+                </div>
+            </div>
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <p class="text-xs xl:text-sm text-zinc-500">
+                    Here at the Co-operative College, we’ve always done things
+                    differently. Born over 100 years ago out of a need for
+                    radical education that fights for social justice, our
+                    mission hasn’t changed.
+                </p>
+            </div>
+
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <a
+                    class="bg-blue-500 xl:py-5 py-3 px-12 w-full my-2 text-white xl:rounded-3xl rounded-xl flex text-center items-center justify-center hover:bg-theme1 transition duration-500"
+                    href="https://www.co-op.ac.uk/"
+                    target="_blank"
+                >
+                    Visit<i class="text-white text-xs ml-2"
+                        ><font-awesome-icon icon="fa-solid fa-arrow-right-long"
+                    /></i>
+                </a>
             </div>
         </div>
 
-        <div class="flex flex-col xl:flex-row justify-center items-center">
-            <div
-                class="card px-4 text-center flex flex-col justify-center items-center my-4 mb-10 h-96 xl:w-96 w-80 bg-theme2 mx-4 rounded-xl"
-                data-aos="zoom-out"
-                data-aos-duration="1000"
-                data-aos-delay="900"
-            >
-                <font-awesome-icon
-                    icon="fa-solid fa-briefcase-medical"
-                    class="text-theme1 xl:h-16 h-12 mb-4 absolute z-40 hover:opacity-0"
+        <div
+            class="my-4 h-80 xl:h-128 pt-10 pb-1 w-96 bg-gradient-to-b from-theme2 via-white to-zinc-100 flex flex-col items-center justify-center rounded-3xl px-6"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out-back"
+            data-aos-delay="800"
+        >
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <img
+                    src="../../../asset/majorpartners/arete.png"
+                    class="rounded-full object-contain h-full"
                 />
-                <p
-                    class="cardtext px-12 xl:px-8 bg-theme2 z-50 flex flex-col items-center justify-center h-96 w-80 xl:w-96 opacity-0 hover:opacity-100 transition duration-700"
-                >
-                    From the CIFL to the Co-op College PH The CLIMBS Institute
-                    of Financial Literacy (CIFL) strategically pivoted to the
-                    CLIMBS Institute of Management (CIM), and finally to the
-                    Co-operative College of the Philippines (Co-op College PH)
-                    which aims to further co-operative education by embodying
-                    the Co-operative Values & Principles, providing higher level
-                    of trainings, upgrade educational & learning platforms, and
-                    widen its reach through local & international partnerships.
+            </div>
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <div class="text-start w-full text-2xl mt-2">Areté</div>
+            </div>
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <p class="text-xs xl:text-sm text-zinc-500">
+                    Areté has been in the industry of training and corporate
+                    consulting since 2008. Its services cover a broad range of
+                    learning and development interventions.
                 </p>
             </div>
-            <div
-                class="card px-4 text-center flex flex-col justify-center items-center my-4 mb-10 h-96 xl:w-96 w-80 bg-theme2 mx-4 rounded-xl"
-                data-aos="zoom-out"
-                data-aos-duration="1000"
-                data-aos-delay="1100"
-            >
-                <font-awesome-icon
-                    icon="fa-solid fa-chart-simple"
-                    class="text-theme1 xl:h-16 h-12 mb-4 absolute z-40 hover:opacity-0"
-                />
-                <p
-                    class="cardtext px-12 xl:px-8 bg-theme2 z-50 flex flex-col items-center justify-center h-96 w-80 xl:w-96 opacity-0 hover:opacity-100 transition duration-700"
+
+            <div class="w-full h-1/4 flex items-center justify-center">
+                <a
+                    class="bg-blue-500 xl:py-5 py-3 px-12 w-full my-2 text-white xl:rounded-3xl rounded-xl flex text-center items-center justify-center hover:bg-theme1 transition duration-500"
+                    href="https://www.teamarete.org/"
+                    target="_blank"
                 >
-                    <span class="text-xl">Cooperative Management</span><br />
-                    in partnership with the Asian Institute of Management (AIM).
-                </p>
-            </div>
-            <div
-                class="card px-4 text-center flex flex-col justify-center items-center my-4 mb-10 h-96 xl:w-96 w-80 bg-theme2 mx-4 rounded-xl"
-                data-aos="zoom-out"
-                data-aos-duration="1000"
-                data-aos-delay="1300"
-            >
-                <font-awesome-icon
-                    icon="fa-solid fa-earth-asia"
-                    class="text-theme1 xl:h-16 h-12 mb-4 absolute z-40 hover:opacity-0"
-                />
-                <p
-                    class="cardtext px-12 xl:px-8 bg-theme2 z-50 flex flex-col items-center justify-center h-96 w-80 xl:w-96 opacity-0 hover:opacity-100 transition duration-700"
-                >
-                    <span class="text-xl">
-                        The Global Co-operative Executive Masterclass</span
-                    ><br />
-                    Was held in Manchester, United Kingdom, in the heart of the
-                    birthplace of the modern Co-operative Movement, following in
-                    the footsteps of the Rochdale Pioneers.
-                </p>
+                    Visit<i class="text-white text-xs ml-2"
+                        ><font-awesome-icon icon="fa-solid fa-arrow-right-long"
+                    /></i>
+                </a>
             </div>
         </div>
     </div>
@@ -378,33 +887,90 @@ img {
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from "swiper/vue";
+import img1 from "../../../asset/front/3.webp";
+import img2 from "../../../asset/front/2.webp";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
-// Import Swiper styles
-import "swiper/css";
+import { library } from "@fortawesome/fontawesome-svg-core";
 
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
-// import required modules
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
-
-import img1 from "../../../asset/landingpage.jpg";
-import img2 from "../../../asset/landingpagenew.jpg";
-import img3 from "../../../asset/landingpagenewest.jpg";
+import { BASE_URL } from "../../baseurl";
+library.add(faArrowRightLong);
 
 export default {
     data() {
         return {
-            cover: [img1, img2, img3],
+            cover: [img1, img2],
             currentIndex: 0,
+            phrases: [
+                "We are the sole-training needs provider of the National Federation of Cooperative Primaries of the Philippines (NaFeCOOP). We Strategically pivoted from CLIMBS Institute for Financial Literacy (CIFL) to CLIMBS Institute of Management (CIM), and now, the Co-operative College of the Philippines (Co-op College PH) to further cooperative education both locally and globally, embodies the cooperative values and principles, and upgrades its educational platforms.",
+            ],
+            sleepTime: 30,
+            curPhraseIndex: 0,
+            showLoadingImage: false,
+            webVisits: null,
+            othersSum: 0,
         };
     },
 
     mounted() {
+        axios
+            .get(BASE_URL + "/api/ip")
+            .then((getResponse) => {
+                // console.log("GET Response:", getResponse.data);
+                // console.log(getResponse.data.query);
+                // console.log(getResponse.data.country);
+                // console.log(getResponse.data.city);
+
+                // Assuming you want to send some data in the POST request
+                const postData = {
+                    Country: getResponse.data.country,
+                    City: getResponse.data.city,
+                    IpAdd: getResponse.data.query,
+                };
+
+                // Make a POST request
+                return axios.post(BASE_URL + "/webvisits", postData);
+            })
+            .then((postResponse) => {
+                // console.log("POST Response:", postResponse.data);
+                // Handle the POST response here
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+                // Handle errors for both GET and POST requests here
+            });
+
         setInterval(() => {
             this.nextSlide();
         }, 5000);
+
+        setTimeout(() => {
+            this.writeLoop();
+        }, 5000);
+        // setTimeout(() => {
+        //     this.showLoadingImage = true;
+        // }, 2000);
+
+        axios
+            .get(BASE_URL + "/displaywebvisits") // Replace '/api/display' with your actual API endpoint
+            .then((response) => {
+                this.webVisits = response.data.results;
+                console.log(this.webVisits);
+
+                let sum = 0;
+
+                // Loop through the array starting from index 2
+                for (let i = 3; i < this.webVisits.length; i++) {
+                    sum += this.webVisits[i].count;
+                }
+
+                this.othersSum = sum;
+                console.log(this.othersSum);
+            })
+            .catch((error) => {
+                console.error("Error fetching data:", error);
+            });
     },
     methods: {
         prevSlide() {
@@ -414,16 +980,24 @@ export default {
         nextSlide() {
             this.currentIndex = (this.currentIndex + 1) % this.cover.length;
         },
-    },
-    components: {
-        Swiper,
-        SwiperSlide,
-    },
+        sleep(ms) {
+            return new Promise((resolve) => setTimeout(resolve, ms));
+        },
+        async writeLoop() {
+            while (true) {
+                let curWord = this.phrases[this.curPhraseIndex];
 
-    setup() {
-        return {
-            modules: [Navigation, Pagination, Mousewheel, Keyboard],
-        };
+                for (let i = 0; i < curWord.length; i++) {
+                    this.$refs.typewriter.textContent = curWord.substring(
+                        0,
+                        i + 1
+                    );
+                    await this.sleep(this.sleepTime);
+                }
+
+                await this.sleep(this.sleepTime * 9999);
+            }
+        },
     },
 };
 

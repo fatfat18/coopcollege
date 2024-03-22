@@ -8,6 +8,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import InputLabel from "@/Components/InputLabel.vue";
 import { faTty } from "@fortawesome/free-solid-svg-icons";
+import Modal from "@/Components/Modal.vue";
 
 library.add(faFacebook, faPhone, faEnvelope, faTty);
 </script>
@@ -22,6 +23,114 @@ library.add(faFacebook, faPhone, faEnvelope, faTty);
 
 <template>
     <div
+        class="ftr w-screen h-max flex items-center justify-center xl:pt-10 pt-4 relative"
+    >
+        <Modal :show="showLoading" @close="showLoading = false">
+            <span class="text-3xl">Submitting form to our team!</span
+            ><br /><br />
+        </Modal>
+        <div class="xl:w-3/4 w-screen h-max xl:px-10 px-2">
+            <p class="xl:text-7xl text-4xl text-white text-center">
+                Stay Connected
+            </p>
+            <p class="xl:text-4xl text-xl my-2 text-white text-center">
+                Join our Newsletter!
+            </p>
+            <p class="xl:text-md text-sm text-white text-center">
+                CIFL/CIM now pivots to the Co-operative College of the
+                Philippines (Co-op College PH).The training and education arm
+                for a higher level of training and education opportunities in
+                the Philippine Cooperative Movement.
+            </p>
+            <br />
+            <div class="flex items-center justify-center flex-col">
+                <div class="xl:w-3/4 w-[95%] flex">
+                    <input
+                        type="text"
+                        class="rounded-lg w-full mx-1"
+                        placeholder="Name"
+                        required
+                        v-model="newslettername"
+                    />
+                    <input
+                        type="email"
+                        class="rounded-lg w-full mx-1"
+                        placeholder="Email"
+                        email
+                        required
+                        v-model="newsletteremail"
+                    />
+                </div>
+                <div class="xl:w-3/4 w-[95%] px-1">
+                    <textarea
+                        class="rounded-lg w-full h-40 mt-1"
+                        placeholder="Message"
+                        required
+                        v-model="newslettermessage"
+                    ></textarea>
+                    <button
+                        class="w-full rounded-xl text-zinc-950 xl:text-3xl text-xl bg-theme2 py-4"
+                        @click="submitData()"
+                    >
+                        Join us now!
+                    </button>
+                </div>
+            </div>
+
+            <div
+                class="flex xl:flex-row flex-col text-white xl:ml-20 mt-4 justify-center items-start"
+            >
+                <span class="flex items-center justify-center"
+                    ><font-awesome-icon
+                        icon="fa-solid fa-mobile"
+                        class="xl:text-4xl text-xl mx-4 my-5"
+                    />0917-700-9159</span
+                >
+
+                <span class="flex items-center justify-center"
+                    ><font-awesome-icon
+                        icon="fa-solid fa-envelope"
+                        class="xl:text-4xl text-xl mx-4 my-5"
+                    />info@co-opcollege.ph</span
+                >
+
+                <span class="flex items-center justify-center"
+                    ><font-awesome-icon
+                        icon="fa-solid fa-globe"
+                        class="xl:text-4xl text-xl mx-4 my-5"
+                    />www.co-opcollege.ph</span
+                >
+            </div>
+            <div
+                class="w-full py-4 flex text-white items-center justify-start xl:justify-center"
+            >
+                <a href="https://www.facebook.com/CoopCollegePH" target="_blank"
+                    ><span
+                        ><font-awesome-icon
+                            icon="fa-brands fa-facebook"
+                            class="xl:text-6xl text-4xl mx-4 hover:scale-110 transition duration-500" /></span
+                ></a>
+                <a
+                    href="https://www.linkedin.com/company/co-operative-college-of-the-philippines-ccp"
+                    target="_blank"
+                >
+                    <span
+                        ><font-awesome-icon
+                            icon="fa-brands fa-linkedin"
+                            class="xl:text-6xl text-4xl mx-4 hover:scale-110 transition duration-500" /></span
+                ></a>
+            </div>
+            <div
+                class="w-full pt-10 text-theme2 flex flex-col items-center justify-center text-center xl:text-sm text-xs"
+            >
+                All Rights Reserved Co-operative College of the Philippines
+
+                <img src="../../asset//logo.png" class="w-10 h-11 my-2" />
+            </div>
+        </div>
+    </div>
+
+    <!-- <div
         id="footer"
         class="ftr w-screen h-80 bg-theme1 pt-8 flex flex-col items-center"
     >
@@ -93,11 +202,21 @@ library.add(faFacebook, faPhone, faEnvelope, faTty);
                 © Co-operative College of the Philippines
             </p>
         </div>
-    </div>
+    </div> -->
 </template>
 
 <script>
 import { BASE_URL } from "../baseurl";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { faMobile } from "@fortawesome/free-solid-svg-icons";
+
+import { library } from "@fortawesome/fontawesome-svg-core";
+
+library.add(faFacebook, faLinkedin, faEnvelope, faGlobe, faMobile);
 
 export default {
     data() {
@@ -109,6 +228,10 @@ export default {
             tel: "",
             email: "",
             showModal: false,
+            newslettername: "",
+            newsletteremail: "",
+            newslettermessage: "",
+            showLoading: false,
         };
     },
 
@@ -117,7 +240,7 @@ export default {
             .get(BASE_URL + "/displayContactUs?idcontactUs=1")
             .then((response) => {
                 this.contacts = response.data;
-                console.log(this.contacts);
+                //console.log(this.contacts);
                 this.fb = this.contacts[0].facebookLink;
                 this.phonenum = this.contacts[0].phoneNum;
                 this.email =
@@ -128,6 +251,40 @@ export default {
             .catch((error) => {
                 console.log(error);
             });
+    },
+    methods: {
+        submitData() {
+            const formData = new FormData();
+            formData.append("email", this.newsletteremail);
+            formData.append("message", this.newslettermessage);
+            formData.append("fullname", this.newslettername);
+
+            // Append additional form data to the same FormData object
+
+            if (
+                this.newsletteremail !== "" &&
+                this.newslettername !== "" &&
+                this.newslettermessage !== ""
+            ) {
+                this.showLoading = !this.showLoading;
+                axios
+                    .post(BASE_URL + "/email", formData, {
+                        headers: {
+                            "Content-Type": "multipart/form-data",
+                        },
+                    })
+                    .then((response) => {
+                        //console.log(response);
+                        this.showLoading = !this.showLoading;
+                        this.newsletteremail = "";
+                        this.newslettermessage = "";
+                        this.newslettername = "";
+                    })
+                    .catch((error) => {
+                        console.log(error);
+                    });
+            }
+        },
     },
 };
 

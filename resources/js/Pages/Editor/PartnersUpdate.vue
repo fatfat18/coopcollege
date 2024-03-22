@@ -30,12 +30,12 @@ import InputLabel from "@/Components/InputLabel.vue";
         <div class=""></div>
 
         <div
-            class="postcontainer flex justify-center w-screen xl:px-10 xl:pb-40 pt-20"
+            class="postcontainer flex justify-center w-screen xl:px-10 xl:pb-40"
         >
-            <div class="xl:w-3/4 w-4/5 xl:mt-16 overflow-y-hidden">
-                <form @submit.prevent="updatePartners(this.intNum)">
+            <div class="xl:w-3/4 w-4/5 overflow-y-hidden">
+                <form @submit.prevent="updatePartners(intNum)">
                     <button
-                        class="mt-16 border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg mb-10 hover:bg-green-600 transition ease-in duration-100"
+                        class="mt-6 border border-white w-24 text-white py-2 px-4 bg-green-800 rounded-lg mb-10 hover:bg-green-600 transition ease-in duration-100"
                     >
                         Save
                     </button>
@@ -184,6 +184,7 @@ export default {
         },
 
         updatePartners() {
+            this.showModal = true;
             let params = new URLSearchParams();
             //let item = this.items.find(item => item.idTC === this.selectedItem);
 
@@ -199,7 +200,7 @@ export default {
                 )
                 .then((response) => {
                     console.log(response.data);
-                    this.showModal = true;
+                    this.showModal = false;
 
                     async function redirectWithDelay() {
                         await new Promise((resolve) =>

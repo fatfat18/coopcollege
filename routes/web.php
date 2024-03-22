@@ -7,10 +7,13 @@ use App\Http\Controllers\contactUs;
 use App\Http\Controllers\post;
 use App\Http\Controllers\partner;
 use App\Http\Controllers\bod;
+use App\Http\Controllers\Emailer;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\NavBarController;
+use App\Http\Controllers\webVisits;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -226,12 +229,24 @@ Route::get('/displayBODAdmin',[bod::class, 'displayAdmin'] );
 Route::delete('/deleteBOD',[bod::class, 'delete'] );
 
 
+// mailer
+Route::post('/email',[Emailer::class, 'sendWelcomeEmail'] );
 
 
+// web visits counter
+Route::post('/webvisits',[webVisits::class, 'store'] );
+Route::get('/displaywebvisits',[webVisits::class, 'display'] );
 
 
-
-
+Route::get('/api/ip', function () {
+    try {
+        $response = Http::get('http://ip-api.com/json/');
+        return $response->json();
+    } catch (\Exception $e) {
+        // Handle errors
+        return response()->json(['error' => 'Internal Server Error'], 500);
+    }
+});
 
 
 require __DIR__.'/auth.php';
