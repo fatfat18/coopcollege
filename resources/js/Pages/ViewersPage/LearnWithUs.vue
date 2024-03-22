@@ -58,7 +58,7 @@ import NoContents from "@/Components/NoContents.vue";
             class="rounded-t max-w-7xl px-3 xl:pl-8 w-screen bg-zinc-100 text-theme1 mt-1 py-2 xl:flex hidden items-center text-l xl:text-2xl"
         >
             <div class="w-1/5 text-center">Target Execution</div>
-            <div class="w-1/5 text-center">Course Title</div>
+            <div class="w-1/5 text-center">Agenda</div>
             <div class="w-2/5 text-center">Objectives</div>
             <div class="w-1/4 text-center">Mode of Delivery</div>
         </div>
@@ -93,7 +93,7 @@ import NoContents from "@/Components/NoContents.vue";
                             v-if="index >= 1"
                         ></div>
                         <div
-                            class="xl:w-1/5 w-full xl:text-center text-start xl:text-sm text-sm flex justify-start items-start py-2"
+                            class="xl:w-1/5 w-full xl:text-center text-start xl:text-sm text-sm flex xl:items-center xl:justify-center justify-start items-start py-2"
                         >
                             <span class="xl:hidden w-1/4">
                                 Course Title :
@@ -113,7 +113,9 @@ import NoContents from "@/Components/NoContents.vue";
                         <div
                             class="xl:w-1/5 w-full xl:text-center text-start xl:text-base text-sm flex justify-center items-start py-2"
                         >
-                            <span class="xl:hidden w-1/4"> Venue : </span>
+                            <span class="xl:hidden w-1/4">
+                                Mode Of Delivery :
+                            </span>
                             <span class="xl:full w-3/4"> {{ event.Cost }}</span>
                         </div>
                     </div>
